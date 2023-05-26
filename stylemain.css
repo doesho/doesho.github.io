@@ -1,0 +1,33 @@
+﻿.Heading p {
+    text-align: center;
+}
+
+#Body
+{
+    text-align: center;
+}
+
+#Heading {
+    color: red;
+    text-align: center;
+}
+
+#options {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.box {
+    display: table-cell;
+    background-color: lightgrey;
+    width: 150px;
+    padding: 5px;
+    text-align: center;
+    border: outset;
+}
+
+footer{
+    text-align: center;
+}
