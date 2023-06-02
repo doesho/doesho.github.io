@@ -1,0 +1,23 @@
+﻿#Banner {
+    text-align: center;
+    background-image: linear-gradient(to bottom right, #ebda66, #dc9471);
+    padding: 10px;
+}
+
+#Heading {
+    color: #ee5c29;
+    text-align: center;
+    font-family:'MKX Title'
+}
+
+#Body {
+    text-align: center;
+}
+
+p{
+    font-family:Vollkorn, serif;
+}
+
+footer{
+    text-align: center;
+}
