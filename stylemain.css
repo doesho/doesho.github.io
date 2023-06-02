@@ -1,14 +1,14 @@
-﻿.Heading p {
+﻿#Banner {
     text-align: center;
-}
-
-#Body {
-    text-align: center;
-    background-color: antiquewhite;
+    background-image: linear-gradient(to bottom right, #ebda66, #dc9471);
 }
 
 #Heading {
     color: red;
+    text-align: center;
+}
+
+#Body {
     text-align: center;
 }
 
