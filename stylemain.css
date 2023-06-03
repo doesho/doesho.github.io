@@ -9,7 +9,6 @@
     color: #ee5c29;
     text-align: center;
     font-size: 20px;
-    font-family:'MKX Title'
 }
 
 #Banner {
@@ -51,8 +50,23 @@ p {
 
 #Body {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-footer{
-    text-align: center;
+#NewsBox{
+    overflow: auto;
+    width: 800px;
+    background-color: antiquewhite;
+    border: solid;
+    border-radius: 2px;
+    margin: 50px;
 }
+
+footer > div{
+    font-size: 10px;
+    text-align: center;
+    margin: 0px;
+}
+
