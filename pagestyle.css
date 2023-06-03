@@ -1,21 +1,67 @@
-﻿#Banner {
-    text-align: center;
+﻿/* H1 is the page header.
+    H2 is for sections.
+    H3 is for titles of things, like player entries, guide names, etc. Typically in searchable boxes.
+    H4 is for things that have to stand out of normal text ie. buttons
+*/
+
+#Heading {
+    color: #483527;
     background-image: linear-gradient(to bottom right, #ebda66, #dc9471);
+    text-align: center;
+    font-size: 30px;
+}
+
+p {
+    font-family: Vollkorn, serif;
+}
+
+/* Choice Container Options*/
+
+#ChoiceContainer {
+    font-family: Vollkorn, serif;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1000px;
+    gap: 20px;
+}
+
+@media (max-width: 700px){
+    #ChoiceContainer{
+        grid-template-columns: 1fr;
+    }
+}
+
+.Choice {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
     padding: 10px;
 }
 
-#Heading {
-    color: #ee5c29;
-    text-align: center;
-    font-family:'MKX Title'
+.ChoiceLink {
+    text-decoration: none;
 }
+
+.Choice h3 {
+    font-size: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.Choice p {
+    margin: auto;
+}
+
+.ChoiceTable {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Other stuff */
 
 #Body {
-    text-align: center;
-}
-
-p{
-    font-family:Vollkorn, serif;
+    margin-left: 50px;
+    margin-right: 100px;
 }
 
 footer{
