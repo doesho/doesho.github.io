@@ -1,4 +1,4 @@
-# playexceed.com / doesho.github.io
+# PLAY MORE EXCEED | playexceed.com
 Doe's Exceed fan website! I want this website to do multiple things to benefit the Exceed community:
 
 1. Compile fan-made content such as characters, playmats and rules
