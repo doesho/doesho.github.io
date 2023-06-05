@@ -16,15 +16,25 @@ html * {
 /* Top part of the page */
 
 #Heading {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
     color: #ee5c29;
     text-align: center;
     font-size: 25px;
+    margin-top: 60px;
 }
 
 #Banner {
     text-align: center;
-    background-image: linear-gradient(to bottom right, #ebda66, #dc9471);
-    padding: 10px;
+    background: radial-gradient(#ff460f, #fee567 90%);
+    padding: 0px;
+    margin: 0px;
+}
+
+#Banner h1{
+    margin: 0px;
 }
 
 /* options */
@@ -52,22 +62,49 @@ html * {
     cursor: pointer;
 }
 
-/* text beneath the options */
+#customsbutton, #communitybutton, #blogbutton {
+    cursor: not-allowed !important;
+    background-color: #ef9b7e !important;
+}
+
+/* beneath options, contains newsbox */
 
 #Body {
     text-align: center;
     display: flex;
+
     justify-content: center;
-    align-items: center;
 }
 
-#NewsBox{
+/* whole news box*/
+
+#NewsBox {
     overflow: auto;
     width: 800px;
     background-color: antiquewhite;
     border: solid;
     border-radius: 2px;
     margin: 50px;
+}
+
+/* >> individual news entry*/
+
+.NewsEntry h3{
+    font-size: 25px;
+    
+    padding: 0px;
+    line-height: 0px;
+}
+
+.NewsEntry h4 {
+    padding: 0px;
+    line-height: 0px;
+}
+
+.NewsEntry p{
+    text-indent: 40px;
+    text-align: left;
+    margin: 20px;
 }
 
 footer > div{
