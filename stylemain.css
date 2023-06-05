@@ -73,20 +73,34 @@ html * {
     text-align: center;
     display: flex;
 
-    justify-content: center;
+    padding: 50px;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 900px){
+    #Body{
+        display: block;
+    }
 }
 
 /* whole news box*/
 
 #NewsBox {
     overflow: auto;
-    width: 800px;
-    background-color: antiquewhite;
     border: solid;
-    border-radius: 2px;
+    border-color: orange;
     margin: 50px;
+
+    flex-basis: 30%;
 }
 
+    #NewsBox h2 {
+        background: radial-gradient(#ff460f, #fee567 90%);
+    }
+
+#WhatsExceedBox {
+    flex-basis: 70%;
+}
 /* >> individual news entry*/
 
 .NewsEntry h3{
