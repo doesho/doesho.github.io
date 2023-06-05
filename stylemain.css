@@ -23,18 +23,13 @@ html * {
     color: #ee5c29;
     text-align: center;
     font-size: 25px;
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 #Banner {
     text-align: center;
     background: radial-gradient(#ff460f, #fee567 90%);
-    padding: 0px;
-    margin: 0px;
-}
-
-#Banner h1{
-    margin: 0px;
+    padding: 20px;
 }
 
 /* options */
@@ -92,6 +87,7 @@ html * {
     margin: 50px;
 
     flex-basis: 30%;
+    height: 300px;
 }
 
     #NewsBox h2 {
@@ -100,7 +96,12 @@ html * {
 
 #WhatsExceedBox {
     flex-basis: 70%;
+    margin-left: 50px;
 }
+#WhatsExceedBox p{
+    text-align: left;
+}
+
 /* >> individual news entry*/
 
 .NewsEntry h3{
