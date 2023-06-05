@@ -57,7 +57,7 @@ html * {
     cursor: pointer;
 }
 
-#customsbutton, #communitybutton, #blogbutton {
+#customsbutton, #communitybutton, #playersbutton, #blogbutton {
     cursor: not-allowed !important;
     background-color: #ef9b7e !important;
 }
@@ -98,6 +98,11 @@ html * {
     flex-basis: 70%;
     margin-left: 50px;
 }
+
+#WhatsExceedBox h2{
+
+}
+
 #WhatsExceedBox p{
     text-align: left;
 }
