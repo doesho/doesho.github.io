@@ -62,21 +62,46 @@ html * {
     background-color: #ef9b7e !important;
 }
 
-/* beneath options, contains newsbox */
+#Body{
+    padding: 50px;
+}
 
-#Body {
+/* div that contains WhatsExceed and newsbox */
+
+#BodyInfo {
     text-align: center;
     display: flex;
 
-    padding: 50px;
     justify-content: space-between;
 }
 
 @media screen and (max-width: 900px){
-    #Body{
+    #BodyInfo{
         display: block;
     }
 }
+
+
+/* What's Exceed? seller*/
+
+#WhatsExceedBox {
+    flex-basis: 70%;
+    margin-left: 50px;
+}
+
+.ExceedSeller {
+    margin-bottom: 50px;
+}
+
+.ExceedSeller h2 {
+    margin: 0px;
+}
+
+.ExceedSeller p {
+    text-align: left;
+    margin-top: 10px;
+}
+
 
 /* whole news box*/
 
@@ -87,25 +112,13 @@ html * {
     margin: 50px;
 
     flex-basis: 30%;
-    height: 300px;
+    height: 50%;
 }
 
     #NewsBox h2 {
         background: radial-gradient(#ff460f, #fee567 90%);
     }
 
-#WhatsExceedBox {
-    flex-basis: 70%;
-    margin-left: 50px;
-}
-
-#WhatsExceedBox h2{
-
-}
-
-#WhatsExceedBox p{
-    text-align: left;
-}
 
 /* >> individual news entry*/
 
@@ -113,21 +126,44 @@ html * {
     font-size: 25px;
     
     padding: 0px;
-    line-height: 0px;
+    margin: 0px;
 }
 
 .NewsEntry h4 {
     padding: 0px;
-    line-height: 0px;
+    margin: 0px;
 }
 
 .NewsEntry p{
     text-indent: 40px;
     text-align: left;
     margin: 20px;
+    margin-bottom: 40px;
 }
 
-footer > div{
+/* rest of the body */
+
+#BodySplash{
+    margin: 0px;
+    text-align: center;
+}
+
+/* FOOTER */
+
+#FooterSplash{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    text-align: center;
+    font-size: 20px;
+}
+
+#FooterSplash p{
+    font-size: 30px;
+}
+
+#FooterContents{
     font-size: 10px;
     text-align: center;
     margin: 0px;
