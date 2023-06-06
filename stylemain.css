@@ -150,22 +150,9 @@ html * {
 
 /* FOOTER */
 
-#FooterSplash{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-
-    text-align: center;
-    font-size: 20px;
-}
-
-#FooterSplash p{
-    font-size: 30px;
-}
-
 #FooterContents{
     font-size: 10px;
     text-align: center;
-    margin: 0px;
+    margin-bottom: 30px;
 }
 
