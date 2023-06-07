@@ -62,7 +62,7 @@ html * {
 }
 
 #Body{
-    padding: 50px;
+    padding: 40px 50px;
 }
 
 /* div that contains WhatsExceed and newsbox */
@@ -74,7 +74,7 @@ html * {
     justify-content: space-between;
 }
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 1000px){
     #BodyInfo{
         display: block;
     }
@@ -107,7 +107,7 @@ html * {
 }
 
 
-/* whole news box*/
+/* whole news box + footer*/
 
 #NewsBox {
     overflow: auto;
@@ -118,19 +118,22 @@ html * {
 
     flex-basis: 30%;
     height: 50%;
+    min-width: 300px;
 }
 
     #NewsBox h2 {
         background: radial-gradient(#ff460f, #fee567 90%);
     }
 
-
 /* >> individual news entry*/
+
+.NewsEntry{
+    margin: 20px;
+}
 
 .NewsEntry h3{
     font-size: 25px;
-    
-    padding: 0px 10px;
+    padding: 0px 0px;
     margin: 0px;
 }
 
@@ -142,8 +145,7 @@ html * {
 .NewsEntry p{
     text-indent: 40px;
     text-align: left;
-    margin: 20px;
-    margin-bottom: 40px;
+    margin-top: 10px;
 }
 
 /* rest of the body */
