@@ -16,12 +16,10 @@ html *{
 
 #Heading {
     color: #483527;
-    background-image: linear-gradient(to bottom right, #ebda66, #dc9471);
+    background: radial-gradient(#ff460f, #fee567 90%);
     text-align: center;
     font-size: 30px;
 }
-
-
 
 .SearchBar{
     display: flex;
