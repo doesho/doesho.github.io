@@ -44,7 +44,6 @@ html * {
 
 .box {
     background-color: #ee5c29;
-    border: none;
     border-radius: 2px;
     color: white;
     text-align: center;
@@ -102,6 +101,11 @@ html * {
     margin-top: 10px;
 }
 
+.LinkList li{
+    display: inline-block;
+    padding: 0px 10px;
+}
+
 
 /* whole news box*/
 
@@ -109,6 +113,7 @@ html * {
     overflow: auto;
     border: solid;
     border-color: orange;
+    border-radius: 4px;
     margin: 50px;
 
     flex-basis: 30%;
@@ -125,7 +130,7 @@ html * {
 .NewsEntry h3{
     font-size: 25px;
     
-    padding: 0px;
+    padding: 0px 10px;
     margin: 0px;
 }
 
