@@ -13,6 +13,11 @@ html * {
     background: #abe4d8;
 }
 
+a {
+    text-decoration: none;
+    color: #44a490;
+}
+
 .tooltip{
     position: relative;
     display: inline-block;
@@ -108,13 +113,20 @@ html * {
     margin-top: 10px;
 }
 
-.LinkList {
+.GamesList li {
+    display: inline-flex;
+    padding: 0px;
 }
+
+.GamesList img{
+    height: 60px;
+    margin: 5px;
+}
+
 
 .LinkList li{
     display: inline-flex;
-    padding: 0px;
-    margin: 0px 10px;
+    margin: 10px;
 }
 
 .LinkList img{
