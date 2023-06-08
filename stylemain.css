@@ -1,6 +1,6 @@
 ﻿/* full page stuff */
 
-@font-face{
+@font-face{ /*this bitch broken*/
     font-family:'MKX Title';
     src:url(content/fonts/MKX_Title.tff)
 }
@@ -11,6 +11,12 @@ html * {
 
 ::selection {
     background: #abe4d8;
+}
+
+.tooltip{
+    position: relative;
+    display: inline-block;
+
 }
 
 /* Top part of the page */
@@ -92,18 +98,29 @@ html * {
     margin-bottom: 50px;
 }
 
-.ExceedSeller h2 {
-    margin: 0px;
-}
+    .ExceedSeller h2 {
+        margin: 0px;
+        background-image: radial-gradient(#dda544, rgba(0, 0, 0, 0) 30%);
+    }
 
 .ExceedSeller p {
     text-align: left;
     margin-top: 10px;
 }
 
+.LinkList {
+}
+
 .LinkList li{
-    display: inline-block;
-    padding: 0px 10px;
+    display: inline-flex;
+    padding: 0px;
+    margin: 0px 10px;
+}
+
+.LinkList img{
+    height: 50px;
+    border: 1px solid orange;
+    border-radius: 5px;
 }
 
 
