@@ -4,3 +4,43 @@
     H4 is for things that have to stand out of normal text but barely, ie. buttons, author name
 */
 
+.SeasonsContainer{
+
+}
+
+/* individual season entry */
+
+.Season h2{ /*season title*/
+    margin: 0px;
+
+}
+
+
+/* season boxes entries */
+
+.SeasonBoxesContainer {
+    display: flex;
+}
+
+.SeasonBox {
+    display: flex;
+    flex-direction: column;
+    background-color: antiquewhite;
+    justify-content: center;
+
+    min-width: 100px;
+    max-width: 150px;
+
+    margin: 20px;
+    padding: 20px;
+}
+
+.SeasonBox h4{
+    margin: 0px;
+    text-align: center;
+}
+
+.SeasonBox ul{
+    padding: 0px;
+    list-style-type: none;
+}
