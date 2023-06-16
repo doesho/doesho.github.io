@@ -4,6 +4,8 @@
     H4 is for things that have to stand out of normal text but barely, ie. buttons, author name
 */
 
+/* this sheet applies to all pages. only exception is index. */
+
 html *{
     font-family: Vollkorn, serif;
 }
