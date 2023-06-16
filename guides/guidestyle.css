@@ -4,13 +4,12 @@
     H4 is for things that have to stand out of normal text but barely, ie. buttons, author name
 */
 
-.SearchBar{
+.SearchBar {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    margin:40px;
-    background-color: antiquewhite;
+    margin: 40px;
+    background: antiquewhite;
 }
 
 .SillyContainer{
@@ -65,7 +64,7 @@
 }
 
 .Choice {
-    background-color: antiquewhite;
+    background: linear-gradient(#fdebcf, #fdfbf0);
     border: 2px solid #ccc;
     padding: 10px;
     height: 180px;
