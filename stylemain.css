@@ -18,10 +18,43 @@ a {
     color: #44a490;
 }
 
-.tooltip{
+a:hover{
+    color: turquoise;
+}
+
+/* tooltip stuff, l99 tooltip is special */
+
+.ToolTip{
     position: relative;
     display: inline-block;
+}
 
+.ToolTip .ToolTipText{
+    visibility: hidden;
+    opacity: 0;
+    width: 100px;
+    background-color: darkcyan;
+    color: white;
+    text-align: center;
+    border-radius: 2px;
+    padding: 5px 0;
+
+    position: absolute;
+    z-index: 1;
+    bottom: 60px;
+    left: 62%;
+    margin-left: -60px;
+}
+
+.ToolTip:hover .ToolTipText{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.2s;
+}
+
+#Level99{
+    background-color: darkgoldenrod;
+    width: 120px;
 }
 
 /* Top part of the page */
@@ -65,6 +98,10 @@ a {
     font-size: 18px;
     margin: 4px 2px;
     cursor: pointer;
+}
+
+.box:hover {
+    color: white !important;
 }
 
 #customsbutton, #communitybutton, #playersbutton, #blogbutton {
@@ -128,12 +165,21 @@ a {
     margin: 10px;
 }
 
+.LinkList:hover img{
+    opacity: 0.5;
+    transition: 0.2s;
+}
+
 .LinkList img{
     height: 50px;
     border: 1px solid orange;
     border-radius: 5px;
 }
 
+.LinkList img:hover{
+    border: 1px solid turquoise;
+    opacity: 1;
+}
 
 /* whole news box + footer*/
 
