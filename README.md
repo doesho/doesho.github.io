@@ -11,5 +11,7 @@ This is a real mess because I don't know web development and I'm learning as I g
 
 ## To Do
 
-1. BEGIN STYLING PAGES. I don't want to throw a bunch of content on before I know how to format it nicely.
-2. CREATE SEARCH FUNCTION. I need a generic search function that will be used for multiple things, but right now certainly guides and players.
+1. FINISH STYLING GUIDE ENTRIES. They're not half bad but they should be comfortably done before adding all the guides in.
+2. NEW PAGE HEADERS. Just make them raster.
+3. NEW FRONT PAGE HEADER. cool character scroll or something behind PMX logo.
+4. BEGIN ANOTHER PAGE. Guides has come along smashingly. Get started on another main page.
