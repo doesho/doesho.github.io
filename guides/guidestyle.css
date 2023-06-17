@@ -76,6 +76,9 @@
 }
 
 .Choice {
+
+    position: relative;
+
     background: linear-gradient(#fdebcf, #fdfbf0);
     border: 2px solid #ccc;
     border-radius: 4px;
@@ -83,6 +86,8 @@
     height: 180px;
     min-width: 400px;
     max-width: 500px;
+
+
 }
 
 .Choice:hover {
@@ -100,12 +105,12 @@
 
 .Choice h4{ /*author or subtitle*/
     margin-top: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .Choice p { /*text body of each choice*/
-    margin: auto;
-    text-indent: 20px;
+    margin: 0px;
+    text-indent: 30px;
 }
 
 .ChoiceTable { /*info table on choice*/
@@ -114,8 +119,12 @@
 }
 
 .Tags{ /*bottom right tags of choice*/
-    display: flex;
-    justify-content: flex-end;
+    align-self: flex-start;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+
+    margin: 0px;
     font-size: 12px;
     color: gray;
 }
