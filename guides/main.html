@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Guides &amp; Strategy | PLAY MORE EXCEED</title>
-    <link rel="icon" type="image/x-icon" href="../content/images/PMX_Favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="../content/icons/PMX_Favicon.ico" />
     <link rel="stylesheet" href="../pagestyle.css" />
     <link rel="stylesheet" href="guidestyle.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <section id="Heading">
         <h1>GUIDES &amp; STRATEGY</h1>
     </section>
@@ -21,15 +22,15 @@
             <a href="../index.html"><b>Return</b></a>
         </div>
         <p>
-            Click a box to be taken to that guide.
+            Click a box to be taken to that guide. The search function reads for every single word in a given entry (not caps sensitive), so you can search by words in the title, description, author name, or tags. <br />
+            <span style="font-size: 20px"><b>New to EXCEED?</b></span> Search <i>Basic</i> to see some guides that teach the fundamentals!
         </p>
     </section>
 
     <div class="SearchBar">
         <form>
-            <label>this bitch broken</label>
-            <input name="SearchInput" id="SearchInput" />
-            <button type="reset"><b>Clear</b></button>
+            <label>Search: </label>
+            <input id="SearchInput" />
         </form>
     </div>
 
@@ -43,7 +44,7 @@
                     <h3>Emogine at a Dead Run</h3>
                     <h4>By: D (Tirankin)</h4>
                     <p>Take a quick look at Emogine’s attacks and boosts, see where her value lies and how each option should be used.</p>
-                    <p class="Tags"><i>Emogine, Character, Basics, Text</i></p>
+                    <p class="Tags"><i>Emogine, Character, Text</i></p>
                 </div>
             </a>
 
@@ -71,7 +72,7 @@
                     <h3>A Guide to Cammy</h3>
                     <h4>By: Viddie</h4>
                     <p>Take a quick look at Cammy's attacks, boosts and UA, their typical uses, and some quick tips.</p>
-                    <p class="Tags"><i>Cammy, Character, Basics, Text</i></p>
+                    <p class="Tags"><i>Cammy, Character, Text</i></p>
                 </div>
             </a>
 
@@ -89,7 +90,7 @@
                     <h3>Jin Kisaragi Guide</h3>
                     <h4>By: Unknown</h4>
                     <p>Take a quick look at Jin's' attacks, boosts and UA, their typical uses, and some quick tips.</p>
-                    <p class="Tags"><i>Jin, Character, Basics, Text</i></p>
+                    <p class="Tags"><i>Jin, Character, Text</i></p>
                 </div>
             </a>
 
@@ -134,5 +135,30 @@
 
     <h2 class="ChoiceSectionTitle">Tier Lists</h2>
 
+    <script>
+        
+        function guideSearch(input) {
+            let filter = input.target.value.toUpperCase();
+            let links = document.querySelectorAll("a.ChoiceLink");
+
+            for (let i = 0; i < links.length; i++) {
+                let link = links[i];
+                let content = link.innerText.toUpperCase();
+
+                if (content.includes(filter)) {
+                    link.style.display = "";
+                } else {
+                    link.style.display = "none";
+                }
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let input = document.getElementById("SearchInput");
+            input.addEventListener("input", guideSearch);
+        });
+    </script>
+
 </body>
+
 </html>
