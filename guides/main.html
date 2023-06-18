@@ -30,10 +30,18 @@
 
     <div class="SearchBar">
         <form>
-            <label class="ToolTip" id="SearchInfo"><img src="../content/icons/hazamashrug.png" width=40px/><span class="ToolTipText">The search function reads every single word in a given entry <i>(title, description, author, tags)</i> and hides entries not containing your input.<br />
-                    Currently, you cannot have multiple search terms at once.<br />
-                    In the future, this will be a dropdown with all tags listed.</span></label>
-            <input id="SearchInput" />
+                <div class="ToolTip" id="SearchInfo">
+                    <img src="../content/icons/hazamashrug.png" width=40 /> 
+                    <p class="ToolTipText">
+                        The search function compares your input to every single word in each guide entry <i>(title, description, author, tags)</i> and hides those not containing your exact input.<br />
+                        Currently, you cannot have multiple search terms at once.<br /> <br />
+                        <u>Tags that aren't obvious:</u><br />
+                        <b>Basics -</b> Guides perfect for beginners! <br />
+                        <b>Engine - </b> About how Exceed works <br />
+                        <b>Meta - </b> About the game but not the gameplay <i>(ie. sales)</i>
+                    </p>
+                </div>
+            <input id="SearchInput" placeholder="Search..." />
         </form>
     </div>
 
@@ -46,7 +54,7 @@
                 <div class="Choice">
                     <h3>Buyer's Guide</h3>
                     <h4>By: Doesho</h4>
-                    <p>A comprehensive guide to all Exceed products with contents, release dates and recent sales prices.</p>
+                    <p>A comprehensive guide to all Exceed products and promos with details, release dates and recent sales prices.</p>
                     <p class="Tags">Exceed, Meta, Text</p>
                 </div>
             </a>
@@ -57,6 +65,15 @@
                     <h4>By: D (Tirankin)</h4>
                     <p>Take a quick look at Emogine’s attacks and boosts, see where her value lies and how each option should be used.</p>
                     <p class="Tags">Emogine, Character, Text</p>
+                </div>
+            </a>
+
+            <a href="https://boardgamegeek.com/thread/2601351/normals-guide-exceeds-basic-options" class="ChoiceLink">
+                <div class="Choice">
+                    <h3>(Unofficial) EXCEED FAQ, Errata &amp; Clarifications</h3>
+                    <h4>By: D (Tirankin)</h4>
+                    <p>This enormous FAQ covers almost every niche ruling and interaction you can imagine.</p>
+                    <p class="Tags">Engine, FAQ, Text</p>
                 </div>
             </a>
 
