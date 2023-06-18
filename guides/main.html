@@ -23,27 +23,28 @@
         </div>
         <p>
             <span style="font-size: 20px"><b>New to EXCEED?</b></span> Search <i>Basics</i> to see some guides that teach the fundamentals! <br />
-            Looking to make a tier list? Check out the tier list section in <a href="../customs/main.html">Custom Content</a>.
-
+            Looking to make a tier list? Check out the tier list section in <a href="../customs/main.html">Custom Content</a>. <br />
+            Pro tip: use MOUSE3 to open a guide in a new tab!
         </p>
     </section>
 
     <div class="SearchBar">
         <form>
-                <div class="ToolTip" id="SearchInfo">
-                    <img src="../content/icons/hazamashrug.png" width=40 /> 
-                    <p class="ToolTipText">
-                        The search function compares your input to every single word in each guide entry <i>(title, description, author, tags)</i> and hides those not containing your exact input.<br />
-                        Currently, you cannot have multiple search terms at once.<br /> <br />
-                        <u>Tags that aren't obvious:</u><br />
-                        <b>Basics -</b> Guides perfect for beginners! <br />
-                        <b>Engine - </b> About how Exceed works <br />
-                        <b>Meta - </b> About the game but not the gameplay <i>(ie. sales)</i>
-                    </p>
-                </div>
+            <div class="ToolTip" id="SearchInfo">
+                <img src="../content/icons/hazamashrug.png" width=40 />
+                <p class="ToolTipText">
+                    The search function compares your input to every single word in each guide entry <i>(title, description, author, tags)</i> and hides those not containing your exact input.<br />
+                    Currently, you cannot have multiple search terms at once.<br /> <br />
+                    <u>Tags that aren't obvious:</u><br />
+                    <b>Basics -</b> Guides perfect for beginners! <br />
+                    <b>Engine - </b> About how Exceed works <br />
+                    <b>Meta - </b> About the game but not the gameplay <i>(ie. sales)</i>
+                </p>
+            </div>
             <input id="SearchInput" placeholder="Search..." />
         </form>
     </div>
+
 
     <h2 class="ChoiceSectionTitle">Text</h2>
 
@@ -100,7 +101,7 @@
                 <div class="Choice">
                     <h3 class="CharName"><img src="../content/icons/char/cammy.jpg" class="CharIcon" />A Guide to Cammy</h3>
                     <h4>By: Viddie</h4>
-                    <p>Take a quick look at Cammy's attacks, boosts and UA, their typical uses, and some quick tips.</p>
+                    <p>Take a look at Cammy's attacks, boosts and UA, discussing their typical uses, and some quick tips.</p>
                     <p class="Tags">Cammy, Character, Text</p>
                 </div>
             </a>
@@ -109,8 +110,26 @@
                 <div class="Choice">
                     <h3 class="CharName"><img src="../content/icons/char/jin.jpg" class="CharIcon" />Jin Kisaragi Guide</h3>
                     <h4>By: Unknown</h4>
-                    <p>Take a quick look at Jin's' attacks, boosts and UA, their typical uses, and some quick tips.</p>
+                    <p>A detailed analysis of Jin's' attacks, boosts and UA, discussing their typical uses, and some quick tips.</p>
                     <p class="Tags">Jin, Character, Text</p>
+                </div>
+            </a>
+
+            <a href="https://boardgamegeek.com/thread/2643236/jin-kisaragi-quickstart-guide" class="ChoiceLink">
+                <div class="Choice">
+                    <h3 class="CharName"><img src="../content/icons/char/jin.jpg" class="CharIcon" />Jin Kisaragi: A Quickstart Guide</h3>
+                    <h4>By: Jay Green</h4>
+                    <p>A concise guide about the mindset of playing Jin, including his tempo and pressure game.</p>
+                    <p class="Tags">Jin, Character, Text</p>
+                </div>
+            </a>
+
+            <a href="https://boardgamegeek.com/thread/2652158/litchi-faye-ling-quickstart-guide" class="ChoiceLink">
+                <div class="Choice">
+                    <h3 class="CharName"><img src="../content/icons/char/litchi.jpg" class="CharIcon" />Litchi Faye Ling: A Quickstart Guide</h3>
+                    <h4>By: Jay Green</h4>
+                    <p>A guide covering Litchi's strategy, opening game, key attacks and Matenbo.</p>
+                    <p class="Tags">Litchi, Character, Text</p>
                 </div>
             </a>
 
@@ -120,6 +139,15 @@
                     <h4>By: Brad Talton</h4>
                     <p>EXCEED Creator Brad Talton himself breaks down the Normals, analyzing each one in meticulous detail.</p>
                     <p class="Tags">Normals, Basics, Text</p>
+                </div>
+            </a>
+
+            <a href="guide/buyersguide.html" class="ChoiceLink">
+                <div class="Choice">
+                    <h3>EXCEED Survival Guide #1 - You Are Not Using Enough Wild Swings!</h3>
+                    <h4>By: Jay Green</h4>
+                    <p>A short and sweet guide about when and how to wild swing (it's 'more often than you think).</p>
+                    <p class="Tags">Basics, Text</p>
                 </div>
             </a>
 
@@ -165,7 +193,7 @@
     <h2 class="ChoiceSectionTitle">Tier Lists</h2>
 
     <script>
-        
+
         function guideSearch(input) {
             let filter = input.target.value.toUpperCase();
             let links = document.querySelectorAll("a.ChoiceLink");
