@@ -103,7 +103,8 @@ a:hover{
 
     .box:hover {
         color: white !important;
-        box-shadow: 0px 0px 0px 4px turquoise inset;
+        box-shadow: 0px 0px 0px 5px turquoise inset;
+        background-color: orange;
         transition: 0.15s;
     }
 
@@ -111,6 +112,7 @@ a:hover{
     cursor: not-allowed !important;
     background-color: lightgray !important;
     border: none;
+    box-shadow: none !important;
 }
 
 #Body{
