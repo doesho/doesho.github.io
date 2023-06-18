@@ -10,7 +10,7 @@
 
     padding: 20px;
     margin: 40px;
-    background: antiquewhite;
+    background: orange;
 }
 
 .SearchBar img{
@@ -23,6 +23,18 @@
     bottom: 50px;
     left: -500%;
 }
+
+#SearchInput {
+    padding: 5px;
+    margin: 5px;
+    border: 2px solid gray;
+    border-radius: 2px;
+}
+
+    #SearchInput:focus {
+        outline: none;
+        border: 2px solid turquoise;
+    }
 
 .SillyContainer{
     display: flex;
