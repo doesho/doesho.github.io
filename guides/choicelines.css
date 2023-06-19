@@ -48,10 +48,9 @@
 }
 
 .Choice h3 { /*title of each choice*/
-    font-size: 30px;
+    font-size: 20px;
     margin-top: auto;
     margin-bottom: auto;
-    line-height: 30px;
 }
 
 .Choice h4{ /*author or subtitle*/
