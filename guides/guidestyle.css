@@ -8,14 +8,19 @@
     display: flex;
     justify-content: center;
 
+    width: 100vw;
     padding: 20px;
-    margin: 40px;
+
     background: orange;
 }
 
 .SearchBar img{
     display: inline-block;
     vertical-align: middle;
+}
+
+#StyleButton {
+    width: 70px;
 }
 
 #SearchInfo .ToolTipText { /* special alteration to tooltiptext for search info tooltip*/
