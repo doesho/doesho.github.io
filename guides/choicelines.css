@@ -21,8 +21,6 @@
     background-image: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,0), #ffaa10);
 }
 
-/*screen size adjustments to choices*/
-
 /* individual choice settings*/
 
 .ChoiceLink {
@@ -32,12 +30,14 @@
 
 .Choice {
     display: flex;
+    flex-direction: column;
     position: relative;
 
     background: linear-gradient(to left, #fdebcf, #fdfbf0);
     border: 2px solid #ccc;
     border-radius: 4px;
-    padding: 10px;
+    padding: 5px;
+    min-width: 900px;
 
 }
 
@@ -47,15 +47,24 @@
     transition: 0.1s;
 }
 
+.ChoiceBody{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin: 0px;
+}
+
 .Choice h3 { /*title of each choice*/
-    font-size: 20px;
+    font-size: 25px;
     margin-top: auto;
     margin-bottom: auto;
 }
 
 .Choice h4{ /*author or subtitle*/
     margin-top: 5px;
-    margin-bottom: 10px;
+    margin-bottom: auto;
+    font-weight: normal;
 }
 
 .Choice p { /*text body of each choice*/
@@ -71,7 +80,7 @@
 .Tags{ /*bottom right tags of choice*/
     align-self: flex-start;
     position: absolute;
-    bottom: 5px;
+    top: 5px;
     right: 10px;
 
     margin: 0px;
