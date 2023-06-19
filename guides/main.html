@@ -5,8 +5,13 @@
     <meta charset="utf-8" />
     <title>Guides &amp; Strategy | PLAY MORE EXCEED</title>
     <link rel="icon" type="image/x-icon" href="../content/icons/PMX_Favicon.ico" />
+
     <link rel="stylesheet" href="../pagestyle.css" />
     <link rel="stylesheet" href="guidestyle.css" />
+
+    <link rel="stylesheet" href="choicelines.css" id="LineSheet" />
+    <link rel="stylesheet" href="choicecubes.css" id="CubeSheet" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
@@ -41,7 +46,11 @@
                     <b>Meta - </b> About the game but not the gameplay <i>(ie. sales)</i>
                 </p>
             </div>
+
             <input id="SearchInput" placeholder="Search..." />
+
+            <button type="button" id="StyleButton">Toggle Style</button>
+
         </form>
     </div>
 
@@ -192,7 +201,7 @@
 
     <h2 class="ChoiceSectionTitle">Tier Lists</h2>
 
-    <script>
+    <script> // search function
 
         function guideSearch(input) {
             let filter = input.target.value.toUpperCase();
@@ -214,6 +223,39 @@
             let input = document.getElementById("SearchInput");
             input.addEventListener("input", guideSearch);
         });
+    </script>
+
+    <script> // style changer
+        const button = document.getElementById("StyleButton");
+        const lines = document.getElementById("LineSheet");
+        const cubes = document.getElementById("CubeSheet");
+        let styleStateIndex = 0;
+
+        if (cubes && lines) {
+            cubes.disabled = true;
+        }
+
+        button.addEventListener("click", styleSwitch);
+
+        function styleSwitch() {
+
+            if (styleStateIndex > 1) {
+                styleStateIndex = 0;
+            }
+
+            switch (styleStateIndex) {
+                case 0:
+                    lines.disabled = true;
+                    cubes.disabled = false;
+                    break;
+                case 1:
+                    cubes.disabled = true;
+                    lines.disabled = false;
+                    break;
+            }
+            styleStateIndex++;
+        }
+
     </script>
 
 </body>
