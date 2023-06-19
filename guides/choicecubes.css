@@ -49,18 +49,14 @@
 }
 
 .Choice {
-
     position: relative;
-
-    background: linear-gradient(#fdebcf, #fdfbf0);
+    background: linear-gradient(#fdfbf0, #fdebcf);
     border: 2px solid #ccc;
     border-radius: 4px;
     padding: 10px;
     height: 180px;
     min-width: 400px;
     max-width: 500px;
-
-
 }
 
 .Choice:hover {
