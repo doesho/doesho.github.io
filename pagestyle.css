@@ -4,7 +4,7 @@
     H4 is for things that have to stand out of normal text but barely, ie. buttons, author name
 */
 
-/* this sheet applies to all pages. only exception is index. */
+/* this sheet applies to all pages, except the main page index.html. */
 
 html *{
     font-family: Vollkorn, serif;
@@ -30,15 +30,49 @@ a {
 
 /* side nav bar */
 
-#SideNavBar {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
+#SideNavOpener{
+    position: fixed;
+    top: 10px;
+    left: 10px;
     z-index: 1;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+
+    opacity: 0.3;
+}
+
+#SideNavOpener img{
+    width: 30px;
+}
+
+#SideNavOpener:hover{
+    opacity: 1;
+
+    transition: 0.05s;
+    cursor: pointer;
+}
+
+#SideNavBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    overflow-x: hidden;
+
     align-content: center;
-    width: 200px;
+    width: 0px;
     height: 100%;
-    background: black;
+    background: white;
+
+    transition: 0.05s;
+}
+
+#SideNavBarContents {
+    display: flex;
+    flex-direction: column;
+
+    padding: 10px;
+    min-width: 80px;
 }
 
 /* tooltips */
