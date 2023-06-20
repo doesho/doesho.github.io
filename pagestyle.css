@@ -28,6 +28,19 @@ a {
     font-size: 30px;
 }
 
+/* side nav bar */
+
+#SideNavBar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    align-content: center;
+    width: 200px;
+    height: 100%;
+    background: black;
+}
+
 /* tooltips */
 
 .ToolTip {
