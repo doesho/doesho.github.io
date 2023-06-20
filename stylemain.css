@@ -64,15 +64,15 @@ a:hover{
     justify-content: center;
     flex-direction: column;
 
-    color: #ee5c29;
+    background: radial-gradient(#ff460f, #fee567 90%);
     text-align: center;
     font-size: 25px;
-    margin-top: 60px;
+    padding-top: 50px;
 }
 
 #Banner {
     text-align: center;
-    background: radial-gradient(#ff460f, #fee567 90%);
+
     padding: 20px;
 }
 
