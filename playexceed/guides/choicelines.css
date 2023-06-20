@@ -26,6 +26,7 @@
 .ChoiceLink {
     text-decoration: none;
     color: black;
+    min-width: 800px;
 }
 
 .Choice {
@@ -37,8 +38,6 @@
     border: 2px solid #ccc;
     border-radius: 4px;
     padding: 5px;
-    min-width: 900px;
-
 }
 
 .Choice:hover {
@@ -72,11 +71,6 @@
     text-indent: 30px;
 }
 
-.ChoiceTable { /*info table on choice*/
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .Tags{ /*bottom right tags of choice*/
     align-self: flex-start;
     position: absolute;
@@ -86,10 +80,4 @@
     margin: 0px;
     font-size: 12px;
     color: gray;
-}
-
-/* >>>> Text choice options*/
-
-.TextChoiceContainer {
-
 }
