@@ -1,0 +1,24 @@
+﻿/* full page stuff */
+
+@font-face{ /*this bitch broken*/
+    font-family:'MKX Title';
+    src:url(content/fonts/MKX_Title.tff)
+}
+
+html * {
+    font-family: Vollkorn, serif;
+    background-color: #715a46;
+}
+
+::selection {
+    background: #8f786b;
+}
+
+a {
+    text-decoration: none;
+    color: rosybrown;
+}
+
+a:hover{
+    color: tan;
+}
