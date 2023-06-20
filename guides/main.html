@@ -14,21 +14,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+
 </head>
+
 <body>
+
 
     <section id="Heading">
         <h1>GUIDES &amp; STRATEGY</h1>
     </section>
 
-    <button type="button" id="SideNavButton"><img src="../content/icons/XFS.ico" /></button>
+    <!-- side nav bar! -->
 
+    <button type="button" id="SideNavOpener"><img src="../content/icons/XFS.ico" /></button>
     <div id="SideNavBar">
-        <div>
-            <a href="../index.html">Main</a>
+        <div id="SideNavBarContents">
+            <button type="button" id="SideNavCloser"><<</button>
+            <a href="../index.html">Home</a>
+            <a href="../customs/main.html">Custom Content</a>
+            <a href="#" id="CurrentPage">Guides &amp; Strategy</a>
+            <a href="../community/main.html">Community &amp; Events</a>
             <a href="../players/main.html">Players</a>
+            <a href="../blog/main.html">Blog</a>
         </div>
     </div>
+
+    <!-- rest of the content below here -->
 
     <section id="Body">
         <p>
@@ -37,8 +49,6 @@
             Pro tip: use MOUSE3 to open a guide in a new tab!
         </p>
     </section>
-
-
 
     <div class="SearchBar">
         <form>
@@ -61,6 +71,8 @@
         </form>
     </div>
 
+
+    <!-- choices section -->
 
     <h2 class="ChoiceSectionTitle">Text</h2>
 
@@ -237,6 +249,8 @@
 
     <h2 class="ChoiceSectionTitle">Tier Lists</h2>
 
+    <script src="../sidenavbar.js"></script>
+
     <script>
         // search function
 
@@ -301,8 +315,6 @@
         }
 
     </script>
-
-
 </body>
 
 </html>
