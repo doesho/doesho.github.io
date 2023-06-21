@@ -4,45 +4,12 @@
     H4 is for things that have to stand out of normal text but barely, ie. buttons, author name
 */
 
-.SearchBar {
-    display: flex;
-    justify-content: center;
-
-    width: 100vw;
-    padding: 20px;
-
-    background: antiquewhite;
-}
-
-.SearchBar img{
-    display: inline-block;
-    vertical-align: middle;
-}
-
-#StyleButton {
-    width: 70px;
-}
-
-#SearchInfo .ToolTipText { /* special alteration to tooltiptext for search info tooltip*/
-    width: 500px;
-    bottom: 50px;
-    left: -500%;
-}
-
-#SearchInput {
-    padding: 5px;
-    margin: 5px;
-    border: 2px solid gray;
-    border-radius: 2px;
-}
-
-    #SearchInput:focus {
-        outline: none;
-        border: 2px solid turquoise;
-    }
-
 .SillyContainer{
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
+}
+
+.ChoiceLink:hover{ /* prevent choice text from turning due to pagestyle a:hover */
+    color: black;
 }
