@@ -12,6 +12,5 @@ This is a real mess because I don't know web development and I'm learning as I g
 ## To Do
 
 1. FINISH STYLING GUIDE ENTRIES. They're not half bad but they should be comfortably done before adding all the guides in.
-2. NEW PAGE HEADERS. Just make them raster.
-3. NEW FRONT PAGE HEADER. cool character scroll or something behind PMX logo.
-4. BEGIN ANOTHER PAGE. Guides has come along smashingly. Get started on another main page.
+2. NEW FRONT PAGE HEADER. cool character scroll or something behind PMX logo.
+3. BEGIN ANOTHER PAGE. Guides has come along smashingly. Get started on another main page.
