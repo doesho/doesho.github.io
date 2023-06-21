@@ -63,8 +63,10 @@ a:hover{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    filter: drop-shadow(0 0 0.5rem #72410d);
-    background: radial-gradient(#ff460f, #fee567 80%);
+
+    border-bottom: 1px solid gray;
+    filter: drop-shadow(0 0 1rem antiquewhite);
+    background: antiquewhite;
     text-align: center;
     font-size: 25px;
     padding-top: 50px;
@@ -103,7 +105,6 @@ a:hover{
 
     .box:hover {
         color: white !important;
-        box-shadow: 0px 0px 0px 5px turquoise inset;
         background-color: orange;
         transition: 0.15s;
     }
@@ -112,6 +113,7 @@ a:hover{
     cursor: not-allowed !important;
     border: none;
     box-shadow: none !important;
+    background-color: lightgray;
 }
 
 #Body{
@@ -147,7 +149,7 @@ a:hover{
 
     .ExceedSeller h2 {
         margin: 0px;
-        background-image: radial-gradient(#ffb642, rgba(0, 0, 0, 0) 30%);
+        background-image: radial-gradient(orange, rgba(0, 0, 0, 0) 40%);
     }
 
 .ExceedSeller p {
@@ -241,6 +243,6 @@ a:hover{
     text-align: center;
     padding-bottom: 20px;
     padding-top: 20px;
-    background: #f4f4f4
+    background: antiquewhite;
 }
 
