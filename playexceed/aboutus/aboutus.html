@@ -4,15 +4,33 @@
 <head>
     <meta charset="utf-8" />
     <title>Credits | PLAY MORE EXCEED</title>
-    <link rel="icon" type="image/x-icon" href="content/images/PMX_Favicon.ico" />
-    <link rel="stylesheet" href="pagestyle.css" />
+    <link rel="icon" type="image/x-icon" href="../content/icons/PMX_Favicon.ico" />
+
     <link rel="stylesheet" href="aboutstyle.css" />
+    <link rel="stylesheet" href="../pagestyle.css" />
+    <link rel="stylesheet" href="../sidebarstyle.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vollkorn&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
+    <button type="button" id="SideBarOpener"><img src="../content/icons/PMX_Favicon.ico" /></button>
+    <div id="SideBar">
+        <div id="SideBarContents">
+            <button type="button" id="SideBarCloser"><<</button>
+            <a href="../index.html">Home</a>
+            <a href="../customs/main.html">Custom Content</a>
+            <a href="../guides/main.html">Guides &amp; Strategy</a>
+            <a href="../community/main.html">Community &amp; Events</a>
+            <a href="../players/main.html">Players</a>
+            <a href="../blog/main.html">Blog</a>
+        </div>
+    </div>
+
+    <!-- content --> 
 
     <section id="Heading">
         <h1>FAQ &amp; About</h1>
@@ -42,7 +60,7 @@
 
     </section>
 
-
+    <script src="../content/scripts/sidebar.js"></script>
 
 </body>
 </html>
