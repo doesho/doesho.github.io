@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" href="../pagestyle.css" />
     <link rel="stylesheet" href="guidestyle.css" />
+
+    <link rel="stylesheet" href="../searchbarstyle.css" />
     <link rel="stylesheet" href="choicelines.css" id="LineSheet" />
     <link rel="stylesheet" href="choicecubes.css" id="CubeSheet" />
     <link rel="stylesheet" href="../sidebarstyle.css" id="SideBarSheet" />
@@ -58,7 +60,7 @@
                     <u>Tags that aren't obvious:</u><br />
                     <b>Basics -</b> Guides perfect for beginners! <br />
                     <b>Engine - </b> About how Exceed works <br />
-                    <b>Meta - </b> About the game but not the gameplay <i>(ie. sales)</i>
+                    <b>Meta - </b> About the game but not the gameplay <i>(ie. sales, lore)</i>
                 </p>
             </div>
 
@@ -99,13 +101,24 @@
                 </div>
             </a>
 
-            <a href="https://boardgamegeek.com/thread/2601351/normals-guide-exceeds-basic-options" class="ChoiceLink">
+            <a href="https://docs.google.com/document/d/1AgWn96Q0rpO43w5GEsQHFwKgRAmOtnBczFzIVennyu4/edit" class="ChoiceLink">
                 <div class="Choice">
                     <h3>(Unofficial) EXCEED FAQ, Errata &amp; Clarifications</h3>
                     <div class="ChoiceBody">
                         <h4>by D (Tirankin)</h4>
                         <p>This enormous FAQ covers almost every niche ruling and interaction you can imagine.</p>
                         <p class="Tags">Engine, FAQ, Text</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://docs.google.com/document/d/1BKaMzCjgnJQqZV8qCjiazz_jCq4XaoHfaPgzht42R4Y/edit#heading=h.2rgfbsry9m3y" class="ChoiceLink">
+                <div class="Choice">
+                    <h3>(Unofficial) Exceed Lore Dumps</h3>
+                    <div class="ChoiceBody">
+                        <h4>by D (Tirankin)</h4>
+                        <p>A compilation of lore for each character through S5. </p>
+                        <p class="Tags">Meta, Text</p>
                     </div>
                 </div>
             </a>
@@ -189,7 +202,7 @@
                 </div>
             </a>
 
-            <a href="guide/buyersguide.html" class="ChoiceLink">
+            <a href="https://boardgamegeek.com/thread/1689528/exceed-survival-guide-1-you-are-not-using-enough-w" class="ChoiceLink">
                 <div class="Choice">
                     <h3>EXCEED Survival Guide #1 - You Are Not Using Enough Wild Swings!</h3>
                     <div class="ChoiceBody">
@@ -246,35 +259,12 @@
 
 
 
-    <script src="../sidebar.js"></script>
+    <script src="../content/scripts/sidebar.js"></script>
+
+    <script src="../content/scripts/search.js"></script>
 
     <script>
-        // search function
-
-        function guideSearch(input) {
-            let filter = input.target.value.toUpperCase();
-            let links = document.querySelectorAll("a.ChoiceLink");
-
-            for (let i = 0; i < links.length; i++) {
-                let link = links[i];
-                let content = link.innerText.toUpperCase();
-
-                if (content.includes(filter)) {
-                    link.style.display = "";
-                } else {
-                    link.style.display = "none";
-                }
-            }
-        }
-
-        document.addEventListener("DOMContentLoaded", function () {
-            let input = document.getElementById("SearchInput");
-            input.addEventListener("input", guideSearch);
-        });
-    </script>
-
-    <script>
-        // style changer
+        // style changer. make generic so it can be its own .js
         const button = document.getElementById("StyleButton");
         const lines = document.getElementById("LineSheet");
         const cubes = document.getElementById("CubeSheet");
