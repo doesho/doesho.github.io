@@ -8,10 +8,10 @@
 
 .ChoiceContainer {
     font-family: Vollkorn, serif;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    display: grid;
+    grid-gap: 15px;
 
+    width: 1200px;
     margin-left: 30px;
     margin-right: 30px;
 }
@@ -24,9 +24,9 @@
 /* individual choice settings*/
 
 .ChoiceLink {
+    display: block;
     text-decoration: none;
     color: black;
-    min-width: 800px;
 }
 
 .Choice {
