@@ -4,7 +4,7 @@
     H4 is for things that have to stand out of normal text but barely, ie. buttons, author name
 */
 
-/* this sheet applies to all pages, except the main page index.html. */
+/* this sheet applies to all pages, though pages also have their own specialized sheet. */
 
 html *{
     font-family: Vollkorn, serif;
@@ -19,6 +19,10 @@ a {
     color: #44a490;
 }
 
+a:hover {
+    color: turquoise;
+}
+
 /* Top of the page */
 
 #Heading {
@@ -28,7 +32,7 @@ a {
     font-size: 30px;
 }
 
-/* side nav bar */
+/* side nav bar*/
 
 #SideBarOpener{
     position: fixed;
@@ -42,7 +46,7 @@ a {
 }
 
 #SideBarOpener img{
-    width: 50px;
+    width: 30px;
 }
 
 #SideBarOpener:hover{
@@ -116,8 +120,7 @@ a {
 /* Other stuff */
 
 #Body {
-    margin-left: 50px;
-    margin-right: 100px;
+    padding: 40px 50px;
 }
 
 footer{
