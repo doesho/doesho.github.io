@@ -30,29 +30,29 @@ a {
 
 /* side nav bar */
 
-#SideNavOpener{
+#SideBarOpener{
     position: fixed;
     top: 10px;
-    left: 10px;
+    left: 20px;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: white;
     border: none;
 
-    opacity: 0.3;
+    opacity: 0.2;
 }
 
-#SideNavOpener img{
-    width: 30px;
+#SideBarOpener img{
+    width: 50px;
 }
 
-#SideNavOpener:hover{
+#SideBarOpener:hover{
     opacity: 1;
 
     transition: 0.05s;
     cursor: pointer;
 }
 
-#SideNavBar {
+#SideBar { /* behavior while closed. open behavior is in sidebarstyle.css */
     position: fixed;
     top: 0;
     left: 0;
@@ -67,12 +67,16 @@ a {
     transition: 0.05s;
 }
 
-#SideNavBarContents {
+#SideBarContents {
     display: flex;
     flex-direction: column;
 
     padding: 10px;
     min-width: 80px;
+}
+
+#CurrentPage{
+    color: gray;
 }
 
 /* tooltips */
