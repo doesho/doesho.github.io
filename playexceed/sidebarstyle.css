@@ -1,4 +1,21 @@
 ﻿/* full page stuff */
 
 #SideBar{
+    z-index: 2;
+}
+
+#SideBarCloser{
+
+}
+
+#SideBarContents {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+
+    height: 80%;
+    width: 100px;
+    background-color: antiquewhite;
+}
 }
