@@ -5,14 +5,12 @@ const closer = document.getElementById("SideBarCloser");
 opener.addEventListener("click", openSideBar);
 closer.addEventListener("click", closeSideBar);
 
-function openSideBar() {
-    sideBarDiv.style.width = "100px";
-    sideBarDiv.style.padding = "10px";
+function openSideBar() { //width set auto, becomes child width (sidebarcontents in sidebarstyle.css)
+    sideBarDiv.style.width = "auto";
     sideBarDiv.style.borderRight = "1px solid gray";
 }
 
-function closeSideBar() {
-    sideBarDiv.style.width = "0px";
-    sideBarDiv.style.padding = "0px";
-    sideBarDiv.style.borderRight = "none";
+function closeSideBar() { //resets values to pagestyle.css values
+    sideBarDiv.style.width = "";
+    sideBarDiv.style.borderRight = "";
 }
