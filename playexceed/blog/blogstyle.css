@@ -4,14 +4,7 @@
     H4 is for things that have to stand out of normal text but barely, ie. buttons, author name
 */
 
-.SearchBar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    margin:40px;
-    background-color: antiquewhite;
-}
+/* this handles "blog/main.html". "blogentrystyle.css" handles blog posts */
 
 .SillyContainer{
     display: flex;
