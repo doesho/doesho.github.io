@@ -38,7 +38,7 @@ a:hover {
     position: fixed;
     top: 10px;
     left: 20px;
-    z-index: 1;
+    z-index: 2;
     background: linear-gradient(to right, antiquewhite 60%, rgba(0,0,0,0));
     border: none;
 
@@ -119,8 +119,13 @@ a:hover {
 
 /* Other stuff */
 
-#Body {
-    padding: 40px 50px;
+.Body {
+    padding: 10px 50px;
+}
+
+.UniqueBody{
+    /* dont put anything here. unquebody rules should be in the page's sheet
+       since what they contain is unique to that page */
 }
 
 footer{

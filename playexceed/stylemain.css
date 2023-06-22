@@ -175,6 +175,10 @@
 
 /* rest of the body */
 
+.UniqueBody {
+    padding: 40px 50px;
+}
+
 #BodySplash{
     margin: 0px;
     text-align: center;

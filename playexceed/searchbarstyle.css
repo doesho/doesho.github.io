@@ -1,12 +1,13 @@
-﻿.SearchBar {
+﻿#SearchBar {
     display: flex;
     justify-content: center;
     width: 100%;
     padding: 20px 0px;
     background: antiquewhite;
+    border: 1px solid gray;
 }
 
-    .SearchBar img {
+    #SearchBar img {
         display: inline-block;
         vertical-align: middle;
     }
@@ -35,5 +36,13 @@
 
 .sticky{ /* this class is applied by search.js to make it sticky, is not on by default */
     position: fixed;
+    padding: 3px 0px !important;
     top: 0;
+    z-index: 1;
+
+    transition: 0.2s;
+}
+
+.sticky + .UniqueBody{
+    margin-top: 100px;
 }

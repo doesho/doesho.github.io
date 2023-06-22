@@ -4,7 +4,7 @@
     H4 is for things that have to stand out of normal text but barely, ie. buttons, author name
 */
 
-.SillyContainer{
+.UniqueContainer{
     display: flex;
     justify-content: center;
     margin-bottom: 30px;

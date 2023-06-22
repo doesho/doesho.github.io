@@ -1,4 +1,4 @@
-//core search functionality
+//core search functionality. change style of matches?
 
 function funcSearch(input) {
     let filter = input.target.value.toUpperCase();
@@ -21,15 +21,15 @@ document.addEventListener("DOMContentLoaded", function () {
     input.addEventListener("input", funcSearch);
 });
 
-//sticky functionality. it is returning searchbar as undefined.
+//sticky functionality. rewrite to search for all class "canstick" elements?
 
-let searchbar = document.getElementsByClassName("SearchBar");
-let stickpoint = 100;
+let searchbar = document.getElementById("SearchBar");
+let stickpoint = searchbar.offsetTop;
 
 window.onscroll = function () { funcSticky() };
 
 function funcSticky() {
-    if (window.pageYOffset > stickpoint) {
+    if (window.pageYOffset > (stickpoint + 20)) {
         searchbar.classList.add("sticky");
     } else {
         searchbar.classList.remove("sticky");
