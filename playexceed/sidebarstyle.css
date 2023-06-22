@@ -5,7 +5,7 @@
 }
 
 #SideBarCloser{
-
+    margin-bottom: 20px;
 }
 
 #SideBarContents {
@@ -14,9 +14,14 @@
     justify-content: space-between;
     padding: 20px;
 
-    height: 80%;
+    height: 50%;
     width: 100px;
     background-color: antiquewhite;
+}
+
+#SideBarContents a{
+    margin: 5px 0px;
+    line-height: 20px;
 }
 
 #CurrentPage{
