@@ -18,7 +18,7 @@
 
 #SearchInfo .ToolTipText { /* special alteration to tooltiptext for search info tooltip*/
     width: 500px;
-    bottom: 50px;
+    bottom: 60%;
     left: -500%;
 }
 
