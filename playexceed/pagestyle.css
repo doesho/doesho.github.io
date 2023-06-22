@@ -26,10 +26,10 @@ a:hover {
 /* Top of the page */
 
 #Heading {
-    color: black;
-    background: antiquewhite;
     text-align: center;
     font-size: 30px;
+
+    background: radial-gradient(orange 50%, rgba(0,0,0,0));
 }
 
 /* side nav bar*/
