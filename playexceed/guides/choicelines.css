@@ -46,6 +46,11 @@
     transition: 0.1s;
 }
 
+.ChoiceHead{
+    display: flex;
+    flex-direction: row;
+}
+
 .ChoiceBody{
     display: flex;
     flex-direction: row;
