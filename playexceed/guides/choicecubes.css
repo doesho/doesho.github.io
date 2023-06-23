@@ -51,7 +51,7 @@
 .Choice {
     position: relative;
     background: linear-gradient(#fdfbf0, #fdebcf);
-    border: 2px solid #ccc;
+    border: 1px solid #ccc;
     border-radius: 4px;
     padding: 10px;
     height: 180px;
@@ -61,12 +61,12 @@
 
 .Choice:hover {
     box-shadow: 0px 0px 0px 2px turquoise inset;
-    border: 2px solid turquoise;
+    border: 1px solid turquoise;
     transition: 0.1s;
 }
 
 .Choice h3 { /*title of each choice*/
-    font-size: 30px;
+    font-size: 25px;
     margin-top: auto;
     margin-bottom: auto;
     line-height: 30px;
