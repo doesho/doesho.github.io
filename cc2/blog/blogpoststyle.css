@@ -1,0 +1,27 @@
+﻿/* full page stuff */
+
+html * {
+    font-family: Vollkorn, serif;
+    background-color: #715a46;
+}
+
+::selection {
+    background: #8f786b;
+}
+
+h1 {
+    color: #c0ab99;
+}
+
+p {
+    color: #c0ab99;
+}
+
+a {
+    text-decoration: none;
+    color: rosybrown;
+}
+
+a:hover{
+    color: tan;
+}
