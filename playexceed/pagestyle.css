@@ -29,7 +29,6 @@ a:hover {
 #body { /*contains the whole page ofc*/
     padding: 0px;
     margin: 0px;
-    background-color: #fff9f4;
 }
 
 #Heading {
@@ -40,7 +39,7 @@ a:hover {
 }
 
 .TextBody {
-    background-color: antiquewhite;
+    background-color: #fdebcf;
     padding-bottom: 1px;
 }
 
