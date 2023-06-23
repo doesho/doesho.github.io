@@ -6,6 +6,7 @@
 
 /* this sheet applies to all pages, though pages also have their own specialized sheet. */
 
+
 html *{
     font-family: Vollkorn, serif;
 }
@@ -25,59 +26,31 @@ a:hover {
 
 /* Top of the page */
 
-#Heading {
-    text-align: center;
-    font-size: 30px;
-    margin: 0px;
-
-    background: radial-gradient(orange 50%, rgba(0,0,0,0));
-}
-
-#body {
+#body { /*contains the whole page ofc*/
     padding: 0px;
     margin: 0px;
     background-color: #fff9f4;
 }
 
-/* side nav bar*/
-
-#SideBarOpener{
-    position: fixed;
-    top: 10px;
-    left: 20px;
-    z-index: 2;
-    background: linear-gradient(to right, antiquewhite 60%, rgba(0,0,0,0));
-    border: none;
-
-    opacity: 0.4;
+#Heading {
+    text-align: center;
+    font-size: 40px;
+    background: radial-gradient(orange 50%, rgba(0,0,0,0));
+    margin: 0px;
 }
 
-#SideBarOpener img{
-    width: 30px;
-}
-
-#SideBarOpener:hover{
-    opacity: 1;
-
-    transition: 0.05s;
-    cursor: pointer;
-}
-
-#SideBar { /* parent container that hides & holds actual sidebar. real styling is in sidebarstyle.css */
-    position: fixed;
-    top: 0;
-    left: 0;
-    overflow-x: hidden;
-
-    align-content: center;
-    width: 0px;
-    height: 100%;
+.TextBody {
     background-color: antiquewhite;
-    transition: 0.05s;
+    padding-bottom: 1px;
 }
 
-#CurrentPage{
-    color: gray;
+.TextBody p{
+    padding: 0px 50px;
+}
+
+.UniqueBody {
+    /* dont put anything here. uniquebody rules should be in the page's sheet
+       since what they contain is unique to that page */
 }
 
 /* tooltips */
@@ -125,15 +98,6 @@ a:hover {
 }
 
 /* Other stuff */
-
-.Body {
-    padding: 10px 50px;
-}
-
-.UniqueBody{
-    /* dont put anything here. uniquebody rules should be in the page's sheet
-       since what they contain is unique to that page */
-}
 
 footer{
     text-align: center;
