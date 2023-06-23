@@ -1,4 +1,43 @@
-﻿/* full page stuff */
+﻿/* side bar opener */
+
+#SideBarOpener {
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    z-index: 2;
+    background: rgba(0,0,0,0);
+    border: none;
+    opacity: 0.4;
+}
+
+    #SideBarOpener img {
+        width: 30px;
+    }
+
+    #SideBarOpener:hover {
+        opacity: 1;
+        transition: 0.05s;
+        cursor: pointer;
+    }
+
+#SideBar { /* parent container that hides & holds actual sidebar. real styling is in sidebarstyle.css */
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    align-content: center;
+    width: 0px;
+    height: 100%;
+    background-color: antiquewhite;
+    transition: 0.05s;
+}
+
+#CurrentPage {
+    color: gray;
+}
+
+
+/* full page stuff */
 
 #SideBar{
     z-index: 3;
