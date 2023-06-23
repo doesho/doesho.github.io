@@ -4,7 +4,7 @@
     width: 100%;
     padding: 20px 0px;
     background: antiquewhite;
-    border: 1px solid gray;
+    border-bottom: 1px solid gray;
 }
 
     #SearchBar img {
@@ -16,7 +16,7 @@
     width: 70px;
 }
 
-#SearchInfo .ToolTipText { /* special alteration to tooltiptext for search info tooltip*/
+#SearchInfo .ToolTipText { /* special alteration to tooltiptext for search info tooltip. make this work upside down */
     width: 500px;
     bottom: 60%;
     left: -500%;
