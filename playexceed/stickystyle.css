@@ -2,7 +2,7 @@
     position: fixed;
     padding: 3px 0px !important;
     top: 0;
-    z-index: 96;
+    z-index: 90;
 
     transition: 0.2s;
 }
@@ -14,7 +14,7 @@
 .sticky.ChoiceSectionTitle{
     position: fixed;
     top: 30px;
-    z-index: 97;
+    z-index: 90;
     background: linear-gradient(to right, orange 70%, rgba(0,0,0,0));
     padding-right: 40px;
     text-indent: 40px;
