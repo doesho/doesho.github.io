@@ -1,26 +1,26 @@
 ﻿/* side bar opener */
 
-#SideBarOpener {
+#SideNavOpener {
     position: fixed;
     top: 10px;
     left: 20px;
-    z-index: 2;
+    z-index: 98;
     background: rgba(0,0,0,0);
     border: none;
     opacity: 0.4;
 }
 
-    #SideBarOpener img {
+    #SideNavOpener img {
         width: 30px;
     }
 
-    #SideBarOpener:hover {
+    #SideNavOpener:hover {
         opacity: 1;
         transition: 0.05s;
         cursor: pointer;
     }
 
-#SideBar { /* parent container that hides & holds actual sidebar. real styling is in sidebarstyle.css */
+#SideNav { /* parent container that hides & holds actual SideNav. real styling is in sidebarstyle.css */
     position: fixed;
     top: 0;
     left: 0;
@@ -39,28 +39,29 @@
 
 /* full page stuff */
 
-#SideBar{
-    z-index: 3;
+#SideNav{
+    z-index: 99;
 }
 
-#SideBarCloser{
+#SideNavCloser{
     margin-bottom: 20px;
+    background-color: turquoise;
+    border: 0px;
 }
 
-#SideBarContents {
+#SideNavContents {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     padding: 20px;
 
-    height: 50%;
-    width: 100px;
+    height: 50px;
+    width: 120px;
     background-color: antiquewhite;
 }
 
-#SideBarContents a{
-    margin: 5px 0px;
-    line-height: 20px;
+#SideNavContents a{
+    margin: 10px 0px;
+    line-height: 18px;
 }
 
 #CurrentPage{
