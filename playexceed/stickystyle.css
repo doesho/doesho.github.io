@@ -1,0 +1,27 @@
+﻿.sticky#SearchBar { /* this class is applied by search.js to make it sticky, is not on by default */
+    position: fixed;
+    padding: 3px 0px !important;
+    top: 0;
+    z-index: 96;
+
+    transition: 0.2s;
+}
+
+.sticky + .UniqueBody {
+    margin-top: 65px;
+}
+
+.sticky.ChoiceSectionTitle{
+    position: fixed;
+    top: 30px;
+    z-index: 97;
+    background: linear-gradient(to right, orange 70%, rgba(0,0,0,0));
+    padding-right: 40px;
+    text-indent: 40px;
+
+    transition: 0.1s;
+}
+
+.sticky + .ChoiceContainer{
+    margin-top: 70px;
+}
