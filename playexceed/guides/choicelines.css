@@ -10,10 +10,6 @@
     font-family: Vollkorn, serif;
     display: grid;
     grid-gap: 15px;
-
-    width: 1200px;
-    margin-left: 30px;
-    margin-right: 30px;
 }
 
 .ChoiceSectionTitle {
@@ -21,34 +17,43 @@
     background-image: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,0), #ffaa10);
 }
 
+
 /* individual choice settings*/
 
 .ChoiceLink {
     display: block;
     text-decoration: none;
     color: black;
+    margin-left: 50px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: linear-gradient(to left, #fdebcf 20%, #fdfbf0);
+    padding: 5px;
+    min-width: 600px;
 }
+
+    .ChoiceLink:hover {
+        box-shadow: 0px 0px 0px 2px turquoise inset !important;
+        border: 1px solid turquoise !important;
+        transition: 0.1s;
+    }
 
 .Choice {
     display: flex;
     flex-direction: column;
     position: relative;
 
-    background: linear-gradient(to left, #fdebcf 20%, #fdfbf0);
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 5px;
 }
 
-.Choice:hover {
-    box-shadow: 0px 0px 0px 2px turquoise inset;
-    border: 1px solid turquoise;
-    transition: 0.1s;
+.Choice h3 { /*title of each choice*/
+    font-size: 22px;
+    margin: 0px;
+    z-index: 2;
 }
 
 .ChoiceHead{
     display: flex;
-    flex-direction: row;
+    margin-bottom: 10px;
 }
 
 .ChoiceBody{
@@ -59,23 +64,24 @@
     margin: 0px;
 }
 
-.Choice h3 { /*title of each choice*/
-    font-size: 22px;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
 .Choice h4{ /*author or subtitle*/
-    margin-top: 5px;
-    margin-bottom: auto;
     font-weight: normal;
     font-size: 15px;
+    margin: 0px 5px 0px 0px;
+    white-space: nowrap;
 }
 
-.Choice p { /*text body of each choice*/
+.ChoiceHead p{
+    font-family: 'Times New Roman', Times, serif;
+    text-indent: 5px;
+    font-size: 10px !important;
+    align-self: center;
+}
+
+.Choice p{ /*text body of each choice*/
     margin: 0px;
-    text-indent: 30px;
     font-size: 15px;
+    text-align: right;
 }
 
 .Tags{ /*bottom right tags of choice. */
