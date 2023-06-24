@@ -4,7 +4,7 @@
     position: fixed;
     top: 10px;
     left: 20px;
-    z-index: 98;
+    z-index: 96;
     background: rgba(0,0,0,0);
     border: none;
     opacity: 0.4;
@@ -20,7 +20,7 @@
         cursor: pointer;
     }
 
-#SideNav { /* parent container that hides & holds actual SideNav. real styling is in sidebarstyle.css */
+#SideNav {
     position: fixed;
     top: 0;
     left: 0;
@@ -40,7 +40,7 @@
 /* full page stuff */
 
 #SideNav{
-    z-index: 99;
+    z-index: 97;
 }
 
 #SideNavCloser{
@@ -55,7 +55,7 @@
     padding: 20px;
 
     height: 50px;
-    width: 120px;
+    width: 130px;
     background-color: antiquewhite;
 }
 
@@ -67,3 +67,19 @@
 #CurrentPage{
     cursor: default;
 }
+
+/* bottom stuff */
+
+#BottomContents{
+    margin: 0px;
+    overflow: hidden;
+}
+
+    #BottomContents img {
+        position: absolute;
+        bottom: 0;
+        left: -120%;
+        background: linear-gradient(to top, orange 80%, rgba(0,0,0,0));
+        height: 600px;
+        opacity: 0.4;
+    }
