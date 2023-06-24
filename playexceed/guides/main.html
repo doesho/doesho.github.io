@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="choicelines.css" id="LineSheet" />
     <link rel="stylesheet" href="choicecubes.css" id="CubeSheet" />
     <link rel="stylesheet" href="../SideNavstyle.css" id="SideNavSheet" />
+    <link rel="stylesheet" href="../stickystyle.css" id="StickSheet" />
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,22 +43,16 @@
 
     <section class="TextBody">
             <h1 id="Heading">GUIDES &amp; STRATEGY</h1>
-            <p><span style="font-size: 20px"><b>New to EXCEED?</b></span> Search <i>Basics</i> to see some guides that teach the fundamentals! <br />
-            Looking to make a tier list? Check out the tier list section in <a href="../customs/main.html">Custom Content</a>. <br />
-            Pro tip: use MOUSE3 to open a guide in a new tab!<p>
+            <p><span style="font-size: 20px"><b>New to EXCEED?</b></span> Search <b>Basics</b> to see some guides that teach the fundamentals!</p>
     </section>
 
-    <div id="SearchBar">
+    <div id="SearchBar" class="stickable">
         <form>
             <div class="ToolTip" id="SearchInfo">
                 <img src="../content/icons/hazamashrug.png" width=40 />
                 <p class="ToolTipText">
                     The search function compares your input to every single word in each guide entry <i>(title, description, author, tags)</i> and hides those not containing your exact input.<br />
-                    Currently, you cannot have multiple search terms. The search function parses your input whole, as-is.<br /> <br />
-                    <u>Tags that aren't obvious:</u><br />
-                    <b>Basics -</b> Guides perfect for beginners! <br />
-                    <b>Engine - </b> About how Exceed works <br />
-                    <b>Meta - </b> About the game but not the gameplay <i>(ie. sales, lore)</i>
+                    Currently, you cannot have multiple search terms. The search function parses your input whole, verbatim.
                 </p>
             </div>
 
@@ -72,9 +68,9 @@
 
     <section class="UniqueBody">
         <div class="UniqueContainer" id="ChoiceUniqueContainer">
-            <div class="ChoiceContainer">
 
-                <h2 class="ChoiceSectionTitle">Text</h2>
+            <h2 class="ChoiceSectionTitle stickable">Text</h2>
+            <div class="ChoiceContainer">
 
                 <a href="guide/buyersguide.html" class="ChoiceLink">
                     <div class="Choice">
@@ -219,9 +215,10 @@
                         </div>
                     </div>
                 </a>
+             </div>
 
-                <h2 class="ChoiceSectionTitle">Videos</h2>
-
+            <h2 class="ChoiceSectionTitle stickable">Videos</h2>
+            <div class="ChoiceContainer">
                 <a href="https://www.youtube.com/watch?v=tmH3B4ojC38" class="ChoiceLink">
                     <div class="Choice">
                         <div class="ChoiceHead">
@@ -284,23 +281,33 @@
             </div>
         </div>
 
-        <div class="UniqueContainer" id="SidebarUniqueContainer">
-            <div id="TagBox">
-                <h3>Tags</h3>
-                <ul>
-                    <li>Basics</li>
-                    <li>Engine</li>
-                    <li>Meta</li>
-                    <li>Power Budget</li>
-                    <li>Season #</li>
-                    <li>Speed Curve</li>
-                </ul>
+        <div id="SideBarUniqueContainer" class="UniqueContainer">
+            <div class="SideBarSection" id="IntroBox">
+                <p>
+                    Looking to make a tier list? Check out the tier list section in <a href="../customs/main.html">Custom Content</a>.<br />
+                    Pro tip: use MOUSE3 to open a guide in a new tab!
+                </p>
+            </div>
+
+            <div class="SideBarSection" id="TagBox">
+                <div id="TagBox">
+                    <h3><u>Tags</u></h3>
+                    <ul>
+                        <li><b>Basics</b> - Guides perfect for beginners.</li>
+                        <li><b>Engine</b> - How Exceed functions</li>
+                        <li><b>Meta</b> - Not the game, but things surrounding it (ie. sales, lore)</li>
+                        <li><b>Power Budget</b></li>
+                        <li><b>Season #</b> - Filter by season (ie. Season 5)</li>
+                        <li><b>Speed Curve</b></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
     <script src="../content/scripts/SideNav.js"></script>
     <script src="../content/scripts/search.js"></script>
+    <script src="../content/scripts/stick.js"></script>
     <script>
         // style changer. make generic so it can be its own .js
         const button = document.getElementById("StyleButton");
@@ -327,7 +334,7 @@
                 case 0:
                     lines.disabled = true;
                     cubes.disabled = false;
-                    currentState = "Grid";
+                    currentState = "Grid (Busted)";
                     break;
                 case 1:
                     cubes.disabled = true;

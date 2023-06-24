@@ -4,21 +4,8 @@
     H4 is for things that have to stand out of normal text but barely, ie. buttons, author name
 */
 
-.UniqueBody {
-    display: flex;
-}
-
-@media screen and (max-width: 1000px) { /*collapses at smaller window size */
-    .UniqueBody {
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-.UniqueContainer{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 30px;
+.TextBody{
+    text-align: center;
 }
 
 .ChoiceLink:hover{ /* prevent choice text from turning due to pagestyle a:hover */

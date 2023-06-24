@@ -4,12 +4,35 @@
     H4 is for things that have to stand out of normal text but barely, ie. buttons, author name
 */
 
+/* div that contains uniquecontainers AND class-level rules for those uniquecontainers */
+
+.UniqueBody {
+    display: flex;
+}
+
+@media screen and (max-width: 1000px) { /*collapses at smaller window size */
+    .UniqueBody {
+        display: block;
+    }
+}
+
+.UniqueContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+#ChoiceUniqueContainer {
+    flex-basis: 70%;
+}
+
+
 /* >>>> Choice Container Options*/
 
 .ChoiceContainer {
-    font-family: Vollkorn, serif;
     display: grid;
-    grid-gap: 15px;
+    grid-gap: 13px;
+    padding: 0px 10px 0px 40px;
 }
 
 .ChoiceSectionTitle {
@@ -24,7 +47,6 @@
     display: block;
     text-decoration: none;
     color: black;
-    margin-left: 50px;
     border: 1px solid #ccc;
     border-radius: 4px;
     background: linear-gradient(to left, #fdebcf 20%, #fdfbf0);
@@ -93,4 +115,27 @@
     margin: 0px;
     font-size: 12px !important;
     color: gray;
+}
+
+/* sidebar settings */
+
+#SideBarUniqueContainer {
+    display: flex;
+    grid-gap: 20px;
+    padding: 50px 25px;
+}
+
+.SideBarSection {
+    display: block;
+    background-color: #fdebcf;
+
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
+/* individual sidebar boxes */
+
+#TagBox h3{
+    text-align: center;
 }
