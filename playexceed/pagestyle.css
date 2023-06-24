@@ -34,7 +34,7 @@ a:hover {
 #Heading {
     text-align: center;
     font-size: 40px;
-    background: radial-gradient(orange 50%, rgba(0,0,0,0));
+    background: orange;
     margin: 0px;
 }
 
