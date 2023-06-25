@@ -42,17 +42,21 @@
         </div>
     </div>
 
-    <!-- rest of the content below here -->
+    <!-- textbody -->
 
     <section class="TextBody">
             <h1 id="Heading">GUIDES &amp; STRATEGY</h1>
-            <p><span style="font-size: 20px"><b>New to EXCEED?</b></span> Search <b>Basics</b> to see some guides that teach the fundamentals!</p>
+            <div>
+                <p id="kenQuoteBody"><i>Click for advice from the Masters!</i></p>
+                <img src="../content/icons/kenyay.png" id="kenPic" />
+            </div>
     </section>
+
+    <!-- search bar -->
 
     <div id="SearchBar" class="stickable">
         <form>
             <div class="ToolTip" id="SearchInfo">
-                <img src="../content/icons/hazamashrug.png" width=40 />
                 <p class="ToolTipText">
                     The search function compares your input to every single word in each guide entry <i>(title, description, author, tags)</i> and hides those not containing your exact input.<br />
                     Currently, you cannot have multiple search terms. The search function parses your input whole, verbatim.
@@ -67,7 +71,7 @@
     </div>
 
 
-    <!-- choices section -->
+    <!-- choices & sidebar boxes section -->
 
     <section class="UniqueBody">
         <div class="UniqueContainer" id="ChoiceUniqueContainer">
@@ -292,6 +296,10 @@
 
             <div class="SideBarSection" id="TagBox">
                 <div id="TagBox">
+                    <div>
+                        <img src="../content/icons/hazamashrug.png" width=40 />
+                    </div>
+
                     <h3><u>Tags</u></h3>
                     <ul>
                         <li><b>Basics</b> - Guides perfect for beginners.</li>
@@ -320,8 +328,6 @@
                     The Exceed community borrows a lot of terms from fighting games which you might not know. Use <a href="https://glossary.infil.net/">The Fighting Game Glossary</a> to look up any terms you don't recognize!
                 </p>
             </div>
-
-
         </div>
     </section>
 
@@ -367,6 +373,40 @@
             document.getElementById("ButtonText").innerHTML = currentState;
         }
 
+    </script>
+
+    <script>
+        //random ken quote generator. make him blow up if the user clicks him a bunch.
+
+        const kenQuoteArray = [
+            "h̭̙͖̮̟̝͇͝͡h̯̮͎̬h҉̮͉̰̹̯̩h͚̱͇͘h̻͕͘̕h͏̪̗̥̰̺̻̮̙h҉̩̬̹͉͔͎̼̕h̴̳̙̩̬͜͞h̵̶̖̯̮͢h̼̦̫͎̹͟h̜̤̩͢h͈͝ḫ̶̳͍̟",
+            "It's me, Ken! From Streets!",
+            "I lost it all on Bisoncoin...",
+            "The Skull Man 33 solo fighter is not available from Level 99 Games.",
+            "You are low on life because get beaten up.",
+            "Fundamentally, play more Exceed.",
+            "A character's front side is called their Basic Mode.",
+            "Speed is the only stat that can be negative. Others stop at 0.",
+            "Unless an effect explicitly says otherwise, you can only EX attacks from your hand.",
+            "Effects that put an attack back on top of your deck are typically called hado loops.",
+            "You can take the Change Cards action and change 0 cards, effectively doing nothing then drawing a card.",
+            "Remember to check your opponent's discard pile to see what options they don't have.",
+            "Watch how your opponent looks at their hand, places cards and moves in general. Exceed is like poker, they probably have tells.",
+            "You can always try to bluff your way out of a bad situation.",
+            "Every strike is an opportunity to wild swing."
+            ]
+
+
+        kenQuoteBody = document.getElementById('kenQuoteBody');
+        kenPic = document.getElementById('kenPic');
+
+        kenPic.addEventListener('click', getKenQuote);
+
+        function getKenQuote() {
+            randomInt = Math.floor(Math.random() * kenQuoteArray.length);
+            let currentQuote = kenQuoteArray[randomInt];
+            kenQuoteBody.innerText = currentQuote;
+        }
     </script>
 </body>
 </html>

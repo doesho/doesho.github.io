@@ -4,9 +4,39 @@
     H4 is for things that have to stand out of normal text but barely, ie. buttons, author name
 */
 
+
+
 .TextBody{
+    display: flex;
+    flex-direction: column;
     text-align: center;
 }
+
+    /* ken quotes */
+
+    .TextBody div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 20px;
+    }
+
+    .TextBody img{
+        margin-top: 5px;
+        height: 50px;
+    }
+
+    #kenQuoteBody{
+        background-color: rgba(255,0,0,0.3);
+        padding: 0px 10px;
+        height: 30px;
+        margin: 0px;
+        text-align: center;
+        border-radius: 5px;
+    }
+
+/* choice styling */
 
 .ChoiceLink:hover{ /* prevent choice text from turning due to pagestyle a:hover */
     color: black;
