@@ -8,7 +8,6 @@ document.addEventListener("click", closeSideNav);
 function openSideNav() { //width set auto, becomes child width (sideNavcontents in sideNavstyle.css)
     sideNavDiv.style.width = "auto";
     sideNavDiv.style.borderRight = "1px solid gray";
-    randomSideNavPic();
     event.stopPropagation();
 }
 
@@ -16,6 +15,7 @@ function closeSideNav() {
     if (!sideNavDiv.contains(event.target) || closer.contains(event.target)) {
         sideNavDiv.style.width = "";
         sideNavDiv.style.borderRight = "";
+        randomSideNavPic();
     }
 }
 
