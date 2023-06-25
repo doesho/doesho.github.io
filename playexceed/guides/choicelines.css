@@ -138,6 +138,23 @@
 
 /* individual sidebar boxes */
 
+#NoobBox{
+    border: 2px solid orange;
+    padding: 0px;
+}
+    #NoobBox h4{
+        font-size: 25px;
+        font-weight: bold;
+        background: orange;
+        padding: 2px;
+        margin: 20px 0px;
+        text-align: center;
+    }
+
+    #NoobBox p{
+        padding: 0px 5px;
+    }
+
 #TagBox h3{
     text-align: center;
 }
