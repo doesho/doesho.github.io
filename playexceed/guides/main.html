@@ -25,11 +25,17 @@
     
     <!-- side nav bar! -->
 
-    <button type="button" id="SideNavOpener"><img src="../content/icons/PMX_Favicon.ico" /></button>
+    <button type="button" id="SideNavOpener"><img src="../content/icons/PMX_Favicon.ico" alt="Side Nav Open"/></button>
+
+
     <div id="SideNav">
 
+        <div id="SideNavTopContents">
+            <button type="button" id="SideNavCloser"><img src="../content/icons/XFS.ico" alt="Side Nav Close" /></button>
+            <a href="../index.html" class="HomeButton"><img src="../content/images/PMX_Logo.png" alt="PMX Logo" title="Home" /></a>
+        </div>
+
         <div id="SideNavContents">
-            <button type="button" id="SideNavCloser"><<</button>
             <a href="../index.html">Home</a>
             <a href="../customs/main.html">Custom Content</a>
             <a href="#" id="CurrentPage">Guides &amp; Strategy</a>
@@ -37,7 +43,7 @@
             <a href="../players/main.html">Players</a>
             <a href="../blog/main.html">Blog</a>
         </div>
-        <div id="BottomContents">
+        <div id="SideNavBottomContents">
             <img id="BottomPic" draggable="false"/>
         </div>
     </div>
@@ -47,7 +53,7 @@
     <section class="TextBody">
             <h1 id="Heading">GUIDES &amp; STRATEGY</h1>
             <div>
-                <p id="kenQuoteBody"><i>Click for advice from the Masters!</i></p>
+                <p id="kenQuoteBody"><i>Click for advice from the Masters...</i></p>
                 <img src="../content/icons/kenyay.png" id="kenPic" />
             </div>
     </section>
@@ -225,6 +231,7 @@
              </div>
 
             <h2 class="ChoiceSectionTitle stickable">Videos</h2>
+
             <div class="ChoiceContainer">
                 <a href="https://www.youtube.com/watch?v=tmH3B4ojC38" class="ChoiceLink">
                     <div class="Choice">
@@ -290,16 +297,12 @@
 
         <div id="SideBarUniqueContainer" class="UniqueContainer">
             <div class="SideBarSection" id="NoobBox">
-                <h4>NEW TO EXCEED?</h4>
+                <h3>NEW TO EXCEED?</h3>
                 <p> Search <b>Basics</b> to see some guides that teach the fundamentals! I recommend learning about the <b>speed curve</b> first.</p>
             </div>
 
             <div class="SideBarSection" id="TagBox">
                 <div id="TagBox">
-                    <div>
-                        <img src="../content/icons/hazamashrug.png" width=40 />
-                    </div>
-
                     <h3><u>Tags</u></h3>
                     <ul>
                         <li><b>Basics</b> - Guides perfect for beginners.</li>
@@ -322,9 +325,12 @@
                 <p>Pro tip: use MOUSE3 to open a guide in a new tab!</p>
             </div>
 
-            <div class="SideBarSection">
+            <div class="SideBarSection" id="FGCBox">
                 <p>
-                    <span style="font-size: 20px"><b>Not familiar with fighting games?</b></span><br />
+                    <div>
+                        <img src="../content/icons/hazamashrug.png" width=40 />
+                        <span style="font-size: 20px"><b>Not familiar with fighting games?</b></span>
+                    </div>
                     The Exceed community borrows a lot of terms from fighting games which you might not know. Use <a href="https://glossary.infil.net/">The Fighting Game Glossary</a> to look up any terms you don't recognize!
                 </p>
             </div>
