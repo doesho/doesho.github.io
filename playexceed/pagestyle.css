@@ -31,7 +31,7 @@ a:hover {
     margin: 0px;
 }
 
-#Heading {
+#Heading { /*main page heading in its own document*/
     text-align: center;
     font-size: 40px;
     background: orange;
