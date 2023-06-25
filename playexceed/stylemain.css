@@ -10,53 +10,48 @@
 #IndexHeading { /*inherits nothing from pagestyle #heading*/
     display: flex;
     justify-content: center;
-    flex-direction: column;
     border-bottom: 1px solid gray;
-    text-align: center;
-    font-size: 25px;
-    padding-top: 50px;
     background-image: linear-gradient(to bottom left, orange, white);
     background-size: cover;
     background-position: center;
 }
 
 #Banner {
-    text-align: center;
-    padding: 20px;
+    padding: 40px;
 }
-    #Banner img {
-        filter: drop-shadow(30px 10p 40px black);
-    }
 
 /* options */
 
 #options {
     display: table;
-    margin-left: auto;
-    margin-right: auto;
     padding: 20px;
     text-align: center;
-
+    background: antiquewhite;
+    width: 100%;
 }
 
 .box {
     display: inline-block;
-    width: 200px;
+    width: 250px;
     text-align: center;
-    text-decoration: none;
+    font-weight: bold;
     font-size: 20px;
     color: black;
 
-    background-color: white;
+    background-color: orange;
+    border: 1px solid gray;
     border-radius: 2px;
     margin: 4px 4px;
     padding: 0px 5px 0px 5px;
     cursor: pointer;
 }
+    .box p{
+    }
 
     .box:hover {
-        color: white !important;
+        color: black !important;
         box-shadow: 0px 0px 0px 5px turquoise inset !important;
+        border: 1px solid turquoise;
         transition: 0.15s;
     }
 
@@ -65,6 +60,7 @@
     border: none;
     box-shadow: none !important;
     background-color: lightgray;
+    color:darkgray !important;
 }
 
 /* div that contains WhatsExceed and newsbox */
@@ -150,7 +146,7 @@
 }
 
     #NewsBox h2 {
-        background: radial-gradient(#ff460f, #fee567 90%);
+        background: orange;
     }
 
 /* >> individual news entry*/
