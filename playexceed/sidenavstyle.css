@@ -5,7 +5,7 @@
     top: 10px;
     left: 20px;
     z-index: 96;
-    background: rgba(0,0,0,0);
+    background: transparent;
     border: none;
     opacity: 0.4;
 }
@@ -15,6 +15,26 @@
     }
 
     #SideNavOpener:hover {
+        opacity: 1;
+        transition: 0.05s;
+        cursor: pointer;
+    }
+
+.HomeButton{
+    position: fixed;
+    top: 10px;
+    left: 60px;
+    z-index: 96;
+    background: transparent;
+    border: none;
+    opacity: 0.6;
+}
+
+    .HomeButton img{
+        height: 33px;
+    }
+
+    .HomeButton:hover{
         opacity: 1;
         transition: 0.05s;
         cursor: pointer;
@@ -44,10 +64,16 @@
 }
 
 #SideNavCloser{
-    margin-bottom: 20px;
-    background-color: turquoise;
+    padding: 0px;
     border: 0px;
+    background: transparent;
 }
+    #SideNavCloser img{
+        width: 30px;
+    }
+    #SideNavCloser:hover{
+        cursor: pointer;
+    }
 
 #SideNavContents {
     display: flex;
@@ -62,6 +88,7 @@
 #SideNavContents a{
     margin: 10px 0px;
     line-height: 18px;
+    text-align: right;
 }
 
 #CurrentPage{
@@ -70,12 +97,12 @@
 
 /* bottom stuff */
 
-#BottomContents{
+#SideNavBottomContents{
     margin: 0px;
     overflow: hidden;
 }
 
-    #BottomContents img {
+    #SideNavBottomContents img {
         position: absolute;
         bottom: 0;
         left: -120%;
