@@ -17,6 +17,9 @@
     .ChoiceContainer{
         padding: 0px 40px !important;
     }
+    #SideBarUniqueContainer{
+        padding: 20px 50px !important;
+    }
 }
 
 .UniqueContainer {
@@ -142,7 +145,7 @@
     border: 2px solid orange;
     padding: 0px;
 }
-    #NoobBox h4{
+    #NoobBox h3{
         font-size: 25px;
         font-weight: bold;
         background: orange;
@@ -157,4 +160,10 @@
 
 #TagBox h3{
     text-align: center;
+}
+
+#FGCBox div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
