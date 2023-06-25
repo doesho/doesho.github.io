@@ -23,7 +23,7 @@
 .HomeButton{
     position: fixed;
     top: 10px;
-    left: 60px;
+    left: 80px;
     z-index: 96;
     background: transparent;
     border: none;
@@ -63,8 +63,13 @@
     z-index: 97;
 }
 
+#SideNavTopContents{
+    margin: 0px 10px;
+    border-bottom: 2px solid gray;
+}
+
 #SideNavCloser{
-    padding: 0px;
+    padding: 10px 15px;
     border: 0px;
     background: transparent;
 }
