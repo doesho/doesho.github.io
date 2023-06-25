@@ -5,7 +5,7 @@ let sideNavImageArray = [
     '../content/images/sidebar/platinum.png',
     '../content/images/sidebar/specter.png',
     '../content/images/sidebar/tinker.png',
-    '../content/images/sidebar/shovel.png',]
+    '../content/images/sidebar/shovel.png']
 
 let bannerImageArray = [
     'content/images/banners/bg1.jpg',
@@ -18,6 +18,8 @@ let bannerImageArray = [
 
 // dumbass. make these the same generic function using parameters.
 
+document.addEventListener('DOMContentLoaded', randomSideNavPic);
+
 function randomSideNavPic() {
     randomInt = Math.floor(Math.random() * sideNavImageArray.length);
     let currentImage = sideNavImageArray[randomInt];
@@ -26,7 +28,7 @@ function randomSideNavPic() {
     sideNavImage.src = currentImage;
 }
 
-document.addEventListener("DOMContentLoaded", randomBanner())
+document.addEventListener('DOMContentLoaded', randomBanner);
 
 function randomBanner() { //make this a psuedo element background instead so we can filter it
     randomInt = Math.floor(Math.random() * sideNavImageArray.length);
