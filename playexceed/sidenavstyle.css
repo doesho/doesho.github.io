@@ -46,26 +46,28 @@
     position: fixed;
     top: 0;
     left: 0;
-    overflow-x: hidden;
+    overflow: hidden;
     align-content: center;
     width: 0px;
     height: 100%;
     background-color: antiquewhite;
-    transition: 0.05s;
     z-index: 97;
 }
 
 /* top part of sidenav (just closer)*/
 
 #SideNavTopContents{
-    margin: 0px 10px;
-    border-bottom: 2px solid gray;
-    z-index: 3;
+    position: relative;
+    z-index: 66;
     background: antiquewhite;
 }
 
+    #SideNavTopContents hr{
+        margin: 0px 10px;
+    }
+
 #SideNavCloser{
-    padding: 10px 15px;
+    padding: 10px 25px;
     border: 0px;
     background: transparent;
 }
@@ -86,17 +88,17 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 5px;
 
-    width: 130px;
-    background-color: antiquewhite;
     z-index: 2;
 }
 
-#SideNavContents a{
-    margin: 10px 0px;
+#SideNavContents a{ /* actual links */
+    margin: 5px 0px;
+    padding: 10px;
     line-height: 18px;
     text-align: right;
+    background-color:antiquewhite;
 }
 
 #CurrentPage{
@@ -105,8 +107,9 @@
 
 /* bottom contents ie picture */
 
-#SideNavBottomContents{
+#SideNavBottomContents {
     margin: 0px;
+    padding: 0px;
     overflow: hidden;
 }
 
@@ -117,6 +120,5 @@
         background: linear-gradient(to top, orange 80%, rgba(0,0,0,0));
         height: 600px;
         opacity: 0.4;
-
         z-index: 1;
     }
