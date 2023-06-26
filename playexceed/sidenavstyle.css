@@ -1,4 +1,4 @@
-﻿/* side bar opener */
+﻿/* side bar opener & home button */
 
 #SideNavOpener {
     position: fixed;
@@ -40,6 +40,8 @@
         cursor: pointer;
     }
 
+/* actual sidenav div itself */
+
 #SideNav {
     position: fixed;
     top: 0;
@@ -50,22 +52,16 @@
     height: 100%;
     background-color: antiquewhite;
     transition: 0.05s;
-}
-
-#CurrentPage {
-    color: gray;
-}
-
-
-/* full page stuff */
-
-#SideNav{
     z-index: 97;
 }
+
+/* top part of sidenav (just closer)*/
 
 #SideNavTopContents{
     margin: 0px 10px;
     border-bottom: 2px solid gray;
+    z-index: 3;
+    background: antiquewhite;
 }
 
 #SideNavCloser{
@@ -80,14 +76,21 @@
         cursor: pointer;
     }
 
+/* main body / options */
+
+#CurrentPage {
+    color: gray;
+}
+
 #SideNavContents {
+    position: relative;
     display: flex;
     flex-direction: column;
     padding: 20px;
 
-    height: 50px;
     width: 130px;
     background-color: antiquewhite;
+    z-index: 2;
 }
 
 #SideNavContents a{
@@ -100,7 +103,7 @@
     cursor: default;
 }
 
-/* bottom stuff */
+/* bottom contents ie picture */
 
 #SideNavBottomContents{
     margin: 0px;
@@ -114,4 +117,6 @@
         background: linear-gradient(to top, orange 80%, rgba(0,0,0,0));
         height: 600px;
         opacity: 0.4;
+
+        z-index: 1;
     }
