@@ -4,16 +4,59 @@
 <head>
     <meta charset="utf-8" />
     <title>Custom Content | PLAY MORE EXCEED</title>
+
     <link rel="stylesheet" href="../pagestyle.css" />
+    <link rel="stylesheet" href="../searchbarstyle.css" />
+    <link rel="stylesheet" href="../sidenavstyle.css" id="SideNavSheet" />
+    <link rel="stylesheet" href="../stickystyle.css" id="StickSheet" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vollkorn&display=swap" rel="stylesheet">
 </head>
 <body id="body">
-    <h1 id="Heading">CUSTOM CONTENT</h1>
-    <p>
-        This page will be a big library of customs, like characters, mats, arenas and templates. I'm sure some will be hosted but most will be linked to google drives and stuff.
-    </p>
+
+    <!-- side nav bar -->
+
+    <button type="button" id="SideNavOpener"><img src="../content/icons/PMX_Favicon.ico" alt="Side Nav Open" /></button>
+
+
+    <div id="SideNav">
+
+        <div id="SideNavTopContents">
+            <button type="button" id="SideNavCloser"><img src="../content/icons/XFS.ico" alt="Side Nav Close" /></button>
+            <a href="../index.html" class="HomeButton"><img src="../content/images/PMX_Logo.png" alt="PMX Logo" title="Home" /></a>
+            <hr />
+        </div>
+
+        <div id="SideNavContents">
+            <a href="../index.html">Home</a>
+            <a href="#" id="CurrentPage">Custom Content</a>
+            <a href="../guides/main.html">Guides &amp; Strategy</a>
+            <a href="../community/main.html">Community &amp; Events</a>
+            <a href="../players/main.html">Players</a>
+            <a href="../blog/main.html">Blog</a>
+        </div>
+        <div id="SideNavBottomContents">
+            <img id="BottomPic" draggable="false" />
+        </div>
+    </div>
+
+    <!-- content below here -->
+
+    <section class="TextBody">
+        <h1 id="Heading">CUSTOM CONTENT</h1>
+        <p>
+            This page will be a big library of customs, like characters, mats, arenas and templates. I'm sure some will be hosted but most will be linked to google drives and stuff.
+        </p>
+    </section>
+
+    <!-- scripts -->
+
+    <script src="../content/scripts/sidenav.js"></script>
+    <script src="../content/scripts/search.js"></script>
+    <script src="../content/scripts/stick.js"></script>
+    <script src="../content/scripts/randompic.js"></script>
 
 </body>
 </html>

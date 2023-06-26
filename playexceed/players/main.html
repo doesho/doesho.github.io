@@ -5,62 +5,75 @@
     <meta charset="utf-8" />
     <title>Players | PLAY MORE EXCEED</title>
     <link rel="icon" type="image/x-icon" href="../content/images/PMX_Favicon.ico" />
+
     <link rel="stylesheet" href="../pagestyle.css" />
+    <link rel="stylesheet" href="../playerstyle.css" />
+
+    <link rel="stylesheet" href="../searchbarstyle.css" />
+    <link rel="stylesheet" href="../sidenavstyle.css" id="SideNavSheet" />
+    <link rel="stylesheet" href="../stickystyle.css" id="StickSheet" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vollkorn&display=swap" rel="stylesheet">
-
 </head>
-<body>
-    <section id="Heading">
-        <h1>PLAYERS</h1>
-    </section>
+<body id="body">
 
-    <section id="Options">
-        <a href="../index.html"><b>Return</b></a>
-    </section>
+    <!-- side nav bar -->
 
-    <section id="Body">
+    <button type="button" id="SideNavOpener"><img src="../content/icons/PMX_Favicon.ico" alt="Side Nav Open" /></button>
+
+
+    <div id="SideNav">
+
+        <div id="SideNavTopContents">
+            <button type="button" id="SideNavCloser"><img src="../content/icons/XFS.ico" alt="Side Nav Close" /></button>
+            <a href="../index.html" class="HomeButton"><img src="../content/images/PMX_Logo.png" alt="PMX Logo" title="Home" /></a>
+            <hr />
+        </div>
+
+        <div id="SideNavContents">
+            <a href="../index.html">Home</a>
+            <a href="../customs/main.html">Custom Content</a>
+            <a href="../guides/main.html">Guides &amp; Strategy</a>
+            <a href="../community/main.html">Community &amp; Events</a>
+            <a href="#" id="CurrentPage">Players</a>
+            <a href="../blog/main.html">Blog</a>
+        </div>
+        <div id="SideNavBottomContents">
+            <img id="BottomPic" draggable="false" />
+        </div>
+    </div>
+
+    <!-- content below here -->
+
+    <section class="TextBody">
+        <h1 id="Heading">PLAYERS</h1>
         <p>
-            This page features players and information about them. The search bar tags can filter by mains, location, name, online availability, competitive event attendance &amp; results, and more.
+            This page will be an index of players, searchable by where they are located, what scene they are a local to, their mains, etc.
+            Each player can optionally have their own page or dropdown menu which details things about them, such as tournament winnings,
+            favorite pony, plastyle, whatever they want.
         </p>
     </section>
 
-    <div class="SearchBar">
+    <!-- search bar -->
+
+    <div id="SearchBar" class="stickable">
         <form>
-            <label>this bitch broken</label>
-            <input name="SearchInput" id="SearchInput" />
-            <button type="reset"><b>Clear</b></button>
+            <input id="SearchInput" placeholder="Search..." />
+
+            <button type="button" id="StyleButton" style="display:none"><span id="ButtonText"></span></button>
+
         </form>
     </div>
 
-    <section class="SillyContainer">
-        <div class="TextChoiceContainer">
+    <!-- scripts -->
 
-            <a href="../index.html">
-                <div class="TextChoice">
-                    <p>Doe</p>
-                    <p>Wagner, Jin</p>
-                </div>
-            </a>
+    <script src="../content/scripts/sidenav.js"></script>
+    <script src="../content/scripts/search.js"></script>
+    <script src="../content/scripts/stick.js"></script>
+    <script src="../content/scripts/randompic.js"></script>
 
-            <a href="../index.html">
-                <div class="TextChoice">
-                    <p>Doe</p>
-                    <p>Wagner, Jin</p>
-                </div>
-            </a>
-
-            <a href="../index.html">
-                <div class="TextChoice">
-                    <p>Doe</p>
-                    <p>Wagner, Jin</p>
-                </div>
-            </a>
-
-        </div>
-
-    </section>
 
 </body>
 </html>
