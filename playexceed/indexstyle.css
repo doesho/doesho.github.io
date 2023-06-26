@@ -140,6 +140,7 @@
     border-radius: 4px;
     margin: 50px;
 
+    height: 100%;
     flex-basis: 30%;
     min-width: 300px;
 }
