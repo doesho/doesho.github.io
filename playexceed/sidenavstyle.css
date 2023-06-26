@@ -50,7 +50,7 @@
     align-content: center;
     width: 0px;
     height: 100%;
-    background-color: antiquewhite;
+    background: linear-gradient(to top, orange 30%, antiquewhite);
     z-index: 97;
 }
 
@@ -63,7 +63,6 @@
 }
 
     #SideNavTopContents hr{
-        margin: 0px 10px;
     }
 
 #SideNavCloser{
@@ -99,6 +98,7 @@
     line-height: 18px;
     text-align: right;
     background-color:antiquewhite;
+    border: 1px solid gray;
 }
 
 #CurrentPage{
@@ -117,8 +117,8 @@
         position: absolute;
         bottom: 0;
         left: -120%;
-        background: linear-gradient(to top, orange 80%, rgba(0,0,0,0));
         height: 600px;
-        opacity: 0.4;
+        opacity: 0.2;
+        filter: grayscale(100%);
         z-index: 1;
     }
