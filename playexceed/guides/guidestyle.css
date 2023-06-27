@@ -4,8 +4,6 @@
     H4 is for things that have to stand out of normal text but barely, ie. buttons, author name
 */
 
-
-
 .TextBody{
     display: flex;
     flex-direction: column;
