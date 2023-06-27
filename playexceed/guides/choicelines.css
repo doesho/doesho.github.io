@@ -5,6 +5,7 @@
 */
 
 /* div that contains uniquecontainers AND class-level rules for those uniquecontainers */
+/* a ton of this is probably vestigal. clean this up */
 
 .UniqueBody {
     display: flex;
@@ -48,48 +49,46 @@
 }
 
 
-/* individual choice settings*/
+/* individual choice container settings*/
 
-.ChoiceLink {
+.Choice {
     display: block;
     text-decoration: none;
-    color: black;
     border: 1px solid #ccc;
     background: linear-gradient(to left, #fdebcf 20%, #fdfbf0);
-    padding: 5px;
+    padding: 0px;
     min-width: 600px;
 }
 
-    .ChoiceLink:hover {
+    .Choice a{
+        color: black;
+    }
+
+    .Choice:hover {
         box-shadow: 0px 0px 0px 2px turquoise inset !important;
         border: 1px solid turquoise !important;
         transition: 0.1s;
     }
 
-.Choice {
+.ChoiceBodyContainer {
     display: flex;
     flex-direction: column;
     position: relative;
+    padding: 5px;
 
 }
 
-.Choice h3 { /*title of each choice*/
-    font-size: 22px;
-    margin: 0px;
-    z-index: 2;
-}
+/* head of each choice*/
 
 .ChoiceHead{
     display: flex;
     margin-bottom: 10px;
 }
 
-.ChoiceBody{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
+.Choice h3 { /*title of each choice*/
+    font-size: 22px;
     margin: 0px;
+    z-index: 2;
 }
 
 .Choice h4{ /*author or subtitle*/
@@ -104,6 +103,15 @@
     text-indent: 5px;
     font-size: 10px !important;
     align-self: center;
+}
+
+/* body of each choice */
+
+.ChoiceBody {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px;
 }
 
 .Choice p{ /*text body of each choice*/
