@@ -1,4 +1,4 @@
-﻿#SearchBar {
+﻿#SearchBar { /*div that contains everything else*/
     display: flex;
     justify-content: center;
     width: 100%;
@@ -19,6 +19,15 @@
 }
 
     #StyleButton:hover{
+        border: 1px solid turquoise;
+    }
+
+#CatagorySelect{
+    background-color: white;
+    border: 1px solid gray;
+}
+
+    #CatagorySelect:hover{
         border: 1px solid turquoise;
     }
 
