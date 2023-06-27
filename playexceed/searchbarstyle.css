@@ -13,9 +13,10 @@
     }
 
 #StyleButton {
-    width: 100px;
     background-color: white;
     border: 1px solid gray;
+    padding: 5px;
+    margin: 5px;
 }
 
     #StyleButton:hover{
@@ -25,6 +26,8 @@
 #CatagorySelect{
     background-color: white;
     border: 1px solid gray;
+    padding: 5px;
+    margin: 5px;
 }
 
     #CatagorySelect:hover{
