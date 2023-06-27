@@ -1,18 +1,18 @@
-//core search functionality. change style of matches?
+//core search functionality
 
 function funcSearch(input) {
     let choiceContainer = document.getElementById("ChoiceUniqueContainer");
     let filter = input.target.value.toUpperCase();
-    let links = choiceContainer.querySelectorAll("a.ChoiceLink");
+    let choices = choiceContainer.querySelectorAll("div.Choice");
 
-    for (let i = 0; i < links.length; i++) {
-        let link = links[i];
-        let content = link.innerText.toUpperCase();
+    for (let i = 0; i < choices.length; i++) {
+        let choice = choices[i];
+        let content = choice.innerText.toUpperCase();
 
         if (content.includes(filter)) {
-            link.style.display = "";
+            choice.style.display = "";
         } else {
-            link.style.display = "none";
+            choice.style.display = "none";
         }
     }
 }
