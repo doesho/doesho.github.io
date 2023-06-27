@@ -33,9 +33,3 @@
         text-align: center;
         border-radius: 5px;
     }
-
-/* choice styling */
-
-.ChoiceLink:hover{ /* prevent choice text from turning due to pagestyle a:hover */
-    color: black;
-}
