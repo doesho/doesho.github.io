@@ -11,7 +11,6 @@
 
     <link rel="stylesheet" href="../searchbarstyle.css" />
     <link rel="stylesheet" href="choicelines.css" id="LineSheet" />
-    <link rel="stylesheet" href="choicecubes.css" id="CubeSheet" />
     <link rel="stylesheet" href="../sidenavstyle.css" id="SideNavSheet" />
     <link rel="stylesheet" href="../stickystyle.css" id="StickSheet" />
 
@@ -372,45 +371,6 @@
     <script src="../content/scripts/search.js"></script>
     <script src="../content/scripts/stick.js"></script>
     <script src="../content/scripts/randompic.js"></script>
-    <script>
-        // style changer. make generic so it can be its own .js
-        const button = document.getElementById("StyleButton");
-        const lines = document.getElementById("LineSheet");
-        const cubes = document.getElementById("CubeSheet");
-        let styleStateIndex = 0;
-        let currentState;
-
-        if (cubes && lines) {
-            cubes.disabled = true;
-            currentState = "Default";
-            document.getElementById("ButtonText").innerHTML = currentState;
-        }
-
-        button.addEventListener("click", styleSwitch);
-
-        function styleSwitch() {
-
-            if (styleStateIndex > 1) {
-                styleStateIndex = 0;
-            }
-
-            switch (styleStateIndex) {
-                case 0:
-                    lines.disabled = true;
-                    cubes.disabled = false;
-                    currentState = "Grid (Busted)";
-                    break;
-                case 1:
-                    cubes.disabled = true;
-                    lines.disabled = false;
-                    currentState = "Default";
-                    break;
-            }
-            styleStateIndex++;
-            document.getElementById("ButtonText").innerHTML = currentState;
-        }
-
-    </script>
 
     <script>
         //random ken quote generator. make him blow up if the user clicks him a bunch.
@@ -432,9 +392,9 @@
             "Watch how your opponent looks at their hand, places cards and moves in general. Exceed is like poker, they probably have tells.",
             "You can always try to bluff your way out of a bad situation.",
             "Every strike is an opportunity to wild swing.",
-            "If your opponent expects your optimal attack, playing something suboptimal will work even better.",
-            "Never be afraid of losing.",
-            "You'll learn a lot about Exceed if you make a custom character!"
+            "If your opponent expects an optimal attack, playing something suboptimal will work even better.",
+            "You'll learn a lot about Exceed if you make a custom character!",
+            "Never be afraid of losing."
             ]
 
 
