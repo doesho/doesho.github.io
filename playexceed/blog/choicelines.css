@@ -4,23 +4,71 @@
     H4 is for things that have to stand out of normal text but barely, ie. buttons, author name
 */
 
-/* div that contains uniquecontainers AND class-level rules for those uniquecontainers */
-/* a ton of this is probably vestigal. clean this up */
+/* divs that contain uniquecontainers AND class-level rules for those uniquecontainers */
 
-#UniqueBody{ /* father of all unique content */
-    
+.UniqueBody{ /* father of all unique content */
+    display: flex;
+    padding: 100px;
 }
 
-#ChoiceUniqueContainer{ /* contains all blog stuff */
+.UniqueContainer { /*both choiceuniquecontainer and timelineuniquecontainer have this class */
+    margin: 5px;
 }
 
-.ChoiceContainer{
+/* >>> left side blog content */
+#ChoiceUniqueContainer { /* contains all blog stuff */
     display: flex;
     flex-direction: column;
-    margin-left: 80px;
-
-    background-color: lightgray;
+    flex-wrap: wrap;
+    flex-basis: 150%;
+    background-color: whitesmoke;
     border: 4px double gray;
     border-radius: 4px;
 }
 
+.ChoiceSectionTitle{
+    text-align: center;
+}
+
+/* individual choice settings */
+
+.ChoiceContainer{
+    padding: 10px;
+}
+
+.Choice{ /* whole individual blog post entry */
+}
+
+    .BlogEntryTitle h3{
+        margin: 0px;
+        font-size: 25px;
+        line-height: 27px;
+    }
+
+    .BlogEntryTitle h4{
+        margin: 0px;
+        text-indent: 40px;
+    }
+
+    .BlogEntryBody p{
+        text-indent: 30px;
+    }
+
+/* >>> right side timeline */
+#TimelineUniqueContainer{ /*contains all timeline stuff*/
+    flex-basis: 50%;
+}
+
+#Timeline{
+    background-color: lightgray;
+    border: 2px solid gray;
+    border-radius: 2px;
+}
+
+.MonthTitle{
+    margin: 0px;
+}
+
+.MonthEntry{
+    text-indent: 20px;
+}
