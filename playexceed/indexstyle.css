@@ -55,7 +55,7 @@
         transition: 0.15s;
     }
 
-#customsbutton, #communitybutton, #playersbutton, #blogbutton {
+#customsbutton, #communitybutton, #playersbutton {
     cursor: not-allowed !important;
     border: none;
     box-shadow: none !important;
