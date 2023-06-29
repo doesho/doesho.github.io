@@ -11,6 +11,5 @@ This is a real mess because I don't know web development and I'm learning as I g
 
 ## To Do
 
-1. FINISH STYLING GUIDE ENTRIES. They're not half bad but they should be comfortably done before adding all the guides in.
-2. NEW FRONT PAGE HEADER. cool character scroll or something behind PMX logo.
-3. BEGIN ANOTHER PAGE. Guides has come along smashingly. Get started on another main page.
+1. COMPLETE BLOG PAGE. The guide page is basically good, next up is the blog page.
+2. STYLE PAGES AS RAINBOW. Currently the pages are all aggressive and orange. Let's try assigning each page a Normals color, as best we can according to color psychology, and style each page with minimal splashes of that color.
