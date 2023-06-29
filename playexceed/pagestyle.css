@@ -28,6 +28,7 @@ a:hover {
 #body { /*contains the whole page ofc*/
     padding: 0px;
     margin: 0px;
+    background-color: var(--background);
 }
 
 #Heading { /*main page heading in its own document*/
