@@ -34,12 +34,11 @@ a:hover {
 #Heading { /*main page heading in its own document*/
     text-align: center;
     font-size: 40px;
-    background: orange;
     margin: 0px;
 }
 
 .TextBody {
-    background-color: #fdebcf;
+    background-color: whitesmoke;
     padding-bottom: 1px;
 }
 
@@ -96,8 +95,11 @@ a:hover {
     margin-right: 5px;
 }
 
-/* Other stuff */
+/* FOOTER */
 
-footer{
+#FooterContents {
+    font-size: 10px;
     text-align: center;
+    padding: 20px;
+    background: whitesmoke;
 }
