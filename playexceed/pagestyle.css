@@ -6,7 +6,6 @@
 
 /* this sheet applies to all pages, though pages also have their own specialized sheet. */
 
-
 html *{
     font-family: Vollkorn, serif;
 }
@@ -21,7 +20,7 @@ a {
 }
 
 a:hover {
-    color: turquoise;
+    color: var(--userinput);
 }
 
 /* Top of the page */
@@ -38,7 +37,7 @@ a:hover {
 }
 
 .TextBody {
-    background-color: whitesmoke;
+    background-color: var(--secondary);
     padding-bottom: 1px;
 }
 
@@ -101,5 +100,5 @@ a:hover {
     font-size: 10px;
     text-align: center;
     padding: 20px;
-    background: whitesmoke;
+    background: var(--secondary);
 }

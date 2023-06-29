@@ -50,7 +50,7 @@
     align-content: center;
     width: 0px;
     height: 100%;
-    background: linear-gradient(to top, orange 30%, antiquewhite);
+    background: linear-gradient(to top, var(--highlight) 5%, var(--secondary));
     z-index: 97;
 }
 
@@ -59,7 +59,7 @@
 #SideNavTopContents{
     position: relative;
     z-index: 66;
-    background: antiquewhite;
+    background: var(--highlightsecondary);
 }
 
     #SideNavTopContents hr{
@@ -101,7 +101,7 @@
     padding: 10px;
     line-height: 18px;
     text-align: right;
-    background-color:antiquewhite;
+    background-color: var(--secondary);
     border: 1px solid gray;
 }
 

@@ -4,6 +4,17 @@
     H4 is for things that have to stand out of normal text but barely, ie. buttons, author name
 */
 
+:root {
+    --highlight: #feeb4c;
+    --highlightsecondary: #fcf9e3;
+    --secondary: whitesmoke;
+    --userinput: turquoise;
+}
+
+#Heading{
+    background-color: var(--highlight);
+}
+
 .TextBody{
     display: flex;
     flex-direction: column;

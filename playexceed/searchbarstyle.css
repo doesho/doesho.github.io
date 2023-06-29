@@ -3,7 +3,7 @@
     justify-content: center;
     width: 100%;
     padding-bottom: 20px;
-    background: whitesmoke;
+    background: var(--secondary);
     border-bottom: 1px solid gray;
 }
 
@@ -20,7 +20,7 @@
 }
 
     #StyleButton:hover{
-        border: 1px solid turquoise;
+        border: 1px solid var(--userinput);
     }
 
 #CatagorySelect{
@@ -31,7 +31,7 @@
 }
 
     #CatagorySelect:hover{
-        border: 1px solid turquoise;
+        border: 1px solid var(--userinput);
     }
 
 #SearchInfo .ToolTipText { /* special alteration to tooltiptext for search info tooltip. make this work upside down */
@@ -49,5 +49,5 @@
 
     #SearchInput:focus {
         outline: none;
-        border: 2px solid turquoise;
+        border: 2px solid var(--userinput);
     }
