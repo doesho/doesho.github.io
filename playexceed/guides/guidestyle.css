@@ -4,14 +4,6 @@
     H4 is for things that have to stand out of normal text but barely, ie. buttons, author name
 */
 
-:root {
-    --highlight: orange;
-    --highlightsecondary: antiquewhite;
-    --secondary: whitesmoke;
-    --border: lightgray;
-    --userinput: turquoise;
-}
-
 #Heading{
     background-color: var(--highlight);
 }
