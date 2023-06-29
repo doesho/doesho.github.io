@@ -105,6 +105,10 @@
     border: 1px solid gray;
 }
 
+#ModeButton{
+    margin: 20px 0px;
+}
+
 /* bottom contents ie picture */
 
 #SideNavBottomContents {
