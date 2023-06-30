@@ -60,6 +60,7 @@
     position: relative;
     z-index: 66;
     background: var(--highlightsecondary);
+    border-bottom: 2px solid gray;
 }
 
     #SideNavTopContents hr{
