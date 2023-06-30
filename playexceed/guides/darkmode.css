@@ -6,8 +6,8 @@
 
 :root {
     --highlight: orange;
-    --highlightsecondary: antiquewhite;
-    --secondary: white;
+    --highlightsecondary: darkgray;
+    --secondary: gray;
     --tertiary: gray;
     --border: lightgray;
 

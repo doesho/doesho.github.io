@@ -8,8 +8,8 @@
 
     <link rel="stylesheet" href="../pagestyle.css" />
     <link rel="stylesheet" href="guidestyle.css" />
-    <link rel="stylesheet" href="lightmode.css" />
-    <link rel="stylesheet" href="darkmode.css" disabled/>
+    <link rel="stylesheet" href="lightmode.css" id="LightMode" />
+    <link rel="stylesheet" href="darkmode.css" id="DarkMode"/>
 
     <link rel="stylesheet" href="../searchbarstyle.css" />
     <link rel="stylesheet" href="choicelines.css" id="LineSheet" />
@@ -34,7 +34,6 @@
         <div id="SideNavTopContents">
             <button type="button" id="SideNavCloser"><img src="../content/icons/XFS.ico" alt="Side Nav Close" /></button>
             <a href="../index.html" class="HomeButton"><img src="../content/images/PMX_Logo.png" alt="PMX Logo" title="Home" /></a>
-            <hr />
         </div>
 
         <div id="SideNavContents">
@@ -44,7 +43,7 @@
             <a href="../community/main.html">Community &amp; Events</a>
             <a href="../players/main.html">Players</a>
             <a href="../blog/main.html">Blog</a>
-            <button type="button" id="ModeButton">Light/Dark</button>
+            <button type="button" id="ModeButton"><p id="ModeButtonText"></p></button>
         </div>
         <div id="SideNavBottomContents">
             <img id="BottomPic" draggable="false" />
@@ -393,6 +392,7 @@
     <script src="../content/scripts/search.js"></script>
     <script src="../content/scripts/stick.js"></script>
     <script src="../content/scripts/randompic.js"></script>
+    <script src="../content/scripts/styleswitch.js"></script>
 
     <script>
         //random ken quote generator. make him blow up if the user clicks him a bunch.
