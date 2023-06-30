@@ -8,6 +8,7 @@
 
 html *{
     font-family: Vollkorn, serif;
+    color: var(--text);
 }
 
 ::selection {
