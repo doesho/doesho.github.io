@@ -55,13 +55,13 @@
     display: block;
     text-decoration: none;
     border: 1px solid var(--border);
-    background: white;
+    background: var(--secondary);
     padding: 0px;
     min-width: 600px;
 }
 
     .Choice a{
-        color: black;
+        color: var(--text) !important;
     }
 
     .Choice:hover {
