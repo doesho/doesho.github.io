@@ -12,12 +12,12 @@ html *{
 }
 
 ::selection {
-    background: #abe4d8;
+    background: var(--selection);
 }
 
 a {
     text-decoration: none;
-    color: #44a490;
+    color: var(--link);
 }
 
 a:hover {
@@ -104,3 +104,8 @@ a:hover {
     padding: 20px;
     background: var(--secondary);
 }
+
+    #FooterNav a{
+        font-size: 15px;
+        margin: 15px;
+    }
