@@ -5,16 +5,14 @@
 */
 
 :root {
-    --highlight: orange;
-    --highlightsecondary: antiquewhite;
+    --highlight: mediumorchid;
+    --highlightsecondary: plum;
     --secondary: white;
     --tertiary: gray;
     --border: lightgray;
-
     --text: black;
     --link: darkcyan;
     --userinput: turquoise;
     --selection: skyblue;
-
     --background: whitesmoke;
 }
