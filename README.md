@@ -11,5 +11,5 @@ This is a real mess because I don't know web development and I'm learning as I g
 
 ## To Do
 
-1. COMPLETE BLOG PAGE. The guide page is basically good, next up is the blog page.
-2. STYLE PAGES AS RAINBOW. Currently the pages are all aggressive and orange. Let's try assigning each page a Normals color, as best we can according to color psychology, and style each page with minimal splashes of that color.
+1. MAKE IT LESS UGLY. Honestly the website is not very good looking. It's better looking than it was before, but it needs to be visually cohesive and more appealing.
+2. CREATE PLAYERS PAGE. Big index of players, with their own pages probably.
