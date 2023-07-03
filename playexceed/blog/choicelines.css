@@ -54,11 +54,15 @@
         text-indent: 40px;
     }
 
-    .BlogEntryBody p{
-        text-indent: 30px;
+    .BlogEntryBody{
     }
 
+        .BlogEntryBody p{
+            text-indent: 30px;
+        }
+
     .jumplink{ /*"read more..." links*/
+        margin: 10px;
     }
 
 .Choice hr {
