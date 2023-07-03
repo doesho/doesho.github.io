@@ -11,8 +11,10 @@
     --tertiary: gray;
     --border: lightgray;
     --text: black;
-    --link: turquoise;
-    --userinput: orange;
+    --link: darkcyan;
+    --userinput: turquoise;
     --background: whitesmoke;
     --selection: #abe4d8;
+    --optionbox: none;
+    --optionbackground: white;
 }

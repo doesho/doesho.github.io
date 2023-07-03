@@ -27,30 +27,29 @@
     padding: 20px 0px;
     width: 100%;
     text-align: center;
-    background: antiquewhite;
+    background: var(--optionbackground);
 }
 
 .box {
     display: inline-block;
-    width: 250px;
-    text-align: center;
+    width: 220px;
     font-weight: bold;
     font-size: 20px;
-    color: black;
+    color: var(--font);
 
-    background-color: orange;
-    border: 1px solid gray;
+    background-color: var(--optionbox);
+    border: 1px solid var(--border);
     border-radius: 2px;
     margin: 4px 4px;
     padding: 0px 5px 0px 5px;
     cursor: pointer;
 }
     .box p{
+        text-align:center;
     }
 
     .box:hover {
         color: black !important;
-        box-shadow: 0px 0px 0px 5px turquoise inset !important;
         border: 1px solid turquoise;
         transition: 0.15s;
     }
@@ -122,12 +121,12 @@
 
 .LinkList img{
     height: 50px;
-    border: 1px solid orange;
+    border: 1px solid var(--highlight);
     border-radius: 5px;
 }
 
 .LinkList img:hover{
-    border: 1px solid turquoise;
+    border: 1px solid var(--userinput);
     opacity: 1;
 }
 
@@ -136,8 +135,9 @@
 #NewsBox {
     overflow: auto;
     border: solid;
-    border-color: orange;
+    border-color: var(--highlight);
     border-radius: 4px;
+    background: var(--secondary);
     margin: 50px;
 
     height: 100%;
