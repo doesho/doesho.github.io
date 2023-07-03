@@ -21,7 +21,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     flex-basis: 150%;
-    background-color: whitesmoke;
+    background-color: var(--secondary);
     border: 1px solid gray;
     border-radius: 4px;
     padding: 10px;
@@ -71,7 +71,7 @@
 }
 
 #Timeline{
-    background-color: lightgray;
+    background-color: var(--tertiary);
     border: 1px solid gray;
     border-radius: 2px;
     padding: 5px;
