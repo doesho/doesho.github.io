@@ -1,27 +1,13 @@
 ﻿/* full page stuff */
 
-html * {
-    font-family: Vollkorn, serif;
-    background-color: #715a46;
+blockquote {
+    font-style: italic;
 }
 
-::selection {
-    background: #8f786b;
+.BlogSection{
+
 }
 
-h1 {
-    color: #c0ab99;
-}
-
-p {
-    color: #c0ab99;
-}
-
-a {
-    text-decoration: none;
-    color: rosybrown;
-}
-
-a:hover{
-    color: tan;
+.BlogEntryContents p{
+    text-indent: 40px;
 }

@@ -3,18 +3,11 @@
 html * {
     font-family: Vollkorn, serif;
     background-color: #715a46;
+    color: #c0ab99;
 }
 
 ::selection {
     background: #8f786b;
-}
-
-h1 {
-    color: #c0ab99;
-}
-
-p {
-    color: #c0ab99;
 }
 
 a {
@@ -22,6 +15,6 @@ a {
     color: rosybrown;
 }
 
-a:hover{
-    color: tan;
-}
+    a:hover {
+        color: tan;
+    }
