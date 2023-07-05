@@ -59,7 +59,7 @@
 #SideNavTopContents{
     position: relative;
     z-index: 66;
-    background: var(--highlightsecondary);
+    background: white;
     border-bottom: 2px solid gray;
 }
 
