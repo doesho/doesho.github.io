@@ -8,6 +8,9 @@
 
     <link rel="stylesheet" href="../pagestyle.css" />
     <link rel="stylesheet" href="playerstyle.css" />
+    <link rel="stylesheet" href="lightmode.css" />
+
+    <link rel="stylesheet" href="choicelines.css" />
 
     <link rel="stylesheet" href="../searchbarstyle.css" />
     <link rel="stylesheet" href="../sidenavstyle.css" id="SideNavSheet" />
@@ -53,18 +56,82 @@
             Each player can optionally have their own page or dropdown menu which details things about them, such as tournament winnings,
             favorite pony, plastyle, whatever they want.
         </p>
+        <p>
+            <b>Want to be on this list?</b> Message me on discord.
+        </p>
     </section>
 
     <!-- search bar -->
 
     <div id="SearchBar" class="stickable">
         <form>
+            <select id="CatagorySelect">
+                <option value="">Show All</option>
+                <optgroup label="United States">
+                    <option value="wc">West Coast</option>
+                    <option value="mw">Midwest</option>
+                    <option value="so">South</option>
+                    <option value="ec">East Coast</option>
+                </optgroup>
+                <optgroup label="Europe">
+                    <option value="fn">France</option>
+                    <option value="de">Germany</option>
+                    <option value="uk">United Kingdom</option>
+                </optgroup>
+                <optgroup label="Asia">
+                    <option value="jp">Japan</option>
+                    <option value="ch">China</option>
+                </optgroup>
+                <optgroup label="Oceania">
+                    <option value="au">Australia</option>
+                </optgroup>
+            </select>
+
             <input id="SearchInput" placeholder="Search..." />
 
             <button type="button" id="StyleButton" style="display:none"><span id="ButtonText"></span></button>
 
         </form>
     </div>
+
+    <!-- choices -->
+
+    <section class="UniqueBody">
+        <div class="ChoiceContainer" id="ChoiceUniqueContainer">
+
+            <div class="Choice wc">
+                <div class="ChoiceHead">
+                    <h3>Doe</h3>
+                    <h4>"Doesho"</h4>
+                </div>
+                <div class="ChoiceBody">
+                    <p>Mains, Location, Local Scene, Plays Online? </p>
+                    <a href="players/na/usa/wc/doesho.html">Page >></a>
+                </div>
+            </div>
+
+            <div class="Choice wc">
+                <div class="ChoiceHead">
+                    <h3>Ben Ben</h3>
+                    <h4>n/a</h4>
+                </div>
+                <div class="ChoiceBody">
+                    <p>Mains, Location, Local Scene, Plays Online? </p>
+                </div>
+            </div>
+
+            <div class="Choice ec">
+                <div class="ChoiceHead">
+                    <h3>EastCoaster</h3>
+                    <h4>notreal</h4>
+                </div>
+                <div class="ChoiceBody">
+                    <p>Mains, Location, Local Scene, Plays Online? </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
     <!-- scripts -->
 
