@@ -1,30 +1,41 @@
-﻿/* full page stuff */
+﻿
 
-blockquote {
-    font-style: italic;
-}
+/* full page stuff */
 
 .BlogEntry{
     margin-bottom: 60px;
 }
 
-.BlogEntryHeader {
+/* top of entry */
 
+.BlogEntryHeader {
 }
 
 .BlogEntryTitle {
     color: var(--entrytitle);
+    line-height: 0px;
     margin: 0px;
+    font-size: 50px;
 }
 
 .BlogEntryFluff {
     margin: 0px;
     font-size: 8px;
     font-family: 'Times New Roman', Times, serif !important;
+    position: relative;
+    top: -5px;
 }
 
 .BlogEntryDate {
     margin: 0px;
+    position: relative;
+
+}
+
+/* actual contents */
+
+.BlogEntryContents{
+    line-height: 20px;
 }
 
 .BlogEntryContents p{

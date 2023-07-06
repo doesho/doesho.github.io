@@ -1,12 +1,17 @@
-﻿/* full page stuff */
+﻿:root {
+    --text: #c0ab99;
+    --selection: #8f786b;
+}
+
+/* full page stuff */
 
 html * {
     font-family: Vollkorn, serif;
-    color: #c0ab99;
+    color: var(--text);
 }
 
 ::selection {
-    background: #8f786b;
+    background: var(--selection);
 }
 
 a {
@@ -18,12 +23,20 @@ a {
         color: tan;
     }
 
+blockquote {
+    font-style: italic;
+    background: linear-gradient(to right, var(--quotecolor), rgba(0,0,0,0) 5%);
+    padding: 5px 10px;
+}
+
 #Body {
     background: #524234;
 }
 
 #MasterSection {
     margin: 30px;
+    min-width: 420px;
+    max-width: 900px;
     padding: 20px;
     background-color: #715a46;
 }
@@ -31,6 +44,5 @@ a {
 /* page classes */
 
 #Header{
-    background: linear-gradient(to right, brown, tan);
     text-align: center;
 }
