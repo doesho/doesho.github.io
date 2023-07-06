@@ -1,7 +1,23 @@
 ﻿
 
 /* full page stuff */
+#MasterSection {
+    display: flex;
+}
 
+#BlogSection {
+    margin: 30px;
+    padding: 20px;
+    background-color: #715a46;
+    flex-basis: 70%;
+}
+
+#SidebarSection {
+    margin: 30px;
+    flex-basis: 30%;
+}
+
+/* >>>>>>>>> entries */
 .BlogEntry{
     margin-bottom: 60px;
 }
@@ -9,11 +25,12 @@
 /* top of entry */
 
 .BlogEntryHeader {
+    margin-bottom: -20px;
 }
 
 .BlogEntryTitle {
     color: var(--entrytitle);
-    line-height: 0px;
+    line-height: 40px;
     margin: 0px;
     font-size: 50px;
 }
@@ -23,12 +40,13 @@
     font-size: 8px;
     font-family: 'Times New Roman', Times, serif !important;
     position: relative;
-    top: -5px;
+    top: -25px;
 }
 
 .BlogEntryDate {
     margin: 0px;
     position: relative;
+    top: -20px;
 
 }
 
@@ -36,6 +54,7 @@
 
 .BlogEntryContents{
     line-height: 20px;
+    padding: 0px 30px;
 }
 
 .BlogEntryContents p{

@@ -33,14 +33,6 @@ blockquote {
     background: #524234;
 }
 
-#MasterSection {
-    margin: 30px;
-    min-width: 420px;
-    max-width: 900px;
-    padding: 20px;
-    background-color: #715a46;
-}
-
 /* page classes */
 
 #Header{
