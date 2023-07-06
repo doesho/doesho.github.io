@@ -2,7 +2,6 @@
 
 html * {
     font-family: Vollkorn, serif;
-    background-color: #715a46;
     color: #c0ab99;
 }
 
@@ -18,3 +17,20 @@ a {
     a:hover {
         color: tan;
     }
+
+#Body {
+    background: #524234;
+}
+
+#MasterSection {
+    margin: 30px;
+    padding: 20px;
+    background-color: #715a46;
+}
+
+/* page classes */
+
+#Header{
+    background: linear-gradient(to right, brown, tan);
+    text-align: center;
+}

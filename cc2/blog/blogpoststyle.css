@@ -4,8 +4,27 @@ blockquote {
     font-style: italic;
 }
 
-.BlogSection{
+.BlogEntry{
+    margin-bottom: 60px;
+}
 
+.BlogEntryHeader {
+
+}
+
+.BlogEntryTitle {
+    color: var(--entrytitle);
+    margin: 0px;
+}
+
+.BlogEntryFluff {
+    margin: 0px;
+    font-size: 8px;
+    font-family: 'Times New Roman', Times, serif !important;
+}
+
+.BlogEntryDate {
+    margin: 0px;
 }
 
 .BlogEntryContents p{
