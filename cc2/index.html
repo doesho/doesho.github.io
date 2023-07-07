@@ -19,18 +19,17 @@
     <section id="UniqueContainer">
 
         <section id="Sidebar">
-            <h1 id="Greeting"></h1>
+            <h1 id="Greeting">welcome to the club.</h1>
         </section>
 
         <section id="NavOptionsContainer">
-            <div id="BlogOption" class="NavOption">
+            <div class="NavOption">
                 <a href="blog/2023/main.html">blog >></a>
             </div>
             <div class="NavOption">
                 <a href="../playexceed/index.html">exceed >></a>
             </div>
         </section>
-
     </section>
     
 
@@ -38,13 +37,13 @@
         const kenQuoteArray = [
             "right here, right now",
             "some days, some nights",
-            "welcome to the world",
             "what a lovely catastrophe",
-            "welcome to my brown heaven.",
+            "god has a brown voice",
+            "down seven, up eight",
         ]
 
         kenQuoteBody = document.getElementById('Greeting');
-        window.onload = getKenQuote;
+        //window.onload = getKenQuote;
         kenQuoteBody.addEventListener('click', getKenQuote);
 
         function getKenQuote() {

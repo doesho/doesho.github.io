@@ -2,44 +2,48 @@
 
 #UniqueContainer {
     display: flex;
-    justify-content: center;
 }
 
 /* contained div 1 */
 
 #NavOptionsContainer {
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
-    margin: 10px;
-    position: fixed;
-    left: 50%;
+    height: 100%;
+    flex-basis: 50%;
+    width: 50%;
 }
 
     .NavOption{
-        margin: 20px 0px;
+        margin: 20px 10px;
         font-size: 40px;
     }
 
 /* contained div 2 */
 
 #Sidebar {
-    display: flex;
-    position: fixed;
-    right: 50%;
-    height: 100%;
-
+    display: block;
+    height: 100vh;
+    user-select: none;
+    flex-basis: 50%;
+    overflow: hidden;
     background-image: url(content/1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: right;
 }
+
     #Greeting{
-        display:table-caption;
+        position: fixed;
+        right: 50%;
+
+        hyphens: auto;
+
+        word-spacing: 9999rem;
         font-size: 100px;
         text-align: right;
         margin: 10px;
-    }
+        line-height: 100px;
 
-    #GreetingImage{
-        width: 100%;
+        align-items: center;
     }
