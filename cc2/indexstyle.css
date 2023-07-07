@@ -2,21 +2,23 @@
 
 #UniqueContainer {
     display: flex;
-    padding: 10px;
     justify-content: center;
 }
 
 /* contained div 1 */
 
 #NavOptionsContainer {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     margin: 10px;
     position: fixed;
     left: 50%;
 }
 
     .NavOption{
-        margin: 10px 0px;
+        margin: 20px 0px;
+        font-size: 40px;
     }
 
 /* contained div 2 */
@@ -26,12 +28,16 @@
     position: fixed;
     right: 50%;
     height: 100%;
+
+    background-image: url(content/1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
     #Greeting{
         display:table-caption;
         font-size: 100px;
         text-align: right;
-        margin: 0px;
+        margin: 10px;
     }
 
     #GreetingImage{

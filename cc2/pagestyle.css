@@ -34,6 +34,8 @@ blockquote {
 
 #Body {
     background: #524234;
+    padding: 0px;
+    margin: 0px;
 }
 
 /* page classes */
