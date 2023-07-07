@@ -16,29 +16,35 @@
 
 <body id="Body">
 
-    <section id="Header">
-        <button><h1 id="Greeting">test</h1></button>
-    </section>
+    <section id="UniqueContainer">
 
-    <section id="NavOptions">
-        <div id="BlogOption">
-            <a href="blog/2023/main.html">blog</a>
-        </div>
+        <section id="Sidebar">
+            <h1 id="Greeting"></h1>
+        </section>
 
-        <a href="../playexceed/index.html">exceed</a>
+        <section id="NavOptionsContainer">
+            <div id="BlogOption" class="NavOption">
+                <a href="blog/2023/main.html">blog</a>
+            </div>
+            <div>
+                <a href="../playexceed/index.html">exceed</a>
+            </div>
+        </section>
+
     </section>
+    
 
     <script>
-        //random ken quote generator. make him blow up if the user clicks him a bunch.
-
         const kenQuoteArray = [
-            "right here, right now.",
-            "some days, some nights...",
+            "right here, right now",
+            "some days, some nights",
+            "welcome to the world",
+            "what a lovely catastrophe",
+            "welcome to my brown heaven.",
         ]
 
-
         kenQuoteBody = document.getElementById('Greeting');
-
+        window.onload = getKenQuote;
         kenQuoteBody.addEventListener('click', getKenQuote);
 
         function getKenQuote() {

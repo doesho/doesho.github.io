@@ -1,18 +1,39 @@
 ﻿/* full page stuff */
 
-#NavOptions{
+#UniqueContainer {
     display: flex;
-    justify-content: space-evenly;
-
-    margin: 0px 50px 0px 50px;
+    padding: 10px;
+    justify-content: center;
 }
 
-#Header{
-    width: 50px;
+/* contained div 1 */
+
+#NavOptionsContainer {
+    display: block;
+    margin: 10px;
+    position: fixed;
+    left: 50%;
 }
 
-    #Header button{
-        background: rgba(0,0,0,0);
-        border: none;
+    .NavOption{
+        margin: 10px 0px;
+    }
+
+/* contained div 2 */
+
+#Sidebar {
+    display: flex;
+    position: fixed;
+    right: 50%;
+    height: 100%;
+}
+    #Greeting{
+        display:table-caption;
+        font-size: 100px;
         text-align: right;
+        margin: 0px;
+    }
+
+    #GreetingImage{
+        width: 100%;
     }
