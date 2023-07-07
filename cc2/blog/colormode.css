@@ -1,6 +1,10 @@
 ﻿/* full page stuff */
 
 :root {
+    /* side bar.. side */
+    --sidebarbackground: #604d3c;
+    /* blog side */
+    --blogbackground: #715a46;
     --entrytitle: #a97656;
     --quotecolor: #a97656;
     --quotecolorsecond: tan;
