@@ -59,8 +59,8 @@
 #SideNavTopContents{
     position: relative;
     z-index: 66;
-    background: white;
-    border-bottom: 2px solid gray;
+    background: rgba(255,255,255, 0.8);
+
 }
 
     #SideNavTopContents hr{
