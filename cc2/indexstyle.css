@@ -33,17 +33,14 @@
     background-position: right;
 }
 
-    #Greeting{
-        position: fixed;
-        right: 50%;
-
-        hyphens: auto;
-
-        word-spacing: 9999rem;
-        font-size: 100px;
-        text-align: right;
-        margin: 10px;
-        line-height: 100px;
-
-        align-items: center;
-    }
+#Greeting {
+    position: fixed;
+    right: 50%;
+    word-spacing: 9999rem;
+    font-size: 100px;
+    text-align: right;
+    margin: 10px;
+    line-height: 100px;
+    hyphens: auto;
+    align-items: center;
+}
