@@ -3,16 +3,28 @@
 /* full page stuff */
 #MasterSection {
     display: flex;
+    justify-content: center;
+}
+
+.Media{
+    display: flex;
+    background-color: saddlebrown;
+    justify-items: center;
+    width: fit-content;
+    padding: 4px;
 }
 
 /* sidebar side */
 
-#SidebarSection {
+#SidebarSection{
+    width: fit-content;
+}
+
+.SidebarPanel {
     margin: 30px;
     flex-basis: 30%;
     background: var(--sidebarbackground);
     padding: 20px;
-    height: 100%;
 }
 
 /* blog side */
@@ -22,7 +34,7 @@
     margin-right: 0px;
     padding: 20px;
     background-color: var(--blogbackground);
-    flex-basis: 70%;
+    flex-basis: 60%;
 }
 
 /* >>>>>>>>> entries */
