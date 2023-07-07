@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', randomBanner);
 function randomBanner() { //make this a psuedo element background instead so we can filter it
     randomInt = Math.floor(Math.random() * sideNavImageArray.length);
     let currentImage = bannerImageArray[randomInt];
-    let bannerImage = document.getElementById('IndexHeading')
     let gradient = 'linear-gradient(to bottom right, rgba(250,163,69, 0.8), rgba(249,203,62, 0.8)), ';
 
     IndexHeading.style.backgroundImage = gradient + 'url(' + currentImage + ')';
