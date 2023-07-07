@@ -14,16 +14,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body id="Body">
 
     <section id="Header">
         <button><h1 id="Greeting">test</h1></button>
     </section>
 
     <section id="NavOptions">
-        <a href="blog/2023/main.html">blog</a>
+        <div id="BlogOption">
+            <a href="blog/2023/main.html">blog</a>
+        </div>
+
         <a href="../playexceed/index.html">exceed</a>
     </section>
+
+    <script>
+        //random ken quote generator. make him blow up if the user clicks him a bunch.
+
+        const kenQuoteArray = [
+            "right here, right now.",
+            "some days, some nights...",
+        ]
+
+
+        kenQuoteBody = document.getElementById('Greeting');
+
+        kenQuoteBody.addEventListener('click', getKenQuote);
+
+        function getKenQuote() {
+            randomInt = Math.floor(Math.random() * kenQuoteArray.length);
+            let currentQuote = kenQuoteArray[randomInt];
+            kenQuoteBody.innerText = currentQuote;
+        }
+    </script>
 
 </body>
 </html>
