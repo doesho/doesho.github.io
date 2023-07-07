@@ -1,4 +1,8 @@
-﻿
+﻿@media screen and (max-width: 800px){
+    #MasterSection{
+        flex-direction: column-reverse;
+    }
+}
 
 /* full page stuff */
 #MasterSection {
@@ -21,6 +25,8 @@
 }
 
 .SidebarPanel {
+    display: flex;
+    flex-direction: column;
     margin: 30px;
     flex-basis: 30%;
     background: var(--sidebarbackground);
@@ -31,7 +37,6 @@
 
 #BlogSection {
     margin: 30px;
-    margin-right: 0px;
     padding: 20px;
     background-color: var(--blogbackground);
     flex-basis: 60%;
