@@ -1,7 +1,7 @@
 ﻿:root {
+    --background: #524234;
     --text: #c0ab99;
     --selection: #8f786b;
-
     --a: rosybrown;
     --ahighlight: saddlebrown;
 }
@@ -33,7 +33,7 @@ blockquote {
 }
 
 #Body {
-    background: #524234;
+    background: var(--background);
     padding: 0px;
     margin: 0px;
 }
