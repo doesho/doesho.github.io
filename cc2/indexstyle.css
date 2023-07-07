@@ -28,16 +28,14 @@
     user-select: none;
     flex-basis: 50%;
     overflow: hidden;
-    background: sienna;
-    background-image: linear-gradient(to bottom, rgba(130,61,34,0.5) 30%, sienna), url(content/1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: right;
+    background-position: center;
 }
 
 #Greeting {
     position: relative;
-    word-spacing: 9999rem;
+    word-spacing: 999rem;
     font-size: 80px;
     text-align: right;
     margin: 10px;

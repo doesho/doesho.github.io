@@ -35,22 +35,27 @@
 
     <script>
         const kenQuoteArray = [
-            "the tao which can be told is not the eternal tao",
-            "some days, some nights, some live, some die, in the way of the samurai",
-            "god has a brown voice, soft and full as beer",
-            "to manifest great compassion and act for the sake of man",
-            "there is no limit to the breadth and depth of ones heart",
-            "accept all things as they are",
+            "her evil twin can fight like her too.",
+            "the greatest trick none would see.",
+            "change is not painful. only resistance to change.",
+        ]
+
+        const backgroundArray = [
+            "content/images/1.jpg",
+            "content/images/2.jpg",
+            "content/images/3.jpg",
         ]
 
         kenQuoteBody = document.getElementById('Greeting');
+        quoteDiv = document.getElementById('Sidebar');
         //window.onload = getKenQuote;
         kenQuoteBody.addEventListener('click', getKenQuote);
 
         function getKenQuote() {
             randomInt = Math.floor(Math.random() * kenQuoteArray.length);
-            let currentQuote = kenQuoteArray[randomInt];
-            kenQuoteBody.innerText = currentQuote;
+            let currentPair = kenQuoteArray[randomInt];
+            kenQuoteBody.innerText = currentPair;
+            quoteDiv.style.backgroundImage = 'url(' + backgroundArray[randomInt] + ')';
         }
     </script>
 

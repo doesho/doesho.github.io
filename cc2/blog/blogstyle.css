@@ -57,7 +57,7 @@
     color: var(--entrytitle);
     line-height: 40px;
     margin: 0px;
-    font-size: 50px;
+    font-size: 55px;
 }
 
 .BlogEntryFluff {
@@ -71,7 +71,7 @@
 .BlogEntryDate {
     margin: 0px;
     position: relative;
-    top: -20px;
+    top: -19px;
 
 }
 
