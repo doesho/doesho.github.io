@@ -1,0 +1,11 @@
+﻿.sticky{
+    position: fixed;
+    top: -20px;
+    width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+    .sticky {
+        left: 70%;
+    }
+}
