@@ -19,7 +19,9 @@
     <section id="UniqueContainer">
 
         <section id="Sidebar">
-            <h1 id="Greeting">thank you for visiting, and welcome to the club</h1>
+            <div id="GreetingWrapper">
+                <h1 id="Greeting"></h1>
+            </div>
         </section>
 
         <section id="NavOptionsContainer">
@@ -35,20 +37,30 @@
 
     <script>
         const kenQuoteArray = [
-            "turns out, her evil twin fights like her.",
-            "the greatest trick the world would never see.",
+            "her twin could fight like her too.",
+            "...and i'll be beside her.",
             "change is not painful. only resistance to change.",
+            "i'm going to find you...",
+            "...?",
+            "come along. i don't mind if you don't mind",
+            "...and i'll be waiting for you.",
         ]
 
         const backgroundArray = [
             "content/images/1.jpg",
             "content/images/2.jpg",
             "content/images/3.jpg",
+            "content/images/4.jpg",
+            "content/images/5.jpg",
+            "content/images/6.jpg",
+            "content/images/7.jpg",
         ]
+
+
 
         kenQuoteBody = document.getElementById('Greeting');
         quoteDiv = document.getElementById('Sidebar');
-        //window.onload = getKenQuote;
+        window.onload = getKenQuote;
         kenQuoteBody.addEventListener('click', getKenQuote);
 
         function getKenQuote() {

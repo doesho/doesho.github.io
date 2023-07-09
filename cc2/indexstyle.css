@@ -11,7 +11,6 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 50%;
 }
 
     .NavOption{
@@ -22,8 +21,10 @@
 /* contained div 2 */
 
 #Sidebar {
-    display: block;
+    display: flex;
+    justify-content: right;
     height: 100vh;
+    flex-basis: 50%;
     user-select: none;
     overflow: hidden;
     background-repeat: no-repeat;
@@ -31,15 +32,18 @@
     background-position: center;
 }
 
+#GreetingWrapper {
+    align-self: center;
+    filter: invert(1);
+    mix-blend-mode: difference;
+}
+
 #Greeting {
     filter: invert(1);
     mix-blend-mode: difference;
-
-
     font-size: 80px;
     text-align: right;
     margin: 10px;
     line-height: 80px;
-    hyphens: auto;
     align-items: center;
 }
