@@ -2,6 +2,10 @@
     #MasterSection{
         flex-direction: column-reverse;
     }
+    #SidebarSection{
+        max-width: 100% !important;
+        width: 100%;
+    }
 }
 
 /* full page stuff */
@@ -13,15 +17,20 @@
 .Media{
     display: flex;
     background-color: saddlebrown;
-    justify-items: center;
     width: fit-content;
     padding: 4px;
+    align-self:center;
+}
+#MediaTitle {
+    align-self: center;
+    margin: 10px 0px 0px;
 }
 
 /* sidebar side */
 
 #SidebarSection{
     width: fit-content;
+    max-width: 30%;
 }
 
 .SidebarPanel {
@@ -32,6 +41,8 @@
     background: var(--sidebarbackground);
     padding: 20px;
 }
+
+
 
 /* blog side */
 
