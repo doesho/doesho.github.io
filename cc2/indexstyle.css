@@ -10,19 +10,19 @@
     display: flex;
     align-items: center;
     justify-content: right;
-    height: 100vh;
-    width: 20%;
-    min-width: 300px;
+    justify-content: space-around;
+    width: 30%;
+    overflow: hidden;
 }
 
     #Header{
         font-size: 30px;
         margin: 0px 10px;
+        hyphens: auto;
     }
 
     .NavOption{
-        margin: 20px 10px;
-        font-size: 40px;
+        font-size: 30px;
         text-align: right;
     }
 
@@ -32,7 +32,7 @@
     display: flex;
     justify-content: right;
     height: 100vh;
-    flex-basis: 80%;
+    flex-basis: 70%;
     user-select: none;
     overflow: hidden;
     background-repeat: no-repeat;
