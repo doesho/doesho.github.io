@@ -38,8 +38,19 @@ blockquote {
     margin: 0px;
 }
 
+/* tooltips */
+
+.tooltipicon{
+
+}
+
+.tooltip{
+    display: none;
+}
+
 /* page classes */
 
 #Header{
     text-align: center;
 }
+
