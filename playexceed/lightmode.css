@@ -15,6 +15,6 @@
     --userinput: turquoise;
     --background: whitesmoke;
     --selection: #abe4d8;
-    --optionbox: none;
-    --optionbackground: white;
+    --optionbox: white;
+    --optionbackground: rgb(245,245,245); /*background of option section, footer */
 }
