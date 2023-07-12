@@ -60,7 +60,7 @@
     position: relative;
     z-index: 66;
     background: rgba(255,255,255, 0.8);
-
+    margin-bottom: 10px;
 }
 
     #SideNavTopContents hr{
@@ -92,18 +92,16 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 5px;
 
     z-index: 2;
 }
 
 #SideNavContents a{ /* actual links */
-    margin: 5px 0px;
     padding: 10px;
     line-height: 18px;
     text-align: right;
     background-color: var(--secondary);
-    border: 1px solid gray;
+    border: 1px solid rgba(0,0,0,0.05);
 }
 
 #ModeButton{
