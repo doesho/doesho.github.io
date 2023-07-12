@@ -6,6 +6,8 @@
     /* blog side */
     --blogbackground: #715a46;
     --entrytitle: #a97656;
-    --quotecolor: #a97656;
+    --quotecolor: #8d7366;
     --quotecolorsecond: tan;
+    /*other*/
+    --mediaframe: #8d7366;
 }

@@ -1,7 +1,6 @@
 ﻿.sticky{
     position: fixed;
-    top: -20px;
-    width: 100%;
+    top: 0px;
 }
 
 @media screen and (max-width: 800px) {
