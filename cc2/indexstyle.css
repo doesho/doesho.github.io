@@ -9,7 +9,6 @@
 #NavOptionsContainer {
     display: flex;
     align-items: center;
-    justify-content: right;
     justify-content: space-around;
     width: 30%;
     overflow: hidden;
@@ -23,14 +22,13 @@
 
     .NavOption{
         font-size: 30px;
-        text-align: right;
+        text-align: center;
     }
 
 /* contained div 2 */
 
 #Sidebar {
     display: flex;
-    justify-content: right;
     height: 100vh;
     flex-basis: 70%;
     user-select: none;
