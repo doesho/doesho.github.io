@@ -42,24 +42,14 @@ blockquote {
 
 .ToolTip {
     position: relative;
-    display: inline-block;
 }
 
-    .ToolTip .ToolTipBody { /*make this shit more generic dumbass. positioning settings belong on individual page*/
+    .ToolTip .ToolTipBody { /* individual tooltips styled on own sheet */
         visibility: hidden;
-        width: 500px;
         opacity: 0;
-        background-color: saddlebrown;
-        border-radius: 6px;
         position: absolute;
         z-index: 1;
-        padding: 10px;
-        bottom: -300%;
-        right: 150%;
-        margin-left: -60px;
-        line-height: 15px;
-        text-indent: 20px;
-        align-self: flex-end;
+
     }
 
     .ToolTip:hover .ToolTipBody {

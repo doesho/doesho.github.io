@@ -1,1 +1,17 @@
-﻿
+﻿/* tooltip + media are paired up using class name "song-songname".
+    the tooltip has an ID "songname-tooltip" so it can be individually 
+    styled on this sheet.
+*/
+
+#tooltip-50off {
+    width: 500px;
+    background-color: saddlebrown;
+    border-radius: 6px;
+    padding: 10px;
+    bottom: -300%;
+    right: 150%;
+    margin-left: -60px;
+    line-height: 15px;
+    text-indent: 20px;
+    align-self: flex-end;
+}
