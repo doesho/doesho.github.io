@@ -29,6 +29,7 @@
 
 #Sidebar {
     display: flex;
+    justify-content: right;
     height: 100vh;
     flex-basis: 70%;
     user-select: none;
@@ -47,9 +48,9 @@
 #Greeting {
     filter: invert(1);
     mix-blend-mode: difference;
-    font-size: 80px;
+    font-size: 90px;
     text-align: right;
     margin: 20px;
     line-height: 80px;
-    align-items: center;
+    color: tan;
 }

@@ -74,6 +74,7 @@
         quoteDiv = document.getElementById('Sidebar');
         window.onload = getKenQuote;
         newButton.addEventListener('click', getKenQuote);
+        let gradient = 'linear-gradient(to top left, rgba(110,80,50,0.9) 5%, rgba(0,0,0,0)), ';
 
         function getKenQuote() {
             randomInt = Math.floor(Math.random() * kenQuoteArray.length);
