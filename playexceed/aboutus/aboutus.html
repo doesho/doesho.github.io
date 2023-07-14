@@ -8,7 +8,9 @@
 
     <link rel="stylesheet" href="aboutstyle.css" />
     <link rel="stylesheet" href="../pagestyle.css" />
-    <link rel="stylesheet" href="../sidebarstyle.css" />
+    <link rel="stylesheet" href="../sidenavstyle.css" />
+
+    <link rel="stylesheet" href="lightmode.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,20 +19,31 @@
 
 <body>
 
-    <button type="button" id="SideBarOpener"><img src="../content/icons/PMX_Favicon.ico" /></button>
-    <div id="SideBar">
-        <div id="SideBarContents">
-            <button type="button" id="SideBarCloser"><<</button>
+    <!-- side nav bar! -->
+
+    <button type="button" id="SideNavOpener"><img src="../content/icons/PMX_Favicon.ico" alt="Side Nav Open" /></button>
+
+    <div id="SideNav">
+
+        <div id="SideNavTopContents">
+            <button type="button" id="SideNavCloser"><img src="../content/icons/XFS.ico" alt="Side Nav Close" /></button>
+            <a href="../index.html" class="HomeButton"><img src="../content/images/PMX_Logo.png" alt="PMX Logo" title="Home" /></a>
+        </div>
+
+        <div id="SideNavContents">
             <a href="../index.html">Home</a>
             <a href="../customs/main.html">Custom Content</a>
             <a href="../guides/main.html">Guides &amp; Strategy</a>
             <a href="../community/main.html">Community &amp; Events</a>
             <a href="../players/main.html">Players</a>
             <a href="../blog/main.html">Blog</a>
+            <button type="button" id="ModeButton"><p id="ModeButtonText"></p></button>
+        </div>
+        <div id="SideNavBottomContents">
+            <img id="BottomPic" draggable="false" />
         </div>
     </div>
-
-    <!-- content --> 
+    <!-- content -->
 
     <section id="Heading">
         <h1>FAQ &amp; About</h1>
@@ -60,7 +73,8 @@
 
     </section>
 
-    <script src="../content/scripts/sidebar.js"></script>
+    <script src="../content/scripts/sidenav.js"></script>
+    <script src="../content/scripts/randompic.js"></script>
 
 </body>
 </html>
