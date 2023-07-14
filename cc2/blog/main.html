@@ -143,7 +143,18 @@
 
                     <div class="ToolTip">
                         <img src="../content/icons/he.png" width="30px" class="ToolTipOpener" />
-                        <div class="ToolTipBody song-50off" id="tooltip-50off">
+
+                        <div class="ToolTipBody featuredSong" id="tooltip-mhw">
+                            <p>
+                                I recently got into Monster Hunter, beginning with Monster Hunter: World. The atmosphere is phenomenal, and just
+                                wandering around each level on your way to the monster is so engrossing. <br />The title theme I think is an underrated
+                                detail.
+                                It captures the wonder and serenity of nature, with a hint of the grand, spectacular combat at the game's heart. It's
+                                a brilliant song to have on the title screen.
+                            </p>
+                        </div>
+
+                        <div class="ToolTipBody featuredSong" id="tooltip-50off">
                             <p>
                                 This song stands out as a vaporwave treasure with its somber yet optimistic tone. To me, it is not a criticism
                                 or attack like most vaporwave. Using homey personal footage of beautiful shopping centers, it says:
@@ -166,12 +177,16 @@
                     <p>
                         Featured song
                     </p>
-                    <a href="javascript:;" title="return" style="visibility:hidden;"><<</a>
-                    <a href="javascript:;" title="previous song">>></a>
+                    <a href="javascript:;" title="next song" id="next"><<</a>
+                    <a href="javascript:;" title="previous song" id="previous">>></a>
                 </div>
-                <div class="Media">
-                    <iframe width="200" src="https://www.youtube.com/embed/HG9ilI2zuTE?start=6" class="song-50off" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="Media" id="song-50off">
+                    <iframe width="200" src="https://www.youtube.com/embed/HG9ilI2zuTE?start=6" class="featuredSong" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>               
+                <div class="Media" id="song-mhw">
+                    <iframe width="200" src="https://www.youtube.com/embed/Fj4o3q659Z4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
+
             </div>
 
 
@@ -194,6 +209,7 @@
     </section>
 
     <script src="../content/scripts/stick.js"></script>
+    <script src="../content/scripts/featuredsong.js"></script>
 
 </body>
 </html>

@@ -7,11 +7,23 @@
     width: 500px;
     background-color: saddlebrown;
     border-radius: 6px;
-    padding: 10px;
+    padding: 5px;
     bottom: -300%;
     right: 150%;
     margin-left: -60px;
     line-height: 15px;
     text-indent: 20px;
     align-self: flex-end;
+}
+
+#tooltip-mhw{
+    width: 400px;
+    background-color: saddlebrown;
+    border-radius: 6px;
+    padding: 5px;
+    text-indent: 20px;
+    align-self: flex-end;
+    bottom: -100%;
+    right: 150%;
+    margin-left: -60px;
 }
