@@ -57,6 +57,10 @@ blockquote {
         transition: 0.2s;
     }
 
+    .ToolTipBody p{
+        margin: 10px;
+    }
+
 /* media title */
 #MediaTitle{
     display: flex;
