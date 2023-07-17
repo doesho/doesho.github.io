@@ -8,7 +8,7 @@
     background-color: tan;
     border-radius: 6px;
     padding: 5px;
-    bottom: -300%;
+    bottom: -270%;
     right: 150%;
     margin-left: -60px;
     line-height: 15px;
@@ -26,11 +26,28 @@
     padding: 5px;
     text-indent: 20px;
     align-self: flex-end;
-    bottom: -250%;
+    bottom: -210%;
     right: 150%;
     margin-left: -60px;
 }
     #tooltip-mhw p{
+        color: saddlebrown;
+        line-height: 15px;
+    }
+
+#tooltip-onesmallstep {
+    width: 500px;
+    background-color: tan;
+    border-radius: 6px;
+    padding: 5px;
+    text-indent: 20px;
+    align-self: flex-end;
+    bottom: -400%;
+    right: 150%;
+    margin-left: -60px;
+}
+
+    #tooltip-onesmallstep p {
         color: saddlebrown;
         line-height: 15px;
     }
