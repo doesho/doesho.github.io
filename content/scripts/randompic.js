@@ -29,6 +29,8 @@ function randomSideNavPic() {
 }
 
 document.addEventListener('DOMContentLoaded', randomBanner);
+let newimage = document.getElementById('newImage');
+newimage.addEventListener('click', randomBanner);
 
 function randomBanner() { //make this a psuedo element background instead so we can filter it
     randomInt = Math.floor(Math.random() * sideNavImageArray.length);

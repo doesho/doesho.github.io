@@ -20,6 +20,18 @@
     padding: 40px;
 }
 
+#newImage{
+    position: absolute;
+    right: 10px;
+    top: 350px;
+    opacity: 0.1;
+}
+    #newImage:hover{
+        opacity: 0.5;
+        cursor: pointer;
+        user-select: none;
+    }
+
 /* options */
 
 #options {
