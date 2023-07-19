@@ -26,12 +26,24 @@
 .MediaTitle {
     display: flex;
     align-self: center;
-
 }
+    
+    .MediaTitle p{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 
     .MediaTitle a{
         align-self: center;
     }
+
+.ToolTip{
+    display: flex;
+}
+
+.ToolTipOpener{
+    align-self: center;
+}
 
 /* sidebar side */
 
