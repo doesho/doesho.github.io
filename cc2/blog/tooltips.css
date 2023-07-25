@@ -3,6 +3,29 @@
     styled on this sheet.
 */
 
+.tooltipfluff{
+    position: absolute;
+    bottom: 5px;
+    right: 3px;
+
+    text-align: right;
+    margin: 0px;
+    opacity: 0.2;
+}
+
+    .tooltipfluff-songtitle{
+        margin: 0px;
+        padding: 0px;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 15px;
+    }
+
+    .tooltipfluff-date {
+        margin: 0px;
+        padding: 0px;
+    }
+
 #tooltip-50off {
     width: 500px;
     background-color: tan;
