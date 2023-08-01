@@ -88,6 +88,12 @@
     background-color: lightgray !important;
 }
 
+.DisabledPage{
+    color: dimgray !important;
+    cursor: not-allowed;
+    background-color: gray !important;
+}
+
 #SideNavContents {
     position: relative;
     display: flex;
