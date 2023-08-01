@@ -9,6 +9,10 @@
     background-color: var(--highlight);
 }
 
+#body{
+    background-color: var(--background);
+}
+
 .TextBody{
     display: flex;
     flex-direction: column;
@@ -16,7 +20,9 @@
 }
 
 .UniqueBody {
-    padding: 50px;
+    background-color: var(--secondary);
+    margin: 0px 80px;
+    padding: 60px 40px;
 }
 
 /* each entry on this page */
