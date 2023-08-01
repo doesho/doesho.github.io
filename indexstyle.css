@@ -159,6 +159,10 @@
         background: orange;
     }
 
+hr {
+    opacity: 0.5;
+}
+
 /* >> individual news entry*/
 
 .NewsEntry{
