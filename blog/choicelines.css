@@ -8,11 +8,11 @@
 
 .UniqueBody{ /* father of all unique content */
     display: flex;
-    padding: 50px 100px;
+    padding: 0px 100px;
 }
 
 .UniqueContainer { /*both choiceuniquecontainer and timelineuniquecontainer have this class */
-    margin: 5px;
+    margin: 0px 5px 50px;
 }
 
 /* >>> left side blog content */
@@ -22,9 +22,8 @@
     flex-wrap: wrap;
     flex-basis: 150%;
     background-color: var(--secondary);
-    border: 1px solid gray;
     border-radius: 4px;
-    padding: 10px;
+    padding: 50px 10px;
 }
 
 .ChoiceSectionTitle{
@@ -67,6 +66,7 @@
 
 .Choice hr {
     margin: 30px 0px;
+    color: var(--background);
 }
 
 /* >>> right side timeline */
@@ -79,6 +79,7 @@
     border: 1px solid gray;
     border-radius: 2px;
     padding: 5px;
+    margin-top: 50px;
 }
 
 .MonthTitle{
