@@ -9,20 +9,40 @@
 
 #IndexHeading { /*inherits nothing from pagestyle #heading*/
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    border-bottom: 1px solid gray;
+    align-items: center;
     background-size: cover;
     background-position: center;
+    height: 100vh;
+
+    overflow: hidden;
 }
 
 #Banner {
-    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#PMXimg{
+    width: 60%;
+}
+
+#IndexHeadingBottom {
+    display: flex;
+    height: 100px;
+    width: 100vw;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 20%, rgba(255,255,255,0.3), var(--indexheadingbottom) 70%);
+    position: absolute;
+    bottom: 0px;
+    justify-content: center;
 }
 
 #newImage{
     position: absolute;
     right: 10px;
-    top: 350px;
+    bottom: 15px;
     opacity: 0.1;
 }
     #newImage:hover{
@@ -34,7 +54,8 @@
 /* options */
 
 #options {
-    display: table;
+    display: none;
+    /*display: table;*/
     padding: 20px 0px;
     width: 100%;
     text-align: center;
