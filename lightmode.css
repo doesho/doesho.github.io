@@ -17,4 +17,9 @@
     --selection: #abe4d8;
     --optionbox: white;
     --optionbackground: rgb(245,245,245); /*background of option section, footer */
+    --indexheadingbottom: rgba(255,255,255); /*gradient background of scroll down thing*/
+
+    /*two colors used in the background image gradient*/
+    --gradient1: rgba(150,80,40,0.8);
+    --gradient2: rgba(100,60,40,0.7);
 }

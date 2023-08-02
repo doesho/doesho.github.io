@@ -35,7 +35,7 @@ newimage.addEventListener('click', randomBanner);
 function randomBanner() { //make this a psuedo element background instead so we can filter it
     randomInt = Math.floor(Math.random() * sideNavImageArray.length);
     let currentImage = bannerImageArray[randomInt];
-    let gradient = 'linear-gradient(to bottom right, rgba(250,163,69, 0.8), rgba(249,203,62, 0.8)), ';
+    let gradient = 'linear-gradient(to bottom right, var(--gradient1), var(--gradient2)), ';
 
     IndexHeading.style.backgroundImage = gradient + 'url(' + currentImage + ')';
 }
