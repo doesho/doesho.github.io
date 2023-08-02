@@ -92,6 +92,7 @@
     color: dimgray !important;
     cursor: not-allowed;
     background-color: gray !important;
+    opacity: 0.6;
 }
 
 #SideNavContents {

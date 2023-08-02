@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="pagestyle.css" />
     <link rel="stylesheet" href="lightmode.css" />
 
+    <link rel="stylesheet" href="sidenavstyle.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
@@ -25,6 +27,34 @@
         }
     </script>
 
+    <!-- side nav bar! -->
+
+    <button type="button" id="SideNavOpener"><img src="content/icons/PMX_Favicon.ico" alt="Side Nav Open" /></button>
+
+
+    <div id="SideNav">
+
+        <div id="SideNavTopContents">
+            <button type="button" id="SideNavCloser"><img src="content/icons/XFS.ico" alt="Side Nav Close" /></button>
+            <a href="#" class="HomeButton"><img src="content/images/PMX_Logo.png" alt="PMX Logo" title="Home" /></a>
+        </div>
+
+        <div id="SideNavContents">
+            <a href="#" id="CurrentPage">Home</a>
+            <a href="customs/main.html" class="DisabledPage">Custom Content</a>
+            <a href="guides/main.html">Guides &amp; Strategy</a>
+            <a href="community/main.html" class="DisabledPage">Community &amp; Events</a>
+            <a href="players/main.html" class="DisabledPage">Players</a>
+            <a href="blog/main.html">Blog</a>
+            <button type="button" id="ModeButton" style="display: none;"><p id="ModeButtonText"></p></button>
+        </div>
+        <div id="SideNavBottomContents">
+            <img id="BottomPic" draggable="false" />
+        </div>
+    </div>
+
+    <!-- heading / landing page -->
+
     <section id="IndexHeading">
         <div id="Banner">
             <img src="content/images/PMX_Logo.png" alt="EXCEED Logo" id="PMXimg">
@@ -34,7 +64,8 @@
         </div>
     </section>
 
-    <section id="options"> <!-- hidden in indexstyle.css -->
+    <section id="options">
+        <!-- hidden in indexstyle.css -->
         <a href="customs/main.html" class="box" id="customsbutton"><p>Custom Content</p></a>
         <a href="guides/main.html" class="box" id="guidesbutton"><p>Guides &amp; Strategy</p></a>
         <a href="community/main.html" class="box" id="communitybutton"><p>Community &amp; Events</p></a>
@@ -53,7 +84,7 @@
                         <img id="whatisXFSlogo" src="content/images/XFS_Logo.png" />
                         <h2>?</h2>
                     </div>
-                    
+
                     <p>
                         <b>Exceed</b> (AKA the <b>Exceed Fighting System</b>) <b>is a crossover fighting game in card game form!</b> It has the depth and interactivity of a fighting game with the variety and strategy of a card game, all in one
                         <i>(and unlike either of these, Exceed is really well balanced!)</i>.
@@ -134,7 +165,7 @@
                         and online starting at 10am.
                     </p>
                     <p>
-                        They are running demos of Exceed at the same time, but the project was not stated to be Bald Eagle (Season 7) or Exceed. However, D (Tirankin), who has been officially involved in Exceed development before, stated in the Breakfast Club; 
+                        They are running demos of Exceed at the same time, but the project was not stated to be Bald Eagle (Season 7) or Exceed. However, D (Tirankin), who has been officially involved in Exceed development before, stated in the Breakfast Club;
                     </p>
                     <blockquote>
                         <b>Tirankin:</b> <i>Folks should keep their eyes and ears open on August 4th</i><br />
@@ -184,6 +215,7 @@
     </footer>
 
     <script src="content/scripts/randompic.js"></script>
+    <script src="content/scripts/sidenav.js"></script>
 
 </body>
 </html>
