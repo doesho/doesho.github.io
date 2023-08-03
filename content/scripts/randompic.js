@@ -20,22 +20,36 @@ let bannerImageArray = [
 
 document.addEventListener('DOMContentLoaded', randomSideNavPic);
 
-function randomSideNavPic() {
+let previousrandomInt = 0;
+
+function randomSideNavPic() { //applies a random sidenav pic each time the sidenav is closed (for load times)
     randomInt = Math.floor(Math.random() * sideNavImageArray.length);
+    if (randomInt === previousrandomInt) {
+        randomInt++;
+    }
     let currentImage = sideNavImageArray[randomInt];
     let sideNavImage = document.getElementById('BottomPic');
 
     sideNavImage.src = currentImage;
+
+    previousrandomInt = randomInt;
 }
 
 document.addEventListener('DOMContentLoaded', randomBanner);
+
 let newimage = document.getElementById('newImage');
 newimage.addEventListener('click', randomBanner);
 
-function randomBanner() { //make this a psuedo element background instead so we can filter it
+function randomBanner() { //make this a psuedo element background instead so we can work with it better
     randomInt = Math.floor(Math.random() * sideNavImageArray.length);
+    if (randomInt === previousrandomInt) {
+        randomInt++;
+    }
     let currentImage = bannerImageArray[randomInt];
     let gradient = 'linear-gradient(to bottom right, var(--gradient1), var(--gradient2)), ';
 
     IndexHeading.style.backgroundImage = gradient + 'url(' + currentImage + ')';
+
+    previousrandomInt = randomInt; //stores int for comparison in the next loop
+    setTimeout(randomBanner, 2000);
 }
