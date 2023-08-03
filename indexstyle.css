@@ -31,17 +31,17 @@
 
 #IndexHeadingBottom {
     display: flex;
-    height: 20%;
+    height: 10%;
     width: 100vw;
-    background: linear-gradient(to bottom, rgba(255,255,255,0) 50%, rgba(255,255,255,0.7), var(--indexheadingbottom) 90%);
+    background: linear-gradient(to bottom, rgba(255,255,255,0), var(--indexheadingbottom) 60%);
     position: absolute;
-    bottom: 0px;
+    bottom: -17px;
     justify-content: center;
     transition: 0.2s;
 }
 
     #IndexHeadingBottom:hover {
-        height: 40%;
+        height: 20%;
     }
 
 #newImage{
