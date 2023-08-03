@@ -33,7 +33,7 @@
     display: flex;
     height: 10%;
     width: 100vw;
-    background: linear-gradient(to bottom, rgba(255,255,255,0), var(--indexheadingbottom) 60%);
+    background: linear-gradient(to bottom, rgba(255,255,255,0), var(--background) 60%);
     position: absolute;
     bottom: -17px;
     justify-content: center;
@@ -45,6 +45,7 @@
     }
 
 #newImage{
+    display: none;
     position: absolute;
     right: 10px;
     bottom: 0px;
@@ -226,8 +227,9 @@ hr {
 /* rest of the body */
 
 .UniqueBody {
-    padding: 40px 50px;
-    background: white;
+    margin: 70px 50px 50px;
+    padding: 30px 10px;
+    background: var(--secondary);
 }
 
 #BodySplash{
@@ -236,5 +238,5 @@ hr {
 }
 
 #FooterContents{
-    background-color: var(--optionbackground) !important;
+    background-color: var(--secondary) !important;
 }
