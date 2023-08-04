@@ -9,6 +9,7 @@
 .UniqueBody{ /* father of all unique content */
     display: flex;
     padding: 0px 100px;
+    justify-content: center;
 }
 
 .UniqueContainer { /*both choiceuniquecontainer and timelineuniquecontainer have this class */
@@ -24,6 +25,8 @@
     background-color: var(--secondary);
     border-radius: 4px;
     padding: 50px 10px;
+    min-width: 400px;
+    max-width: 800px;
 }
 
 .ChoiceSectionTitle{
@@ -72,6 +75,7 @@
 /* >>> right side timeline */
 #TimelineUniqueContainer{ /*contains all timeline stuff*/
     flex-basis: 50%;
+    max-width: 300px;
 }
 
 #Timeline{
