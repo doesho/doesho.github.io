@@ -10,11 +10,10 @@
     --secondary: white;
     --tertiary: gray;
     --border: lightgray;
-
-    --text: black;
+    /* text coloors */
+    --text: #3c3c3c;
     --link: darkcyan;
     --userinput: turquoise;
     --selection: skyblue;
-
     --background: whitesmoke;
 }

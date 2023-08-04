@@ -10,7 +10,8 @@
     --secondary: white;
     --tertiary: white;
     --border: lightgray;
-    --text: black;
+    /* text color */
+    --text: #3c3c3c;
     --link: darkcyan;
     --userinput: turquoise;
     --selection: skyblue;
