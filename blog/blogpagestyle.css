@@ -21,11 +21,15 @@
 
 .UniqueBody {
     background-color: var(--secondary);
-    margin: 0px 80px;
+    margin: 0px 200px;
     padding: 60px 40px;
 }
 
 /* each entry on this page */
+
+.BlogEntry{
+    margin: 40px;
+}
 
 .BlogEntryTitle h3{
     font-size: 20px;
