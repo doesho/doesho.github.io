@@ -33,7 +33,7 @@
     text-align: center;
 }
 
-/* individual choice settings */
+/* settings for all choices */
 
 .ChoiceContainer{
 }
@@ -43,6 +43,12 @@
 
 .BlogContents{ /* contains all blog text */
     margin: 0px 20px;
+}
+
+.BlogEntryTitle{
+    background: var(--tertiary);
+    padding: 10px;
+    margin-bottom: 20px;
 }
 
     .BlogEntryTitle h3{
@@ -57,10 +63,18 @@
     }
 
     .BlogEntryBody{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
         .BlogEntryBody p{
+            align-self: flex-start;
             text-indent: 30px;
+            margin: 5px;
+        }
+        .BlogEntryBody blockquote{
+            align-self: flex-start;
         }
 
     .jumplink{ /*"read more..." links*/
@@ -72,6 +86,21 @@
     color: var(--background);
 }
 
+.EntryImage{
+    align-self: center;
+    margin: 10px;
+    width: 80%;
+    border: 10px solid var(--imageframe);
+}
+
+/* settings for specific choices */
+#WelcomeGGST{
+    background: linear-gradient(to bottom right, red, orange);
+}
+    #WelcomeGGST > *{
+        color: white;
+    }
+
 /* >>> right side timeline */
 #TimelineUniqueContainer{ /*contains all timeline stuff*/
     flex-basis: 50%;
@@ -79,7 +108,7 @@
 }
 
 #Timeline{
-    background-color: var(--tertiary);
+    background-color: var(--secondary);
     border: 1px solid gray;
     border-radius: 2px;
     padding: 5px;
