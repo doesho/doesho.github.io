@@ -42,14 +42,14 @@ newimage.addEventListener('click', randomBanner);
 
 function randomBanner() { //make this a psuedo element background instead so we can work with it better
     randomInt = Math.floor(Math.random() * sideNavImageArray.length);
-    if (randomInt === previousrandomInt) {
-        randomInt++;
-    }
+    //if (randomInt === previousrandomInt) {
+    //    randomInt++;
+    //}
     let currentImage = bannerImageArray[randomInt];
     let gradient = 'linear-gradient(to bottom right, var(--gradient1), var(--gradient2)), ';
 
     IndexHeading.style.backgroundImage = gradient + 'url(' + currentImage + ')';
 
     previousrandomInt = randomInt; //stores int for comparison in the next loop
-    setTimeout(randomBanner, 2000);
+    //setTimeout(randomBanner, 2000);
 }
