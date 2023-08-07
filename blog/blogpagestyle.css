@@ -6,7 +6,9 @@
 
 
 #Heading{
-    background-color: var(--highlight);
+    background: linear-gradient(to bottom right, var(--highlight), var(--highlightsecondary));
+    color: white;
+    width: 100%;
 }
 
 #body{
@@ -20,10 +22,38 @@
 }
 
 .UniqueBody {
-    background-color: var(--secondary);
-    margin: 0px 200px;
-    padding: 60px 40px;
+    display: flex;
+    justify-content: center;
+    padding: 60px 100px;
 }
+
+.UniqueContainer{
+    padding: 20px;
+    background-color: var(--secondary);
+    
+    min-width: 500px;
+    max-width: 800px;
+}
+
+/* section seperator */
+
+.EntrySeperator {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0px;
+}
+
+    .EntrySeperator p {
+        margin: 0px;
+        align-self: end;
+        font-family: 'Times New Roman';
+        font-size: 12px;
+    }
+
+    .EntrySeperator hr {
+        color: var(--background);
+        margin: 0px;
+    }
 
 /* each entry on this page */
 
@@ -46,6 +76,9 @@
 .BlogEntryBody{
     margin-left: 30px;
 }
+    .BlogEntryBody p{
+        text-indent: 30px;
+    }
 
 .hidden{
     display: none !important;
