@@ -8,7 +8,7 @@
     --highlight: #feeb4c;
     --highlightsecondary: #fcf9e3;
     --secondary: white;
-    --tertiary: white;
+    --tertiary: rgb(245, 245, 245);
     --border: lightgray;
     /* text color */
     --text: #3c3c3c;
@@ -16,4 +16,6 @@
     --userinput: turquoise;
     --selection: skyblue;
     --background: whitesmoke;
+    /* blog eentry colors */
+    --imageframe: rgb(240,240,240);
 }
