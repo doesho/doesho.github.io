@@ -81,10 +81,21 @@
         margin: 10px;
     }
 
-.Choice hr {
+.EntrySeperator {
+    display: flex;
+    flex-direction: column;
     margin: 30px 0px;
-    color: var(--background);
 }
+    .EntrySeperator p {
+        margin: 0px;
+        align-self: end;
+        font-family: 'Times New Roman'; 
+        font-size: 12px;
+    }
+    .EntrySeperator hr{
+        color: var(--background);
+        margin: 0px;
+    }
 
 .EntryImage{
     align-self: center;
