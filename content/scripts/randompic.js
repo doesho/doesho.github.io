@@ -9,11 +9,7 @@ let sideNavImageArray = [
 
 let bannerImageArray = [
     'content/images/banners/bg1.jpg',
-    'content/images/banners/bg2.jpg',
-    'content/images/banners/bg3.jpg',
-    'content/images/banners/bg4.jpg',
-    'content/images/banners/bg5.jpg',
-    'content/images/banners/bg6.jpg']
+    'content/images/banners/bg2.jpg',]
 
 
 // dumbass. make these the same generic function using parameters.
@@ -41,7 +37,7 @@ let newimage = document.getElementById('newImage');
 newimage.addEventListener('click', randomBanner);
 
 function randomBanner() { //make this a psuedo element background instead so we can work with it better
-    randomInt = Math.floor(Math.random() * sideNavImageArray.length);
+    randomInt = Math.floor(Math.random() * bannerImageArray.length);
     //if (randomInt === previousrandomInt) {
     //    randomInt++;
     //}
