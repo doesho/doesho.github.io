@@ -56,7 +56,9 @@
 
     #scrollicon{
         align-self: center;
+        min-width: 100px;
         width: 10%;
+        max-width: 150px;
     }
 
 #newImage{
