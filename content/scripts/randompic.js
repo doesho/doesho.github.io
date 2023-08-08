@@ -1,8 +1,11 @@
 let currentImage;
 let sideNavImageArray = [
+    '../content/images/sidebar/bridget.png',
     '../content/images/sidebar/ky.png',
     '../content/images/sidebar/sol.png',
+    '../content/images/sidebar/ramlethal.png',
     '../content/images/sidebar/orie.png',
+    '../content/images/sidebar/enkidu.png',
     '../content/images/sidebar/hazama.png',
     '../content/images/sidebar/platinum.png',
     '../content/images/sidebar/specter.png',
