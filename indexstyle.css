@@ -77,43 +77,38 @@
 /* options */
 
 #options {
-    display: none;
-    /*display: table;*/
-    padding: 20px 0px;
-    width: 100%;
+    display: flex;
+    margin-top: 50px;
     text-align: center;
-    background: var(--optionbackground);
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .box {
-    display: inline-block;
-    width: 220px;
+    width: 150px;
+    height: 100px;
     font-weight: bold;
     font-size: 20px;
-    color: var(--font);
-
-    background-color: var(--optionbox);
-    border: 1px solid var(--border);
-    border-radius: 2px;
     margin: 4px 4px;
     padding: 0px 5px 0px 5px;
     cursor: pointer;
 }
     .box p{
         text-align:center;
+        color: var(--link);
     }
 
-    .box:hover {
-        color: black;
-        border: 1px solid turquoise;
+    .box p:hover {
         transition: 0.15s;
+        color: var(--userinput) !important;
     }
 
-#customsbutton, #communitybutton, #playersbutton {
+#customsbutton > p, #communitybutton > p, #playersbutton > p{
     cursor: not-allowed !important;
     border: none;
     box-shadow: none !important;
-    background-color: lightgray;
+    color: lightgray !important;
 }
 
 /* div that contains WhatsExceed and newsbox */
@@ -263,7 +258,7 @@ hr {
 }
 
 .UniqueBody {
-    padding: 70px 100px 50px;
+    padding: 50px 100px 50px;
     display: flex;
     flex-direction: column;
 }
