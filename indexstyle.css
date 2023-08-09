@@ -80,29 +80,13 @@
     display: flex;
     margin-top: 50px;
     text-align: center;
-    justify-self: center;
     justify-content: center;
     align-items: center;
 }
 
-.box {
-    width: 150px;
-    height: 100px;
-    font-weight: bold;
-    font-size: 20px;
-    margin: 4px 4px;
-    padding: 0px 5px 0px 5px;
+.navbutton {
     cursor: pointer;
 }
-    .box p{
-        text-align:center;
-        color: var(--link);
-    }
-
-    .box p:hover {
-        transition: 0.15s;
-        color: var(--userinput) !important;
-    }
 
 #customsbutton > p, #communitybutton > p, #playersbutton > p{
     cursor: not-allowed !important;

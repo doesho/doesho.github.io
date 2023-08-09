@@ -25,3 +25,10 @@
 .sticky + .ChoiceContainer{
     margin-top: 70px;
 }
+
+#options.sticky{
+    position: fixed;
+    top: -30px;
+    right: 50%;
+    color: red;
+}
