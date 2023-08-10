@@ -38,3 +38,24 @@
         border: 1px solid rgba(50,50,50,0.1);
         border-radius: 5px;
     }
+
+.LinkList li {
+    display: inline-flex;
+    margin: 10px;
+}
+
+.LinkList:hover img {
+    opacity: 0.5;
+    transition: 0.2s;
+}
+
+.LinkList img {
+    height: 50px;
+    border: 1px solid var(--highlight);
+    border-radius: 5px;
+}
+
+    .LinkList img:hover {
+        border: 1px solid var(--userinput);
+        opacity: 1;
+    }
