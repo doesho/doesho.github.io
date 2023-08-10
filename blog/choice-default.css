@@ -24,7 +24,7 @@
     flex-basis: 150%;
     background-color: var(--secondary);
     border-radius: 4px;
-    padding: 50px 10px;
+    padding: 20px 10px;
     min-width: 400px;
     max-width: 800px;
 }
@@ -33,16 +33,28 @@
     text-align: center;
 }
 
+.Pinned{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+    .Pinned > a:hover{
+        color: var(--highlight);
+    }
+
 /* settings for all choices */
 
 .ChoiceContainer{
 }
 
-.Choice{ /* whole individual blog post entry */
+.Choice { /* whole individual blog post entry */
+    margin: 0px 20px 60px;
 }
 
 .BlogContents{ /* contains all blog text */
-    margin: 0px 20px;
+
 }
 
 .BlogEntryTitle{
@@ -86,7 +98,7 @@
 .EntrySeperator {
     display: flex;
     flex-direction: column;
-    margin: 30px 0px;
+    margin-bottom: 20px;
 }
     .EntrySeperator p {
         margin: 0px;
@@ -107,10 +119,10 @@
 }
 
 /* settings for specific choices */
-#WelcomeGGST{
+.GGST{
     background: linear-gradient(to bottom right, red, orange);
 }
-    #WelcomeGGST > *{
+    .GGST > *{
         color: white;
     }
 
