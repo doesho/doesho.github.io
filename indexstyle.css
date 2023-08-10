@@ -77,19 +77,27 @@
 /* options */
 
 #options {
-    display: none;
-    /*display: flex;*/
-    margin-top: 50px;
-    text-align: center;
+    display: flex;
+    margin-top: 60px;
     justify-content: center;
     align-items: center;
 }
 
-.navbutton {
-    cursor: pointer;
+#optionContainer{
+    display: flex;
+    flex-direction: row;
+    background: white;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid gray;
 }
 
-#customsbutton > p, #communitybutton > p, #playersbutton > p{
+.navbutton {
+    cursor: pointer;
+    margin: 15px 30px;
+}
+
+#customsbutton, #communitybutton, #playersbutton{
     cursor: not-allowed !important;
     border: none;
     box-shadow: none !important;
