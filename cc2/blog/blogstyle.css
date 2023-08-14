@@ -45,6 +45,30 @@
     align-self: center;
 }
 
+/* month dividers */
+
+.MonthDivider{
+    display: flex;
+    flex-direction: column;
+    margin: 40px 10px;
+}
+
+.MonthDivider hr{
+    margin: 0px;
+}
+.MonthTitle{
+    margin: 0px;
+    align-self: flex-end;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.MonthDescription{
+    margin: 0px;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+
 /* sidebar side */
 
 #SidebarSection{
