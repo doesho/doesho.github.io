@@ -6,6 +6,7 @@ let nextButton = document.getElementById("next");
 
 let currentPair = 0; //this let changes to pick array pair
 let mediaArray = [
+    "song-cocktail",
     "song-50off",
     "song-onesmallstep",
     "song-mhw",
@@ -13,6 +14,7 @@ let mediaArray = [
 ];
 
 let tooltipArray = [
+    "tooltip-cocktail",
     "tooltip-50off",
     "tooltip-onesmallstep",
     "tooltip-mhw",
@@ -35,7 +37,7 @@ function pairUpdater(change) { //adjusts currentpair int, makes sure its within 
     mediaElementUpdater();
 }
 
-function mediaElementUpdater(){
+function mediaElementUpdater(){ //loops through all tooltips and media elements, displaying only those matching currentpair int
     for (let i = 0; i < mediaArray.length; i++) {
         let mediaElement = document.getElementById(mediaArray[i]);
         let tooltipElement = document.getElementById(tooltipArray[i]);
