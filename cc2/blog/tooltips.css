@@ -26,51 +26,45 @@
         padding: 0px;
     }
 
-#tooltip-50off {
-    width: 500px;
+.ToolTipBody{
     background-color: tan;
     border-radius: 6px;
+    text-indent: 20px;
     padding: 5px;
+    align-self: flex-end;
+}
+
+.ToolTipBody > p{
+    color: saddlebrown;
+    line-height: 15px;
+}
+
+/* specific tooltip adjustments */
+
+#tooltip-cocktail{
+    width: 400px;
+    bottom: -190%;
+
+    right: 150%;
+}
+
+#tooltip-50off {
+    width: 500px;
     bottom: -270%;
     right: 150%;
     margin-left: -60px;
-    line-height: 15px;
-    text-indent: 20px;
-    align-self: flex-end;
 }
-    #tooltip-50off > p{
-        color:saddlebrown;
-    }
 
 #tooltip-mhw{
     width: 400px;
-    background-color: tan;
-    border-radius: 6px;
-    padding: 5px;
-    text-indent: 20px;
-    align-self: flex-end;
     bottom: -210%;
     right: 150%;
     margin-left: -60px;
 }
-    #tooltip-mhw p{
-        color: saddlebrown;
-        line-height: 15px;
-    }
 
 #tooltip-onesmallstep {
     width: 500px;
-    background-color: tan;
-    border-radius: 6px;
-    padding: 5px;
-    text-indent: 20px;
-    align-self: flex-end;
     bottom: -400%;
     right: 150%;
     margin-left: -60px;
 }
-
-    #tooltip-onesmallstep p {
-        color: saddlebrown;
-        line-height: 15px;
-    }
