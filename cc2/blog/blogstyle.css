@@ -101,20 +101,20 @@
     margin-bottom: 60px;
 }
 
-/* top of entry */
+/* entry styling - musings */
 
-.BlogEntryHeader {
+.musing .BlogEntryHeader {
     margin-bottom: -20px;
 }
 
-.BlogEntryTitle {
+.musing .BlogEntryTitle {
     color: var(--entrytitle);
     line-height: 40px;
     margin: 0px;
     font-size: 55px;
 }
 
-.BlogEntryFluff {
+.musing .BlogEntryFluff {
     margin: 0px;
     font-size: 8px;
     font-family: 'Times New Roman', Times, serif !important;
@@ -122,20 +122,21 @@
     top: -25px;
 }
 
-.BlogEntryDate {
+.musing .BlogEntryDate {
     margin: 0px;
     position: relative;
     top: -19px;
 
 }
 
-/* actual contents */
-
-.BlogEntryContents{
+.musing .BlogEntryContents{
     line-height: 20px;
     padding: 0px 30px;
 }
 
-.BlogEntryContents p{
+.musing .BlogEntryContents p{
     text-indent: 40px;
 }
+
+/* entry styling - showcase*/
+
