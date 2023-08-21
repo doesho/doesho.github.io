@@ -98,13 +98,14 @@
 .EntrySeperator {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
     .EntrySeperator p {
         margin: 0px;
         align-self: end;
         font-family: 'Times New Roman'; 
-        font-size: 12px;
+        font-size: 14px;
+        letter-spacing: 2px;
     }
     .EntrySeperator hr{
         color: var(--background);
