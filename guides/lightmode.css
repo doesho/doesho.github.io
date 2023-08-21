@@ -1,19 +1,13 @@
-﻿/* H1 is the page header.
-    H2 is for sections.
-    H3 is for titles of things, like player entries, guide names, etc. Typically in searchable boxes.
-    H4 is for things that have to stand out of normal text but barely, ie. buttons, author name
-*/
-
-:root {
+﻿:root {
     --highlight: orange;
     --highlightsecondary: antiquewhite;
     --secondary: white;
-    --tertiary: gray;
-    --border: lightgray;
     /* text coloors */
     --text: #3c3c3c;
     --link: darkcyan;
     --userinput: turquoise;
     --selection: skyblue;
     --background: whitesmoke;
+    /* page specific stuff */
+    --border: lightgray;
 }
