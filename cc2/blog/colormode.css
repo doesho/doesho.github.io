@@ -5,9 +5,11 @@
     --sidebarbackground: #604d3c;
     /* blog side */
     --blogbackground: #715a46;
-    --entrytitle: #a97656;
     --quotecolor: #8d7366;
     --quotecolorsecond: tan;
+    /* specific colors */
+    --musingtitle: #a97656;
+    --quotetitle: tan;
     /*other*/
     --mediaframe: #8d7366;
 }
