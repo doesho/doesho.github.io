@@ -72,7 +72,6 @@
 #SideNavTopContents{
     position: relative;
     z-index: 66;
-    background: rgba(255,255,255, 0.8);
     margin-bottom: 10px;
 }
 
