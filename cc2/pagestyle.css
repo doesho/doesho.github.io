@@ -28,7 +28,7 @@ a {
 
 blockquote {
     font-style: italic;
-    background: linear-gradient(to right, var(--quotecolor), rgba(0,0,0,0) 5%);
+    background: linear-gradient(to right, var(--quotecolor), rgba(0,0,0,0) 30px);
     padding: 5px 10px;
 }
 
