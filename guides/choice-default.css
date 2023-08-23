@@ -21,7 +21,9 @@
         margin: 0px 40px !important;
     }
     #SideBarUniqueContainer{
+        display: grid !important;
         margin: 20px 50px !important;
+        max-width: 100% !important;
     }
 }
 
