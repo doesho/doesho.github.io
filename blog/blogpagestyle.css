@@ -4,6 +4,7 @@
     H4 is for things that have to stand out of normal text but barely, ie. buttons, author name
 */
 
+/* this document is for specific blog entry pages (ie. wheres-s7?). the actual blog main.html uses blogstyle.css */
 
 #Heading{
     background: linear-gradient(to bottom right, var(--highlight), var(--highlightsecondary));

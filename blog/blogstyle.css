@@ -4,6 +4,7 @@
     H4 is for things that have to stand out of normal text but barely, ie. buttons, author name
 */
 
+/* this css is for the blog main.html. blog subpages (ie wheres-s7?) use blogpagestyle.css. */
 
 #Heading{
     background-color: var(--highlight);
