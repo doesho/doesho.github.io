@@ -38,8 +38,8 @@
 
 #IndexHeadingBottom {
     display: flex;
-    height: 10%;
-    min-height: 100px;
+    height: 20%;
+    min-height: 130px;
     width: 100vw;
     background: linear-gradient(to bottom, rgba(255,255,255,0), var(--background) 60%);
     position: absolute;
@@ -50,15 +50,15 @@
 }
 
     #IndexHeadingBottom:hover {
-        height: 20%;
-        min-height: 150px;
+        height: 30%;
+        min-height: 180px;
         cursor: pointer;
     }
 
     #scrollicon{
         align-self: center;
         min-width: 100px;
-        width: 10%;
+        width: 20%;
         max-width: 150px;
     }
 
