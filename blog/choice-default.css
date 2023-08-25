@@ -24,7 +24,7 @@
     flex-basis: 150%;
     background-color: var(--secondary);
     border-radius: 4px;
-    padding: 20px 10px;
+    padding: 20px 0px;
     min-width: 400px;
     max-width: 800px;
 }
@@ -37,7 +37,6 @@
     display: flex;
     justify-content: center;
     padding: 5px;
-    margin-bottom: 20px;
     font-weight: bold;
 }
     .Pinned > a:hover{
@@ -50,7 +49,6 @@
 }
 
 .Choice { /* whole individual blog post entry */
-    margin: 0px 20px 60px;
 }
 
 .BlogContents{ /* contains all blog text */
@@ -60,7 +58,11 @@
 .BlogEntryTitle{
     background: var(--tertiary);
     padding: 10px;
-    margin-bottom: 20px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
 }
 
     .BlogEntryTitle h3{
@@ -78,6 +80,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: 0px 40px
     }
 
         .BlogEntryBody p{
@@ -93,12 +96,13 @@
         margin: 10px;
         font-weight: bold;
         text-align: center;
+        align-items: center;
     }
 
 .EntrySeperator {
     display: flex;
     flex-direction: column;
-    margin-bottom: 40px;
+    margin: 30px 20px 40px;
 }
     .EntrySeperator p {
         margin: 0px;
@@ -124,21 +128,27 @@
     background: linear-gradient(to bottom right, red, orange);
 }
     .GGST > *{
-        color: white;
+        color: white !important;
     }
 
 /* >>> right side timeline */
 #TimelineUniqueContainer{ /*contains all timeline stuff*/
     flex-basis: 50%;
     max-width: 300px;
+    padding-top: 30px;
+}
+
+.SideEntry {
+    padding: 5px;
+    margin-top: 30px;
+    border: 1px solid gray;
+    border-radius: 2px;
 }
 
 #Timeline{
     background-color: var(--secondary);
-    border: 1px solid gray;
-    border-radius: 2px;
+
     padding: 5px;
-    margin-top: 50px;
 }
 
 .MonthTitle{
