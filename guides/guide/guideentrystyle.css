@@ -15,24 +15,23 @@
 
 }
 
-
 /* season boxes entries */
 
 .SeasonBoxesContainer {
     display: flex;
+    width: 100%;
+    margin-bottom: 40px;
 }
 
 .SeasonBox {
     display: flex;
     flex-direction: column;
     background-color: antiquewhite;
-    justify-content: center;
 
-    min-width: 100px;
-    max-width: 150px;
+    width: 150px;
 
-    margin: 20px;
-    padding: 20px;
+    margin: 10px;
+    padding: 10px;
 }
 
 .SeasonBox h4{
