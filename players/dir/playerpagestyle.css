@@ -17,47 +17,46 @@ p {
     font-family: Vollkorn, serif;
 }
 
-/* Choice Container Options*/
-
-#ChoiceContainer {
-    font-family: Vollkorn, serif;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 1000px;
-    gap: 20px;
+.sectionTitle{
+    text-align: center;
 }
 
-@media (max-width: 700px){
-    #ChoiceContainer{
-        grid-template-columns: 1fr;
-    }
+/* top of page - player intro */
+
+#playerIntro{
+    display: flex;
+    flex-direction: column;
 }
 
-.Choice {
-    background-color: #f1f1f1;
-    border: 1px solid #ccc;
-    padding: 10px;
+#playerIntro h1{
+    font-size: 35px;
+    margin: 0px;
 }
 
-.ChoiceLink {
-    text-decoration: none;
+#playerIntro p{
+    margin: 0px;
 }
 
-.Choice h3 {
-    font-size: 30px;
-    margin-top: auto;
-    margin-bottom: auto;
+/* bulk of page - player about*/
+
+#playerMains{
+
 }
 
-.Choice p {
-    margin: auto;
+.playerAboutParagraphs{
+    text-indent: 30px;
 }
 
-.ChoiceTable {
-    margin-left: auto;
-    margin-right: auto;
+/* competitive results - player results */
+
+#PlayerResults{
+    display: flex;
+    flex-direction: column;
 }
 
+#PlayerResultsTable{
+    align-self: center;
+}
 
 /* Other stuff */
 
