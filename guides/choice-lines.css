@@ -1,0 +1,183 @@
+﻿/* H1 is the page header.
+    H2 is for sections.
+    H3 is for titles of things, like player entries, guide names, etc. Typically in searchable boxes.
+    H4 is for things that have to stand out of normal text but barely, ie. buttons, author name
+*/
+
+/* div that contains uniquecontainers AND class-level rules for those uniquecontainers */
+/* a ton of this is probably vestigal. clean this up */
+
+.UniqueBody {
+    display: flex;
+}
+
+@media screen and (max-width: 1100px) { /*collapses at smaller window size */
+    .UniqueBody {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .ChoiceContainer{
+        margin: 0px 40px !important;
+    }
+    #SideBarUniqueContainer{
+        display: grid !important;
+        margin: 20px 50px !important;
+        max-width: 100% !important;
+    }
+}
+
+.UniqueContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+#ChoiceUniqueContainer {
+    flex-wrap: wrap;
+    flex-basis: 150%;
+}
+
+
+/* >>>> Choice Container Options*/
+
+.ChoiceContainer {
+    display: grid;
+    grid-gap: 8px;
+    margin: 0px 10px 0px 140px;
+}
+
+.ChoiceSectionTitle {
+    text-indent: 100px;
+    background-image: linear-gradient(to left, rgba(0,0,0,0), var(--highlight));
+}
+
+
+/* individual choice container settings*/
+
+.Choice {
+    display: block;
+    text-decoration: none;
+    border-bottom: 2px solid var(--border);
+    background: var(--secondary);
+    padding: 0px;
+    min-width: 600px;
+}
+
+    .Choice a{
+        color: var(--text) !important;
+    }
+
+    .Choice:hover {
+        box-shadow: 0px -1px 0px 0px var(--userinput) inset !important;
+        border-bottom: 2px solid var(--userinput) !important;
+        transition: 0.1s;
+    }
+    .Choice:hover h3{
+        color: var(--userinput);
+    }
+
+.ChoiceBodyContainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 5px;
+}
+
+/* head of each choice*/
+
+.ChoiceHead{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.Choice h3 { /*title of each choice*/
+    font-size: 22px;
+    margin: 0px;
+    z-index: 2;
+}
+
+.Choice h4{ /*author or subtitle*/
+    font-weight: normal;
+    font-size: 15px;
+    margin: 0px 5px 0px 0px;
+    white-space: nowrap;
+}
+
+.ChoiceHead p{
+    font-family: 'Times New Roman', Times, serif;
+    text-indent: 5px;
+    font-size: 10px !important;
+    align-self: center;
+}
+
+/* body of each choice */
+
+.ChoiceBody {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px;
+}
+
+.Choice p{ /*text body of each choice*/
+    margin: 0px;
+    font-size: 15px;
+    text-align: right;
+}
+
+.Tags{ /*bottom right tags of choice. */
+    align-self: flex-start;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+
+    margin: 0px;
+    font-size: 12px !important;
+    color: gray;
+}
+
+/* sidebar settings */
+
+#SideBarUniqueContainer {
+    margin: 50px 140px 0px 10px;
+    max-width: 400px;
+}
+
+.SideBarSection {
+    display: block;
+    background-color: white;
+    border: 1px solid var(--border);
+    margin-top: 20px;
+    padding: 0px 10px;
+
+}
+
+/* individual sidebar boxes */
+
+#NoobBox{
+    border: 2px solid var(--highlight);
+    padding: 0px;
+}
+    #NoobBox h3{
+        font-size: 25px;
+        font-weight: bold;
+        background: var(--highlight);
+        padding: 2px;
+        margin: 20px 0px;
+        text-align: center;
+    }
+
+    #NoobBox p{
+        padding: 0px 5px;
+    }
+
+#TagBox h3{
+    text-align: center;
+}
+
+#FGCBox div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
