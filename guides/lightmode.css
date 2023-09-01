@@ -5,9 +5,8 @@
     /* text coloors */
     --text: #3c3c3c;
     --link: darkcyan;
-    --userinput: turquoise;
+    --userinput: #5abdb9;
     --selection: skyblue;
     --background: whitesmoke;
     /* page specific stuff */
     --border: lightgray;
-}
