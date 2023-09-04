@@ -6,6 +6,7 @@ let nextButton = document.getElementById("next");
 
 let currentPair = 0; //this let changes to pick array pair
 let mediaArray = [
+    "song-insideout",
     "song-cocktail",
     "song-50off",
     "song-onesmallstep",
@@ -14,6 +15,7 @@ let mediaArray = [
 ];
 
 let tooltipArray = [
+    "tooltip-insideout",
     "tooltip-cocktail",
     "tooltip-50off",
     "tooltip-onesmallstep",

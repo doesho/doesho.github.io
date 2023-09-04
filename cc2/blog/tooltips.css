@@ -41,6 +41,12 @@
 
 /* specific tooltip adjustments */
 
+#tooltip-insideout {
+    width: 500px;
+    bottom: -190%;
+    right: 150%;
+}
+
 #tooltip-cocktail{
     width: 400px;
     bottom: -190%;
