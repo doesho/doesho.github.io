@@ -30,12 +30,11 @@
     }
 
     #kenQuoteBody{
-        background-color: var(--highlightsecondary);
         padding: 0px 10px;
         height: 30px;
         margin: 0px;
         text-align: center;
-        border: 1px solid rgba(50,50,50,0.1);
+        border: 1px solid rgba(50,50,50,0.3);
         border-radius: 5px;
     }
 
