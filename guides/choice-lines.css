@@ -71,7 +71,7 @@
     .Choice:hover {
         box-shadow: 0px -1px 0px 0px var(--userinput) inset !important;
         border-bottom: 2px solid var(--userinput) !important;
-        transition: 0.1s;
+        transition: 0.15s;
     }
     .Choice:hover h3{
         color: var(--userinput);
