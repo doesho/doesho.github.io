@@ -58,8 +58,8 @@
 .Choice {
     display: block;
     text-decoration: none;
-    border-bottom: 2px solid var(--border);
     background: var(--secondary);
+    border-bottom: 1px solid var(--border);
     padding: 0px;
     min-width: 600px;
 }
@@ -69,8 +69,8 @@
     }
 
     .Choice:hover {
-        border-bottom: 2px solid var(--userinput) !important;
-        box-shadow: 0px -1px 0px 0px var(--userinput) inset !important;
+        border-bottom: 1px solid var(--userinput) !important;
+        box-shadow: 3px -1px 0px 0px var(--userinput) inset !important;
         transition: 0.15s;
     }
 
@@ -88,9 +88,14 @@
 }
 
 .Choice h3 { /*title of each choice*/
-    font-size: 22px;
-    margin: 0px;
+    text-indent: 5px;
+    font-size: 20px;
+    margin: 3px 0px;
     z-index: 2;
+}
+
+.CharIcon{
+    border: none;
 }
 
 .Choice h4{ /*author or subtitle*/
