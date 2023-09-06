@@ -19,6 +19,6 @@
     --optionbox: white;
     --optionbackground: rgb(245,245,245); /*background of option section, footer */
     /*two colors used in the background image gradient*/
-    --gradient1: rgba(150,50,40,0.8);
-    --gradient2: rgba(255,192,46,0.7);
+    --gradient1: rgba(150,50,40,0.9);
+    --gradient2: rgba(255,192,46,0.9);
 }
