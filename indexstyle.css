@@ -159,8 +159,10 @@
 }
 
     .ExceedSeller h2 {
+        font-size: 28px;
+        text-transform: uppercase;
         margin: 0px;
-        background-image: radial-gradient(orange, rgba(0, 0, 0, 0) 40%);
+        background-image: radial-gradient(var(--highlight), rgba(0, 0, 0, 0) 60%);
     }
 
 .ExceedSeller p {
