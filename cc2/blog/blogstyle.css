@@ -85,7 +85,9 @@
     padding: 15px;
 }
 
+#featuredsong-title{
 
+}
 
 /* blog side */
 
@@ -147,7 +149,7 @@
     color: var(--quotetitle);
     line-height: 40px;
     margin: 0px;
-    font-size: 55px;
+    font-size: 40px;
 }
 
 .quote .BlogEntryFluff{
