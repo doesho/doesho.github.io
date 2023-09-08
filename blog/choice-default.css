@@ -34,13 +34,9 @@
 }
 
 .Pinned{
-    display: flex;
-    justify-content: center;
-    padding: 5px;
-    font-weight: bold;
 }
-    .Pinned > a:hover{
-        color: var(--highlight);
+    .Pinned:hover{
+        border: 1px solid var(--userinput);
     }
 
 /* settings for all choices */
@@ -56,9 +52,8 @@
 }
 
 .BlogEntryTitle{
-    background: var(--tertiary);
-    padding: 10px;
-    margin: 20px;
+    padding: 15px;
+    margin-bottom: 5px;
     display: flex;
     align-items: center;
     text-align: center;
