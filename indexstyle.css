@@ -205,7 +205,7 @@
 
 #NewsBox {
     overflow: auto;
-    border: solid;
+    border: 2px solid;
     border-color: var(--highlight);
     border-radius: 4px;
     background: var(--secondary);
@@ -219,6 +219,7 @@
 
     #NewsBox h2 {
         background: orange;
+        margin-top: 10px;
     }
 
 hr {
