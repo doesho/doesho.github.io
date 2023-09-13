@@ -136,7 +136,7 @@
 .SideEntry {
     padding: 5px;
     margin-top: 30px;
-    border: 1px solid gray;
+    border: 1px solid var(--border);
     border-radius: 2px;
 }
 
