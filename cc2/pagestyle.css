@@ -26,6 +26,11 @@ a {
         color: var(--ahighlight);
     }
 
+.currentPage{
+    color: var(--currentpage) !important;
+    cursor: default;
+}
+
 blockquote {
     font-style: italic;
     background: linear-gradient(to right, var(--quotecolor), rgba(0,0,0,0) 30px);
