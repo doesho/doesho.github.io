@@ -1,0 +1,141 @@
+﻿@media screen and (max-width: 800px){
+    #MasterSection{
+        flex-direction: column-reverse;
+    }
+    #SidebarSection{
+        max-width: 100% !important;
+        width: 100%;
+    }
+}
+
+/* full page stuff */
+#MasterSection {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.Media{
+    display: flex;
+    background-color: var(--mediaframe);
+    width: fit-content;
+    padding: 4px;
+    align-self: center;
+}
+.MediaTitle {
+    display: flex;
+    align-self: center;
+}
+    
+    .MediaTitle p{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .MediaTitle a{
+        align-self: center;
+    }
+
+.ToolTip{
+    display: flex;
+}
+
+.ToolTipOpener{
+    align-self: center;
+}
+
+/* month dividers */
+
+.MonthDivider{
+    display: flex;
+    flex-direction: column;
+    margin: 40px 10px;
+}
+
+.MonthDivider hr{
+    margin: 0px;
+}
+.MonthTitle{
+    margin: 0px;
+    align-self: flex-end;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.MonthDescription{
+    margin: 0px;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+
+/* sidebar side */
+
+#SidebarSection{
+    width: fit-content;
+    max-width: 30%;
+    margin: 30px;
+}
+
+.SidebarPanel {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0px 15px;
+    background: var(--sidebarbackground);
+    padding: 15px;
+}
+
+#featuredsong-title{
+
+}
+
+/* album side */
+
+#BlogSection {
+    margin: 30px 0px 30px 30px;
+    padding: 20px;
+    background-color: var(--blogbackground);
+    flex-basis: 60%;
+}
+
+/* >>>>>>>>> entries */
+.AlbumEntry{
+    margin-bottom: 60px;
+}
+
+/* entry styling - musings */
+
+.AlbumEntryHeader {
+    margin-bottom: -20px;
+}
+
+.AlbumEntryTitle {
+    color: var(--musingtitle);
+    line-height: 40px;
+    margin: 0px;
+    font-size: 55px;
+}
+
+.AlbumEntryFluff {
+    margin: 0px;
+    font-size: 8px;
+    font-family: 'Times New Roman', Times, serif !important;
+    position: relative;
+    top: -25px;
+}
+
+.AlbumEntryDate {
+    margin: 0px;
+    position: relative;
+    top: -19px;
+
+}
+
+.AlbumEntryContents{
+    line-height: 20px;
+    padding: 0px 30px;
+}
+
+.AlbumEntryContents p{
+    text-indent: 40px;
+}
