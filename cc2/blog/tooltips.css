@@ -41,6 +41,12 @@
 
 /* specific tooltip adjustments */
 
+#tooltip-livingcolours {
+    width: 500px;
+    bottom: -100%;
+    right: 150%;
+}
+
 #tooltip-insideout {
     width: 500px;
     bottom: -100%;
