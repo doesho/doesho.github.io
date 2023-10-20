@@ -131,11 +131,25 @@
 
 }
 
-.AlbumEntryContents{
+.BlogEntryContents{
     line-height: 20px;
     padding: 0px 30px;
 }
 
 .AlbumEntryContents p{
     text-indent: 40px;
+}
+
+.EntryBodySection{
+    margin: 0px;
+}
+
+.EntryBodySection p{
+    margin: 0px;
+    text-align: right;
+    font-size: 15px;
+}
+
+.EntryBodySection hr{
+    margin: 0px;
 }

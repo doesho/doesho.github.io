@@ -103,7 +103,28 @@
     margin-bottom: 60px;
 }
 
-/* entry styling - musings */
+/* entry styling - song */
+
+.SongEntryHeader{
+    margin-bottom: -20px;
+}
+
+.SongEntryTitle {
+    color: var(--songtitle);
+    margin: 0px;
+    font-size: 35px;
+}
+
+.SongEntryContents{
+    line-height: 20px;
+    padding: 0px 30px;
+}
+
+.SongEntryContents p{
+    text-indent: 40px;
+}
+
+/* entry styling - album */
 
 .AlbumEntryHeader {
     margin-bottom: -20px;
