@@ -41,6 +41,12 @@
 
 /* specific tooltip adjustments */
 
+#tooltip-slow30sroom{
+    width: 600px;
+    bottom: -250%;
+    right: 150%;
+}
+
 #tooltip-livingcolours {
     width: 500px;
     bottom: -100%;
