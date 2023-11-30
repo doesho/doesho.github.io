@@ -1,0 +1,56 @@
+﻿/* full page stuff */
+
+#UniqueContainer {
+    display: flex;
+}
+
+/* contained div 1 */
+
+#NavOptionsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 30%;
+    overflow: hidden;
+}
+
+    #Header{
+        font-size: 30px;
+        margin: 0px 10px;
+        hyphens: auto;
+    }
+
+    .NavOption{
+        font-size: 30px;
+        text-align: center;
+    }
+
+/* contained div 2 */
+
+#Sidebar {
+    display: flex;
+    justify-content: right;
+    height: 100vh;
+    flex-basis: 70%;
+    user-select: none;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#GreetingWrapper {
+    align-self: center;
+    filter: invert(1);
+    mix-blend-mode: difference;
+}
+
+#Greeting {
+    filter: invert(1);
+    mix-blend-mode: difference;
+    font-size: 90px;
+    text-align: right;
+    margin: 20px;
+    line-height: 80px;
+    color: tan;
+}
