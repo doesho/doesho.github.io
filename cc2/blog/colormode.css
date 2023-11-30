@@ -2,7 +2,7 @@
 
 :root {
     /* side bar.. side */
-    --sidebarbackground: #604d3c;
+    --sidebarbackground: #503e2f;
     /* blog side */
     --blogbackground: #715a46;
     --quotecolor: #8d7366;
@@ -11,7 +11,7 @@
     --musingtitle: #a97656;
     --quotetitle: #9f7f5c;
     /* text stuff */
-    --currentpage: ;
+    --currentpage:;
     /*other*/
     --mediaframe: #8d7366;
 }
