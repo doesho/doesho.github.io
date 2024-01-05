@@ -23,6 +23,7 @@
     flex-wrap: wrap;
     flex-basis: 150%;
     background-color: var(--secondary);
+    border: 1px solid var(--border);
     border-radius: 4px;
     padding: 20px 0px;
     min-width: 400px;

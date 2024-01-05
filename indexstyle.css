@@ -141,6 +141,7 @@
     margin-left: 50px;
     background: var(--secondary);
     padding: 20px 30px;
+    border: 1px solid var(--border);
 }
 
 #WhatsExceedTitle{
