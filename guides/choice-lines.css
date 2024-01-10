@@ -11,7 +11,7 @@
     display: flex;
 }
 
-@media screen and (max-width: 1100px) { /*collapses at smaller window size */
+@media screen and (max-width: 1200px) { /*collapses at smaller window size */
     .UniqueBody {
         display: flex;
         flex-direction: column;
@@ -122,7 +122,7 @@
 
 .Choice p{ /*text body of each choice*/
     margin: 0px;
-    font-size: 15px;
+    font-size: 12px;
     text-align: right;
 }
 
