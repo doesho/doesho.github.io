@@ -53,6 +53,14 @@
     user-select: none;
 }
 
+#SideNavReminder{
+    width: 100px;
+    position: fixed;
+    left: 30px;
+    top: 40px;
+    user-select: none;
+}
+
 /* actual sidenav div itself */
 
 #SideNav {
