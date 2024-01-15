@@ -10,6 +10,7 @@ let sideNavImageArray = [
     '../content/images/sidebar/platinum.png',
     '../content/images/sidebar/specter.png',
     '../content/images/sidebar/tinker.png',
+    '../content/images/sidebar/washington.png',
     '../content/images/sidebar/shovel.png']
 
 let bannerImageArray = [
