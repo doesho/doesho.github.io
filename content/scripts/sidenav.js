@@ -9,7 +9,9 @@ document.addEventListener("click", closeSideNav);
 function openSideNav() { //width set auto, becomes child width (sideNavcontents in sideNavstyle.css)
     sideNavDiv.style.width = "auto";
     sideNavDiv.style.borderRight = "1px solid gray";
-    reminder.style.display = "none";
+    if (reminder != null) {
+        reminder.style.display = "none";
+    }
     event.stopPropagation();
 }
 
