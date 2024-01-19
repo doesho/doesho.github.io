@@ -1,7 +1,7 @@
 ﻿/* tooltip stuff, l99 tooltip is special */
 
-#Level99{
-    background-color: darkgoldenrod;
+#Level99 {
+    background-color: #69d061;
     width: 120px;
 }
 
@@ -15,7 +15,6 @@
     background-size: cover;
     background-position: center;
     height: 100vh;
-
     overflow: hidden;
 }
 
@@ -55,12 +54,12 @@
         cursor: pointer;
     }
 
-    #scrollicon{
-        align-self: center;
-        min-width: 100px;
-        width: 20%;
-        max-width: 150px;
-    }
+#scrollicon {
+    align-self: center;
+    min-width: 100px;
+    max-width: 200px;
+    filter: drop-shadow( 0px 7px var(--highlight));
+}
 
 #newImage{
     display: none;
