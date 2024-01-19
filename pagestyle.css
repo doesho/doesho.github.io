@@ -16,7 +16,7 @@ html *{
 }
 
 a {
-    text-decoration: none;
+    text-decoration-line: none;
     color: var(--link);
 }
 
@@ -63,7 +63,7 @@ a:hover {
     visibility: hidden;
     width: 100px;
     opacity: 0;
-    background-color: darkcyan;
+    background-color: var(--userinput);
     color: white;
     text-align: center;
     border-radius: 2px;
