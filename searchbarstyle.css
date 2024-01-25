@@ -5,6 +5,7 @@
     padding-bottom: 20px;
     background: var(--secondary);
     border-bottom: 1px solid gray;
+    box-shadow: 0px 6px 5px rgba(0,0,0,0.2);
 }
 
     #SearchBar img {
