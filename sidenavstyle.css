@@ -54,9 +54,9 @@
 }
 
 #SideNavReminder{
-    width: 100px;
+    width: 150px;
     position: fixed;
-    left: 30px;
+    left: 20px;
     top: 40px;
     user-select: none;
 }
