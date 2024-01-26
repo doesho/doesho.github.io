@@ -14,6 +14,7 @@
 
     <!-- color modes -->
     <link rel="stylesheet" href="lightmode.css" id="LightMode" />
+    <!-- <link rel="stylesheet" href="darkmode.css" id="DarkMode" />  -->
 
     <!-- style modes -->
     <link rel="stylesheet" href="choice-lines.css" id="LineSheet" />
@@ -53,7 +54,7 @@
             <a href="../replays/main.html" class="DisabledPage">Replays</a>
             <a href="../players/main.html" class="DisabledPage">Players</a>
             <a href="../blog/main.html">News</a>
-            <button type="button" id="ModeButton" style="display: none;"><p id="ModeButtonText"></p></button>
+            <button type="button" style="display: none;" id="ModeButton"><p id="ModeButtonText"></p></button> <!-- dark mode button -->
         </div>
         <div id="SideNavBottomContents">
             <img id="BottomPic" draggable="false" />
@@ -76,7 +77,7 @@
         <form>
             <input id="SearchInput" placeholder="Search..." />
 
-            <button type="button" id="StyleButton"><span id="ButtonText"></span></button> <!-- currently disabled style button-->
+            <button type="button" id="StyleButton"><span id="ButtonText"></span></button>
 
         </form>
     </div>
@@ -1649,13 +1650,13 @@
 
             <div class="SideBarSection" id="InfoBox">
                 <p>Pro tip: use MOUSE3 to open a guide in a new tab!</p>
-                <p>The search function parses your input whole and compares it to every part of each entry (title, description, tags, author). This means you cant have multiple search terms (yet)</p>
                 <p><b>Want to look up specific cards?</b> Join the L99 or BFC discord servers. The L99 server has an image database up to S5, and BFC has an up-to-date text database.</p>
                 <ul class="LinkList">
                     <li><a href="https://discord.gg/level99games" class="ToolTip"><span class="ToolTipText">Level 99 Games Discord</span><img src="../content/icons/websites/level99games.png" /></a></li>
                     <li><a href="https://discord.com/invite/jM2sPAWDr7" class="ToolTip"><span class="ToolTipText">The Breakfast Club</span><img src="../content/icons/char/seijun.jpg" /></a></li>
                 </ul>
                 <p><b>Looking to make a tier list?</b> Check out the tier list section in <a href="../customs/main.html">Custom Content</a>.</p>
+                <p>The search function parses your input whole and compares it to every part of each entry (title, description, tags, author). This means you cant have multiple search terms (yet)</p>
             </div>
 
             <div class="SideBarSection" id="TagBox">
