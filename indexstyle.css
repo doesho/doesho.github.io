@@ -31,10 +31,6 @@
     width: 100%;
 }
 
-#BannerText{
-    color: black;
-}
-
 #IndexHeadingBottom {
     display: flex;
     height: 20%;
@@ -62,7 +58,6 @@
 }
 
 #newImage{
-    display: none;
     position: absolute;
     right: 10px;
     bottom: 0px;
@@ -74,34 +69,11 @@
         user-select: none;
     }
 
-/* options */
-
-#options {
-    display: flex;
-    margin-top: 60px;
-    justify-content: center;
-    align-items: center;
-}
-
-#optionContainer{
-    display: flex;
-    flex-direction: row;
-    background: white;
-    padding: 5px;
-    text-align: center;
-    border: 1px solid gray;
-}
+/* sidenav */
 
 .navbutton {
     cursor: pointer;
     margin: 15px 30px;
-}
-
-#customsbutton, #communitybutton, #playersbutton{
-    cursor: not-allowed !important;
-    border: none;
-    box-shadow: none !important;
-    color: lightgray !important;
 }
 
 /* div that contains WhatsExceed and newsbox */
@@ -160,8 +132,8 @@
 
     .ExceedSeller h2 {
         font-size: 28px;
-        text-transform: uppercase;
         margin: 0px;
+        text-transform: uppercase;
         background-image: radial-gradient(var(--highlight), rgba(0, 0, 0, 0) 60%);
     }
 
