@@ -64,10 +64,6 @@
     min-width: 600px;
 }
 
-    .Choice a{
-        color: var(--text) !important;
-    }
-
     .Choice:hover {
         border-bottom: 1px solid var(--userinput) !important;
         box-shadow: 3px -1px 0px 0px var(--userinput) inset !important;
@@ -80,11 +76,15 @@
     padding: 5px;
 }
 
-/* head of each choice*/
+/* ----  head of each choice*/
 
-.ChoiceHead{
+.ChoiceHead{ /*div containing title, picture and timestamp */
     display: flex;
     margin-bottom: 10px;
+}
+
+.ChoiceHead p{ /*timestamp for videos*/
+    display: none;
 }
 
 .Choice h3 { /*title of each choice*/
@@ -99,20 +99,15 @@
 }
 
 .Choice h4{ /*author or subtitle*/
+    position: relative;
+    top: 25%;
+    left: 5%;
     font-weight: normal;
     font-size: 15px;
-    margin: 0px 5px 0px 0px;
-    white-space: nowrap;
+    margin: 0px;
 }
 
-.ChoiceHead p{
-    font-family: 'Times New Roman', Times, serif;
-    text-indent: 5px;
-    font-size: 10px !important;
-    align-self: center;
-}
-
-/* body of each choice */
+/* ------- body of each choice */
 
 .ChoiceBody {
     display: flex;
@@ -121,22 +116,8 @@
     margin: 0px;
 }
 
-.Choice p{ /*text body of each choice*/
-    margin: 0px;
-    font-size: 15px;
-    text-align: right;
+.ChoiceBody p{ /*text description of each choice*/
     display: none;
-}
-
-.Tags{ /*bottom right tags of choice. */
-    align-self: flex-start;
-    position: absolute;
-    top: 5px;
-    right: 10px;
-
-    margin: 0px;
-    font-size: 12px !important;
-    color: gray;
 }
 
 /* sidebar settings */
