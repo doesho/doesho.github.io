@@ -51,7 +51,7 @@
     position: sticky;
     top: 50px;
     text-indent: 100px;
-    background-image: linear-gradient(to left, var(--background), var(--highlight));
+    background-image: linear-gradient(to right, var(--highlight) 50%, rgba(0,0,0,0));
     z-index: 50;
 }
 
