@@ -48,8 +48,11 @@
 }
 
 .ChoiceSectionTitle {
+    position: sticky;
+    top: 50px;
     text-indent: 100px;
-    background-image: linear-gradient(to left, rgba(0,0,0,0), var(--highlight));
+    background-image: linear-gradient(to left, var(--background), var(--highlight));
+    z-index: 50;
 }
 
 
