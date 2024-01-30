@@ -1,11 +1,4 @@
-﻿/* tooltip stuff, l99 tooltip is special */
-
-#Level99 {
-    background-color: #69d061;
-    width: 120px;
-}
-
-/* Top part of the page */
+﻿/* Top part of the page */
 
 #IndexHeading { /*inherits nothing from pagestyle #heading*/
     display: flex;
@@ -190,7 +183,7 @@
 }
 
     #NewsBox h2 {
-        background: orange;
+        background: var(--highlight);
         margin-top: 10px;
     }
 
@@ -230,15 +223,6 @@ hr {
     padding: 50px 100px 50px;
     display: flex;
     flex-direction: column;
-}
-
-#BodySplash{
-    margin-top: 40px;
-    padding: 5px;
-    text-align: center;
-    background: linear-gradient(to bottom left, var(--highlight), brown);
-    font-weight: bold;
-    letter-spacing: 2px;
 }
 
 #FooterContents{
