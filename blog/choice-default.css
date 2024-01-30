@@ -119,14 +119,6 @@
     border: 10px solid var(--imageframe);
 }
 
-/* settings for specific choices */
-.GGST{
-    background: linear-gradient(to bottom right, red, orange);
-}
-    .GGST > *{
-        color: white !important;
-    }
-
 /* >>> right side timeline */
 #TimelineUniqueContainer{ /*contains all timeline stuff*/
     flex-basis: 50%;
