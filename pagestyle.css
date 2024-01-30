@@ -64,7 +64,7 @@ a:hover {
     width: 100px;
     opacity: 0;
     background-color: var(--userinput);
-    color: white;
+    color: var(--tooltiptext);
     text-align: center;
     border-radius: 2px;
     position: absolute;
@@ -81,6 +81,11 @@ a:hover {
     opacity: 1;
     transition: 0.2s;
 }
+
+.Level99 {
+    background-color: var(--level99) !important;
+}
+
 
 /* Character names and accompanying icons */
 
