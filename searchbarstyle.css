@@ -14,7 +14,7 @@
     }
 
 #StyleButton {
-    background-color: white;
+    background-color: var(--secondary);
     border: 1px solid gray;
     padding: 5px;
     margin: 5px;
