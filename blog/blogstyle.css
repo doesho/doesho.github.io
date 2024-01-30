@@ -19,3 +19,13 @@
 .hidden{
     display: none !important;
 }
+
+/* specific options */
+
+.GGST {
+    background: linear-gradient(to bottom right, red, orange);
+}
+
+    .GGST > * {
+        color: white !important;
+    }
