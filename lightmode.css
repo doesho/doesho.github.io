@@ -1,10 +1,5 @@
-﻿/* H1 is the page header.
-    H2 is for sections.
-    H3 is for titles of things, like player entries, guide names, etc. Typically in searchable boxes.
-    H4 is for things that have to stand out of normal text but barely, ie. buttons, author name
-*/
-
-:root {
+﻿:root {
+    /* page colors */
     --highlight: orange;
     --highlightsecondary: antiquewhite;
     --secondary: white;
@@ -14,11 +9,13 @@
     /* text colors */
     --text: #3c3c3c;
     --link: darkcyan;
-    --userinput: turquoise;
+    --userinput: #5CC2B8;
+    --tooltiptext: white;
     --selection: #abe4d8;
-    --optionbox: white;
-    --optionbackground: rgb(245,245,245); /*background of option section, footer */
     /*two colors used in the background image gradient*/
     --gradient1: rgba(150,50,40,0.9);
     --gradient2: rgba(255,192,46,0.9);
+    /* special colors */
+    --level99: #69d061;
+    --imageframe: rgb(240,240,240);
 }
