@@ -3,11 +3,11 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>Community &amp; Events | PLAY MORE EXCEED</title>
+    <title>Replays | PLAY MORE EXCEED</title>
     <link rel="icon" type="image/x-icon" href="../content/icons/PMX_Favicon.ico" />
 
     <link rel="stylesheet" href="../pagestyle.css" />
-    <link rel="stylesheet" href="communitystyle.css" />
+    <link rel="stylesheet" href="replaystyle.css" />
     <link rel="stylesheet" href="../lightmode.css" />
 
     <link rel="stylesheet" href="../searchbarstyle.css" />
@@ -52,6 +52,48 @@
         <p>
             This page assembles links to video recordings of matches, searchable by matchup, players, commentators and play event.
         </p>
+    </section>
+
+    <!-- search bar -->
+
+    <!-- click a button and a little window opens. the little window has all characters sorted by image and name, scrollable. the little window also has a search
+        bar at the top to filter out characters. there's two of these little buttons to help filter videos by matchup.-->
+
+    <div id="SearchBar" class="stickable">
+        <section id="SelectorSection">
+
+            <div class="SelectorContainer">
+                <!-- this is the container for an entire single character selector.-->
+                <p class="SelectorOpener">selectoropener...</p> <!-- hovering this element displays the characterselector div (below) -->
+                <div class="CharacterSelector">
+                    <input id="SearchInput" placeholder="Search..." />
+                    <div class="CharacterChoices">
+                        <p>Season 1...</p>
+                        <p>Season 2...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="SelectorContainer">
+                <p class="SelectorOpener">selectoropener...</p>
+                <div class="CharacterSelector">
+                    <input id="SearchInput" placeholder="Search..." />
+                    <div class="CharacterChoices">
+                        <p>Season 1...</p>
+                        <p>Season 2...</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <!-- start of actual page content -->
+
+    <section class="UniqueBody">
+        <div id="ChoiceUniqueContainer">
+
+        </div>
     </section>
 
     <script src="../content/scripts/sidenav.js"></script>
