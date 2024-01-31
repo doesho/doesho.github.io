@@ -17,11 +17,31 @@
 /* selectors */
 
 #SelectorSection{
+    width: 600px;
     display: flex;
+    justify-content: space-evenly;
 }
 
 .SelectorOpener{
     color: blue;
 }
 
-.
+.SelectorContainer{
+    justify-content: center;
+}
+
+.CharacterSelector{
+    position: absolute;
+    border: 1px solid black;
+    background-color: antiquewhite;
+}
+
+/* inside the selector divs */
+
+.CharacterSeason{
+    margin: 0px;
+}
+
+.CharacterChoice{
+    margin: 10px;
+}

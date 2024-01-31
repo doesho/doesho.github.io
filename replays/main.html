@@ -56,31 +56,49 @@
 
     <!-- search bar -->
 
-    <!-- click a button and a little window opens. the little window has all characters sorted by image and name, scrollable. the little window also has a search
-        bar at the top to filter out characters. there's two of these little buttons to help filter videos by matchup.-->
-
     <div id="SearchBar" class="stickable">
         <section id="SelectorSection">
 
             <div class="SelectorContainer">
-                <!-- this is the container for an entire single character selector.-->
                 <p class="SelectorOpener">selectoropener...</p> <!-- hovering this element displays the characterselector div (below) -->
                 <div class="CharacterSelector">
-                    <input id="SearchInput" placeholder="Search..." />
-                    <div class="CharacterChoices">
-                        <p>Season 1...</p>
-                        <p>Season 2...</p>
+                    <input id="SearchInput" placeholder="Search..." /> <!-- filter functionality to find characters in the CharacterChoices div -->
+                    <div class="CharacterChoiceContainer">
+                        <h4 class="CharacterChoice"><img src="../content/icons/char/random.jpg" class="CharIcon" /><i>Any Character</i></h4>
+                        <div class="CharacterSeason">
+                            <h2>Season 1</h2>
+                            <h4 class="CharacterChoice"><img src="../content/icons/char/nehtali.jpg" class="CharIcon" />Nehtali</h4>
+                            <h4 class="CharacterChoice"><img src="../content/icons/char/vincent.jpg" class="CharIcon" />Vincent</h4>
+                            <h4 class="CharacterChoice"><img src="../content/icons/char/gabrek.jpg" class="CharIcon" />Gabrek</h4>
+                        </div>
+                        <div class="CharacterSeason">
+                            <h2>Season 2</h2>
+                            <h4 class="CharacterChoice"><img src="../content/icons/char/luciya.jpg" class="CharIcon" />Luciya</h4>
+                            <h4 class="CharacterChoice"><img src="../content/icons/char/syrus.jpg" class="CharIcon" />Syrus</h4>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <p>versus</p>
 
             <div class="SelectorContainer">
                 <p class="SelectorOpener">selectoropener...</p>
                 <div class="CharacterSelector">
                     <input id="SearchInput" placeholder="Search..." />
                     <div class="CharacterChoices">
-                        <p>Season 1...</p>
-                        <p>Season 2...</p>
+                        <h4 class="CharacterChoice"><img src="../content/icons/char/random.jpg" class="CharIcon" /><i>Any Character</i></h4>
+                        <div class="CharacterSeason">
+                            <h2>Season 1</h2>
+                            <h4 class="CharacterChoice"><img src="../content/icons/char/nehtali.jpg" class="CharIcon" />Nehtali</h4>
+                            <h4 class="CharacterChoice"><img src="../content/icons/char/vincent.jpg" class="CharIcon" />Vincent</h4>
+                            <h4 class="CharacterChoice"><img src="../content/icons/char/gabrek.jpg" class="CharIcon" />Gabrek</h4>
+                        </div>
+                        <div class="CharacterSeason">
+                            <h2>Season 2</h2>
+                            <h4 class="CharacterChoice"><img src="../content/icons/char/luciya.jpg" class="CharIcon" />Luciya</h4>
+                            <h4 class="CharacterChoice"><img src="../content/icons/char/syrus.jpg" class="CharIcon" />Syrus</h4>
+                        </div>
                     </div>
                 </div>
             </div>
