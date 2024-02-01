@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="../pagestyle.css" />
     <link rel="stylesheet" href="replaystyle.css" />
+    <link rel="stylesheet" href="layout-grid.css" />
     <link rel="stylesheet" href="../lightmode.css" />
 
     <link rel="stylesheet" href="../searchbarstyle.css" />
@@ -60,22 +61,23 @@
         <section id="SelectorSection">
 
             <div class="SelectorContainer">
-                <p class="SelectorOpener">selectoropener...</p> <!-- hovering this element displays the characterselector div (below) -->
+                <p class="SelectorOpener"><i>Choose a character...</i></p> <!-- hovering this element displays the characterselector div (below) -->
                 <div class="CharacterSelector">
                     <input id="SearchInput" placeholder="Search..." /> <!-- filter functionality to find characters in the CharacterChoices div -->
                     <div class="CharacterChoiceContainer">
-                        <h4 class="CharacterChoice"><img src="../content/icons/char/random.jpg" class="CharIcon" /><i>Any Character</i></h4>
-                        <div class="CharacterSeason">
-                            <h2>Season 1</h2>
-                            <h4 class="CharacterChoice"><img src="../content/icons/char/nehtali.jpg" class="CharIcon" />Nehtali</h4>
-                            <h4 class="CharacterChoice"><img src="../content/icons/char/vincent.jpg" class="CharIcon" />Vincent</h4>
-                            <h4 class="CharacterChoice"><img src="../content/icons/char/gabrek.jpg" class="CharIcon" />Gabrek</h4>
-                        </div>
+                        <button class="CharacterChoice" value="Vincent"><h4 class="CharacterLabel"><img src="../content/icons/char/random.jpg" class="CharIcon" />Any Character</h4></button>
                         <div class="CharacterSeason">
                             <h2>Season 2</h2>
-                            <h4 class="CharacterChoice"><img src="../content/icons/char/luciya.jpg" class="CharIcon" />Luciya</h4>
-                            <h4 class="CharacterChoice"><img src="../content/icons/char/syrus.jpg" class="CharIcon" />Syrus</h4>
+                            <button class="CharacterChoice" value="Syrus"><h4 class="CharacterLabel"><img src="../content/icons/char/syrus.jpg" class="CharIcon" />Syrus</h4></button>
+                            <button class="CharacterChoice" value="Luciya"><h4 class="CharacterLabel"><img src="../content/icons/char/luciya.jpg" class="CharIcon" />Luciya</h4></button>
                         </div>
+                        <div class="CharacterSeason">
+                            <h2>Season 1</h2>
+                            <button class="CharacterChoice" value="Nehtali"><h4 class="CharacterLabel"><img src="../content/icons/char/nehtali.jpg" class="CharIcon" />Nehtali</h4></button>
+                            <button class="CharacterChoice" value="Vincent"><h4 class="CharacterLabel"><img src="../content/icons/char/vincent.jpg" class="CharIcon" />Vincent</h4></button>
+                            <button class="CharacterChoice" value="Gabrek"><h4 class="CharacterLabel"><img src="../content/icons/char/gabrek.jpg" class="CharIcon" />Gabrek</h4></button>
+                        </div>
+                        <p><i>End of list</i></p>
                     </div>
                 </div>
             </div>
@@ -83,22 +85,23 @@
             <p>versus</p>
 
             <div class="SelectorContainer">
-                <p class="SelectorOpener">selectoropener...</p>
+                <p class="SelectorOpener"><i>Choose a character...</i></p> <!-- hovering this element displays the characterselector div (below) -->
                 <div class="CharacterSelector">
-                    <input id="SearchInput" placeholder="Search..." />
-                    <div class="CharacterChoices">
-                        <h4 class="CharacterChoice"><img src="../content/icons/char/random.jpg" class="CharIcon" /><i>Any Character</i></h4>
-                        <div class="CharacterSeason">
-                            <h2>Season 1</h2>
-                            <h4 class="CharacterChoice"><img src="../content/icons/char/nehtali.jpg" class="CharIcon" />Nehtali</h4>
-                            <h4 class="CharacterChoice"><img src="../content/icons/char/vincent.jpg" class="CharIcon" />Vincent</h4>
-                            <h4 class="CharacterChoice"><img src="../content/icons/char/gabrek.jpg" class="CharIcon" />Gabrek</h4>
-                        </div>
+                    <input id="SearchInput" placeholder="Search..." /> <!-- filter functionality to find characters in the CharacterChoices div -->
+                    <div class="CharacterChoiceContainer">
+                        <button class="CharacterChoice" value="Any"><h4 class="CharacterLabel"><img src="../content/icons/char/random.jpg" class="CharIcon" />Any Character</h4></button>
                         <div class="CharacterSeason">
                             <h2>Season 2</h2>
-                            <h4 class="CharacterChoice"><img src="../content/icons/char/luciya.jpg" class="CharIcon" />Luciya</h4>
-                            <h4 class="CharacterChoice"><img src="../content/icons/char/syrus.jpg" class="CharIcon" />Syrus</h4>
+                            <button class="CharacterChoice" value="Syrus"><h4 class="CharacterLabel"><img src="../content/icons/char/syrus.jpg" class="CharIcon" />Syrus</h4></button>
+                            <button class="CharacterChoice" value="Luciya"><h4 class="CharacterLabel"><img src="../content/icons/char/luciya.jpg" class="CharIcon" />Luciya</h4></button>
                         </div>
+                        <div class="CharacterSeason">
+                            <h2>Season 1</h2>
+                            <button class="CharacterChoice" value="Nehtali"><h4 class="CharacterLabel"><img src="../content/icons/char/nehtali.jpg" class="CharIcon" />Nehtali</h4></button>
+                            <button class="CharacterChoice" value="Vincent"><h4 class="CharacterLabel"><img src="../content/icons/char/vincent.jpg" class="CharIcon" />Vincent</h4></button>
+                            <button class="CharacterChoice" value="Gabrek"><h4 class="CharacterLabel"><img src="../content/icons/char/gabrek.jpg" class="CharIcon" />Gabrek</h4></button>
+                        </div>
+                        <p><i>End of list</i></p>
                     </div>
                 </div>
             </div>
@@ -109,7 +112,25 @@
     <!-- start of actual page content -->
 
     <section class="UniqueBody">
-        <div id="ChoiceUniqueContainer">
+        <div id="ChoiceContainer">
+
+            <div class="Choice">
+                    <div class="ChoiceTitle">
+                        <div class="Player">
+                            <h4 class="CharacterLabel"><img src="../content/icons/char/syrus.jpg" class="CharIcon" />Syrus</h4>
+                            <p class="PlayerName">Doe</p>
+                        </div>
+                        <p>vs.</p>
+                        <div class="Player">
+                            <h4 class="CharacterLabel"><img src="../content/icons/char/vincent.jpg" class="CharIcon" />Vincent</h4>
+                            <p class="PlayerName">Ben Ben</p>
+                        </div>
+                    </div>
+                    <div class="ChoiceBody">
+                        <p>Presidential Cycle 3 - Winner's Semifinals - Round 2</p>
+                        <p>[17:33]</p>
+                    </div>
+            </div>
 
         </div>
     </section>
@@ -118,6 +139,7 @@
     <script src="../content/scripts/search.js"></script>
     <script src="../content/scripts/stick.js"></script>
     <script src="../content/scripts/randompic.js"></script>
+    <script src="../content/scripts/characterfilter.js"></script>
 
 </body>
 </html>
