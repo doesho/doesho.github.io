@@ -15,31 +15,33 @@
 }
 
 #SearchBar{
+    flex-direction: column;
+    display: flex;
 }
 
-/* selectors */
+/* dropdown character selectors */
 
 #SelectorSection{
-    width: 450px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .SelectorOpener{
+
     user-select: none;
     cursor: pointer;
 }
 
-.selected{ /* opener given this class while a character is selected */
-    font-weight: bold;
-    margin: 10px;
-}
+    .selected{ /* opener given this class while a character is selected */
+        font-weight: bold;
+        margin: 10px;
+    }
 
 .SelectorContainer{
     justify-content: center;
     display: flex;
     position: relative;
-    width: 200px;
+    width: 600px;
 }
 
 .CharacterSelector {
@@ -55,19 +57,17 @@
     overflow: scroll;
 }
 
-/* inside the selector divs */
-
-#SearchInput{
-    margin: auto;
-}
+/* content inside the selector divs */
 
 .CharacterSeason{
     margin: 0px;
 }
 
-.CharacterSeason h2{
-    margin-bottom: 0px;
-}
+    .CharacterSeason h2{
+        margin: auto;
+        text-align: center;
+        text-decoration: underline;
+    }
 
 .CharacterChoice {
     width: 100%;
@@ -78,12 +78,30 @@
     font: inherit;
     cursor: pointer;
     outline: inherit;
+    display: flex;
+    align-items: center;
 }
 
-.CharacterChoice:hover{
-    background-color: lightgray;
-}
+    .CharacterChoice:hover{
+        background-color: lightgray;
+    }
 
 .CharacterLabel{
     margin: 0px;
+    line-height: 70%;
 }
+
+#LowerSelectorSection{
+    display: flex;
+    margin: auto;
+}
+
+    #SpoilerCheckboxContainer{
+        display: flex;
+        margin-left: 5px;
+    }
+    
+    #SpoilerCheckboxContainer label{
+        margin: auto 0px;
+        user-select: none;
+    }
