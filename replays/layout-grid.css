@@ -4,27 +4,30 @@
     H4 is for things that have to stand out of normal text but barely, ie. buttons, author name
 */
 
-.ChoiceContainer {
-    display: grid;
-    grid-gap: 8px;
-    margin: 0px 10px 0px 140px;
+#ChoiceContainer {
+    display: block;
+    margin: 40px 20px;
+    text-align: center;
 }
-
-
 
 /* individual choices */
 
 .Choice {
-    display: block;
+    display: inline-block;
     text-decoration: none;
-    border-bottom: 2px solid var(--border);
+    border: 2px solid var(--border);
     background: var(--secondary);
-    padding: 0px;
-    min-width: 600px;
+    margin: 6px;
+    width: 500px;
+}
+
+.Choice .CharacterLabel{
+    font-size: 150%;
 }
 
 .ChoiceTitle{
     display: flex;
+    justify-content: center;
 }
 
 .Player{

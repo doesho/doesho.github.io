@@ -143,7 +143,7 @@ function filterChoices(selectedCharacterLabel1, selectedCharacterLabel2) {
         });
 
         if (matchFound1 && matchFound2) {
-            choice.style.display = "block";
+            choice.style.display = "inline-block";
         } else {
             choice.style.display = "none";
         }
