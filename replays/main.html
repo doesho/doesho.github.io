@@ -60,9 +60,9 @@
     <div id="SearchBar" class="stickable">
         <section id="SelectorSection">
 
-            <div class="SelectorContainer">
+            <div class="SelectorContainer" id="Selector1">
                 <p class="SelectorOpener"><i>Choose a character...</i></p> <!-- hovering this element displays the characterselector div (below) -->
-                <div class="CharacterSelector">
+                <div class="CharacterSelector" >
                     <input id="SearchInput" placeholder="Search..." /> <!-- filter functionality to find characters in the CharacterChoices div -->
                     <div class="CharacterChoiceContainer">
                         <button class="CharacterChoice" value="Vincent"><h4 class="CharacterLabel"><img src="../content/icons/char/random.jpg" class="CharIcon" />Any Character</h4></button>
@@ -84,22 +84,42 @@
 
             <p>versus</p>
 
-            <div class="SelectorContainer">
+            <div class="SelectorContainer" id="Selector2">
                 <p class="SelectorOpener"><i>Choose a character...</i></p> <!-- hovering this element displays the characterselector div (below) -->
                 <div class="CharacterSelector">
                     <input id="SearchInput" placeholder="Search..." /> <!-- filter functionality to find characters in the CharacterChoices div -->
                     <div class="CharacterChoiceContainer">
                         <button class="CharacterChoice" value="Any"><h4 class="CharacterLabel"><img src="../content/icons/char/random.jpg" class="CharIcon" />Any Character</h4></button>
                         <div class="CharacterSeason">
+                            <h2>Season 7</h2>
+                            <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/anji.jpg" class="CharIcon" />Anji</h4></button>
+                            <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/axl.jpg" class="CharIcon" />Axl</h4></button>
+                            <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/baiken.jpg" class="CharIcon" />Baiken</h4></button>
+                            <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/chipp.jpg" class="CharIcon" />Chipp</h4></button>
+                        </div>
+                        <div class="CharacterSeason">
+                            <h2>Season 4</h2>
+                            <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/beheaded.jpg" class="CharIcon" />Beheaded</h4></button>
+                        </div>
+                        <div class="CharacterSeason">
+                            <h2>Season 3</h2>
+                            <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/akuma.jpg" class="CharIcon" />Akuma</h4></button>
+                            <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/cammy.jpg" class="CharIcon" />Cammy</h4></button>
+                            <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/cviper.jpg" class="CharIcon" />C. Viper</h4></button>
+                        </div>
+                        <div class="CharacterSeason">
                             <h2>Season 2</h2>
-                            <button class="CharacterChoice" value="Syrus"><h4 class="CharacterLabel"><img src="../content/icons/char/syrus.jpg" class="CharIcon" />Syrus</h4></button>
-                            <button class="CharacterChoice" value="Luciya"><h4 class="CharacterLabel"><img src="../content/icons/char/luciya.jpg" class="CharIcon" />Luciya</h4></button>
+                            <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/celinka.jpg" class="CharIcon" />Celinka</h4></button>
+                            <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/syrus.jpg" class="CharIcon" />Syrus</h4></button>
+                            <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/luciya.jpg" class="CharIcon" />Luciya</h4></button>
                         </div>
                         <div class="CharacterSeason">
                             <h2>Season 1</h2>
-                            <button class="CharacterChoice" value="Nehtali"><h4 class="CharacterLabel"><img src="../content/icons/char/nehtali.jpg" class="CharIcon" />Nehtali</h4></button>
-                            <button class="CharacterChoice" value="Vincent"><h4 class="CharacterLabel"><img src="../content/icons/char/vincent.jpg" class="CharIcon" />Vincent</h4></button>
-                            <button class="CharacterChoice" value="Gabrek"><h4 class="CharacterLabel"><img src="../content/icons/char/gabrek.jpg" class="CharIcon" />Gabrek</h4></button>
+                            <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/alice.jpg" class="CharIcon" />Alice</h4></button>
+                            <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/baelkhor.jpg" class="CharIcon" />Baelkhor</h4></button>
+                            <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/nehtali.jpg" class="CharIcon" />Nehtali</h4></button>
+                            <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/vincent.jpg" class="CharIcon" />Vincent</h4></button>
+                            <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/gabrek.jpg" class="CharIcon" />Gabrek</h4></button>
                         </div>
                         <p><i>End of list</i></p>
                     </div>
@@ -107,6 +127,11 @@
             </div>
 
         </section>
+        <select>
+            <option value="all">Show All</option>
+            <option value="PresidentialCycle3">Presidential Cycle 3</option>
+            <option value="etc">Non-Tournament</option>
+        </select>
     </div>
 
     <!-- start of actual page content -->
@@ -115,21 +140,75 @@
         <div id="ChoiceContainer">
 
             <div class="Choice">
-                    <div class="ChoiceTitle">
-                        <div class="Player">
-                            <h4 class="CharacterLabel"><img src="../content/icons/char/syrus.jpg" class="CharIcon" />Syrus</h4>
-                            <p class="PlayerName">Doe</p>
-                        </div>
-                        <p>vs.</p>
-                        <div class="Player">
-                            <h4 class="CharacterLabel"><img src="../content/icons/char/vincent.jpg" class="CharIcon" />Vincent</h4>
-                            <p class="PlayerName">Ben Ben</p>
-                        </div>
+                <div class="ChoiceTitle">
+                    <div class="Player">
+                        <h4 class="CharacterLabel"><img src="../content/icons/char/syrus.jpg" class="CharIcon" />Syrus</h4>
+                        <p class="PlayerName">Doe</p>
                     </div>
-                    <div class="ChoiceBody">
-                        <p>Presidential Cycle 3 - Winner's Semifinals - Round 2</p>
-                        <p>[17:33]</p>
+                    <p class="vs">vs.</p>
+                    <div class="Player">
+                        <h4 class="CharacterLabel"><img src="../content/icons/char/vincent.jpg" class="CharIcon" />Vincent</h4>
+                        <p class="PlayerName">Ben Ben</p>
                     </div>
+                </div>
+                <div class="ChoiceBody">
+                    <p>Presidential Cycle 3 - Winner's Semifinals - Round 2</p>
+                    <p>[17:33]</p>
+                </div>
+            </div>
+
+            <div class="Choice">
+                <div class="ChoiceTitle">
+                    <div class="Player">
+                        <h4 class="CharacterLabel"><img src="../content/icons/char/nehtali.jpg" class="CharIcon" />Nehtali</h4>
+                        <p class="PlayerName">Joe</p>
+                    </div>
+                    <p class="vs">vs.</p>
+                    <div class="Player">
+                        <h4 class="CharacterLabel"><img src="../content/icons/char/luciya.jpg" class="CharIcon" />Luciya</h4>
+                        <p class="PlayerName">BasedGod</p>
+                    </div>
+                </div>
+                <div class="ChoiceBody">
+                    <p>EXCEED: What Am I Doing</p>
+                    <p>[23:58]</p>
+                </div>
+            </div>
+
+            <div class="Choice">
+                <div class="ChoiceTitle">
+                    <div class="Player">
+                        <h4 class="CharacterLabel"><img src="../content/icons/char/gabrek.jpg" class="CharIcon" />Gabrek</h4>
+                        <p class="PlayerName">BasedGod</p>
+                    </div>
+                    <p class="vs">vs.</p>
+                    <div class="Player">
+                        <h4 class="CharacterLabel"><img src="../content/icons/char/syrus.jpg" class="CharIcon" />Syrus</h4>
+                        <p class="PlayerName">Doe</p>
+                    </div>
+                </div>
+                <div class="ChoiceBody">
+                    <p>Presidential Cycle 3 - Grand Finals - Round 3</p>
+                    <p>[1:56:20]</p>
+                </div>
+            </div>
+
+            <div class="Choice">
+                <div class="ChoiceTitle">
+                    <div class="Player">
+                        <h4 class="CharacterLabel"><img src="../content/icons/char/luciya.jpg" class="CharIcon" />Luciya</h4>
+                        <p class="PlayerName">BasedGod</p>
+                    </div>
+                    <p class="vs">vs.</p>
+                    <div class="Player">
+                        <h4 class="CharacterLabel"><img src="../content/icons/char/akuma.jpg" class="CharIcon" />Akuma</h4>
+                        <p class="PlayerName">Doe</p>
+                    </div>
+                </div>
+                <div class="ChoiceBody">
+                    <p>EXCEED: Friendly Frags</p>
+                    <p>[8:16]</p>
+                </div>
             </div>
 
         </div>
