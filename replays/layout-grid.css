@@ -21,19 +21,56 @@
     width: 500px;
 }
 
-.Choice .CharacterLabel{
-    font-size: 150%;
-}
+    .Choice:hover{
+        border: 2px solid var(--userinput);
+    }
+
+    .Choice .CharacterLabel{
+        font-size: 150%;
+    }
 
 .ChoiceTitle{
     display: flex;
     justify-content: center;
+    margin: 0px;
+    height: 120px;
 }
 
-.Player{
-    margin: 10px;
-}
+    .Player{
+        margin: 10px;
+    }
 
-.PlayerName{
+    .PlayerName{
+        margin: 2px;
+        font-size: 80%;
+    }
+
+    .WinnerIcon {
+        margin: 0px;
+        background-image: radial-gradient(orange, rgba(0,0,0,0) 40%);
+        font-weight: bold;
+    }
+
+    .vs{
+        margin: auto;
+    }
+
+.ChoiceBody{
     margin: 0px;
 }
+
+    .Tournament{
+        margin: 0px;
+    }
+
+.ChoiceBodyDetails{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+    .ChoiceBodyDetails p{
+        margin: 0px 10px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 80%;
+    }
