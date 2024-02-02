@@ -162,7 +162,7 @@
                             <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/swangee.jpg" class="CharIcon" />Carl Swangee</h4></button>
                             <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/promoknight.jpg" class="CharIcon" />Shovel Knight</h4></button>
                             <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/celinka.jpg" class="CharIcon" />Celinka</h4></button>
-                            <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/djanette.jpg" class="CharIcon" />D'janette</h4></button>
+                            <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/djanette.jpg" class="CharIcon" />D'Janette</h4></button>
                             <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/emogine.jpg" class="CharIcon" />Emogine</h4></button>
                             <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/eugenia.jpg" class="CharIcon" />Eugenia</h4></button>
                             <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/galdred.jpg" class="CharIcon" />Galdred</h4></button>
@@ -206,7 +206,12 @@
                         </div>
                         <div class="CharacterSeason">
                             <h2>Customs</h2>
+                            <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/obama.jpg" class="CharIcon" />Barack Obama</h4></button>
+                            <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/fdr.jpg" class="CharIcon" />Franklin D. Roosevelt</h4></button>
+                            <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/hikaru.jpg" class="CharIcon" />Hikaru</h4></button>
                             <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/izzy.jpg" class="CharIcon" />Izzy Moonbow</h4></button>
+                            <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/koro.jpg" class="CharIcon" />Koro</h4></button>
+                            <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/lastlegs.jpg" class="CharIcon" />Last Legs</h4></button>
                             <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/pipp.jpg" class="CharIcon" />Pipp Petals</h4></button>
                         </div>
                         <p><i>End of list</i></p>
@@ -321,7 +326,7 @@
                             <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/swangee.jpg" class="CharIcon" />Carl Swangee</h4></button>
                             <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/promoknight.jpg" class="CharIcon" />Shovel Knight</h4></button>
                             <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/celinka.jpg" class="CharIcon" />Celinka</h4></button>
-                            <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/djanette.jpg" class="CharIcon" />D'janette</h4></button>
+                            <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/djanette.jpg" class="CharIcon" />D'Janette</h4></button>
                             <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/emogine.jpg" class="CharIcon" />Emogine</h4></button>
                             <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/eugenia.jpg" class="CharIcon" />Eugenia</h4></button>
                             <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/galdred.jpg" class="CharIcon" />Galdred</h4></button>
@@ -365,7 +370,12 @@
                         </div>
                         <div class="CharacterSeason">
                             <h2>Customs</h2>
+                            <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/obama.jpg" class="CharIcon" />Barack Obama</h4></button>
+                            <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/fdr.jpg" class="CharIcon" />Franklin D. Roosevelt</h4></button>
+                            <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/hikaru.jpg" class="CharIcon" />Hikaru</h4></button>
                             <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/izzy.jpg" class="CharIcon" />Izzy Moonbow</h4></button>
+                            <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/koro.jpg" class="CharIcon" />Koro</h4></button>
+                            <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/lastlegs.jpg" class="CharIcon" />Last Legs</h4></button>
                             <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/pipp.jpg" class="CharIcon" />Pipp Petals</h4></button>
                         </div>
                         <p><i>End of list</i></p>
@@ -373,6 +383,15 @@
                 </div>
             </div>
 
+
+        </section>
+
+        <section id="LowerSelectorSection">
+            <input type="search" id="SearchInput" placeholder="Player, video, tournament..."/>
+            <div id="SpoilerCheckboxContainer">
+                <input type="checkbox" id="SpoilerCheckbox" onclick="toggleWinnerIcon()" checked/>
+                <label for="SpoilerCheckbox">show winner?</label>
+            </div>
         </section>
     </div>
 
@@ -382,29 +401,7 @@
         <div id="ChoiceContainer">
 
             <div class="Choice">
-                <a href="https://www.youtube.com/watch?v=1b9S846Lh9I">
-                    <div class="ChoiceTitle">
-                        <div class="Player">
-                            <h4 class="CharacterLabel"><img src="../content/icons/char/platinum.jpg" class="CharIcon" />Platinum the Trinity</h4>
-                            <p class="PlayerName">D (Tirankin)</p>
-                        </div>
-                        <p class="vs">vs.</p>
-                        <div class="Player">
-                            <h4 class="CharacterLabel"><img src="../content/icons/char/exsk.jpg" class="CharIcon" />Shovel &amp; Shield Knight</h4>
-                            <p class="PlayerName">OgreYama</p>
-                            <p class="WinnerIcon">WIN</p>
-                        </div>
-                    </div>
-                    <div class="ChoiceBody">
-                        <p>EXCEED: D's Emogine vs. OgreYama's Syrus</p>
-                        <p>[35:06]</p>
-                        <p>April 12, 2019</p>
-                    </div>
-                </a>
-            </div>
-
-            <div class="Choice">
-                <a href="https://www.youtube.com/watch?v=1b9S846Lh9I">
+                <a href="https://youtu.be/1b9S846Lh9I?si=4HmwvOF5HgCNeZKq">
                     <div class="ChoiceTitle">
                         <div class="Player">
                             <h4 class="CharacterLabel"><img src="../content/icons/char/emogine.jpg" class="CharIcon" />Emogine</h4>
@@ -418,59 +415,416 @@
                         </div>
                     </div>
                     <div class="ChoiceBody">
-                        <p>EXCEED: D's Emogine vs. OgreYama's Syrus</p>
-                        <p>[35:06]</p>
-                        <p>April 12, 2019</p>
+                        <p class="Tournament">EXCEED: D's Emogine vs. OgreYama's Syrus</p>
+                        <div class="ChoiceBodyDetails">
+                            <p>[35:06]</p>
+                            <p>April 10, 2019</p>
+                        </div>
                     </div>
                 </a>
             </div>
-
+            
             <div class="Choice">
-                <a href="https://www.youtube.com/watch?v=1b9S846Lh9I">
+                <a href="https://youtu.be/_h4j_xoBZi0?si=vdonKc_IbivMc_OB">
                     <div class="ChoiceTitle">
                         <div class="Player">
-                            <h4 class="CharacterLabel"><img src="../content/icons/char/emogine.jpg" class="CharIcon" />Emogine</h4>
+                            <h4 class="CharacterLabel"><img src="../content/icons/char/iaquis.jpg" class="CharIcon" />Iaquis</h4>
                             <p class="PlayerName">D (Tirankin)</p>
                         </div>
                         <p class="vs">vs.</p>
                         <div class="Player">
-                            <h4 class="CharacterLabel"><img src="../content/icons/char/syrus.jpg" class="CharIcon" />Syrus</h4>
+                            <h4 class="CharacterLabel"><img src="../content/icons/char/renea.jpg" class="CharIcon" />Renea</h4>
                             <p class="PlayerName">OgreYama</p>
                             <p class="WinnerIcon">WIN</p>
                         </div>
                     </div>
                     <div class="ChoiceBody">
-                        <p>EXCEED: D's Emogine vs. OgreYama's Syrus</p>
-                        <p>[35:06]</p>
-                        <p>April 12, 2019</p>
+                        <p class="Tournament">EXCEED: D's Iaquis vs. OgreYama's Renea</p>
+                        <div class="ChoiceBodyDetails">
+                            <p>[20:39]</p>
+                            <p>April 10, 2019</p>
+                        </div>
                     </div>
                 </a>
             </div>
-
+                        
             <div class="Choice">
-                <a href="https://www.youtube.com/watch?v=1b9S846Lh9I">
+                <a href="https://youtu.be/XJ9iagq3FtI?si=YkAjLYqly6T6a_VY">
                     <div class="ChoiceTitle">
                         <div class="Player">
-                            <h4 class="CharacterLabel"><img src="../content/icons/char/emogine.jpg" class="CharIcon" />Emogine</h4>
+                            <h4 class="CharacterLabel"><img src="../content/icons/char/djanette.jpg" class="CharIcon" />D'Janette</h4>
                             <p class="PlayerName">D (Tirankin)</p>
                         </div>
                         <p class="vs">vs.</p>
                         <div class="Player">
-                            <h4 class="CharacterLabel"><img src="../content/icons/char/syrus.jpg" class="CharIcon" />Syrus</h4>
+                            <h4 class="CharacterLabel"><img src="../content/icons/char/remiliss.jpg" class="CharIcon" />Remiliss</h4>
                             <p class="PlayerName">OgreYama</p>
                             <p class="WinnerIcon">WIN</p>
                         </div>
                     </div>
                     <div class="ChoiceBody">
-                        <p>EXCEED: D's Emogine vs. OgreYama's Syrus</p>
-                        <p>[35:06]</p>
-                        <p>April 12, 2019</p>
+                        <p class="Tournament">EXCEED: D's D'Janette vs. OgreYama's Remiliss</p>
+                        <div class="ChoiceBodyDetails">
+                            <p>[21:16]</p>
+                            <p>April 10, 2019</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+                                    
+            <div class="Choice">
+                <a href="https://youtu.be/FkQDAN-ReHA?si=5U8wda_nnGkWjobW">
+                    <div class="ChoiceTitle">
+                        <div class="Player">
+                            <h4 class="CharacterLabel"><img src="../content/icons/char/promoknight.jpg" class="CharIcon" />Shovel Knight</h4>
+                            <p class="PlayerName">D (Tirankin)</p>
+                            <p class="WinnerIcon">WIN</p>
+                        </div>
+                        <p class="vs">vs.</p>
+                        <div class="Player">
+                            <h4 class="CharacterLabel"><img src="../content/icons/char/seijun.jpg" class="CharIcon" />Seijun</h4>
+                            <p class="PlayerName">OgreYama</p>
+                        </div>
+                    </div>
+                    <div class="ChoiceBody">
+                        <p class="Tournament">EXCEED: D's Shovel Knight vs. OgreYama's Seijun</p>
+                        <div class="ChoiceBodyDetails">
+                            <p>[24:45]</p>
+                            <p>April 10, 2019</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+                                                
+            <div class="Choice">
+                <a href="https://youtu.be/TyPb85l60Nc?si=jRH6NRpKeIp0885K">
+                    <div class="ChoiceTitle">
+                        <div class="Player">
+                            <h4 class="CharacterLabel"><img src="../content/icons/char/sydneyserena.jpg" class="CharIcon" />Sydney &amp; Serena</h4>
+                            <p class="PlayerName">D (Tirankin)</p>
+                        </div>
+                        <p class="vs">vs.</p>
+                        <div class="Player">
+                            <h4 class="CharacterLabel"><img src="../content/icons/char/tournelouse.jpg" class="CharIcon" />Tournelouse</h4>
+                            <p class="PlayerName">OgreYama</p>
+                            <p class="WinnerIcon">WIN</p>
+                        </div>
+                    </div>
+                    <div class="ChoiceBody">
+                        <p class="Tournament">EXCEED: D's Sydney &amp; Serena vs. OgreYama's Tournelouse</p>
+                        <div class="ChoiceBodyDetails">
+                            <p>[17:58]</p>
+                            <p>April 10, 2019</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+                                                            
+            <div class="Choice">
+                <a href="https://youtu.be/9lO0v_bCcqA?si=M6E9fXHZ8GuduxKc">
+                    <div class="ChoiceTitle">
+                        <div class="Player">
+                            <h4 class="CharacterLabel"><img src="../content/icons/char/djanette.jpg" class="CharIcon" />D'Janette</h4>
+                            <p class="PlayerName">D (Tirankin)</p>
+                            <p class="WinnerIcon">WIN</p>
+                        </div>
+                        <p class="vs">vs.</p>
+                        <div class="Player">
+                            <h4 class="CharacterLabel"><img src="../content/icons/char/seijun.jpg" class="CharIcon" />Seijun</h4>
+                            <p class="PlayerName">OgreYama</p>
+                        </div>
+                    </div>
+                    <div class="ChoiceBody">
+                        <p class="Tournament">EXCEED: D's D'Janette vs. OgreYama's Seijun</p>
+                        <div class="ChoiceBodyDetails">
+                            <p>[24:48]</p>
+                            <p>April 10, 2019</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+                                                                        
+            <div class="Choice">
+                <a href="https://youtu.be/eEM2xpy8-xg?si=yyJ98mrz7Omr8src">
+                    <div class="ChoiceTitle">
+                        <div class="Player">
+                            <h4 class="CharacterLabel"><img src="../content/icons/char/sydneyserena.jpg" class="CharIcon" />Sydney &amp; Serena</h4>
+                            <p class="PlayerName">D (Tirankin)</p>
+                            <p class="WinnerIcon">WIN</p>
+                        </div>
+                        <p class="vs">vs.</p>
+                        <div class="Player">
+                            <h4 class="CharacterLabel"><img src="../content/icons/char/geoffrey.jpg" class="CharIcon" />Geoffrey</h4>
+                            <p class="PlayerName">OgreYama</p>
+                        </div>
+                    </div>
+                    <div class="ChoiceBody">
+                        <p class="Tournament">EXCEED: D's Sydney &amp; Serena vs. OgreYama's Geoffrey</p>
+                        <div class="ChoiceBodyDetails">
+                            <p>[16:18]</p>
+                            <p>April 10, 2019</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+                                                                                    
+            <div class="Choice">
+                <a href="https://youtu.be/MpZhvm74QEo?si=PwJlsi7dQD7Uk2Ma">
+                    <div class="ChoiceTitle">
+                        <div class="Player">
+                            <h4 class="CharacterLabel"><img src="../content/icons/char/umina.jpg" class="CharIcon" />Umina</h4>
+                            <p class="PlayerName">D (Tirankin)</p>
+                            <p class="WinnerIcon">WIN</p>
+                        </div>
+                        <p class="vs">vs.</p>
+                        <div class="Player">
+                            <h4 class="CharacterLabel"><img src="../content/icons/char/luciya.jpg" class="CharIcon" />Luciya</h4>
+                            <p class="PlayerName">OgreYama</p>
+                        </div>
+                    </div>
+                    <div class="ChoiceBody">
+                        <p class="Tournament">EXCEED: D's Umina vs. OgreYama's Luciya</p>
+                        <div class="ChoiceBodyDetails">
+                            <p>[7:48]</p>
+                            <p>April 10, 2019</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+                                                                                                
+            <div class="Choice">
+                <a href="https://youtu.be/FWTaZslaHPA?si=O4bSbhXHUp4z-m_T">
+                    <div class="ChoiceTitle">
+                        <div class="Player">
+                            <h4 class="CharacterLabel"><img src="../content/icons/char/minato.jpg" class="CharIcon" />Minato</h4>
+                            <p class="PlayerName">D (Tirankin)</p>
+                        </div>
+                        <p class="vs">vs.</p>
+                        <div class="Player">
+                            <h4 class="CharacterLabel"><img src="../content/icons/char/galdred.jpg" class="CharIcon" />Galdred</h4>
+                            <p class="PlayerName">OgreYama</p>
+                            <p class="WinnerIcon">WIN</p>
+                        </div>
+                    </div>
+                    <div class="ChoiceBody">
+                        <p class="Tournament">EXCEED: D's Minato vs. OgreYama's Galdred</p>
+                        <div class="ChoiceBodyDetails">
+                            <p>[30:34]</p>
+                            <p>April 10, 2019</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+                                                                                                            
+            <div class="Choice">
+                <a href="https://youtu.be/1xYDU9lxELc?si=3IHO2vMJbbPej4mM">
+                    <div class="ChoiceTitle">
+                        <div class="Player">
+                            <h4 class="CharacterLabel"><img src="../content/icons/char/iaquis.jpg" class="CharIcon" />Iaquis</h4>
+                            <p class="PlayerName">D (Tirankin)</p>
+                        </div>
+                        <p class="vs">vs.</p>
+                        <div class="Player">
+                            <h4 class="CharacterLabel"><img src="../content/icons/char/zsolt.jpg" class="CharIcon" />Zsolt</h4>
+                            <p class="PlayerName">OgreYama</p>
+                            <p class="WinnerIcon">WIN</p>
+                        </div>
+                    </div>
+                    <div class="ChoiceBody">
+                        <p class="Tournament">EXCEED: D's Iaquis vs. OgreYama's Zsolt</p>
+                        <div class="ChoiceBodyDetails">
+                            <p>[9:48]</p>
+                            <p>April 10, 2019</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+                                                                                                                        
+            <div class="Choice">
+                <a href="https://youtu.be/l-1W2kAEtUE?si=xHV5Mu4S0_VPN8IR">
+                    <div class="ChoiceTitle">
+                        <div class="Player">
+                            <h4 class="CharacterLabel"><img src="../content/icons/char/gabrek.jpg" class="CharIcon" />Gabrek</h4>
+                            <p class="PlayerName">D (Tirankin)</p>
+                            <p class="WinnerIcon">WIN</p>
+                        </div>
+                        <p class="vs">vs.</p>
+                        <div class="Player">
+                            <h4 class="CharacterLabel"><img src="../content/icons/char/zangief.jpg" class="CharIcon" />Zangief</h4>
+                            <p class="PlayerName">Marco</p>
+                        </div>
+                    </div>
+                    <div class="ChoiceBody">
+                        <p class="Tournament">EXCEED: D's Gabrek vs. Marco's Zangief</p>
+                        <div class="ChoiceBodyDetails">
+                            <p>[10:16]</p>
+                            <p>April 11, 2019</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+                                                                                                                                    
+            <div class="Choice">
+                <a href="https://youtu.be/l-1W2kAEtUE?si=xHV5Mu4S0_VPN8IR">
+                    <div class="ChoiceTitle">
+                        <div class="Player">
+                            <h4 class="CharacterLabel"><img src="../content/icons/char/reese.jpg" class="CharIcon" />Reese</h4>
+                            <p class="PlayerName">D (Tirankin)</p>
+                        </div>
+                        <p class="vs">vs.</p>
+                        <div class="Player">
+                            <h4 class="CharacterLabel"><img src="../content/icons/char/vincent.jpg" class="CharIcon" />Vincent</h4>
+                            <p class="PlayerName">Marco</p>
+                            <p class="WinnerIcon">WIN</p>
+                        </div>
+                    </div>
+                    <div class="ChoiceBody">
+                        <p class="Tournament">EXCEED: D's Reese vs. Marco's Vincent</p>
+                        <div class="ChoiceBodyDetails">
+                            <p>[19:11]</p>
+                            <p>April 11, 2019</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+                                                                                                                                                
+            <div class="Choice">
+                <a href="https://youtu.be/l-1W2kAEtUE?si=xHV5Mu4S0_VPN8IR">
+                    <div class="ChoiceTitle">
+                        <div class="Player">
+                            <h4 class="CharacterLabel"><img src="../content/icons/char/alice.jpg" class="CharIcon" />Alice</h4>
+                            <p class="PlayerName">D (Tirankin)</p>
+                            <p class="WinnerIcon">WIN</p>
+                        </div>
+                        <p class="vs">vs.</p>
+                        <div class="Player">
+                            <h4 class="CharacterLabel"><img src="../content/icons/char/juno.jpg" class="CharIcon" />Juno</h4>
+                            <p class="PlayerName">Marco</p>
+                        </div>
+                    </div>
+                    <div class="ChoiceBody">
+                        <p class="Tournament">EXCEED: D's Alice vs. Marco's Juno</p>
+                        <div class="ChoiceBodyDetails">
+                            <p>[25:45]</p>
+                            <p>April 11, 2019</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+                                                                                                                                                            
+            <div class="Choice">
+                <a href="https://youtu.be/HIHgo5h494A?si=FajT735mplOnTONh">
+                    <div class="ChoiceTitle">
+                        <div class="Player">
+                            <h4 class="CharacterLabel"><img src="../content/icons/char/dan.jpg" class="CharIcon" />Dan</h4>
+                            <p class="PlayerName">D (Tirankin)</p>
+                        </div>
+                        <p class="vs">vs.</p>
+                        <div class="Player">
+                            <h4 class="CharacterLabel"><img src="../content/icons/char/dan.jpg" class="CharIcon" />Dan</h4>
+                            <p class="PlayerName">Aisling</p>
+                            <p class="WinnerIcon">WIN</p>
+                        </div>
+                    </div>
+                    <div class="ChoiceBody">
+                        <p class="Tournament">EXCEED: D's Dan vs. Aisling's Dan</p>
+                        <div class="ChoiceBodyDetails">
+                            <p>[8:36]</p>
+                            <p>April 11, 2019</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+                                                                                                                                                                        
+            <div class="Choice">
+                <a href="https://youtu.be/RlHIB1HB02Q?si=mZkkJSYP8zLhYDP9">
+                    <div class="ChoiceTitle">
+                        <div class="Player">
+                            <h4 class="CharacterLabel"><img src="../content/icons/char/obama.jpg" class="CharIcon" />Barack Obama</h4>
+                            <p class="PlayerName">D (Tirankin)</p>
+                        </div>
+                        <p class="vs">vs.</p>
+                        <div class="Player">
+                            <h4 class="CharacterLabel"><img src="../content/icons/char/fdr.jpg" class="CharIcon" />Franklin D. Roosevelt</h4>
+                            <p class="PlayerName">Aisling</p>
+                            <p class="WinnerIcon">WIN</p>
+                        </div>
+                    </div>
+                    <div class="ChoiceBody">
+                        <p class="Tournament">EXCEED: D's Barack Obama vs. Aisling's Franklin D. Roosevelt</p>
+                        <div class="ChoiceBodyDetails">
+                            <p>[16:29]</p>
+                            <p>April 11, 2019</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+                                                                                                                                                                                    
+            <div class="Choice">
+                <a href="https://youtu.be/dagcbmKaFco?si=CCTCJRVhZZXWYbdv">
+                    <div class="ChoiceTitle">
+                        <div class="Player">
+                            <h4 class="CharacterLabel"><img src="../content/icons/char/lastlegs.jpg" class="CharIcon" />Last Legs</h4>
+                            <p class="PlayerName">D (Tirankin)</p>
+                            <p class="WinnerIcon">WIN</p>
+                        </div>
+                        <p class="vs">vs.</p>
+                        <div class="Player">
+                            <h4 class="CharacterLabel"><img src="../content/icons/char/hikaru.jpg" class="CharIcon" />Hikaru</h4>
+                            <p class="PlayerName">Aisling</p>
+                        </div>
+                    </div>
+                    <div class="ChoiceBody">
+                        <p class="Tournament">EXCEED: D's Last Legs vs. Aisling's Hikaru</p>
+                        <div class="ChoiceBodyDetails">
+                            <p>[13:37]</p>
+                            <p>April 11, 2019</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+                                                                                                                                                                                                
+            <div class="Choice">
+                <a href="https://youtu.be/0BZ2N1y1yTw?si=K98QmHAL8MRKC7PY">
+                    <div class="ChoiceTitle">
+                        <div class="Player">
+                            <h4 class="CharacterLabel"><img src="../content/icons/char/kaden.jpg" class="CharIcon" />Kaden</h4>
+                            <p class="PlayerName">D (Tirankin)</p>
+                        </div>
+                        <p class="vs">vs.</p>
+                        <div class="Player">
+                            <h4 class="CharacterLabel"><img src="../content/icons/char/vincent.jpg" class="CharIcon" />Vincent</h4>
+                            <p class="PlayerName">boogey</p>
+                            <p class="WinnerIcon">WIN</p>
+                        </div>
+                    </div>
+                    <div class="ChoiceBody">
+                        <p class="Tournament">EXCEED: D's Kaden vs. boogey's Vincent</p>
+                        <div class="ChoiceBodyDetails">
+                            <p>[17:33]</p>
+                            <p>April 11, 2019</p>
+                        </div>
                     </div>
                 </a>
             </div>
 
         </div>
     </section>
+
+    <script>
+        function toggleWinnerIcon() {
+            var winnerIcon = document.querySelectorAll(".WinnerIcon");
+            var spoilerCheckbox = document.getElementById("SpoilerCheckbox");
+
+            winnerIcon.forEach(icon => {
+                if (spoilerCheckbox.checked == false) {
+                    icon.style.visibility = "hidden";
+                } else {
+                    icon.style.visibility = "visible";
+                }
+            });
+        };
+    </script>
 
     <script src="../content/scripts/sidenav.js"></script>
     <script src="../content/scripts/search.js"></script>
