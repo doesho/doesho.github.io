@@ -51,6 +51,7 @@
     background-color: var(--secondary);
     max-height: 50vh;
     min-height: 300px;
+    width: 240px;
     overflow: scroll;
 }
 
