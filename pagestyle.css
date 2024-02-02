@@ -90,6 +90,8 @@ a:hover {
 /* Character names and accompanying icons */
 
 .CharName{
+    display: flex;
+    align-items: center;
 }
 
 .CharIcon {

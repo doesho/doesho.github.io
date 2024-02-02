@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const characterLabel = choice.querySelector(".CharacterLabel").textContent.toLowerCase();
 
                 if (characterLabel.includes(searchText)) {
-                    choice.style.display = "block"; // Show the choice if it matches the search text
+                    choice.style.display = "flex"; // Show the choice if it matches the search text
                 } else {
                     choice.style.display = "none"; // Hide the choice if it doesn't match the search text
                 }
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Hide CharacterSeason divs with no visible CharacterChoices
             const characterSeasons = container.querySelectorAll(".CharacterSeason");
             characterSeasons.forEach(season => {
-                const visibleChoices = season.querySelectorAll(".CharacterChoice[style='display: block;']");
+                const visibleChoices = season.querySelectorAll(".CharacterChoice[style='display: flex;']");
 
                 if (visibleChoices.length === 0) {
                     season.style.display = "none"; // Hide the season if no visible choices
