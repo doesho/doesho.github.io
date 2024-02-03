@@ -6,11 +6,40 @@
 
 #ChoiceContainer {
     display: block;
-    margin: 40px 20px;
+    margin: 40px 40px;
     text-align: center;
 }
 
 /* individual choices */
+
+@media screen and (max-width: 700px){
+    #ChoiceContainer{
+        background-color: red;
+    }
+    .Choice{
+        width: 90% !important;
+    }
+}
+
+@media screen and (min-width: 701px) and (max-width: 1200px){
+    #ChoiceContainer {
+        background-color: yellow;
+    }
+
+    .Choice {
+        width: 47% !important;
+    }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1600px) {
+    #ChoiceContainer {
+        background-color: green;
+    }
+
+    .Choice {
+        width: 31% !important;
+    }
+}
 
 .Choice {
     display: inline-block;
@@ -18,7 +47,7 @@
     border: 2px solid var(--border);
     background: var(--secondary);
     margin: 6px;
-    width: 500px;
+    width: 23%;
 }
 
     .Choice:hover{
@@ -52,21 +81,29 @@
     }
 
     .vs{
-        margin: auto;
+        margin: auto 0px;
     }
 
 .ChoiceBody{
-    margin: 0px;
+    padding: 5px;
 }
 
-    .Tournament{
-        margin: 0px;
+    .Tournament {
+       margin: 0px;
     }
+
+    .Video {
+      margin: 0px;
+      font-size: 80%;
+    }
+
+
+
 
 .ChoiceBodyDetails{
     display: flex;
     justify-content: center;
-    margin: 5px;
+    margin: 0px;
 }
 
     .ChoiceBodyDetails p{
