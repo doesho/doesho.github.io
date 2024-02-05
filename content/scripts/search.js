@@ -1,4 +1,4 @@
-//core search bar functionality
+//core search bar functionality. get this dude out of here
 
 function funcSearch(input) {
     let choiceContainer = document.getElementById("ChoiceUniqueContainer");
@@ -22,7 +22,19 @@ document.addEventListener("DOMContentLoaded", function () {
     input.addEventListener("input", funcSearch);
 });
 
-//dropdown additional filter functinonality. this is a mess but it does work well
+//clearsearchinput button
+
+const clearSearchInputButtons = document.querySelectorAll(".ClearSearchInput");
+
+clearSearchInputButtons.forEach(button => {
+    button.addEventListener("click", function () {
+        const searchInput = this.closest(".SearchInputContainer").querySelector("#SearchInput");
+        searchInput.value = '';
+        funcSearchNew();
+    })
+})
+
+//REMAKE ME. dropdown filter functinonality for blog. hard typed catagories is bad. this is a mess but it does work well
 
 let selector = document.getElementById('CatagorySelect');
 let selectedCatagory = "";
