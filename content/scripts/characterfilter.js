@@ -37,41 +37,47 @@ selectorOpeners.forEach(opener => {
 
 //filter character choice in ChoiceContainer search functionality div
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", funcNewSearch());
+
+function funcNewSearch() {
+    alert("call");
     const selectorContainers = document.querySelectorAll(".SelectorContainer");
 
     selectorContainers.forEach(container => {
-        const searchInput = container.querySelector(".CharacterSelector input");
-        const characterChoices = container.querySelectorAll(".CharacterChoice");
+        const searchInput = container.querySelector(".SearchInputContainer input");
+        const entries = container.querySelectorAll(".Entry");
 
         searchInput.addEventListener("input", function () {
             const searchText = this.value.toLowerCase();
 
-            characterChoices.forEach(choice => {
-                const characterLabel = choice.querySelector(".CharacterLabel").textContent.toLowerCase();
+            entries.forEach(entry => {
+                const characterLabel = entry.querySelector(".CharacterLabel").textContent.toLowerCase();
 
                 if (characterLabel.includes(searchText)) {
-                    choice.style.display = "flex"; // Show the choice if it matches the search text
+                    entry.style.display = "flex"; // Show the choice if it matches the search text
                 } else {
-                    choice.style.display = "none"; // Hide the choice if it doesn't match the search text
+                    entry.style.display = "none"; // Hide the choice if it doesn't match the search text
                 }
             });
 
             // Hide CharacterSeason divs with no visible CharacterChoices
-            const characterSeasons = container.querySelectorAll(".CharacterSeason");
-            characterSeasons.forEach(season => {
-                const visibleChoices = season.querySelectorAll(".CharacterChoice[style='display: flex;']");
+            const entryCatagory = container.querySelectorAll(".EntryCatagory");
+            entryCatagory.forEach(catagory => {
+                const visibleChoices = catagory.querySelectorAll(".Entry[style='display: flex;']");
 
                 if (visibleChoices.length === 0) {
-                    season.style.display = "none"; // Hide the season if no visible choices
+                    catagory.style.display = "none"; // Hide the season if no visible choices
                 } else {
-                    season.style.display = "block"; // Show the season if there are visible choices
+                    catagory.style.display = "block"; // Show the season if there are visible choices
                 }
             });
         });
     });
-});
+}
 
+
+
+// -- UPDATE OPENER APPEARANCE
 //This section grabs Selectors and adds listeners to the buttons. It then calls filterChoices and updates
 //Opener appearance. Finally it calls adjustPlayerOrder to swap Player divs in the Choice if applicable.
 //TO DO - make this a called function and put the establishments elsewhere.
@@ -120,6 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// - FILTER CHOICES
 //This function takes the selected CharacterLabels from the Selectors and iterates over each Choice, comparing against a bool
 //and hiding or showing the choice based on result
 
@@ -150,7 +157,7 @@ function filterChoices(selectedCharacterLabel1, selectedCharacterLabel2) {
     });
 }
 
-
+// - ADJUST PLAYER ORDER
 //This function receives the selected CharacterLabels from the Selectors and loops through each choice, comparing the received
 //CharacterLabels against each choice's CharacterLabels (held within ChoiceTitle). If they match but are criss-crossed we swap
 //the choice labels around to reflect the order the CharacterLabels are in. Otherwise, return or end naturally.
