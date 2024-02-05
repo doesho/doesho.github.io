@@ -60,7 +60,10 @@
             <div class="SelectorContainer" id="Selector1">
                 <p class="SelectorOpener"><i>Choose a character...</i></p> <!-- hovering this element displays the characterselector div (below) -->
                 <div class="CharacterSelector">
-                    <input id="SearchInput" placeholder="Search..." /> <!-- filter functionality to find characters in the CharacterChoices div -->
+                    <div class="SearchInputContainer">
+                        <input id="SearchInput" placeholder="Search..." /> <!-- filter functionality to find characters in the CharacterChoices div -->
+                        <button class="ClearSearchInput"><p>X</p></button>
+                    </div>
                     <div class="CharacterChoiceContainer">
                         <button class="CharacterChoice" value="Any"><h4 class="CharacterLabel"><img src="../content/icons/char/random.jpg" class="CharIcon" />Any Character</h4></button>
                         <div class="CharacterSeason">
@@ -183,7 +186,7 @@
                         </div>
                         <div class="CharacterSeason">
                             <h2>Season 1</h2>
-                            <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/baelkhor.jpg" class="CharIcon" />Devris</h4></button>
+                            <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/devris.jpg" class="CharIcon" />Devris</h4></button>
                             <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/juno.jpg" class="CharIcon" />Juno</h4></button>
                             <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/pooky.jpg" class="CharIcon" />Pooky</h4></button>
                             <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/alice.jpg" class="CharIcon" />Alice</h4></button>
@@ -224,7 +227,11 @@
             <div class="SelectorContainer" id="Selector2">
                 <p class="SelectorOpener"><i>Choose a character...</i></p> <!-- hovering this element displays the characterselector div (below) -->
                 <div class="CharacterSelector">
-                    <input id="SearchInput" placeholder="Search..." /> <!-- filter functionality to find characters in the CharacterChoices div -->
+                    <div class="SearchInputContainer">
+                        <input id="SearchInput" placeholder="Search..." /> <!-- filter functionality to find characters in the CharacterChoices div -->
+                        <button class="ClearSearchInput"><p>X</p></button>
+                    </div>
+
                     <div class="CharacterChoiceContainer">
                         <button class="CharacterChoice" value="Any"><h4 class="CharacterLabel"><img src="../content/icons/char/random.jpg" class="CharIcon" />Any Character</h4></button>
                         <div class="CharacterSeason">
@@ -347,7 +354,7 @@
                         </div>
                         <div class="CharacterSeason">
                             <h2>Season 1</h2>
-                            <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/baelkhor.jpg" class="CharIcon" />Devris</h4></button>
+                            <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/devris.jpg" class="CharIcon" />Devris</h4></button>
                             <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/juno.jpg" class="CharIcon" />Juno</h4></button>
                             <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/pooky.jpg" class="CharIcon" />Pooky</h4></button>
                             <button class="CharacterChoice"><h4 class="CharacterLabel"><img src="../content/icons/char/alice.jpg" class="CharIcon" />Alice</h4></button>
@@ -387,9 +394,12 @@
         </section>
 
         <section id="LowerSelectorSection">
-            <input type="search" id="SearchInput" placeholder="Player, video, tournament..."/>
+            <div class="SearchInputContainer">
+                <input type="search" id="SearchInput" placeholder="Player, video, tournament..." />
+                <button class="ClearSearchInput"><p>X</p></button>
+            </div>
             <div id="SpoilerCheckboxContainer">
-                <input type="checkbox" id="SpoilerCheckbox" onclick="toggleWinnerIcon()" checked/>
+                <input type="checkbox" id="SpoilerCheckbox" onclick="toggleWinnerIcon()" checked />
                 <label for="SpoilerCheckbox">show winner?</label>
             </div>
         </section>
@@ -2341,6 +2351,413 @@
                         <div class="ChoiceBodyDetails">
                             <p>[30:24]</p>
                             <p>April 18, 2019</p>
+                        </div>
+                    </div>
+                </a>
+            </div>                                                                                                                                                                                                                                               
+                                                                                                                                                                                                                                                                                                                       
+            <div class="Choice">
+                <a href="https://youtu.be/K2XnR1EIxVo?si=hrhzd2Ify7NFNh1B">
+                    <div class="ChoiceTitle">
+                        <div class="Player">
+                            <img src="../content/icons/char/youropponent.jpg" class="CharIcon" />
+                            <h4 class="CharacterLabel">Your Opponent</h4>
+                            <p class="PlayerName">D (Tirankin)</p>
+                        </div>
+                        <p class="vs">vs.</p>
+                        <div class="Player">
+                            <img src="../content/icons/char/dan.jpg" class="CharIcon" />
+                            <h4 class="CharacterLabel">Dan</h4>
+                            <p class="PlayerName">Blue</p>
+                            <p class="WinnerIcon">WIN</p>
+                        </div>
+                    </div>
+                    <div class="ChoiceBody">
+                        <p class="Tournament">Casual</p>
+                        <p class="Video">EXCEED: D's Your Opponent vs. Blue's Dan</p>
+                        <div class="ChoiceBodyDetails">
+                            <p>[15:29]</p>
+                            <p>April 19, 2019</p>
+                        </div>
+                    </div>
+                </a>
+            </div>                                                                                                                                                                                                                                               
+                                                                                                                                                                                                                                                                                                                                   
+            <div class="Choice">
+                <a href="https://youtu.be/A4aRoagc7S4?si=om1k07pYETwHnSwb">
+                    <div class="ChoiceTitle">
+                        <div class="Player">
+                            <img src="../content/icons/char/guile.jpg" class="CharIcon" />
+                            <h4 class="CharacterLabel">Guile</h4>
+                            <p class="PlayerName">D (Tirankin)</p>
+                            <p class="WinnerIcon">WIN</p>
+                        </div>
+                        <p class="vs">vs.</p>
+                        <div class="Player">
+                            <img src="../content/icons/char/swangee.jpg" class="CharIcon" />
+                            <h4 class="CharacterLabel">Carl Swangee</h4>
+                            <p class="PlayerName">MadFnorder</p>
+                        </div>
+                    </div>
+                    <div class="ChoiceBody">
+                        <p class="Tournament">Casual - Guile Versus The World</p>
+                        <p class="Video">(GvW25.1) EXCEED: D's Guile vs. MadFnorder's Carl</p>
+                        <div class="ChoiceBodyDetails">
+                            <p>[5:20]</p>
+                            <p>April , 2019</p>
+                        </div>
+                    </div>
+                </a>
+            </div>                                                                                                                                                                                                                                               
+                                                                                                                                                                                                                                                                                                                                               
+            <div class="Choice">
+                <a href="https://youtu.be/5R8ob30AYpk?si=vwnbvcvI7FXjCG1I">
+                    <div class="ChoiceTitle">
+                        <div class="Player">
+                            <img src="../content/icons/char/guile.jpg" class="CharIcon" />
+                            <h4 class="CharacterLabel">Guile</h4>
+                            <p class="PlayerName">D (Tirankin)</p>
+                        </div>
+                        <p class="vs">vs.</p>
+                        <div class="Player">
+                            <img src="../content/icons/char/swangee.jpg" class="CharIcon" />
+                            <h4 class="CharacterLabel">Carl Swangee</h4>
+                            <p class="PlayerName">MadFnorder</p>
+                            <p class="WinnerIcon">WIN</p>
+                        </div>
+                    </div>
+                    <div class="ChoiceBody">
+                        <p class="Tournament">Casual - Guile Versus The World</p>
+                        <p class="Video">(GvW25.2) EXCEED: D's Guile vs. MadFnorder's Carl</p>
+                        <div class="ChoiceBodyDetails">
+                            <p>[19:50]</p>
+                            <p>April 20, 2019</p>
+                        </div>
+                    </div>
+                </a>
+            </div>                                                                                                                                                                                                                                               
+                                                                                                                                                                                                                                                                                                                                                           
+            <div class="Choice">
+                <a href="https://youtu.be/JfiQB2okyKk?si=hFPqdpBzentjMWJO">
+                    <div class="ChoiceTitle">
+                        <div class="Player">
+                            <img src="../content/icons/char/guile.jpg" class="CharIcon" />
+                            <h4 class="CharacterLabel">Guile</h4>
+                            <p class="PlayerName">D (Tirankin)</p>
+                            <p class="WinnerIcon">WIN</p>
+                        </div>
+                        <p class="vs">vs.</p>
+                        <div class="Player">
+                            <img src="../content/icons/char/swangee.jpg" class="CharIcon" />
+                            <h4 class="CharacterLabel">Carl Swangee</h4>
+                            <p class="PlayerName">MadFnorder</p>
+                        </div>
+                    </div>
+                    <div class="ChoiceBody">
+                        <p class="Tournament">Casual - Guile Versus The World</p>
+                        <p class="Video">(GvW25.3) EXCEED: D's Guile vs. MadFnorder's Carl</p>
+                        <div class="ChoiceBodyDetails">
+                            <p>[8:50]</p>
+                            <p>April 20, 2019</p>
+                        </div>
+                    </div>
+                </a>
+            </div>                                                                                                                                                                                                                                               
+                                                                                                                                                                                                                                                                                                                                                                       
+            <div class="Choice">
+                <a href="https://youtu.be/n85H1isyHvY?si=c6h6uK2TUGquaWxG">
+                    <div class="ChoiceTitle">
+                        <div class="Player">
+                            <img src="../content/icons/char/guile.jpg" class="CharIcon" />
+                            <h4 class="CharacterLabel">Guile</h4>
+                            <p class="PlayerName">D (Tirankin)</p>
+                        </div>
+                        <p class="vs">vs.</p>
+                        <div class="Player">
+                            <img src="../content/icons/char/miska.jpg" class="CharIcon" />
+                            <h4 class="CharacterLabel">Miska</h4>
+                            <p class="PlayerName">Viddie</p>
+                            <p class="WinnerIcon">WIN</p>
+                        </div>
+                    </div>
+                    <div class="ChoiceBody">
+                        <p class="Tournament">Casual - Guile Versus The World</p>
+                        <p class="Video">(GvW26) EXCEED: D's Guile vs. Vidjalante's Miska</p>
+                        <div class="ChoiceBodyDetails">
+                            <p>[32:10]</p>
+                            <p>April 20, 2019</p>
+                        </div>
+                    </div>
+                </a>
+            </div>                                                                                                                                                                                                                                               
+                                                                                                                                                                                                                                                                                                                                                                                   
+            <div class="Choice">
+                <a href="https://youtu.be/33iMoemF73s?si=zLHnvUcDNvF5Wv-6">
+                    <div class="ChoiceTitle">
+                        <div class="Player">
+                            <img src="../content/icons/char/guile.jpg" class="CharIcon" />
+                            <h4 class="CharacterLabel">Guile</h4>
+                            <p class="PlayerName">D (Tirankin)</p>
+                            <p class="WinnerIcon">WIN</p>
+                        </div>
+                        <p class="vs">vs.</p>
+                        <div class="Player">
+                            <img src="../content/icons/char/syrus.jpg" class="CharIcon" />
+                            <h4 class="CharacterLabel">Syrus</h4>
+                            <p class="PlayerName">Viddie</p>
+                        </div>
+                    </div>
+                    <div class="ChoiceBody">
+                        <p class="Tournament">Casual - Guile Versus The World</p>
+                        <p class="Video">(GvW27) EXCEED: D's Guile vs. Vidjalante's Syrus</p>
+                        <div class="ChoiceBodyDetails">
+                            <p>[20:41]</p>
+                            <p>April 20, 2019</p>
+                        </div>
+                    </div>
+                </a>
+            </div>                                                                                                                                                                                                                                               
+                                                                                                                                                                                                                                                                                                                                                                                               
+            <div class="Choice">
+                <a href="https://youtu.be/33iMoemF73s?si=zLHnvUcDNvF5Wv-6">
+                    <div class="ChoiceTitle">
+                        <div class="Player">
+                            <img src="../content/icons/char/guile.jpg" class="CharIcon" />
+                            <h4 class="CharacterLabel">Guile</h4>
+                            <p class="PlayerName">D (Tirankin)</p>
+                            <p class="WinnerIcon">WIN</p>
+                        </div>
+                        <p class="vs">vs.</p>
+                        <div class="Player">
+                            <img src="../content/icons/char/vega.jpg" class="CharIcon" />
+                            <h4 class="CharacterLabel">Vega</h4>
+                            <p class="PlayerName">Viddie</p>
+                        </div>
+                    </div>
+                    <div class="ChoiceBody">
+                        <p class="Tournament">Casual - Guile Versus The World</p>
+                        <p class="Video">(GvW28) EXCEED: D's Guile vs. Vidjalante's Vega</p>
+                        <div class="ChoiceBodyDetails">
+                            <p>[23:55]</p>
+                            <p>April 20, 2019</p>
+                        </div>
+                    </div>
+                </a>
+            </div>                                                                                                                                                                                                                                               
+                                                                                                                                                                                                                                                                                                                                                                                                           
+            <div class="Choice">
+                <a href="https://youtu.be/IuHgnK-vzQU?si=t1__O4jn1ZloPl7t">
+                    <div class="ChoiceTitle">
+                        <div class="Player">
+                            <img src="../content/icons/char/guile.jpg" class="CharIcon" />
+                            <h4 class="CharacterLabel">Guile</h4>
+                            <p class="PlayerName">D (Tirankin)</p>
+                            <p class="WinnerIcon">WIN</p>
+                        </div>
+                        <p class="vs">vs.</p>
+                        <div class="Player">
+                            <img src="../content/icons/char/djanette.jpg" class="CharIcon" />
+                            <h4 class="CharacterLabel">D'Janette</h4>
+                            <p class="PlayerName">MadFnorder</p>
+                        </div>
+                    </div>
+                    <div class="ChoiceBody">
+                        <p class="Tournament">Casual - Guile Versus The World</p>
+                        <p class="Video">(GvW29) EXCEED: D's Guile vs. MadFnorder's D'Janette</p>
+                        <div class="ChoiceBodyDetails">
+                            <p>[25:50]</p>
+                            <p>April 20, 2019</p>
+                        </div>
+                    </div>
+                </a>
+            </div>                                                                                                                                                                                                                                               
+                                                                                                                                                                                                                                                                                                                                                                                                                       
+            <div class="Choice">
+                <a href="https://youtu.be/Me8njzxCgF0?si=QyuvKxu4NkR_J08L">
+                    <div class="ChoiceTitle">
+                        <div class="Player">
+                            <img src="../content/icons/char/guile.jpg" class="CharIcon" />
+                            <h4 class="CharacterLabel">Guile</h4>
+                            <p class="PlayerName">D (Tirankin)</p>
+                        </div>
+                        <p class="vs">vs.</p>
+                        <div class="Player">
+                            <img src="../content/icons/char/lily.jpg" class="CharIcon" />
+                            <h4 class="CharacterLabel">Lily</h4>
+                            <p class="PlayerName">Viddie</p>
+                            <p class="WinnerIcon">WIN</p>
+                        </div>
+                    </div>
+                    <div class="ChoiceBody">
+                        <p class="Tournament">Casual - Guile Versus The World</p>
+                        <p class="Video">(GvW30) EXCEED: D's Guile vs. Vidjalante's Lily</p>
+                        <div class="ChoiceBodyDetails">
+                            <p>[17:58]</p>
+                            <p>April 20, 2019</p>
+                        </div>
+                    </div>
+                </a>
+            </div>                                                                                                                                                                                                                                               
+                                                                                                                                                                                                                                                                                                                                                                                                                                   
+            <div class="Choice">
+                <a href="https://youtu.be/hALtGl0Y9HI?si=CPC9ZAIp4CQB9kjh">
+                    <div class="ChoiceTitle">
+                        <div class="Player">
+                            <img src="../content/icons/char/ken.jpg" class="CharIcon" />
+                            <h4 class="CharacterLabel">Ken</h4>
+                            <p class="PlayerName">PolterGhost</p>
+                        </div>
+                        <p class="vs">vs.</p>
+                        <div class="Player">
+                            <img src="../content/icons/char/chunli.jpg" class="CharIcon" />
+                            <h4 class="CharacterLabel">Chun-Li</h4>
+                            <p class="PlayerName">Circuit Bear</p>
+                            <p class="WinnerIcon">WIN</p>
+                        </div>
+                    </div>
+                    <div class="ChoiceBody">
+                        <p class="Commentator">Commentary: D (Tirankin)</p>
+                        <p class="Tournament">Casual</p>
+                        <p class="Video">EXCEED: PolterGhost's Ken vs. Circuit Bear's Chun-Li</p>
+                        <div class="ChoiceBodyDetails">
+                            <p>[12:37]</p>
+                            <p>April 20, 2019</p>
+                        </div>
+                    </div>
+                </a>
+            </div>                                                                                                                                                                                                                                               
+                                                                                                                                                                                                                                                                                                                                                                                                                                               
+            <div class="Choice">
+                <a href="https://youtu.be/VKFEhfZZwkg?si=i5E6Cb_2nN5Yh178">
+                    <div class="ChoiceTitle">
+                        <div class="Player">
+                            <img src="../content/icons/char/sagat.jpg" class="CharIcon" />
+                            <h4 class="CharacterLabel">Sagat</h4>
+                            <p class="PlayerName">PolterGhost</p>
+                            <p class="WinnerIcon">WIN</p>
+                        </div>
+                        <p class="vs">vs.</p>
+                        <div class="Player">
+                            <img src="../content/icons/char/cviper.jpg" class="CharIcon" />
+                            <h4 class="CharacterLabel">C. Viper</h4>
+                            <p class="PlayerName">Circuit Bear</p>
+                        </div>
+                    </div>
+                    <div class="ChoiceBody">
+                        <p class="Commentator">Commentary: D (Tirankin)</p>
+                        <p class="Tournament">Casual</p>
+                        <p class="Video">EXCEED: PolterGhost's Sagat vs. Circuit Bear's C. Viper</p>
+                        <div class="ChoiceBodyDetails">
+                            <p>[16:29]</p>
+                            <p>April 20, 2019</p>
+                        </div>
+                    </div>
+                </a>
+            </div>                                                                                                                                                                                                                                               
+                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+            <div class="Choice">
+                <a href="https://youtu.be/izXwt-WhZmM?si=2Gbip4jqt2MMU69C">
+                    <div class="ChoiceTitle">
+                        <div class="Player">
+                            <img src="../content/icons/char/remiliss.jpg" class="CharIcon" />
+                            <h4 class="CharacterLabel">Remiliss</h4>
+                            <p class="PlayerName">D (Tirankin)</p>
+                            <p class="WinnerIcon">WIN</p>
+                        </div>
+                        <p class="vs">vs.</p>
+                        <div class="Player">
+                            <img src="../content/icons/char/djanette.jpg" class="CharIcon" />
+                            <h4 class="CharacterLabel">D'Janette</h4>
+                            <p class="PlayerName">boogey</p>
+                        </div>
+                    </div>
+                    <div class="ChoiceBody">
+                        <p class="Tournament">Casual</p>
+                        <p class="Video">EXCEED: D's Remiliss vs. boogey's D'Janette</p>
+                        <div class="ChoiceBodyDetails">
+                            <p>[15:11]</p>
+                            <p>April 20, 2019</p>
+                        </div>
+                    </div>
+                </a>
+            </div>                                                                                                                                                                                                                                               
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+            <div class="Choice">
+                <a href="https://youtu.be/8lYjMTfYIJw?si=kHWENSv_224klCya">
+                    <div class="ChoiceTitle">
+                        <div class="Player">
+                            <img src="../content/icons/char/nehtali.jpg" class="CharIcon" />
+                            <h4 class="CharacterLabel">Nehtali</h4>
+                            <p class="PlayerName">D (Tirankin)</p>
+                            <p class="WinnerIcon">WIN</p>
+                        </div>
+                        <p class="vs">vs.</p>
+                        <div class="Player">
+                            <img src="../content/icons/char/djanette.jpg" class="CharIcon" />
+                            <h4 class="CharacterLabel">D'Janette</h4>
+                            <p class="PlayerName">boogey</p>
+                        </div>
+                    </div>
+                    <div class="ChoiceBody">
+                        <p class="Tournament">Casual</p>
+                        <p class="Video">EXCEED: D's Nehtali vs. boogey's D'Janette</p>
+                        <div class="ChoiceBodyDetails">
+                            <p>[30:34]</p>
+                            <p>April 20, 2019</p>
+                        </div>
+                    </div>
+                </a>
+            </div>                                                                                                                                                                                                                                               
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+            <div class="Choice">
+                <a href="https://youtu.be/LtC5VXtOd4k?si=nfmukdXUQ5nCw6sO">
+                    <div class="ChoiceTitle">
+                        <div class="Player">
+                            <img src="../content/icons/char/skullman.jpg" class="CharIcon" />
+                            <h4 class="CharacterLabel">Super Skullman 33</h4>
+                            <p class="PlayerName">D (Tirankin)</p>
+                            <p class="WinnerIcon">WIN</p>
+                        </div>
+                        <p class="vs">vs.</p>
+                        <div class="Player">
+                            <img src="../content/icons/char/tournelouse.jpg" class="CharIcon" />
+                            <h4 class="CharacterLabel">Tournelouse</h4>
+                            <p class="PlayerName">boogey</p>
+                        </div>
+                    </div>
+                    <div class="ChoiceBody">
+                        <p class="Tournament">Casual</p>
+                        <p class="Video">EXCEED: D's Skull Man vs. boogey's Tournelouse</p>
+                        <div class="ChoiceBodyDetails">
+                            <p>[16:35]</p>
+                            <p>April 20, 2019</p>
+                        </div>
+                    </div>
+                </a>
+            </div>                                                                                                                                                                                                                                               
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+            <div class="Choice">
+                <a href="https://youtu.be/2wXI9UaLWjM?si=ONZ9kRaewz42AiyG">
+                    <div class="ChoiceTitle">
+                        <div class="Player">
+                            <img src="../content/icons/char/vincent.jpg" class="CharIcon" />
+                            <h4 class="CharacterLabel">Vincent</h4>
+                            <p class="PlayerName">D (Tirankin)</p>
+                        </div>
+                        <p class="vs">vs.</p>
+                        <div class="Player">
+                            <img src="../content/icons/char/morathi.jpg" class="CharIcon" />
+                            <h4 class="CharacterLabel">Morathi</h4>
+                            <p class="PlayerName">Blue</p>
+                            <p class="WinnerIcon">WIN</p>
+                        </div>
+                    </div>
+                    <div class="ChoiceBody">
+                        <p class="Tournament">Casual</p>
+                        <p class="Video">EXCEED: D's Vincent vs. Blue's Morathi</p>
+                        <div class="ChoiceBodyDetails">
+                            <p>[15:57]</p>
+                            <p>April 20, 2019</p>
                         </div>
                     </div>
                 </a>

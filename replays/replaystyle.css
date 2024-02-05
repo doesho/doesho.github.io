@@ -55,6 +55,7 @@
     min-height: 300px;
     width: 240px;
     overflow: scroll;
+    z-index: 40;
 }
 
 /* content inside the selector divs */
