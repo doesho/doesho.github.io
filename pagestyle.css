@@ -2,6 +2,13 @@
     H2 is for sections.
     H3 is for titles of things, like player entries, guide names, etc. Typically in searchable boxes.
     H4 is for things that have to stand out of normal text but barely, ie. buttons, author name
+
+    ------ CLASS BREAKDOWN -------
+    ParentEntryContainer = this single element contains all entrycatagories and thus entries
+    Entry = this element is one instance in a list of other elements which can be filtered
+    EntryCatagory = this element contains some but not all Entries based on some catagory
+    Tags = the text of this element is compared against search input to filter things. put in an entry
+    
 */
 
 /* this sheet applies to all pages, though pages also have their own specialized sheet. */
