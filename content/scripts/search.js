@@ -22,17 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
     input.addEventListener("input", funcSearch);
 });
 
-//clearsearchinput button
-
-const clearSearchInputButtons = document.querySelectorAll(".ClearSearchInput");
-
-clearSearchInputButtons.forEach(button => {
-    button.addEventListener("click", function () {
-        const searchInput = this.closest(".SearchInputContainer").querySelector("#SearchInput");
-        searchInput.value = '';
-        funcSearchNew();
-    })
-})
 
 //REMAKE ME. dropdown filter functinonality for blog. hard typed catagories is bad. this is a mess but it does work well
 
