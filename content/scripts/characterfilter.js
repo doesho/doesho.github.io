@@ -1,3 +1,28 @@
+//INITIALIZATION
+
+document.addEventListener("DOMContentLoaded", function () {
+    const selectorContainers = document.querySelectorAll(".SelectorContainer");
+
+    selectorContainers.forEach(container => {
+        const searchInput = container.querySelector(".SearchInputContainer input");
+        const clearButton = container.querySelector(".ClearSearchInput");
+        const entries = container.querySelectorAll(".Entry");
+
+        searchInput.addEventListener("input", function () {
+            const searchText = this.value.toLowerCase();
+
+            funcNewSearch(searchText, ".CharacterLabel", entries, "flex");
+        });
+
+        clearButton.addEventListener("click", function () {
+            searchInput.value = "";
+
+            funcNewSearch("", ".CharacterLabel", entries, "flex");
+        })
+
+    });
+});
+
 
 // Close CharacterSelector when a CharacterChoice is clicked
 const characterChoices = document.querySelectorAll('.CharacterChoice');
@@ -35,43 +60,33 @@ selectorOpeners.forEach(opener => {
     });
 });
 
-//filter character choice in ChoiceContainer search functionality div
+// -- SEARCH FILTER FUNCTION
+//funcNewSearch is the perfect man. He is courageous but sensitive when he needs to be. He
+//has 12 all new outfits and comes free with this Play Exceed playset! Call him any time you
+//need to search some shit.
+//pInput is the search input == pTags is the thing input is compared against
 
-document.addEventListener("DOMContentLoaded", funcNewSearch());
+function funcNewSearch(pInput, pTags, pEntries, displayType) {
 
-function funcNewSearch() {
-    alert("call");
-    const selectorContainers = document.querySelectorAll(".SelectorContainer");
+    pEntries.forEach(entry => {
+        const searchTags = entry.querySelector(pTags).textContent.toLowerCase();
 
-    selectorContainers.forEach(container => {
-        const searchInput = container.querySelector(".SearchInputContainer input");
-        const entries = container.querySelectorAll(".Entry");
+        if (searchTags.includes(pInput)) {
+            entry.style.display = displayType;
+        } else {
+            entry.style.display = "none";
+        }
 
-        searchInput.addEventListener("input", function () {
-            const searchText = this.value.toLowerCase();
+        //rework so only checked at end of funcNewSearch and not in forEach
+        const catagory = entry.closest(".EntryCatagory");
+        const visibleChoices = catagory.querySelectorAll(`.Entry[style='display: ${displayType};']`); //concatenate me
 
-            entries.forEach(entry => {
-                const characterLabel = entry.querySelector(".CharacterLabel").textContent.toLowerCase();
+        if (visibleChoices.length === 0) {
+            catagory.style.display = "none";
+        } else {
+            catagory.style.display = "block";
+        }
 
-                if (characterLabel.includes(searchText)) {
-                    entry.style.display = "flex"; // Show the choice if it matches the search text
-                } else {
-                    entry.style.display = "none"; // Hide the choice if it doesn't match the search text
-                }
-            });
-
-            // Hide CharacterSeason divs with no visible CharacterChoices
-            const entryCatagory = container.querySelectorAll(".EntryCatagory");
-            entryCatagory.forEach(catagory => {
-                const visibleChoices = catagory.querySelectorAll(".Entry[style='display: flex;']");
-
-                if (visibleChoices.length === 0) {
-                    catagory.style.display = "none"; // Hide the season if no visible choices
-                } else {
-                    catagory.style.display = "block"; // Show the season if there are visible choices
-                }
-            });
-        });
     });
 }
 
