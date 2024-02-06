@@ -13,18 +13,13 @@
 /* individual choices */
 
 @media screen and (max-width: 700px){
-    #ChoiceContainer{
-        background-color: red;
-    }
+
     .Choice{
         width: 90% !important;
     }
 }
 
 @media screen and (min-width: 701px) and (max-width: 1200px){
-    #ChoiceContainer {
-        background-color: yellow;
-    }
 
     .Choice {
         width: 47% !important;
@@ -32,9 +27,6 @@
 }
 
 @media screen and (min-width: 1201px) and (max-width: 1600px) {
-    #ChoiceContainer {
-        background-color: green;
-    }
 
     .Choice {
         width: 31% !important;
