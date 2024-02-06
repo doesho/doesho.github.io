@@ -115,3 +115,38 @@ function funcCatagory() {
             break;
     }
 }
+
+// -- GOOD SHIT
+
+// -- SEARCH FILTER FUNCTION
+//funcNewSearch is the perfect man. He is courageous but sensitive when he needs to be. He
+//has 12 all new outfits and comes free with this Play Exceed playset! Call him any time you
+//need to search some shit.
+//pInput is the search input. pContainer is the parent div of Entries and Catagories searched through
+
+function funcNewSearch(pInput, pContainer, displayType) {
+
+    const entries = pContainer.querySelectorAll(".Entry");
+
+    entries.forEach(entry => {
+        const searchTags = entry.querySelector(".Tags").textContent.toLowerCase();
+
+        if (searchTags.includes(pInput)) {
+            entry.style.display = displayType;
+        } else {
+            entry.style.display = "none";
+        }
+    });
+
+    const catagories = pContainer.querySelectorAll(".EntryCatagory");
+
+    catagories.forEach(catagory => {
+        const visibleChoices = catagory.querySelectorAll(`.Entry[style='display: ${displayType};']`);
+
+        if (visibleChoices.length === 0) {
+            catagory.style.display = "none";
+        } else {
+            catagory.style.display = "block";
+        }
+    });
+};

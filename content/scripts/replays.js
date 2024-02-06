@@ -1,26 +1,30 @@
 //INITIALIZATION
 
 document.addEventListener("DOMContentLoaded", function () {
+
+    //search function stuff
     const selectorContainers = document.querySelectorAll(".SelectorContainer");
 
     selectorContainers.forEach(container => {
         const searchInput = container.querySelector(".SearchInputContainer input");
         const clearButton = container.querySelector(".ClearSearchInput");
-        const entries = container.querySelectorAll(".Entry");
 
         searchInput.addEventListener("input", function () {
             const searchText = this.value.toLowerCase();
 
-            funcNewSearch(searchText, ".CharacterLabel", entries, "flex");
+            funcNewSearch(searchText, container, "flex");
         });
 
         clearButton.addEventListener("click", function () {
             searchInput.value = "";
 
-            funcNewSearch("", ".CharacterLabel", entries, "flex");
+            funcNewSearch("", container, "flex");
         })
-
     });
+
+    //update opener stuff
+
+
 });
 
 
@@ -60,54 +64,19 @@ selectorOpeners.forEach(opener => {
     });
 });
 
-// -- SEARCH FILTER FUNCTION
-//funcNewSearch is the perfect man. He is courageous but sensitive when he needs to be. He
-//has 12 all new outfits and comes free with this Play Exceed playset! Call him any time you
-//need to search some shit.
-//pInput is the search input == pTags is the thing input is compared against
-
-function funcNewSearch(pInput, pTags, pEntries, displayType) {
-
-    pEntries.forEach(entry => {
-        const searchTags = entry.querySelector(pTags).textContent.toLowerCase();
-
-        if (searchTags.includes(pInput)) {
-            entry.style.display = displayType;
-        } else {
-            entry.style.display = "none";
-        }
-
-        //rework so only checked at end of funcNewSearch and not in forEach
-        const catagory = entry.closest(".EntryCatagory");
-        const visibleChoices = catagory.querySelectorAll(`.Entry[style='display: ${displayType};']`); //concatenate me
-
-        if (visibleChoices.length === 0) {
-            catagory.style.display = "none";
-        } else {
-            catagory.style.display = "block";
-        }
-
-    });
-}
-
-
-
 // -- UPDATE OPENER APPEARANCE
 //This section grabs Selectors and adds listeners to the buttons. It then calls filterChoices and updates
 //Opener appearance. Finally it calls adjustPlayerOrder to swap Player divs in the Choice if applicable.
 //TO DO - make this a called function and put the establishments elsewhere.
 
 document.addEventListener("DOMContentLoaded", function () {
-    const selectorOpeners = document.querySelectorAll(".SelectorOpener");
     const characterChoices1 = document.querySelectorAll("#Selector1 .CharacterChoice");
     const characterChoices2 = document.querySelectorAll("#Selector2 .CharacterChoice");
 
-    // Add event listeners to each CharacterChoice button in the first selector
     characterChoices1.forEach(choice => {
         choice.addEventListener("click", function () {
             const selectedCharacterLabel1 = this.querySelector(".CharacterLabel").textContent;
             const charIconSrc = this.querySelector(".CharIcon").getAttribute("src");
-
             const selectedCharacterLabel2 = document.querySelector("#Selector2 .SelectorOpener").textContent.trim();
 
             filterChoices(selectedCharacterLabel1, selectedCharacterLabel2);
@@ -121,12 +90,10 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Add event listeners to each CharacterChoice button in the second selector
     characterChoices2.forEach(choice => {
         choice.addEventListener("click", function () {
             const selectedCharacterLabel2 = this.querySelector(".CharacterLabel").textContent;
             const charIconSrc = this.querySelector(".CharIcon").getAttribute("src");
-
             const selectedCharacterLabel1 = document.querySelector("#Selector1 .SelectorOpener").textContent.trim();
 
             filterChoices(selectedCharacterLabel1, selectedCharacterLabel2);
@@ -141,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// - FILTER CHOICES
+// - FILTER CHOICES - GENERIC ME
 //This function takes the selected CharacterLabels from the Selectors and iterates over each Choice, comparing against a bool
 //and hiding or showing the choice based on result
 
