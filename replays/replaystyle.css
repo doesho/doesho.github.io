@@ -55,6 +55,7 @@
     min-height: 300px;
     width: 240px;
     overflow: scroll;
+    overflow-x: hidden;
     z-index: 40;
 }
 
