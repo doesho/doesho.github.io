@@ -46,7 +46,7 @@
 
 .CharacterSelector {
     position: absolute;
-    top: 70%;
+    top: 90%;
     display: none;
     flex-direction: column;
     border: 1px solid gray;
@@ -59,6 +59,10 @@
 }
 
 /* content inside the selector divs */
+
+.SearchInputContainer{
+
+}
 
 .CharacterSeason{
     margin: 0px;
