@@ -57,7 +57,7 @@
     position: relative;
 }
 
-#SearchInput {
+.SearchInput {
     padding: 5px;
     margin: 5px;
     border: 2px solid gray;
@@ -65,7 +65,7 @@
     width: 100%;
 }
 
-    #SearchInput:focus {
+    .SearchInput:focus {
         outline: none;
         border: 2px solid var(--userinput);
     }
