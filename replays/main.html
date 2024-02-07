@@ -60,11 +60,12 @@
                 <div class="SelectorContainer" id="Selector1">
                     <p class="SelectorOpener"><i>Choose a character...</i></p> <!-- hovering this element displays the characterselector div (below) -->
                     <div class="CharacterSelector">
-                        <div class="SearchInputContainer">
-                            <input id="SearchInput" placeholder="Search characters..." /> <!-- filter functionality to find characters in the CharacterChoices div -->
+                        <div class="SearchInputContainer" data-searchbuddy-id="Selector1">
+                            <input class="SearchInput" placeholder="Search characters..." /> <!-- filter functionality to find characters in the CharacterChoices div -->
                             <button class="ClearSearchInput"><p>X</p></button>
                         </div>
-                        <div class="ParentEntryContainer CharacterChoiceContainer">
+
+                        <div class="ParentEntryContainer CharacterChoiceContainer" data-searchbuddy-id="Selector1">
                             <button class="CharacterChoice" value="Any"><h4 class="CharacterLabel"><img src="../content/icons/char/random.jpg" class="CharIcon" />Any Character</h4></button>
                             <div class="EntryCatagory CharacterSeason">
                                 <h2>Season 7</h2>
@@ -227,12 +228,12 @@
                 <div class="SelectorContainer" id="Selector2">
                     <p class="SelectorOpener"><i>Choose a character...</i></p> <!-- hovering this element displays the characterselector div (below) -->
                     <div class="CharacterSelector">
-                        <div class="SearchInputContainer">
-                            <input id="SearchInput" placeholder="Search characters..." /> <!-- filter functionality to find characters in the CharacterChoices div -->
+                        <div class="SearchInputContainer" data-searchbuddy-id="Selector2">
+                            <input class="SearchInput" placeholder="Search characters..." /> <!-- filter functionality to find characters in the CharacterChoices div -->
                             <button class="ClearSearchInput"><p>X</p></button>
                         </div>
 
-                        <div class="ParentEntryContainer CharacterChoiceContainer">
+                        <div class="ParentEntryContainer CharacterChoiceContainer" data-searchbuddy-id="Selector2">
                             <button class="CharacterChoice" value="Any"><h4 class="CharacterLabel"><img src="../content/icons/char/random.jpg" class="CharIcon" />Any Character</h4></button>
                             <div class="EntryCatagory CharacterSeason">
                                 <h2>Season 7</h2>
@@ -384,8 +385,8 @@
                                 <button class="Entry CharacterChoice"><h4 class="Tags CharacterLabel"><img src="../content/icons/char/koro.jpg" class="CharIcon" />Koro</h4></button>
                                 <button class="Entry CharacterChoice"><h4 class="Tags CharacterLabel"><img src="../content/icons/char/lastlegs.jpg" class="CharIcon" />Last Legs</h4></button>
                                 <button class="Entry CharacterChoice"><h4 class="Tags CharacterLabel"><img src="../content/icons/char/pipp.jpg" class="CharIcon" />Pipp Petals</h4></button>
-                                <p><i>End of list</i></p>
                             </div>
+                            <p><i>End of list</i></p>
                         </div>
                     </div>
                 </div>
@@ -393,8 +394,8 @@
             </section>
 
             <section id="LowerSelectorSection">
-                <div class="SearchInputContainer">
-                    <input type="search" id="SearchInput" placeholder="Player, video, tournament..." />
+                <div class="SearchInputContainer" data-searchbuddy-id="Body1">
+                    <input type="search" class="SearchInput" placeholder="Player, video, tournament..." />
                     <button class="ClearSearchInput"><p>X</p></button>
                 </div>
                 <div id="SpoilerCheckboxContainer">
@@ -409,25 +410,25 @@
     <!-- start of actual page content -->
 
     <section class="UniqueBody">
-        <div id="ChoiceContainer">
+        <div class="ParentEntryContainer" id="ChoiceContainer" data-searchbuddy-id="Body1">
 
-            <div class="Choice">
+            <div class="Entry Choice">
                 <a href="https://youtu.be/1b9S846Lh9I?si=4HmwvOF5HgCNeZKq">
                     <div class="ChoiceTitle">
                         <div class="Player">
                             <img src="../content/icons/char/emogine.jpg" class="CharIcon" />
                             <h4 class="CharacterLabel">Emogine</h4>
-                            <p class="PlayerName">D (Tirankin)</p>
+                            <p data-searchable class="PlayerName">D (Tirankin)</p>
                         </div>
                         <p class="vs">vs.</p>
                         <div class="Player">
                             <img src="../content/icons/char/syrus.jpg" class="CharIcon" />
                             <h4 class="CharacterLabel">Syrus</h4>
-                            <p class="PlayerName">OgreYama</p>
+                            <p data-tag class="PlayerName">OgreYama</p>
                             <p class="WinnerIcon">WIN</p>
                         </div>
                     </div>
-                    <div class="ChoiceBody">
+                    <div data-tag class="ChoiceBody">
                         <p class="Tournament">Casual - 2019-04-10 Gauntlet</p>
                         <p class="Video">EXCEED: D's Emogine vs. OgreYama's Syrus'</p>
                         <div class="ChoiceBodyDetails">
@@ -2766,21 +2767,6 @@
 
         </div>
     </section>
-
-    <script>
-        function toggleWinnerIcon() {
-            var winnerIcon = document.querySelectorAll(".WinnerIcon");
-            var spoilerCheckbox = document.getElementById("SpoilerCheckbox");
-
-            winnerIcon.forEach(icon => {
-                if (spoilerCheckbox.checked == false) {
-                    icon.style.visibility = "hidden";
-                } else {
-                    icon.style.visibility = "visible";
-                }
-            });
-        };
-    </script>
 
     <script src="../content/scripts/sidenav.js"></script>
     <script src="../content/scripts/search.js"></script>

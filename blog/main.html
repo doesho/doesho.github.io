@@ -69,7 +69,11 @@
                     <option value="News">News</option>
                 </select>
 
-                <input id="SearchInput" placeholder="Search by title..." />
+                <div class="SearchInputContainer">
+                    <input type="search" class="SearchInput" placeholder="Search by title..? WIP" />
+                    <button class="ClearSearchInput"><p>X</p></button>
+                </div>
+
                 <button type="button" style="display: none" id="StyleButton"><span id="ButtonText"></span></button>
             </form>
 
@@ -447,6 +451,7 @@
     <script src="../content/scripts/search.js"></script>
     <script src="../content/scripts/stick.js"></script>
     <script src="../content/scripts/randompic.js"></script>
+    <script src="../content/scripts/blog.js"></script>
 
 </body>
 </html>
