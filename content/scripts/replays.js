@@ -1,50 +1,3 @@
-//INITIALIZATION
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    //search function stuff
-    const selectorContainers = document.querySelectorAll(".SelectorContainer");
-
-    selectorContainers.forEach(container => {
-        const searchInput = container.querySelector(".SearchInputContainer input");
-        const clearButton = container.querySelector(".ClearSearchInput");
-
-        searchInput.addEventListener("input", function () {
-            const searchText = this.value.toLowerCase();
-
-            funcNewSearch(searchText, container, "flex");
-        });
-
-        clearButton.addEventListener("click", function () {
-            searchInput.value = "";
-
-            funcNewSearch("", container, "flex");
-        })
-    });
-
-    //update opener stuff
-
-
-});
-
-
-// Close CharacterSelector when a CharacterChoice is clicked
-const characterChoices = document.querySelectorAll('.CharacterChoice');
-characterChoices.forEach(choice => {
-    choice.addEventListener('click', function () {
-        closeCharacterSelector();
-    });
-});
-
-// generic "close the selectors" function
-
-function closeCharacterSelector() {
-    selectorContainer.forEach(container => {
-        const characterSelector = container.querySelector('.CharacterSelector');
-        characterSelector.style.display = 'none';
-    });
-}
-
 //make div visible when opener clicked
 
 const selectorOpeners = document.querySelectorAll(".SelectorOpener");
@@ -79,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const charIconSrc = this.querySelector(".CharIcon").getAttribute("src");
             const selectedCharacterLabel2 = document.querySelector("#Selector2 .SelectorOpener").textContent.trim();
 
+            closeCharacterSelector(this.closest(".CharacterSelector"));
             filterChoices(selectedCharacterLabel1, selectedCharacterLabel2);
 
             // Update SelectorOpener content and styling
@@ -96,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const charIconSrc = this.querySelector(".CharIcon").getAttribute("src");
             const selectedCharacterLabel1 = document.querySelector("#Selector1 .SelectorOpener").textContent.trim();
 
+            closeCharacterSelector(this.closest(".CharacterSelector"));
             filterChoices(selectedCharacterLabel1, selectedCharacterLabel2);
 
             // Update SelectorOpener content and styling
@@ -107,6 +62,13 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+// generic "close the selectors" function
+
+function closeCharacterSelector(container) {
+    container.style.display = 'none';
+    //call clearInputField... somehow
+}
 
 // - FILTER CHOICES - GENERIC ME
 //This function takes the selected CharacterLabels from the Selectors and iterates over each Choice, comparing against a bool
@@ -172,3 +134,18 @@ function adjustPlayerOrder(selectedCharacterLabel1, selectedCharacterLabel2) {
         }
     })
 }
+
+// - TOGGLE WINNER ICON
+
+function toggleWinnerIcon() {
+    var winnerIcon = document.querySelectorAll(".WinnerIcon");
+    var spoilerCheckbox = document.getElementById("SpoilerCheckbox");
+
+    winnerIcon.forEach(icon => {
+        if (spoilerCheckbox.checked == false) {
+            icon.style.visibility = "hidden";
+        } else {
+            icon.style.visibility = "visible";
+        }
+    });
+};
