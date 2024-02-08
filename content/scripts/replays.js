@@ -23,8 +23,13 @@ selectorOpeners.forEach(opener => {
 //TO DO - make this a called function and put the establishments elsewhere.
 
 document.addEventListener("DOMContentLoaded", function () {
-    const characterChoices1 = document.querySelectorAll("#Selector1 .CharacterChoice");
-    const characterChoices2 = document.querySelectorAll("#Selector2 .CharacterChoice");
+    const selector1 = document.querySelector("#Selector1");
+    const selector2 = document.querySelector("#Selector2");
+
+    const characterChoices1 = selector1.querySelectorAll("[data-entry]");
+    const characterChoices2 = selector2.querySelectorAll("[data-entry]");
+    const InputPlayer1 = selector1.querySelector('data-searchInputContainer');
+    const InputPlayer2 = selector2.querySelector('data-searchInputContainer');
 
     characterChoices1.forEach(choice => {
         choice.addEventListener("click", function () {
@@ -33,9 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const selectedCharacterLabel2 = document.querySelector("#Selector2 .SelectorOpener").textContent.trim();
 
             closeCharacterSelector(this.closest(".CharacterSelector"));
-            filterChoices(selectedCharacterLabel1, selectedCharacterLabel2);
 
-            // Update SelectorOpener content and styling
             const opener1 = this.closest(".SelectorContainer").querySelector(".SelectorOpener");
             opener1.innerHTML = `<img src="${charIconSrc}" class="CharIcon" /> ${selectedCharacterLabel1}`;
             opener1.classList.add("selected");
@@ -51,9 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const selectedCharacterLabel1 = document.querySelector("#Selector1 .SelectorOpener").textContent.trim();
 
             closeCharacterSelector(this.closest(".CharacterSelector"));
-            filterChoices(selectedCharacterLabel1, selectedCharacterLabel2);
 
-            // Update SelectorOpener content and styling
             const opener2 = this.closest(".SelectorContainer").querySelector(".SelectorOpener");
             opener2.innerHTML = `<img src="${charIconSrc}" class="CharIcon" /> ${selectedCharacterLabel2}`;
             opener2.classList.add("selected");
@@ -70,42 +71,43 @@ function closeCharacterSelector(container) {
     //call clearInputField... somehow
 }
 
-// - FILTER CHOICES - GENERIC ME?
-//This function takes the selected CharacterLabels from the Selectors and iterates over each Choice, comparing against a bool
-//and hiding or showing the choice based on result
+// - FILTER CHOICES - BUTTON
+//blah
 
-//add pEntryContainer, pInputName1 and pInputName2
-function filterChoices(pInputLabel1, pInputLabel2) {
-    //get relevant entries via data id (the videos being filtered)
-    const choices = document.querySelectorAll(".Choice");
+const searchButton = document.getElementById("SearchButton");
 
-    //iterate over relevant entries
-    choices.forEach(choice => {
+searchButton.addEventListener("click", function () {
+    const buddyID = this.getAttribute('data-searchbuddy-id');
+    const parentEntryContainer = document.querySelectorAll(`[data-parentEntryContainer][data-searchbuddy-id="${buddyID}"]`);
 
-        //find tag of entry
-        const characterLabels = choice.querySelectorAll(".CharacterLabel");
-        let matchFound1 = false;
-        let matchFound2 = false;
+    const inputCharacter1 = 0;
+    const inputCharacter2 = 0;
+    const inputPlayer1 = document.querySelector('[data-searchInputContainer="playerSearch1"] input').value;
+    const inputPlayer2 = document.querySelector('[data-searchInputContainer="playerSearch2"] input').value;
+    const inputDescription = document.querySelector('[data-searchInputContainer="descriptionSearch"] input').value;
 
-        //iterate over tags
-        characterLabels.forEach(label => {
-            const choiceCharacterLabel = label.textContent.trim();
+    filterReplayEntries(parentEntryContainer, inputPlayer1, inputCharacter1, inputPlayer2, inputCharacter2, inputDescription);
+})
 
-            if (pInputLabel1 === "Any Character" || choiceCharacterLabel === pInputLabel1) {
-                matchFound1 = true;
-            }
-            if (pInputLabel2 === "Any Character" || choiceCharacterLabel === pInputLabel2) {
-                matchFound2 = true;
-            }
-        });
+// - FILTER CHOICES - FUNCTION
+//blah
 
-        if (matchFound1 && matchFound2) {
-            choice.style.display = "inline-block";
-        } else {
-            choice.style.display = "none";
-        }
-    });
+function filterReplayEntries(pEntryContainer, pInputPlayer1, pInputCharacter1, pInputPlayer2, pInputCharacter2, pInputDescription) {
+    console.log(pInputPlayer1);
+    console.log(pInputPlayer2);
+    console.log(pInputDescription);
+    pEntryContainer.forEach(container => {
+
+        const entries = container.querySelectorAll("[data-entry]")
+
+        entries.forEach(entry => {
+
+            const playerDivs = entry.querySelectorAll('[data-tags="PlayerDiv"]');
+        })
+
+    })
 }
+
 
 // - ADJUST PLAYER ORDER
 //This function receives the selected CharacterLabels from the Selectors and loops through each choice, comparing the received
