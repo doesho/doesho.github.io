@@ -70,25 +70,31 @@ function closeCharacterSelector(container) {
     //call clearInputField... somehow
 }
 
-// - FILTER CHOICES - GENERIC ME
+// - FILTER CHOICES - GENERIC ME?
 //This function takes the selected CharacterLabels from the Selectors and iterates over each Choice, comparing against a bool
 //and hiding or showing the choice based on result
 
-function filterChoices(selectedCharacterLabel1, selectedCharacterLabel2) {
+//add pEntryContainer, pInputName1 and pInputName2
+function filterChoices(pInputLabel1, pInputLabel2) {
+    //get relevant entries via data id (the videos being filtered)
     const choices = document.querySelectorAll(".Choice");
 
+    //iterate over relevant entries
     choices.forEach(choice => {
+
+        //find tag of entry
         const characterLabels = choice.querySelectorAll(".CharacterLabel");
         let matchFound1 = false;
         let matchFound2 = false;
 
+        //iterate over tags
         characterLabels.forEach(label => {
             const choiceCharacterLabel = label.textContent.trim();
 
-            if (selectedCharacterLabel1 === "Any Character" || choiceCharacterLabel === selectedCharacterLabel1) {
+            if (pInputLabel1 === "Any Character" || choiceCharacterLabel === pInputLabel1) {
                 matchFound1 = true;
             }
-            if (selectedCharacterLabel2 === "Any Character" || choiceCharacterLabel === selectedCharacterLabel2) {
+            if (pInputLabel2 === "Any Character" || choiceCharacterLabel === pInputLabel2) {
                 matchFound2 = true;
             }
         });

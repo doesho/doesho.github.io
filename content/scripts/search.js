@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     //search function stuff
-    const searchInputContainers = document.querySelectorAll(".SearchInputContainer");
+    const searchInputContainers = document.querySelectorAll("[data-searchInputContainer]");
 
     searchInputContainers.forEach(container => {
         const buddyID = container.dataset.searchbuddyId;
-        const parentEntryContainer = document.querySelector(`.ParentEntryContainer[data-searchbuddy-id="${buddyID}"]`);
+        const parentEntryContainer = document.querySelector(`[data-parentEntryContainer][data-searchbuddy-id="${buddyID}"]`);
 
         const searchInput = container.querySelector(".SearchInput");
         const clearButton = container.querySelector(".ClearSearchInput");
@@ -28,11 +28,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // -- CLEAR INPUT FIELD
-// a bit whacky but works. needs to be easier to call. random functions shouldnt have to find associated entrycontainers,
-// or that should be public somehow
+// a bit whacky but works. needs to be easier to call. random functions calling this shouldnt have to find associated 
+//entrycontainers, or that should be public somehow
 
 function clearInputField(pContainer, pEntryContainer) {
-
     const searchInput = pContainer.querySelector("input");
     searchInput.value = "";
     funcNewSearch("", pEntryContainer, "flex");
@@ -44,22 +43,31 @@ function clearInputField(pContainer, pEntryContainer) {
 //pInput is the search input. pContainer is the parent div of Entries and Catagories searched through
 function funcNewSearch(pInput, pEntryContainer, pDisplayType) {
 
-    const entries = pEntryContainer.querySelectorAll(".Entry");
+    const input = pInput.toLowerCase();
+    const entries = pEntryContainer.querySelectorAll('[data-entry]');
 
     entries.forEach(entry => {
-        const searchTags = entry.querySelector(".Tags").textContent.toLowerCase();
+        const searchTags = entry.querySelectorAll('[data-tags]');
+        let entryMatch = false;
 
-        if (searchTags.includes(pInput)) {
+        searchTags.forEach(tag => {
+            const tagContent = tag.textContent.toLowerCase();
+            if (tagContent.includes(input)) {
+                entryMatch = true;
+            }
+        });
+
+        if (entryMatch) {
             entry.style.display = pDisplayType;
         } else {
             entry.style.display = "none";
         }
     });
 
-    const catagories = pEntryContainer.querySelectorAll(".EntryCatagory");
+    const catagories = pEntryContainer.querySelectorAll("[data-entryCatagory]");
 
     catagories.forEach(catagory => {
-        const visibleChoices = catagory.querySelectorAll(`.Entry[style='display: ${pDisplayType};']`);
+        const visibleChoices = catagory.querySelectorAll(`[data-entry][style='display: ${pDisplayType};']`);
 
         if (visibleChoices.length === 0) {
             catagory.style.display = "none";
