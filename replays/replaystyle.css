@@ -27,26 +27,34 @@
 }
 
 .SelectorOpener{
-
     user-select: none;
     cursor: pointer;
+    margin: 10px auto 0px auto;
 }
 
     .selected{ /* opener given this class while a character is selected */
         font-weight: bold;
-        margin: 10px;
     }
+
+.PlayerSearch { /*searchcontainer below the opener for finding players */
+
+}
+
+#SearchVs{
+    margin-top: auto;
+}
 
 .SelectorContainer{
     justify-content: center;
     display: flex;
+    flex-direction: column;
     position: relative;
-    width: 600px;
+    margin: auto;
 }
 
 .CharacterSelector {
     position: absolute;
-    top: 90%;
+    top: 50%;
     display: none;
     flex-direction: column;
     border: 1px solid gray;
@@ -62,8 +70,9 @@
 /* content inside the selector divs */
 
 .SearchInputContainer{
-
 }
+
+
 
 .CharacterSeason{
     margin: 0px;
