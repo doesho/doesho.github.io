@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
             opener1.innerHTML = `<img src="${charIconSrc}" class="CharIcon" /> ${selectedCharacterLabel1}`;
             opener1.classList.add("selected");
 
-            adjustPlayerOrder(selectedCharacterLabel1, selectedCharacterLabel2);
+            //adjustPlayerOrder(selectedCharacterLabel1, selectedCharacterLabel2);
         });
     });
 
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
             opener2.innerHTML = `<img src="${charIconSrc}" class="CharIcon" /> ${selectedCharacterLabel2}`;
             opener2.classList.add("selected");
 
-            adjustPlayerOrder(selectedCharacterLabel1, selectedCharacterLabel2);
+            //adjustPlayerOrder(selectedCharacterLabel1, selectedCharacterLabel2);
         });
     });
 });
@@ -82,10 +82,10 @@ searchButton.addEventListener("click", function () {
 
     const searchBar = document.getElementById("SearchBar");
 
-    const inputCharacter1 = searchBar.querySelector('[data-searchInputContainer="characterSearch1"]').textContent;
-    const inputCharacter2 = searchBar.querySelector('[data-searchInputContainer="characterSearch2"]').textContent;
-    const inputPlayer1 = searchBar.querySelector('[data-searchInputContainer="playerSearch1"] input').value;
-    const inputPlayer2 = searchBar.querySelector('[data-searchInputContainer="playerSearch2"] input').value;
+    const inputCharacter1 = searchBar.querySelector('[data-searchInputContainer="characterSearch1"]').textContent.trim();
+    const inputCharacter2 = searchBar.querySelector('[data-searchInputContainer="characterSearch2"]').textContent.trim();
+    const inputPlayer1 = searchBar.querySelector('[data-searchInputContainer="playerSearch1"] input').value.trim().toLowerCase();
+    const inputPlayer2 = searchBar.querySelector('[data-searchInputContainer="playerSearch2"] input').value.trim().toLowerCase();
     const inputDescription = searchBar.querySelector('[data-searchInputContainer="descriptionSearch"] input').value;
 
     filterReplayEntries(parentEntryContainer, inputPlayer1, inputCharacter1, inputPlayer2, inputCharacter2, inputDescription);
@@ -96,25 +96,69 @@ searchButton.addEventListener("click", function () {
 
 function filterReplayEntries(pEntryContainer, pInputPlayer1, pInputCharacter1, pInputPlayer2, pInputCharacter2, pInputDescription) {
 
+    //adjustPlayerOrder(pInputCharacter1, pInputCharacter2); <-- want to replace with adjustOrder
+
     pEntryContainer.forEach(container => {
 
         const entries = container.querySelectorAll("[data-entry]")
 
+        //bypass if fields blank
+        if (pInputPlayer1 === "" && pInputPlayer2 === "" && pInputCharacter1 == "Any Character" && pInputCharacter2 == "Any Character") {
+            entries.forEach(entry => {
+                eEntryDisplayType = entry.getAttribute('[data-entry]');
+                entry.style.display = eEntryDisplayType;
+            })
+            alert("Search Bypassed!");
+            return;
+        };
+
         entries.forEach(entry => {
 
-            const playerDivs = entry.querySelectorAll('[data-tags="PlayerDiv"]');
+            let matchFound1 = false;
+            let matchFound2 = false;
+            const playerDivs = entry.querySelectorAll('[data-tags="playerDiv"]');
+
+            var playerNames = Array.from(playerDivs)
+                .flatMap(playerDiv => Array.from(playerDiv.querySelectorAll('[data-tags="playerName"]')))
+                .map(playerNameElement => playerNameElement.textContent.trim().toLowerCase());
+
+            console.log(playerNames);
+
+            var characterNames = Array.from(playerDivs)
+                .flatMap(playerDiv => Array.from(playerDiv.querySelectorAll('[data-tags="characterName"]')))
+                .map(characterNameElement => characterNameElement.textContent);
+
+            adjustOrder(playerNames[0], characterNames[0], playerNames[1], characterNames[1]);
+
+            if (playerNames[0].includes(pInputPlayer1) && ((characterNames[0] == pInputCharacter1) || (pInputCharacter1 === "Any Character"))) {
+                matchFound1 = true;
+            }
+            console.log(matchFound1);
+
+            if (playerNames[1].includes(pInputPlayer2) && ((characterNames[1] == pInputCharacter2) || (pInputCharacter2 === "Any Character"))) {
+                matchFound2 = true;
+            }
+
+            if (matchFound1 && matchFound2) {
+                eEntryDisplayType = entry.getAttribute('[data-entry]');
+                entry.style.display = eEntryDisplayType;
+                console.log("found!");
+            } else {
+                entry.style.display = "none";
+                console.log("nope");
+            }
         })
 
     })
+
+    alert("SEARCH DONE!");
 }
 
 
 // - ADJUST PLAYER ORDER
-//This function receives the selected CharacterLabels from the Selectors and loops through each choice, comparing the received
-//CharacterLabels against each choice's CharacterLabels (held within ChoiceTitle). If they match but are criss-crossed we swap
-//the choice labels around to reflect the order the CharacterLabels are in. Otherwise, return or end naturally.
+//This bitches days are numbered. We're replacing her with a sexier adjustOrder which works in each loop instead of doing its own thing.
 
-function adjustPlayerOrder(selectedCharacterLabel1, selectedCharacterLabel2) {
+function adjustPlayerOrder(pInputCharacter1, pInputCharacter2) {
     const choices = document.querySelectorAll(".Choice");
 
     choices.forEach(choice => {
@@ -124,23 +168,30 @@ function adjustPlayerOrder(selectedCharacterLabel1, selectedCharacterLabel2) {
         const parent = player1.parentNode;
         const vs = choice.querySelector(".vs");
 
-        if (player1 && player2) {
-            const label1 = characterLabels[0].textContent.trim();
-            const label2 = characterLabels[1].textContent.trim();
+        const label1 = characterLabels[0].textContent.trim();
+        const label2 = characterLabels[1].textContent.trim();
 
-            if (label1 === selectedCharacterLabel1 && label2 === selectedCharacterLabel2) {
-                return;
-            }
+        if (label1 === pInputCharacter1 && label2 === pInputCharacter2) {
+            return;
+        }
 
-            if ((label1 === selectedCharacterLabel2 && label2 === selectedCharacterLabel1) ||
-                (selectedCharacterLabel1 === "Any Character" && label1 === selectedCharacterLabel2) ||
-                (label2 === selectedCharacterLabel1 && selectedCharacterLabel2 === "Any Character")) {
+        if ((label1 === pInputCharacter2 && label2 === pInputCharacter1) ||
+            (pInputCharacter1 === "Any Character" && label1 === pInputCharacter2) ||
+            (label2 === pInputCharacter1 && pInputCharacter2 === "Any Character")) {
 
-                parent.insertBefore(player2, player1);
-                parent.insertBefore(vs, player1);
-            }
+            parent.insertBefore(player2, player1);
+            parent.insertBefore(vs, player1);
         }
     })
+}
+
+// - ADJUST ORDER
+//Executes in each entry.forEach to see if the playerDivs should be swapped before we filter them
+
+function adjustOrder(pEntryPlayer1, pEntryCharacter1, pEntryPlayer2, pEntryCharacter2) {
+    //replace adjustplayerorder and be called in the search thing so we dont iterate every choice twice.
+    //this should adjust entries before the rest of the filter checks it so we do it all in the same
+    //entry.foreach loop
 }
 
 // - TOGGLE WINNER ICON
