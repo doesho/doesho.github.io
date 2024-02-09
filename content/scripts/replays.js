@@ -80,11 +80,13 @@ searchButton.addEventListener("click", function () {
     const buddyID = this.getAttribute('data-searchbuddy-id');
     const parentEntryContainer = document.querySelectorAll(`[data-parentEntryContainer][data-searchbuddy-id="${buddyID}"]`);
 
-    const inputCharacter1 = 0;
-    const inputCharacter2 = 0;
-    const inputPlayer1 = document.querySelector('[data-searchInputContainer="playerSearch1"] input').value;
-    const inputPlayer2 = document.querySelector('[data-searchInputContainer="playerSearch2"] input').value;
-    const inputDescription = document.querySelector('[data-searchInputContainer="descriptionSearch"] input').value;
+    const searchBar = document.getElementById("SearchBar");
+
+    const inputCharacter1 = searchBar.querySelector('[data-searchInputContainer="characterSearch1"]').textContent;
+    const inputCharacter2 = searchBar.querySelector('[data-searchInputContainer="characterSearch2"]').textContent;
+    const inputPlayer1 = searchBar.querySelector('[data-searchInputContainer="playerSearch1"] input').value;
+    const inputPlayer2 = searchBar.querySelector('[data-searchInputContainer="playerSearch2"] input').value;
+    const inputDescription = searchBar.querySelector('[data-searchInputContainer="descriptionSearch"] input').value;
 
     filterReplayEntries(parentEntryContainer, inputPlayer1, inputCharacter1, inputPlayer2, inputCharacter2, inputDescription);
 })
@@ -93,9 +95,7 @@ searchButton.addEventListener("click", function () {
 //blah
 
 function filterReplayEntries(pEntryContainer, pInputPlayer1, pInputCharacter1, pInputPlayer2, pInputCharacter2, pInputDescription) {
-    console.log(pInputPlayer1);
-    console.log(pInputPlayer2);
-    console.log(pInputDescription);
+
     pEntryContainer.forEach(container => {
 
         const entries = container.querySelectorAll("[data-entry]")

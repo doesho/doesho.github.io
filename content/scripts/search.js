@@ -1,13 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     //search function stuff
-    const searchInputContainers = document.querySelectorAll("[data-searchInputContainer]");
+    const searchInputContainers = document.querySelectorAll('[data-searchInputContainer]');
 
     searchInputContainers.forEach(container => {
         const buddyID = container.dataset.searchbuddyId;
         const parentEntryContainer = document.querySelectorAll(`[data-parentEntryContainer][data-searchbuddy-id="${buddyID}"]`);
         const searchInput = container.querySelector(".SearchInput");
         const clearButton = container.querySelector(".ClearSearchInput");
+
+        if (!searchInput) {
+            return;
+        }
+
 
         searchInput.addEventListener("input", function () {
             const searchText = this.value.toLowerCase();
@@ -17,7 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         clearButton.addEventListener("click", function () {
 
-            clearInputField(container, parentEntryContainer);
+            clearInputField(container);
+            funcNewSearch(parentEntryContainer, "");
         })
     });
 
@@ -30,10 +36,9 @@ document.addEventListener("DOMContentLoaded", function () {
 // a bit whacky but works. needs to be easier to call. random functions calling this shouldnt have to find associated 
 //entrycontainers, or that should be public somehow
 
-function clearInputField(pContainer, pEntryContainer) {
+function clearInputField(pContainer) {
     const searchInput = pContainer.querySelector("input");
     searchInput.value = "";
-    funcNewSearch(pEntryContainer, "");
 };
 
 // -- SEARCH FILTER FUNCTION
