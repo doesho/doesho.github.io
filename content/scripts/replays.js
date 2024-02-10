@@ -133,21 +133,19 @@ function filterReplayEntries(pEntryContainer, pInputPlayer1, pInputCharacter1, p
                 if ((eCharacterNames[0] === pInputCharacter2 || blankInput.includes(pInputCharacter2)) && ((eCharacterNames[1] === pInputCharacter1) || blankInput.includes(pInputCharacter1))) {
 
                     //check if players should swap
-                    if ((ePlayerNames[0] === pInputPlayer2 || blankInput.includes(pInputPlayer2)) && ((ePlayerNames[1] === pInputPlayer1) || blankInput.includes(pInputPlayer1))) {
+                    if ((ePlayerNames[0].includes(pInputPlayer2) || blankInput.includes(pInputPlayer2)) && ((ePlayerNames[1].includes(pInputPlayer1)) || blankInput.includes(pInputPlayer1))) {
                         const parent = playerDivs[0].parentNode;
                         const vs = entry.querySelector('[data-vs]');
 
                         parent.insertBefore(playerDivs[1], playerDivs[0]);
                         parent.insertBefore(vs, playerDivs[0]);
-                        alert(`${eCharacterNames[0]} and ${eCharacterNames[1]} swapped!`);
                         return true;
                     }
                 };
                 return false;
             }
 
-            const titlesSwapped = adjustOrder()
-            if (titlesSwapped) {
+            if (adjustOrder()) {
                 entry.style.display = eEntryDisplayType;
                 return;
             }
@@ -171,8 +169,6 @@ function filterReplayEntries(pEntryContainer, pInputPlayer1, pInputCharacter1, p
             });
 
     })
-
-    alert("SEARCH DONE!");
 }
 
 
