@@ -96,19 +96,20 @@ searchButton.addEventListener("click", function () {
 
 function filterReplayEntries(pEntryContainer, pInputPlayer1, pInputCharacter1, pInputPlayer2, pInputCharacter2, pInputDescription) {
 
-    //adjustPlayerOrder(pInputCharacter1, pInputCharacter2); <-- want to replace with adjustOrder
+    const blankInput = ["Any Character", ""];
 
     pEntryContainer.forEach(container => {
 
         const entries = container.querySelectorAll("[data-entry]")
 
         //bypass if fields blank
-        if (pInputPlayer1 === "" && pInputPlayer2 === "" && pInputCharacter1 == "Any Character" && pInputCharacter2 == "Any Character") {
+        if (blankInput.includes(pInputPlayer1) && blankInput.includes(pInputPlayer2) &&
+            blankInput.includes(pInputCharacter1) && blankInput.includes(pInputCharacter2))
+        {
             entries.forEach(entry => {
                 eEntryDisplayType = entry.getAttribute('[data-entry]');
                 entry.style.display = eEntryDisplayType;
             })
-            alert("Search Bypassed!");
             return;
         };
 
@@ -117,37 +118,57 @@ function filterReplayEntries(pEntryContainer, pInputPlayer1, pInputCharacter1, p
             let matchFound1 = false;
             let matchFound2 = false;
             const playerDivs = entry.querySelectorAll('[data-tags="playerDiv"]');
+            eEntryDisplayType = entry.getAttribute('[data-entry]');
 
-            var playerNames = Array.from(playerDivs)
+            var ePlayerNames = Array.from(playerDivs)
                 .flatMap(playerDiv => Array.from(playerDiv.querySelectorAll('[data-tags="playerName"]')))
                 .map(playerNameElement => playerNameElement.textContent.trim().toLowerCase());
 
-            console.log(playerNames);
-
-            var characterNames = Array.from(playerDivs)
+            var eCharacterNames = Array.from(playerDivs)
                 .flatMap(playerDiv => Array.from(playerDiv.querySelectorAll('[data-tags="characterName"]')))
                 .map(characterNameElement => characterNameElement.textContent);
 
-            adjustOrder(playerNames[0], characterNames[0], playerNames[1], characterNames[1]);
+            function adjustOrder() {
+                //check if characters should swap
+                if ((eCharacterNames[0] === pInputCharacter2 || blankInput.includes(pInputCharacter2)) && ((eCharacterNames[1] === pInputCharacter1) || blankInput.includes(pInputCharacter1))) {
 
-            if (playerNames[0].includes(pInputPlayer1) && ((characterNames[0] == pInputCharacter1) || (pInputCharacter1 === "Any Character"))) {
+                    //check if players should swap
+                    if ((ePlayerNames[0] === pInputPlayer2 || blankInput.includes(pInputPlayer2)) && ((ePlayerNames[1] === pInputPlayer1) || blankInput.includes(pInputPlayer1))) {
+                        const parent = playerDivs[0].parentNode;
+                        const vs = entry.querySelector('[data-vs]');
+
+                        parent.insertBefore(playerDivs[1], playerDivs[0]);
+                        parent.insertBefore(vs, playerDivs[0]);
+                        alert(`${eCharacterNames[0]} and ${eCharacterNames[1]} swapped!`);
+                        return true;
+                    }
+                };
+                return false;
+            }
+
+            const titlesSwapped = adjustOrder()
+            if (titlesSwapped) {
+                entry.style.display = eEntryDisplayType;
+                return;
+            }
+
+            if (ePlayerNames[0].includes(pInputPlayer1) && ((eCharacterNames[0] == pInputCharacter1) || (blankInput.includes(pInputCharacter1)))) {
                 matchFound1 = true;
             }
-            console.log(matchFound1);
 
-            if (playerNames[1].includes(pInputPlayer2) && ((characterNames[1] == pInputCharacter2) || (pInputCharacter2 === "Any Character"))) {
+            if (ePlayerNames[1].includes(pInputPlayer2) && ((eCharacterNames[1] == pInputCharacter2) || (blankInput.includes(pInputCharacter2)))) {
                 matchFound2 = true;
             }
 
             if (matchFound1 && matchFound2) {
-                eEntryDisplayType = entry.getAttribute('[data-entry]');
                 entry.style.display = eEntryDisplayType;
                 console.log("found!");
             } else {
                 entry.style.display = "none";
                 console.log("nope");
             }
-        })
+
+            });
 
     })
 
@@ -156,8 +177,7 @@ function filterReplayEntries(pEntryContainer, pInputPlayer1, pInputCharacter1, p
 
 
 // - ADJUST PLAYER ORDER
-//This bitches days are numbered. We're replacing her with a sexier adjustOrder which works in each loop instead of doing its own thing.
-
+//This bitch's days are numbered. We're replacing her with a sexier adjustOrder which works in each loop instead of doing its own thing.
 function adjustPlayerOrder(pInputCharacter1, pInputCharacter2) {
     const choices = document.querySelectorAll(".Choice");
 
@@ -171,13 +191,13 @@ function adjustPlayerOrder(pInputCharacter1, pInputCharacter2) {
         const label1 = characterLabels[0].textContent.trim();
         const label2 = characterLabels[1].textContent.trim();
 
-        if (label1 === pInputCharacter1 && label2 === pInputCharacter2) {
+        if (label1 === pInputCharacter1 && label2 === pInputCharacter2) { //if both sides match each other, return
             return;
         }
 
-        if ((label1 === pInputCharacter2 && label2 === pInputCharacter1) ||
-            (pInputCharacter1 === "Any Character" && label1 === pInputCharacter2) ||
-            (label2 === pInputCharacter1 && pInputCharacter2 === "Any Character")) {
+        if ((label1 === pInputCharacter2 && label2 === pInputCharacter1) || //if (entry1 = input2 AND entry2 = input 2) OR
+            (pInputCharacter1 === "Any Character" && label1 === pInputCharacter2) || //(input1 is any AND entry1 is input2 ) OR
+            (label2 === pInputCharacter1 && pInputCharacter2 === "Any Character")) { //(entry2 is input1 AND input2 is any)
 
             parent.insertBefore(player2, player1);
             parent.insertBefore(vs, player1);
@@ -186,13 +206,10 @@ function adjustPlayerOrder(pInputCharacter1, pInputCharacter2) {
 }
 
 // - ADJUST ORDER
-//Executes in each entry.forEach to see if the playerDivs should be swapped before we filter them
+ //replace adjustplayerorder and be called in the search thing so we dont iterate every choice twice.
+ //this should adjust entries before the rest of the filter checks it so we do it all in the same entry.foreach loop
 
-function adjustOrder(pEntryPlayer1, pEntryCharacter1, pEntryPlayer2, pEntryCharacter2) {
-    //replace adjustplayerorder and be called in the search thing so we dont iterate every choice twice.
-    //this should adjust entries before the rest of the filter checks it so we do it all in the same
-    //entry.foreach loop
-}
+
 
 // - TOGGLE WINNER ICON
 
