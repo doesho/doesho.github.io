@@ -4,6 +4,10 @@
     H4 is for things that have to stand out of normal text but barely, ie. buttons, author name
 */
 
+.UniqueBody{
+    min-height: 100vh;
+}
+
 #ChoiceContainer {
     display: block;
     margin: 40px 40px;
