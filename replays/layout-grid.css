@@ -23,14 +23,14 @@
     }
 }
 
-@media screen and (min-width: 701px) and (max-width: 1200px){
+@media screen and (min-width: 701px) and (max-width: 1150px){
 
     .Choice {
         width: 47% !important;
     }
 }
 
-@media screen and (min-width: 1201px) and (max-width: 1600px) {
+@media screen and (min-width: 1151px) and (max-width: 1600px) {
 
     .Choice {
         width: 31% !important;
