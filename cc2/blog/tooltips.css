@@ -41,6 +41,12 @@
 
 /* specific tooltip adjustments */
 
+#tooltip-eternalrest{
+    width: 600px;
+    bottom: -180%;
+    right: 150%;
+}
+
 #tooltip-slow30sroom{
     width: 600px;
     bottom: -250%;
