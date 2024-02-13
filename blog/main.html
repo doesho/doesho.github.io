@@ -55,31 +55,30 @@
             <h1 id="Heading">NEWS</h1>
             <p></p>
         </section>
-
-        <!-- search bar -->
-
-        <div id="SearchBar" class="stickable">
-
-            <form>
-                <select id="CatagorySelect">
-                    <option value="" id="ShowAll">Show All</option>
-                    <option value="Interview">Interview</option>
-                    <option value="Opinion">Opinion</option>
-                    <option value="Community">Community</option>
-                    <option value="News">News</option>
-                </select>
-
-                <div class="SearchInputContainer">
-                    <input type="search" class="SearchInput" placeholder="Search by title..? WIP" />
-                    <button class="ClearSearchInput"><p>X</p></button>
-                </div>
-
-                <button type="button" style="display: none" id="StyleButton"><span id="ButtonText"></span></button>
-            </form>
-
-        </div>
     </header>
-   
+
+    <!-- search bar -->
+
+    <nav id="SearchBar">
+
+        <form>
+            <select id="CatagorySelect">
+                <option value="" id="ShowAll">Show All</option>
+                <option value="Interview">Interview</option>
+                <option value="Opinion">Opinion</option>
+                <option value="Community">Community</option>
+                <option value="News">News</option>
+            </select>
+
+            <div class="SearchInputContainer">
+                <input type="search" class="SearchInput" placeholder="Search by title..? WIP" />
+                <button class="ClearSearchInput"><p>X</p></button>
+            </div>
+
+            <button type="button" style="display: none" id="StyleButton"><span id="ButtonText"></span></button>
+        </form>
+
+    </nav>
 
     <!-- blog hierarchy -->
 
@@ -98,7 +97,7 @@
                             <p>Breakfast Club member <b>Inkie</b> has uploaded a card counting overlay for Tirankin's Exceed Fighting System: Complete table.</p>
                             <p>
                                 This addon is loaded on top of the Exceed Fighting System: Complete, while you're at the table. It automatically displays what cards are possible for
-                                both players by remembering face-up cards shown in a player's area. The overlay is visible to players and spectators, so match commentary should be a 
+                                both players by remembering face-up cards shown in a player's area. The overlay is visible to players and spectators, so match commentary should be a
                                 lot easier now!
                             </p>
                             <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3146346410" class="jumplink">Check it out and subscribe to the workshop addon here!</a>
@@ -385,7 +384,7 @@
                 <p style="text-align: center; opacity: 0.5;"><i>End of list</i></p>
 
             </div>
-            </div>
+        </div>
 
         <div class="UniqueContainer" id="TimelineUniqueContainer">
 
@@ -399,7 +398,7 @@
                     <p class="MonthEntry Community">Introducing the Tabletop Simulator Card Counting Overlay</p>
                     <p class="MonthEntry Community">Exceed: Now For Your Web Browser</p>
                 </div>
-                <hr class="YearSeperator"/>
+                <hr class="YearSeperator" />
                 <div class="Month">
                     <h4 class="MonthTitle News">September 2023</h4>
                     <p class="MonthEntry News">Guilty Gear -Strive- The Board Game 292% Funded!</p>
