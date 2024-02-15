@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-
         searchInput.addEventListener("input", function () {
             const searchText = this.value.toLowerCase();
 
@@ -26,6 +25,17 @@ document.addEventListener("DOMContentLoaded", function () {
             funcNewSearch(parentEntryContainer, "");
         })
     });
+
+    const collapseButton = document.querySelectorAll('[data-collapser]');
+
+    collapseButton.forEach(collapser => {
+
+        collapser.addEventListener("click", function () {
+            const collapsibleDiv = this.previousElementSibling;
+            collapse(collapsibleDiv);
+        })
+    })
+
 
     //update opener stuff
 
@@ -98,3 +108,15 @@ function funcNewSearch(pEntryContainer, pInput) {
 
     });
 };
+
+// COLLAPSE FUNCTION
+
+function collapse(collapsibleDiv) {
+
+    if (collapsibleDiv.style.display === "none") {
+        collapsibleDiv.style.display = "block";
+    } else {
+        collapsibleDiv.style.display = "none";
+    }
+
+}

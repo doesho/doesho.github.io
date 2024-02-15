@@ -1,21 +1,31 @@
-//make div visible when opener clicked
+// -- OPEN SELECTORS, CLOSE SELECTORS
 
-const selectorOpeners = document.querySelectorAll(".SelectorOpener");
-const selectorContainer = document.querySelectorAll(".SelectorContainer");
+const characterSelector1 = document.querySelector('[data-characterSelector="1"]');
+const characterSelector2 = document.querySelector('[data-characterSelector="2"]');
+const selectorOpener1 = document.querySelector('[data-searchInputContainer="characterSearch1"]');
+const selectorOpener2 = document.querySelector('[data-searchInputContainer="characterSearch2"]');
 
-selectorOpeners.forEach(opener => {
-    opener.addEventListener("click", function () {
-        const parentContainer = this.closest('.SelectorContainer');
+document.addEventListener("click", function () {
+
+    if (selectorOpener1.contains(event.target) || selectorOpener2.contains(event.target)) {
+        const parentContainer = event.target.closest('.SelectorContainer');
         const characterSelector = parentContainer.querySelector('.CharacterSelector');
 
-        // Toggle visibility
         if (characterSelector.style.display === 'none' || characterSelector.style.display === '') {
             characterSelector.style.display = 'flex';
         } else {
             characterSelector.style.display = 'none';
         }
-    });
-});
+    } else if (characterSelector1.contains(event.target) || characterSelector2.contains(event.target)) {
+        return;
+    } else {
+        const characterSelectors = document.querySelectorAll('.CharacterSelector');
+        characterSelectors.forEach(selector => {
+            selector.style.display = "none"
+        })
+    }
+
+})
 
 // -- UPDATE OPENER APPEARANCE
 //This section grabs Selectors and adds listeners to the buttons. It then calls filterChoices and updates
@@ -37,13 +47,11 @@ document.addEventListener("DOMContentLoaded", function () {
             const charIconSrc = this.querySelector(".CharIcon").getAttribute("src");
             const selectedCharacterLabel2 = document.querySelector("#Selector2 .SelectorOpener").textContent.trim();
 
-            closeCharacterSelector(this.closest(".CharacterSelector"));
+            this.closest(".CharacterSelector").style.display = "none";
 
-            const opener1 = this.closest(".SelectorContainer").querySelector(".SelectorOpener");
-            opener1.innerHTML = `<img src="${charIconSrc}" class="CharIcon" /> ${selectedCharacterLabel1}`;
-            opener1.classList.add("selected");
+            selectorOpener1.innerHTML = `<img src="${charIconSrc}" class="CharIcon" /> ${selectedCharacterLabel1}`;
+            selectorOpener1.classList.add("selected");
 
-            //adjustPlayerOrder(selectedCharacterLabel1, selectedCharacterLabel2);
         });
     });
 
@@ -53,27 +61,18 @@ document.addEventListener("DOMContentLoaded", function () {
             const charIconSrc = this.querySelector(".CharIcon").getAttribute("src");
             const selectedCharacterLabel1 = document.querySelector("#Selector1 .SelectorOpener").textContent.trim();
 
-            closeCharacterSelector(this.closest(".CharacterSelector"));
+            this.closest(".CharacterSelector").style.display = "none";
 
-            const opener2 = this.closest(".SelectorContainer").querySelector(".SelectorOpener");
-            opener2.innerHTML = `<img src="${charIconSrc}" class="CharIcon" /> ${selectedCharacterLabel2}`;
-            opener2.classList.add("selected");
+            selectorOpener2.innerHTML = `<img src="${charIconSrc}" class="CharIcon" /> ${selectedCharacterLabel2}`;
+            selectorOpener2.classList.add("selected");
 
-            //adjustPlayerOrder(selectedCharacterLabel1, selectedCharacterLabel2);
         });
     });
 });
 
-// generic "close the selectors" function
-
-function closeCharacterSelector(container) {
-    container.style.display = 'none';
-    //call clearInputField... somehow
-}
-
 // - FILTER CHOICES - BUTTON
-//blah
-
+//clicking the search button passes the input information from the character and player fields into the filter choices
+//function.
 const searchButton = document.getElementById("SearchButton");
 
 searchButton.addEventListener("click", function () {
@@ -82,11 +81,12 @@ searchButton.addEventListener("click", function () {
 
     const searchBar = document.getElementById("SearchBar");
 
-    const inputCharacter1 = searchBar.querySelector('[data-searchInputContainer="characterSearch1"]').textContent.trim();
-    const inputCharacter2 = searchBar.querySelector('[data-searchInputContainer="characterSearch2"]').textContent.trim();
+    const inputCharacter1 = selectorOpener1.textContent.trim();
+    const inputCharacter2 = selectorOpener2.textContent.trim();
     const inputPlayer1 = searchBar.querySelector('[data-searchInputContainer="playerSearch1"] input').value.trim().toLowerCase();
     const inputPlayer2 = searchBar.querySelector('[data-searchInputContainer="playerSearch2"] input').value.trim().toLowerCase();
     const inputDescription = searchBar.querySelector('[data-searchInputContainer="descriptionSearch"] input').value;
+    document.documentElement.scrollTop = 0;
 
     filterReplayEntries(parentEntryContainer, inputPlayer1, inputCharacter1, inputPlayer2, inputCharacter2, inputDescription);
 })
@@ -200,12 +200,6 @@ function adjustPlayerOrder(pInputCharacter1, pInputCharacter2) {
         }
     })
 }
-
-// - ADJUST ORDER
- //replace adjustplayerorder and be called in the search thing so we dont iterate every choice twice.
- //this should adjust entries before the rest of the filter checks it so we do it all in the same entry.foreach loop
-
-
 
 // - TOGGLE WINNER ICON
 

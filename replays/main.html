@@ -56,10 +56,9 @@
 
     <nav id="SearchBar">
         <section id="SelectorSection">
-
             <div class="SelectorContainer" id="Selector1">
-                <p data-searchInputContainer="characterSearch1" class="SelectorOpener"><i>Choose a character...</i></p> <!-- hovering this element displays the characterselector div (below) -->
-                <div class="CharacterSelector">
+                <p data-searchInputContainer="characterSearch1" class="SelectorOpener"><img src="../content/icons/char/random.jpg" class="CharIcon" />Any Character</p> <!-- hovering this element displays the characterselector div (below) -->
+                <div data-characterSelector="1" class="CharacterSelector">
                     <div data-searchInputContainer data-searchbuddy-id="Selector1" class="SearchInputContainer">
                         <input class="SearchInput" placeholder="Search characters..." /> <!-- filter functionality to find characters in the CharacterChoices div -->
                         <button class="ClearSearchInput"><p>X</p></button>
@@ -218,7 +217,7 @@
                             <button data-entry="flex" class="CharacterChoice"><h4 data-tags class="CharacterLabel"><img src="../content/icons/char/lastlegs.jpg" class="CharIcon" />Last Legs</h4></button>
                             <button data-entry="flex" class="CharacterChoice"><h4 data-tags class="CharacterLabel"><img src="../content/icons/char/pipp.jpg" class="CharIcon" />Pipp Petals</h4></button>
                         </div>
-                        <p><i>End of list</i></p>
+                        <p style="text-align: center"><i>End of list</i></p>
                     </div>
                 </div>
                 <div data-searchInputContainer="playerSearch1" class="SearchInputContainer">
@@ -230,8 +229,8 @@
             <p id="SearchVs">versus</p>
 
             <div class="SelectorContainer" id="Selector2">
-                <p data-searchInputcontainer="characterSearch2" class="SelectorOpener"><i>Choose a character...</i></p> <!-- hovering this element displays the characterselector div (below) -->
-                <div class="CharacterSelector">
+                <p data-searchInputcontainer="characterSearch2" class="SelectorOpener"><img src="../content/icons/char/random.jpg" class="CharIcon" />Any Character</p> <!-- hovering this element displays the characterselector div (below) -->
+                <div data-characterSelector="2" class="CharacterSelector">
                     <div data-searchInputContainer data-searchbuddy-id="Selector2" class="SearchInputContainer">
                         <input class="SearchInput" placeholder="Search characters..." /> <!-- filter functionality to find characters in the CharacterChoices div -->
                         <button class="ClearSearchInput"><p>X</p></button>
@@ -390,7 +389,7 @@
                             <button data-entry="flex" class="CharacterChoice"><h4 data-tags class="CharacterLabel"><img src="../content/icons/char/lastlegs.jpg" class="CharIcon" />Last Legs</h4></button>
                             <button data-entry="flex" class="CharacterChoice"><h4 data-tags class="CharacterLabel"><img src="../content/icons/char/pipp.jpg" class="CharIcon" />Pipp Petals</h4></button>
                         </div>
-                        <p><i>End of list</i></p>
+                        <p style="text-align: center"><i>End of list</i></p>
                     </div>
                 </div>
                 <div data-searchInputContainer="playerSearch2" class="SearchInputContainer PlayerSearch">
@@ -398,18 +397,25 @@
                     <button class="ClearSearchInput"><p>X</p></button>
                 </div>
             </div>
-        </section>
-        <hr style="width: 90%; margin:20px; color:var(--highlight);" />
-        <section id="LowerSelectorSection">
-            <div id="SpoilerCheckboxContainer">
-                <label for="SpoilerCheckbox">show winner?</label>
-                <input type="checkbox" id="SpoilerCheckbox" onclick="toggleWinnerIcon()" checked />
-            </div>
-            <div data-searchInputContainer="descriptionSearch" class="SearchInputContainer">
-                <input type="search" class="SearchInput" placeholder="Tournament or commentator..." />
-                <button class="ClearSearchInput"><p>X</p></button>
-            </div>
             <button data-searchbuddy-id="Body1" id="SearchButton"><p>Search</p></button>
+        </section>
+
+        <section>
+            <div data-collapsible>
+                <hr style="width: 90%; margin:20px; border: 1px solid var(--highlight);" />
+                <div id="LowerSelectorContainer">
+                    <div id="SpoilerCheckboxContainer">
+                        <label for="SpoilerCheckbox">show winner?</label>
+                        <input type="checkbox" id="SpoilerCheckbox" onclick="toggleWinnerIcon()" checked />
+                    </div>
+                    <div data-searchInputContainer="descriptionSearch" class="SearchInputContainer">
+                        <input type="search" class="SearchInput" placeholder="Tournament or commentator..." />
+                        <button class="ClearSearchInput"><p>X</p></button>
+                    </div>
+                </div>
+            </div>
+
+            <button data-collapser class="collapseButton">^</button>
         </section>
     </nav>
 
@@ -436,7 +442,7 @@
                     </div>
                     <div data-tags="description" class="ChoiceBody">
                         <p class="Tournament">Casual - 2019-04-10 Gauntlet</p>
-                        <p class="Video">EXCEED: D's Emogine vs. OgreYama's Syrus'</p>
+                        <p class="Video">EXCEED: D's Emogine vs. OgreYama's Syrus</p>
                         <div class="ChoiceBodyDetails">
                             <p>[35:06]</p>
                             <p>April 10, 2019</p>
@@ -3942,7 +3948,7 @@
                         </div>
                     </div>
                     <div class="ChoiceBody">
-                        <p class="Tournament">Casual - Guile Versus The World</p>
+                        <p class="Tournament">Casual</p>
                         <p class="Video">(2019-04-30.3) D's Akuma vs. Vidjalante's C. Viper</p>
                         <div class="ChoiceBodyDetails">
                             <p>[31:06]</p>
@@ -5547,7 +5553,6 @@
 
     <script src="../content/scripts/sidenav.js"></script>
     <script src="../content/scripts/search.js"></script>
-    <script src="../content/scripts/stick.js"></script>
     <script src="../content/scripts/randompic.js"></script>
     <script src="../content/scripts/replays.js"></script>
 

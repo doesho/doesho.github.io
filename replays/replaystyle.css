@@ -19,6 +19,14 @@
     display: flex;
 }
 
+.collapseButton{
+    background-color: rgba(0,0,0,0);
+    bottom: 5px;
+    right: 5%;
+    position: absolute;
+    height: 20px;
+}
+
 /* dropdown character selectors */
 
 #SelectorSection{
@@ -30,11 +38,8 @@
     user-select: none;
     cursor: pointer;
     margin: 10px auto 0px auto;
+    font-weight: bold;
 }
-
-    .selected{ /* opener given this class while a character is selected */
-        font-weight: bold;
-    }
 
 .PlayerSearch { /*searchcontainer below the opener for finding players */
 
@@ -72,8 +77,6 @@
 .SearchInputContainer{
 }
 
-
-
 .CharacterSeason{
     margin: 0px;
 }
@@ -106,9 +109,20 @@
     line-height: 70%;
 }
 
-#LowerSelectorSection{
+#SearchButton {
+    position: absolute;
+    top: 20px;
+    right: 3%;
+    border: 2px solid var(--border);
+}
+
+    #SearchButton:hover{
+        border:2px solid var(--userinput);
+    }
+
+#LowerSelectorContainer{
     display: flex;
-    margin: auto;
+    margin: 0px 20%;
 }
 
     #SpoilerCheckboxContainer{
