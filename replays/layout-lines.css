@@ -16,34 +16,12 @@
 
 /* individual choices */
 
-@media screen and (max-width: 700px){
-
-    .Choice{
-        width: 90% !important;
-    }
-}
-
-@media screen and (min-width: 701px) and (max-width: 1150px){
-
-    .Choice {
-        width: 47% !important;
-    }
-}
-
-@media screen and (min-width: 1151px) and (max-width: 1600px) {
-
-    .Choice {
-        width: 31% !important;
-    }
-}
-
 .Choice {
-    display: inline-block;
     text-decoration: none;
     border: 2px solid var(--border);
     background: var(--secondary);
     margin: 6px;
-    width: 23%;
+    min-width: 500px;
 }
 
     .Choice:hover{
@@ -54,12 +32,16 @@
         font-size: 150%;
     }
 
+    .Choice a{
+        display: flex;
+    }
 .ChoiceTitle{
     display: flex;
     justify-content: center;
     align-items: flex-start;
     margin: 0px;
     height: auto;
+    flex-basis: 50%;
 }
 
     .Player{
@@ -94,8 +76,9 @@
     }
 
 .ChoiceBody{
-    font-size: 60%;
+    font-size: 80%;
     padding-bottom: 5px;
+    margin: auto 5px;
 }
 
     .Tournament {
@@ -104,12 +87,7 @@
 
     .Video {
       margin: 0px;
-      white-space: nowrap;
-      overflow: hidden;
     }
-
-
-
 
 .ChoiceBodyDetails{
     display: flex;
