@@ -14,8 +14,12 @@ let sideNavImageArray = [
     '../content/images/sidebar/shovel.png']
 
 let bannerImageArray = [
-    'content/images/banners/bg1.jpg',
-    'content/images/banners/bg2.jpg',]
+    'content/images/banners/wave1/bg1.jpg',
+    'content/images/banners/wave1/bg2.jpg',
+    'content/images/banners/wave1/bg3.jpg',
+    'content/images/banners/wave1/bg4.jpg',
+    'content/images/banners/wave1/bg5.jpg',
+    'content/images/banners/wave1/bg6.jpg']
 
 
 // dumbass. make these the same generic function using parameters.
