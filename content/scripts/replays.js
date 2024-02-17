@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", function () {
+    
+})
+
 // -- OPEN SELECTORS, CLOSE SELECTORS
 
 const characterSelector1 = document.querySelector('[data-characterSelector="1"]');
@@ -145,8 +149,17 @@ function filterReplayEntries(pEntryContainer, pInputPlayer1, pInputCharacter1, p
                 return false;
             }
 
+            const characterImgArray = [];
+
+            playerDivs.forEach(player => {
+                const characterImg = player.querySelector("img");
+                characterImgArray.push(characterImg);
+            })
+
             if (adjustOrder()) {
                 entry.style.display = eEntryDisplayType;
+
+                updateBackgroundArt(entry, characterImgArray[1], characterImgArray[0]);
                 return;
             }
 
@@ -159,6 +172,9 @@ function filterReplayEntries(pEntryContainer, pInputPlayer1, pInputCharacter1, p
             }
 
             if (matchFound1 && matchFound2) {
+
+                updateBackgroundArt(entry, characterImgArray[0], characterImgArray[1]);
+
                 entry.style.display = eEntryDisplayType;
                 console.log("found!");
             } else {
@@ -206,12 +222,30 @@ function adjustPlayerOrder(pInputCharacter1, pInputCharacter2) {
 function toggleWinnerIcon() {
     var winnerIcon = document.querySelectorAll(".WinnerIcon");
     var spoilerCheckbox = document.getElementById("SpoilerCheckbox");
+    let winnerVisible = true;
 
     winnerIcon.forEach(icon => {
         if (spoilerCheckbox.checked == false) {
+            winnerVisible = false;
             icon.style.visibility = "hidden";
         } else {
+            winnerVisible = true;
             icon.style.visibility = "visible";
         }
     });
 };
+
+// -- BACKGROUND IMAGE ON LINES
+
+function updateBackgroundArt(pEntry, pCharacter1, pCharacter2) {
+    console.log(pCharacter1, pCharacter2);
+    // Set the first image as the left background
+    pEntry.style.backgroundImage = `linear-gradient(to left, rgba(100, 0, 0, 0.1), rgba(0, 0, 0, 0)), url(${pCharacter1.src})`;
+    pEntry.style.backgroundPosition = "right";
+    pEntry.style.backgroundSize = "contain, contain";
+    pEntry.style.backgroundRepeat = "no-repeat";
+
+    // Set the second image as the right background
+    pEntry.style.backgroundImage += `, url(${pCharacter2.src}`;
+    pEntry.style.backgroundPosition += ", left";
+}

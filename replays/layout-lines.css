@@ -35,12 +35,12 @@
     .Choice a{
         display: flex;
     }
+
 .ChoiceTitle{
     display: flex;
     justify-content: center;
     align-items: flex-start;
     margin: 0px;
-    height: auto;
     flex-basis: 50%;
 }
 
@@ -69,6 +69,7 @@
         margin: 0px;
         background-image: radial-gradient(orange, rgba(0,0,0,0) 40%);
         font-weight: bold;
+        display: none;
     }
 
     .vs{

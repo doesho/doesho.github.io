@@ -16,26 +16,19 @@
 
 /* individual choices */
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 1100px){
 
     .Choice{
         width: 90% !important;
     }
 }
+@media screen and (min-width: 1101px){
 
-@media screen and (min-width: 701px) and (max-width: 1150px){
-
-    .Choice {
+    .Choice{
         width: 47% !important;
     }
 }
 
-@media screen and (min-width: 1151px) and (max-width: 1600px) {
-
-    .Choice {
-        width: 31% !important;
-    }
-}
 
 .Choice {
     display: inline-block;
