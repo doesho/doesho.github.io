@@ -124,9 +124,10 @@ function filterReplayEntries(pEntryContainer, pInputPlayer1, pInputCharacter1, p
 
             let matchFound1 = false;
             let matchFound2 = false;
-            const playerDivs = entry.querySelectorAll('[data-tags="playerDiv"]');
+            let playerDivs = entry.querySelectorAll('[data-tags="playerDiv"]');
             eEntryDisplayType = entry.getAttribute('[data-entry]');
-            
+            const characterImgArray = [];
+            const winnerArray = [];
 
             var ePlayerNames = Array.from(playerDivs)
                 .flatMap(playerDiv => Array.from(playerDiv.querySelectorAll('[data-tags="playerName"]')))
@@ -147,6 +148,7 @@ function filterReplayEntries(pEntryContainer, pInputPlayer1, pInputCharacter1, p
 
                         parent.insertBefore(playerDivs[1], playerDivs[0]);
                         parent.insertBefore(vs, playerDivs[0]);
+                        playerDivs = entry.querySelectorAll('[data-tags="playerDiv"]'); //update this array
                         return true;
                     }
                 };
@@ -155,15 +157,11 @@ function filterReplayEntries(pEntryContainer, pInputPlayer1, pInputCharacter1, p
 
             const orderAdjusted = adjustOrder();
 
-            const characterImgArray = [];
-            const winnerArray = [];
-
             playerDivs.forEach(player => {
                 const characterImg = player.querySelector("img");
                 characterImgArray.push(characterImg);
 
                 const winner = player.querySelector(".WinnerIcon");
-                console.log(winner);
                 if (winner && pWinnerVisible) {
                     winnerArray.push("win");
                 } else {
@@ -173,7 +171,7 @@ function filterReplayEntries(pEntryContainer, pInputPlayer1, pInputCharacter1, p
 
             if (orderAdjusted) {
                 entry.style.display = eEntryDisplayType;
-                updateBackgroundArt(entry, characterImgArray[1], characterImgArray[0], winnerArray);
+                updateBackgroundArt(entry, characterImgArray[0], characterImgArray[1], winnerArray);
                 return;
             }
 
