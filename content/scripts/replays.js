@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    
+    search();
 })
 
 // -- OPEN SELECTORS, CLOSE SELECTORS
@@ -109,17 +109,6 @@ function filterReplayEntries(pEntryContainer, pInputPlayer1, pInputCharacter1, p
 
         const entries = container.querySelectorAll("[data-entry]")
 
-        //bypass if fields blank
-        if (blankInput.includes(pInputPlayer1) && blankInput.includes(pInputPlayer2) &&
-            blankInput.includes(pInputCharacter1) && blankInput.includes(pInputCharacter2))
-        {
-            entries.forEach(entry => {
-                eEntryDisplayType = entry.getAttribute('[data-entry]');
-                entry.style.display = eEntryDisplayType;
-            })
-            return;
-        };
-
         entries.forEach(entry => {
 
             let matchFound1 = false;
@@ -138,8 +127,11 @@ function filterReplayEntries(pEntryContainer, pInputPlayer1, pInputCharacter1, p
                 .map(characterNameElement => characterNameElement.textContent);
 
             function adjustOrder() {
-                //check if characters should swap
-                if ((eCharacterNames[0] === pInputCharacter2 || blankInput.includes(pInputCharacter2)) && ((eCharacterNames[1] === pInputCharacter1) || blankInput.includes(pInputCharacter1))) {
+                //check if search is empty
+                if ((blankInput.includes(pInputCharacter1) && blankInput.includes(pInputCharacter2)) && (blankInput.includes(pInputPlayer1) && blankInput.includes(pInputPlayer2))) {
+                    return false;
+
+                } else if ((eCharacterNames[0] === pInputCharacter2 || blankInput.includes(pInputCharacter2)) && ((eCharacterNames[1] === pInputCharacter1) || blankInput.includes(pInputCharacter1))) {
 
                     //check if players should swap
                     if ((ePlayerNames[0].includes(pInputPlayer2) || blankInput.includes(pInputPlayer2)) && ((ePlayerNames[1].includes(pInputPlayer1)) || blankInput.includes(pInputPlayer1))) {
@@ -151,7 +143,7 @@ function filterReplayEntries(pEntryContainer, pInputPlayer1, pInputCharacter1, p
                         playerDivs = entry.querySelectorAll('[data-tags="playerDiv"]'); //update this array
                         return true;
                     }
-                };
+                }
                 return false;
             }
 
