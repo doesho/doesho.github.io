@@ -18,4 +18,6 @@
     /* special colors */
     --level99: #69d061;
     --imageframe: rgb(240,240,240);
+    /* page specific*/
+    --winner: #ffd59a;
 }

@@ -9,6 +9,8 @@ const characterSelector2 = document.querySelector('[data-characterSelector="2"]'
 const selectorOpener1 = document.querySelector('[data-searchInputContainer="characterSearch1"]');
 const selectorOpener2 = document.querySelector('[data-searchInputContainer="characterSearch2"]');
 
+let winnerVisible = true;
+
 document.addEventListener("click", function () {
 
     if (selectorOpener1.contains(event.target) || selectorOpener2.contains(event.target)) {
@@ -90,15 +92,16 @@ searchButton.addEventListener("click", function () {
     const inputPlayer1 = searchBar.querySelector('[data-searchInputContainer="playerSearch1"] input').value.trim().toLowerCase();
     const inputPlayer2 = searchBar.querySelector('[data-searchInputContainer="playerSearch2"] input').value.trim().toLowerCase();
     const inputDescription = searchBar.querySelector('[data-searchInputContainer="descriptionSearch"] input').value;
+    const winnerVisible = document.getElementById("SpoilerCheckbox").checked;
     document.documentElement.scrollTop = 0;
 
-    filterReplayEntries(parentEntryContainer, inputPlayer1, inputCharacter1, inputPlayer2, inputCharacter2, inputDescription);
+    filterReplayEntries(parentEntryContainer, inputPlayer1, inputCharacter1, inputPlayer2, inputCharacter2, inputDescription, winnerVisible);
 })
 
 // - FILTER CHOICES - FUNCTION
 //blah
 
-function filterReplayEntries(pEntryContainer, pInputPlayer1, pInputCharacter1, pInputPlayer2, pInputCharacter2, pInputDescription) {
+function filterReplayEntries(pEntryContainer, pInputPlayer1, pInputCharacter1, pInputPlayer2, pInputCharacter2, pInputDescription, pWinnerVisible) {
 
     const blankInput = ["Any Character", ""];
 
@@ -123,6 +126,7 @@ function filterReplayEntries(pEntryContainer, pInputPlayer1, pInputCharacter1, p
             let matchFound2 = false;
             const playerDivs = entry.querySelectorAll('[data-tags="playerDiv"]');
             eEntryDisplayType = entry.getAttribute('[data-entry]');
+            
 
             var ePlayerNames = Array.from(playerDivs)
                 .flatMap(playerDiv => Array.from(playerDiv.querySelectorAll('[data-tags="playerName"]')))
@@ -149,17 +153,27 @@ function filterReplayEntries(pEntryContainer, pInputPlayer1, pInputCharacter1, p
                 return false;
             }
 
+            const orderAdjusted = adjustOrder();
+
             const characterImgArray = [];
+            const winnerArray = [];
 
             playerDivs.forEach(player => {
                 const characterImg = player.querySelector("img");
                 characterImgArray.push(characterImg);
+
+                const winner = player.querySelector(".WinnerIcon");
+                console.log(winner);
+                if (winner && pWinnerVisible) {
+                    winnerArray.push("win");
+                } else {
+                    winnerArray.push("lose");
+                }
             })
 
-            if (adjustOrder()) {
+            if (orderAdjusted) {
                 entry.style.display = eEntryDisplayType;
-
-                updateBackgroundArt(entry, characterImgArray[1], characterImgArray[0]);
+                updateBackgroundArt(entry, characterImgArray[1], characterImgArray[0], winnerArray);
                 return;
             }
 
@@ -172,14 +186,10 @@ function filterReplayEntries(pEntryContainer, pInputPlayer1, pInputCharacter1, p
             }
 
             if (matchFound1 && matchFound2) {
-
-                updateBackgroundArt(entry, characterImgArray[0], characterImgArray[1]);
-
+                updateBackgroundArt(entry, characterImgArray[0], characterImgArray[1], winnerArray);
                 entry.style.display = eEntryDisplayType;
-                console.log("found!");
             } else {
                 entry.style.display = "none";
-                console.log("nope");
             }
 
             });
@@ -187,42 +197,10 @@ function filterReplayEntries(pEntryContainer, pInputPlayer1, pInputCharacter1, p
     })
 }
 
-
-// - ADJUST PLAYER ORDER
-//This bitch's days are numbered. We're replacing her with a sexier adjustOrder which works in each loop instead of doing its own thing.
-function adjustPlayerOrder(pInputCharacter1, pInputCharacter2) {
-    const choices = document.querySelectorAll(".Choice");
-
-    choices.forEach(choice => {
-        const characterLabels = Array.from(choice.querySelectorAll(".CharacterLabel"));
-        const player1 = choice.querySelector(".Player:first-child");
-        const player2 = choice.querySelector(".Player:last-child");
-        const parent = player1.parentNode;
-        const vs = choice.querySelector(".vs");
-
-        const label1 = characterLabels[0].textContent.trim();
-        const label2 = characterLabels[1].textContent.trim();
-
-        if (label1 === pInputCharacter1 && label2 === pInputCharacter2) { //if both sides match each other, return
-            return;
-        }
-
-        if ((label1 === pInputCharacter2 && label2 === pInputCharacter1) || //if (entry1 = input2 AND entry2 = input 2) OR
-            (pInputCharacter1 === "Any Character" && label1 === pInputCharacter2) || //(input1 is any AND entry1 is input2 ) OR
-            (label2 === pInputCharacter1 && pInputCharacter2 === "Any Character")) { //(entry2 is input1 AND input2 is any)
-
-            parent.insertBefore(player2, player1);
-            parent.insertBefore(vs, player1);
-        }
-    })
-}
-
 // - TOGGLE WINNER ICON
 
 function toggleWinnerIcon() {
     var winnerIcon = document.querySelectorAll(".WinnerIcon");
-    var spoilerCheckbox = document.getElementById("SpoilerCheckbox");
-    let winnerVisible = true;
 
     winnerIcon.forEach(icon => {
         if (spoilerCheckbox.checked == false) {
@@ -237,15 +215,21 @@ function toggleWinnerIcon() {
 
 // -- BACKGROUND IMAGE ON LINES
 
-function updateBackgroundArt(pEntry, pCharacter1, pCharacter2) {
-    console.log(pCharacter1, pCharacter2);
-    // Set the first image as the left background
-    pEntry.style.backgroundImage = `linear-gradient(to left, rgba(100, 0, 0, 0.1), rgba(0, 0, 0, 0)), url(${pCharacter1.src})`;
-    pEntry.style.backgroundPosition = "right";
-    pEntry.style.backgroundSize = "contain, contain";
-    pEntry.style.backgroundRepeat = "no-repeat";
+function updateBackgroundArt(pEntry, pCharacter1, pCharacter2, pWinnerArray) {
+    //char1 will always be left and char2 always right (the swap function feeds them in visually proper order)
+    console.log(pWinnerArray);
 
-    // Set the second image as the right background
-    pEntry.style.backgroundImage += `, url(${pCharacter2.src}`;
-    pEntry.style.backgroundPosition += ", left";
+    if ((pWinnerArray[0] === "lose") && (pWinnerArray[1] === "lose")) {
+        pEntry.style.background = `linear-gradient(to right, transparent 10%, var(--secondary) 15%, var(--secondary) 85%, transparent 90%), URL(${pCharacter1.src}) left no-repeat, url(${pCharacter2.src}) right no-repeat`;
+        console.log("stalemate!");
+    }
+    else if (pWinnerArray[0] === "win") {
+        console.log("0 won")
+        pEntry.style.background = `linear-gradient(to right, transparent 10%, var(--winner) 15%, var(--secondary) 30%, var(--secondary) 85%, transparent 90%), URL(${pCharacter1.src}) left no-repeat, url(${pCharacter2.src}) right no-repeat`;
+    } else {
+        console.log("1 won")
+        pEntry.style.background = `linear-gradient(to right, transparent 10%, var(--secondary) 15%, var(--secondary) 70%, var(--winner) 85%, transparent 90%), URL(${pCharacter1.src}) left no-repeat, url(${pCharacter2.src}) right no-repeat`;
+    }
+
+    pEntry.style.backgroundSize = 'contain, contain';
 }

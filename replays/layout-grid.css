@@ -77,9 +77,15 @@
     }
 
     .WinnerIcon {
+        position: absolute;
         margin: 0px;
         background-image: radial-gradient(orange, rgba(0,0,0,0) 40%);
         font-weight: bold;
+    }
+
+    .PlayerDivBackgroundImage{
+        position: absolute;
+
     }
 
     .vs{

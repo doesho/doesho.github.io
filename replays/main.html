@@ -8,8 +8,7 @@
 
     <link rel="stylesheet" href="../pagestyle.css" />
     <link rel="stylesheet" href="replaystyle.css" />
-    <link rel="stylesheet" href="layout-grid.css" id="LineSheet"/>
-    <link rel="stylesheet" href="layout-lines.css" id="CompactSheet"/>
+    <link rel="stylesheet" href="layout-grid.css"/>
     <link rel="stylesheet" href="../lightmode.css" />
 
     <link rel="stylesheet" href="../searchbarstyle.css" />
@@ -419,13 +418,12 @@
                 <div id="LowerSelectorContainer">
                     <div id="SpoilerCheckboxContainer">
                         <label for="SpoilerCheckbox">show winner?</label>
-                        <input type="checkbox" id="SpoilerCheckbox" onclick="toggleWinnerIcon()" checked />
+                        <input type="checkbox" id="SpoilerCheckbox" checked/>
                     </div>
                     <div data-searchInputContainer="descriptionSearch" class="SearchInputContainer">
                         <input type="search" class="SearchInput" placeholder="Tournament or commentator..." />
                         <button class="ClearSearchInput"><p>X</p></button>
                     </div>
-                    <button id="StyleButton"><p id="ButtonText"></p></button>
                 </div>
             </div>
 
@@ -452,6 +450,7 @@
                             <img src="../content/icons/char/kokonoe.jpg" class="CharIcon" />
                             <h4 data-tags="characterName" class="CharacterLabel">Kokonoe</h4>
                             <p data-tags="playerName" class="PlayerName">Chykka</p>
+
                         </div>
                     </div>
                     <div data-tags="description" class="ChoiceBody">
