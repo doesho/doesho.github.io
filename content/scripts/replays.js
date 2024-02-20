@@ -212,15 +212,15 @@ function updateBackgroundArt(pEntry, pCharacter1, pCharacter2, pWinnerArray) {
     console.log(pWinnerArray);
 
     if ((pWinnerArray[0] === "lose") && (pWinnerArray[1] === "lose")) {
-        pEntry.style.background = `linear-gradient(to right, transparent 12%, var(--secondary) 15%, var(--secondary) 85%, transparent 88%), URL(${pCharacter1.src}) left no-repeat, url(${pCharacter2.src}) right no-repeat`;
+        pEntry.style.background = `linear-gradient(to right, transparent 12%, var(--secondary) 16%, var(--secondary) 84%, transparent 88%), URL(${pCharacter1.src}) left no-repeat, url(${pCharacter2.src}) right no-repeat`;
         console.log("stalemate!");
     }
     else if (pWinnerArray[0] === "win") {
         console.log("0 won")
-        pEntry.style.background = `linear-gradient(to right, transparent 12%, var(--winner) 15%, var(--secondary) 50%, var(--secondary) 85%, transparent 88%), URL(${pCharacter1.src}) left no-repeat, url(${pCharacter2.src}) right no-repeat`;
+        pEntry.style.background = `linear-gradient(to right, transparent 12%, var(--winner) 16%, var(--secondary) 50%, var(--secondary) 84%, transparent 88%), URL(${pCharacter1.src}) left no-repeat, url(${pCharacter2.src}) right no-repeat`;
     } else {
         console.log("1 won")
-        pEntry.style.background = `linear-gradient(to right, transparent 12%, var(--secondary) 15%, var(--secondary) 50%, var(--winner) 85%, transparent 88%), URL(${pCharacter1.src}) left no-repeat, url(${pCharacter2.src}) right no-repeat`;
+        pEntry.style.background = `linear-gradient(to right, transparent 12%, var(--secondary) 16%, var(--secondary) 50%, var(--winner) 84%, transparent 88%), URL(${pCharacter1.src}) left no-repeat, url(${pCharacter2.src}) right no-repeat`;
     }
 
     pEntry.style.backgroundSize = 'contain, contain';
