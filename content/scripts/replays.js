@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    search();
+    startSearch();
 })
 
 // -- OPEN SELECTORS, CLOSE SELECTORS
@@ -81,8 +81,10 @@ document.addEventListener("DOMContentLoaded", function () {
 //function.
 const searchButton = document.getElementById("SearchButton");
 
-searchButton.addEventListener("click", function () {
-    const buddyID = this.getAttribute('data-searchbuddy-id');
+searchButton.addEventListener("click", startSearch);
+
+function startSearch() {
+    const buddyID = searchButton.getAttribute('data-searchbuddy-id');
     const parentEntryContainer = document.querySelectorAll(`[data-parentEntryContainer][data-searchbuddy-id="${buddyID}"]`);
 
     const searchBar = document.getElementById("SearchBar");
@@ -96,7 +98,7 @@ searchButton.addEventListener("click", function () {
     document.documentElement.scrollTop = 0;
 
     filterReplayEntries(parentEntryContainer, inputPlayer1, inputCharacter1, inputPlayer2, inputCharacter2, inputDescription, winnerVisible);
-})
+};
 
 // - FILTER CHOICES - FUNCTION
 //blah
