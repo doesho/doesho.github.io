@@ -114,11 +114,21 @@
     top: 20px;
     right: 3%;
     border: 2px solid var(--border);
+    height: 60px;
+    width: 60px;
 }
 
     #SearchButton:hover{
         border:2px solid var(--userinput);
     }
+
+#ResultCounter{
+    position: absolute;
+    top: 65px;
+    right: 3%;
+    z-index: 20;
+    opacity: 0.5;
+}
 
 #LowerSelectorContainer{
     display: flex;
