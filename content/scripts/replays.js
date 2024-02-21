@@ -257,6 +257,8 @@ function filterReplayEntries(pEntryContainer, pInputPlayer1, pInputCharacter1, p
             eEntryDisplayType = entry.getAttribute('[data-entry]');
             const characterImgArray = [];
             const winnerArray = [];
+            let inputFinalCharacter1;
+            let inputFinalCharacter2;
 
             var ePlayerNames = Array.from(playerDivs)
                 .flatMap(playerDiv => Array.from(playerDiv.querySelectorAll('[data-tags="playerName"]')))
@@ -266,23 +268,40 @@ function filterReplayEntries(pEntryContainer, pInputPlayer1, pInputCharacter1, p
                 .flatMap(playerDiv => Array.from(playerDiv.querySelectorAll('[data-tags="characterName"]')))
                 .map(characterNameElement => characterNameElement.textContent);
 
-            function seasonUnpacker(pInputCharacter, eCharacterName) {
+            function seasonUnpacker(pInputCharacter) {
 
                 if (["Season 7", "Season 6", "Season 5", "Season 4", "Season 3", "Season 2", "Season 1", "Customs"].includes(pInputCharacter)) {
 
                     pInputCharacter = pInputCharacter.replace(/\s+/g, '');
-                    if (seasonsArray[pInputCharacter].includes(eCharacterName)) {
-                        //see if the season contains a character name matching eCharacterNames.
-                        return eCharacterName;
-                        //If so, update that pInputCharacter to instead be that character name
+
+                    if (inputFinalCharacter1 == undefined) {
+                        //loop to define character1. 
+                        if (seasonsArray[pInputCharacter].includes(eCharacterNames[0])) {
+
+                            return eCharacterNames[0];
+
+                        } else if (seasonsArray[pInputCharacter].includes(eCharacterNames[1])) {
+                            return eCharacterNames[1];
+                        } else {
+                            return pInputCharacter;
+                        }
+                    } else {
+                        //loop to define character2. has to be compared against eCharacterNames in reverse order to allow season mirror searches to work.
+                        if (seasonsArray[pInputCharacter].includes(eCharacterNames[1])) {
+                            return eCharacterNames[1];
+                        } else if (seasonsArray[pInputCharacter].includes(eCharacterNames[0])) {
+                            return eCharacterNames[0];
+                        } else {
+                            return pInputCharacter;
+                        }
                     }
+
                 } else {
                     return pInputCharacter;
                 }
             }
-
-            inputFinalCharacter1 = seasonUnpacker(pInputCharacter1, eCharacterNames[0]); //remove the second parameter. it should receive the array and understand which
-            inputFinalCharacter2 = seasonUnpacker(pInputCharacter2, eCharacterNames[1]); //spot to assign the character exists in...?
+            inputFinalCharacter1 = seasonUnpacker(pInputCharacter1); //remove the second parameter. it should receive the array and understand which
+            inputFinalCharacter2 = seasonUnpacker(pInputCharacter2); //spot to assign the character exists in...?
 
             console.log("outputs:", inputFinalCharacter1, inputFinalCharacter2);
 
