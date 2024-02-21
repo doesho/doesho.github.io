@@ -11,6 +11,141 @@ const selectorOpener2 = document.querySelector('[data-searchInputContainer="char
 
 let winnerVisible = true;
 
+const seasonsArray = {
+    Season7: ["Anji Mito",
+        "Axl Low",
+        "Baiken",
+        "Chipp",
+        "Faust",
+        "Giovanna",
+        "Goldlewis",
+        "Happy Chaos",
+        "I-No",
+        "Jack-O",
+        "Ky Kiske",
+        "Leo Whitefang",
+        "May",
+        "Millia Rage",
+        "Nagoriyuki",
+        "Potemkin",
+        "Ramlethal",
+        "Sol Badguy",
+        "Testament",
+        "Zato-1"],
+    Season6: ["Byakuya",
+        "Chaos",
+        "Carmine",
+        "Chaos",
+        "Enkidu",
+        "Gordeau",
+        "Hilda",
+        "Hyde",
+        "Linne",
+        "Londrekia",
+        "Merkava",
+        "Mika",
+        "Nanase",
+        "Orie",
+        "Phonon",
+        "Seth",
+        "Vatista",
+        "Wagner",
+        "Waldstein",
+        "Yuzuriha"],
+    Season5: ["Arakune",
+        "Bang Shishigami",
+        "Carl Clover",
+        "Hakumen",
+        "Hazama",
+        "Kokonoe",
+        "Iron Tager",
+        "Jin Kisaragi",
+        "Litchi Faye Ling",
+        "Nine the Phantom",
+        "Noel",
+        "Nu-13",
+        "Platinum the Trinity",
+        "Rachel Alucard",
+        "Ragna the Bloodedge",
+        "Taokaka"],
+    Season4: ["Beheaded",
+        "FIGHT",
+        "Enchantress",
+        "King Knight",
+        "Mole Knight",
+        "Plague Knight",
+        "Polar Knight",
+        "Propeller Knight",
+        "Shovel & Shield Knight",
+        "Specter Knight",
+        "Tinker Knight",
+        "Treasure Knight"],
+    Season3: ["Akuma",
+        "Cammy",
+        "Chun-Li",
+        "C. Viper",
+        "Dan",
+        "Guile",
+        "Ken",
+        "M. Bison",
+        "Ryu",
+        "Sagat",
+        "Vega",
+        "Zangief"],
+    Season2: ["Carl Swangee",
+        "Shovel Knight",
+        "Celinka",
+        "D'Janette",
+        "Emogine",
+        "Eugenia",
+        "Galdred",
+        "Geoffrey",
+        "Iaquis",
+        "Luciya",
+        "Minato",
+        "Remiliss",
+        "Renea",
+        "Seijun",
+        "Sydney & Serena",
+        "Syrus",
+        "Taisei",
+        "Tournelouse",
+        "Umina",
+        "Zsolt",],
+    Season1: ["Devris",
+        "Juno",
+        "Pooky",
+        "Alice",
+        "Baelkhor",
+        "Eva",
+        "Gabrek",
+        "Heidi",
+        "Kaden",
+        "Lily",
+        "Mei Lien",
+        "Miska",
+        "Morathi",
+        "Nehtali",
+        "Reese",
+        "Satoshi",
+        "Super Skullman 33",
+        "Ulrik",
+        "Vincent",
+        "Zoey"],
+    Customs: ["Barack Obama",
+        "Franklin D. Roosevelt",
+        "Fray",
+        "Hikaru",
+        "J'sahni",
+        "Jimmy Carter",
+        "Koro",
+        "Last Legs",
+        "Pope Benedict XVI",
+        "Shatotto",
+        "Your Opponent"]
+}
+
+
 document.addEventListener("click", function () {
 
     if (selectorOpener1.contains(event.target) || selectorOpener2.contains(event.target)) {
@@ -80,6 +215,8 @@ document.addEventListener("DOMContentLoaded", function () {
 //clicking the search button passes the input information from the character and player fields into the filter choices
 //function.
 const searchButton = document.getElementById("SearchButton");
+const resultCounter = document.getElementById("ResultCounter");
+let resultNumber = 0;
 
 searchButton.addEventListener("click", startSearch);
 
@@ -109,6 +246,7 @@ function filterReplayEntries(pEntryContainer, pInputPlayer1, pInputCharacter1, p
 
     pEntryContainer.forEach(container => {
 
+        resultNumber = 0;
         const entries = container.querySelectorAll("[data-entry]")
 
         entries.forEach(entry => {
@@ -128,12 +266,32 @@ function filterReplayEntries(pEntryContainer, pInputPlayer1, pInputCharacter1, p
                 .flatMap(playerDiv => Array.from(playerDiv.querySelectorAll('[data-tags="characterName"]')))
                 .map(characterNameElement => characterNameElement.textContent);
 
+            function seasonUnpacker(pInputCharacter, eCharacterName) {
+
+                if (["Season 7", "Season 6", "Season 5", "Season 4", "Season 3", "Season 2", "Season 1", "Customs"].includes(pInputCharacter)) {
+
+                    pInputCharacter = pInputCharacter.replace(/\s+/g, '');
+                    if (seasonsArray[pInputCharacter].includes(eCharacterName)) {
+                        //see if the season contains a character name matching eCharacterNames.
+                        return eCharacterName;
+                        //If so, update that pInputCharacter to instead be that character name
+                    }
+                } else {
+                    return pInputCharacter;
+                }
+            }
+
+            inputFinalCharacter1 = seasonUnpacker(pInputCharacter1, eCharacterNames[0]); //remove the second parameter. it should receive the array and understand which
+            inputFinalCharacter2 = seasonUnpacker(pInputCharacter2, eCharacterNames[1]); //spot to assign the character exists in...?
+
+            console.log("outputs:", inputFinalCharacter1, inputFinalCharacter2);
+
             function adjustOrder() {
                 //check if search is empty
-                if ((blankInput.includes(pInputCharacter1) && blankInput.includes(pInputCharacter2)) && (blankInput.includes(pInputPlayer1) && blankInput.includes(pInputPlayer2))) {
+                if ((blankInput.includes(inputFinalCharacter1) && blankInput.includes(inputFinalCharacter2)) && (blankInput.includes(pInputPlayer1) && blankInput.includes(pInputPlayer2))) {
                     return false;
 
-                } else if ((eCharacterNames[0] === pInputCharacter2 || blankInput.includes(pInputCharacter2)) && ((eCharacterNames[1] === pInputCharacter1) || blankInput.includes(pInputCharacter1))) {
+                } else if ((eCharacterNames[0] === inputFinalCharacter2 || blankInput.includes(inputFinalCharacter2)) && ((eCharacterNames[1] === inputFinalCharacter1) || blankInput.includes(inputFinalCharacter1))) {
 
                     //check if players should swap
                     if ((ePlayerNames[0].includes(pInputPlayer2) || blankInput.includes(pInputPlayer2)) && ((ePlayerNames[1].includes(pInputPlayer1)) || blankInput.includes(pInputPlayer1))) {
@@ -164,27 +322,35 @@ function filterReplayEntries(pEntryContainer, pInputPlayer1, pInputCharacter1, p
             })
 
             if (orderAdjusted) {
-                entry.style.display = eEntryDisplayType;
                 updateBackgroundArt(entry, characterImgArray[0], characterImgArray[1], winnerArray);
+                resultNumber += 1;
+                entry.style.display = eEntryDisplayType;
                 return;
             }
 
-            if (ePlayerNames[0].includes(pInputPlayer1) && ((eCharacterNames[0] == pInputCharacter1) || (blankInput.includes(pInputCharacter1)))) {
+            if (ePlayerNames[0].includes(pInputPlayer1) && ((eCharacterNames[0] == inputFinalCharacter1) || (blankInput.includes(inputFinalCharacter1)))) {
                 matchFound1 = true;
             }
 
-            if (ePlayerNames[1].includes(pInputPlayer2) && ((eCharacterNames[1] == pInputCharacter2) || (blankInput.includes(pInputCharacter2)))) {
+            if (ePlayerNames[1].includes(pInputPlayer2) && ((eCharacterNames[1] == inputFinalCharacter2) || (blankInput.includes(inputFinalCharacter2)))) {
                 matchFound2 = true;
             }
 
             if (matchFound1 && matchFound2) {
                 updateBackgroundArt(entry, characterImgArray[0], characterImgArray[1], winnerArray);
+                resultNumber += 1;
                 entry.style.display = eEntryDisplayType;
             } else {
                 entry.style.display = "none";
             }
 
-            });
+        });
+
+        if (resultNumber === 1) {
+            resultCounter.innerText = `${resultNumber} result`
+        } else {
+            resultCounter.innerText = `${resultNumber} results`
+        }
 
     })
 }
@@ -209,17 +375,13 @@ function toggleWinnerIcon() {
 
 function updateBackgroundArt(pEntry, pCharacter1, pCharacter2, pWinnerArray) {
     //char1 will always be left and char2 always right (the swap function feeds them in visually proper order)
-    console.log(pWinnerArray);
 
     if ((pWinnerArray[0] === "lose") && (pWinnerArray[1] === "lose")) {
         pEntry.style.background = `linear-gradient(to right, transparent 12%, var(--secondary) 16%, var(--secondary) 84%, transparent 88%), URL(${pCharacter1.src}) left no-repeat, url(${pCharacter2.src}) right no-repeat`;
-        console.log("stalemate!");
     }
     else if (pWinnerArray[0] === "win") {
-        console.log("0 won")
         pEntry.style.background = `linear-gradient(to right, transparent 12%, var(--winner) 16%, var(--secondary) 50%, var(--secondary) 84%, transparent 88%), URL(${pCharacter1.src}) left no-repeat, url(${pCharacter2.src}) right no-repeat`;
     } else {
-        console.log("1 won")
         pEntry.style.background = `linear-gradient(to right, transparent 12%, var(--secondary) 16%, var(--secondary) 50%, var(--winner) 84%, transparent 88%), URL(${pCharacter1.src}) left no-repeat, url(${pCharacter2.src}) right no-repeat`;
     }
 
