@@ -1,4 +1,0 @@
-Use data attributes for non-visual javascript things and especially when multiple attributes
-or data values can be used. 
-
-Use class or ID for javascript things that affect visual appearance.
