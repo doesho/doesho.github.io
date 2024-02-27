@@ -29,16 +29,16 @@
     height: 10%;
     min-height: 130px;
     width: 100vw;
-    background: linear-gradient(to bottom, rgba(255,255,255,0), var(--background) 40%);
+    background: linear-gradient(to bottom, transparent, var(--background) 40%);
     position: absolute;
-    bottom: -17px;
+    bottom: 0px;
     justify-content: center;
-    align-items: flex-start;
     transition: 0.2s;
 }
 
     #IndexHeadingBottom:hover {
         height: 17%;
+        min-height: 150px;
         cursor: pointer;
     }
 
