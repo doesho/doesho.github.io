@@ -128,6 +128,8 @@
     right: 3%;
     z-index: 20;
     opacity: 0.5;
+    user-select: none;
+    pointer-events: none;
 }
 
 #LowerSelectorContainer{
