@@ -300,10 +300,8 @@ function filterReplayEntries(pEntryContainer, pInputPlayer1, pInputCharacter1, p
                     return pInputCharacter;
                 }
             }
-            inputFinalCharacter1 = seasonUnpacker(pInputCharacter1); //remove the second parameter. it should receive the array and understand which
-            inputFinalCharacter2 = seasonUnpacker(pInputCharacter2); //spot to assign the character exists in...?
-
-            console.log("outputs:", inputFinalCharacter1, inputFinalCharacter2);
+            inputFinalCharacter1 = seasonUnpacker(pInputCharacter1);
+            inputFinalCharacter2 = seasonUnpacker(pInputCharacter2); 
 
             function adjustOrder() {
                 //check if search is empty
