@@ -2,8 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
     startSearch();
 })
 
-// -- OPEN SELECTORS, CLOSE SELECTORS
-
 const characterSelector1 = document.querySelector('[data-characterSelector="1"]');
 const characterSelector2 = document.querySelector('[data-characterSelector="2"]');
 const selectorOpener1 = document.querySelector('[data-searchInputContainer="characterSearch1"]');
@@ -211,9 +209,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// - FILTER CHOICES - BUTTON
-//clicking the search button passes the input information from the character and player fields into the filter choices
-//function.
 const searchButton = document.getElementById("SearchButton");
 const resultCounter = document.getElementById("ResultCounter");
 let resultNumber = 0;
@@ -237,9 +232,6 @@ function startSearch() {
     filterReplayEntries(parentEntryContainer, inputPlayer1, inputCharacter1, inputPlayer2, inputCharacter2, inputDescription, winnerVisible);
 };
 
-// - FILTER CHOICES - FUNCTION
-//blah
-
 function filterReplayEntries(pEntryContainer, pInputPlayer1, pInputCharacter1, pInputPlayer2, pInputCharacter2, pInputDescription, pWinnerVisible) {
 
     const blankInput = ["Any Character", ""];
@@ -251,14 +243,10 @@ function filterReplayEntries(pEntryContainer, pInputPlayer1, pInputCharacter1, p
 
         entries.forEach(entry => {
 
-            let matchFound1 = false;
-            let matchFound2 = false;
             let playerDivs = entry.querySelectorAll('[data-tags="playerDiv"]');
             eEntryDisplayType = entry.getAttribute('[data-entry]');
             const characterImgArray = [];
             const winnerArray = [];
-            let inputFinalCharacter1;
-            let inputFinalCharacter2;
 
             var ePlayerNames = Array.from(playerDivs)
                 .flatMap(playerDiv => Array.from(playerDiv.querySelectorAll('[data-tags="playerName"]')))
@@ -300,8 +288,8 @@ function filterReplayEntries(pEntryContainer, pInputPlayer1, pInputCharacter1, p
                     return pInputCharacter;
                 }
             }
-            inputFinalCharacter1 = seasonUnpacker(pInputCharacter1);
-            inputFinalCharacter2 = seasonUnpacker(pInputCharacter2); 
+            let inputFinalCharacter1 = seasonUnpacker(pInputCharacter1);
+            let inputFinalCharacter2 = seasonUnpacker(pInputCharacter2); 
 
             function adjustOrder() {
                 //check if search is empty
@@ -323,7 +311,6 @@ function filterReplayEntries(pEntryContainer, pInputPlayer1, pInputCharacter1, p
                 }
                 return false;
             }
-
             const orderAdjusted = adjustOrder();
 
             playerDivs.forEach(player => {
@@ -345,21 +332,33 @@ function filterReplayEntries(pEntryContainer, pInputPlayer1, pInputCharacter1, p
                 return;
             }
 
-            if (ePlayerNames[0].includes(pInputPlayer1) && ((eCharacterNames[0] == inputFinalCharacter1) || (blankInput.includes(inputFinalCharacter1)))) {
-                matchFound1 = true;
+            function findEntriesMatchingInputs() {
+                let matchFound1 = false;
+                let matchFound2 = false;
+
+                if (ePlayerNames[0].includes(pInputPlayer1) && ((eCharacterNames[0] == inputFinalCharacter1) || (blankInput.includes(inputFinalCharacter1)))) {
+                    matchFound1 = true;
+                }
+
+                if (ePlayerNames[1].includes(pInputPlayer2) && ((eCharacterNames[1] == inputFinalCharacter2) || (blankInput.includes(inputFinalCharacter2)))) {
+                    matchFound2 = true;
+                }
+
+                if (matchFound1 && matchFound2) {
+                    return true;
+                }
+
+                return false;
             }
 
-            if (ePlayerNames[1].includes(pInputPlayer2) && ((eCharacterNames[1] == inputFinalCharacter2) || (blankInput.includes(inputFinalCharacter2)))) {
-                matchFound2 = true;
-            }
-
-            if (matchFound1 && matchFound2) {
+            if (findEntriesMatchingInputs()) {
                 updateBackgroundArt(entry, characterImgArray[0], characterImgArray[1], winnerArray);
                 resultNumber += 1;
                 entry.style.display = eEntryDisplayType;
-            } else {
-                entry.style.display = "none";
+                return;
             }
+
+            entry.style.display = "none";
 
         });
 
@@ -372,7 +371,6 @@ function filterReplayEntries(pEntryContainer, pInputPlayer1, pInputCharacter1, p
     })
 }
 
-// - TOGGLE WINNER ICON
 
 function toggleWinnerIcon() {
     var winnerIcon = document.querySelectorAll(".WinnerIcon");
@@ -388,7 +386,6 @@ function toggleWinnerIcon() {
     });
 };
 
-// -- BACKGROUND IMAGE ON LINES
 
 function updateBackgroundArt(pEntry, pCharacter1, pCharacter2, pWinnerArray) {
     //char1 will always be left and char2 always right (the swap function feeds them in visually proper order)
