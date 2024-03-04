@@ -288,8 +288,8 @@ function filterReplayEntries(pEntryContainer, pInputPlayer1, pInputCharacter1, p
                     return pInputCharacter;
                 }
             }
-            let inputFinalCharacter1 = seasonUnpacker(pInputCharacter1);
-            let inputFinalCharacter2 = seasonUnpacker(pInputCharacter2); 
+            inputFinalCharacter1 = seasonUnpacker(pInputCharacter1);
+            inputFinalCharacter2 = seasonUnpacker(pInputCharacter2);
 
             function adjustOrder() {
                 //check if search is empty
