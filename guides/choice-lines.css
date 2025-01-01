@@ -91,7 +91,6 @@
 
 .ChoiceHead{
     display: flex;
-    margin-bottom: 10px;
 }
 
 .Choice h3 { /*title of each choice*/
