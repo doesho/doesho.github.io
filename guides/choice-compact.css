@@ -76,14 +76,12 @@
 .ChoiceBodyContainer {
     display: flex;
     position: relative;
-    padding: 5px;
 }
 
 /* ----  head of each choice*/
 
 .ChoiceHead{ /*div containing title, picture and timestamp */
     display: flex;
-    margin-bottom: 10px;
 }
 
 .ChoiceHead p{ /*timestamp for videos*/
@@ -93,12 +91,13 @@
 .Choice h3 { /*title of each choice*/
     text-indent: 5px;
     font-size: 20px;
-    margin: 3px 0px;
+    margin: 2px 0px;
     z-index: 2;
 }
 
 .CharIcon{
     border: none;
+    margin: 0px 5px;
 }
 
 .Choice h4{ /*author or subtitle*/
