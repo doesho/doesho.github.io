@@ -28,8 +28,8 @@
     display: flex;
     height: 10%;
     min-height: 130px;
-    width: 100vw;
-    background: linear-gradient(to bottom, transparent, var(--background) 40%);
+    width: 100%;
+    background: linear-gradient(to bottom, transparent, var(--background));
     position: absolute;
     bottom: 0px;
     justify-content: center;
@@ -54,6 +54,7 @@
     right: 10px;
     bottom: 0px;
     opacity: 0.1;
+    display: none;
 }
     #newImage:hover{
         opacity: 0.5;
