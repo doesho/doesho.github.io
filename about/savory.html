@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Credits | PLAY MORE EXCEED</title>
+    <link rel="icon" type="image/x-icon" href="../content/icons/PMX_Favicon.ico" />
+
+    <link rel="stylesheet" href="aboutstyle.css" />
+    <link rel="stylesheet" href="../pagestyle-widescreen.css" />
+    <link rel="stylesheet" href="../sidenavstyle-widescreen.css" />
+
+    <link rel="stylesheet" href="lightmode.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <script language="Javascript">
+        window.onload = function () {
+            var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+
+            var pageStyle = document.createElement("link");
+            pageStyle.rel = "stylesheet";
+            pageStyle.type = "text/css";
+
+            var sideNavStyle = document.createElement("link");
+            sideNavStyle.rel = "stylesheet";
+            sideNavStyle.type = "text/css";
+
+            if (mobile) {
+                pageStyle.href = "../pagestyle-mobile.css";
+                sideNavStyle.href = "../sidenavstyle-mobile.css";
+                document.head.appendChild(pageStyle);
+                document.head.appendChild(sideNavStyle);
+            }
+        }
+    </script>
+
+    <!-- side nav bar! -->
+
+    <button type="button" id="SideNavOpener"><img src="../content/icons/PMX_Favicon.ico" alt="Side Nav Open" /></button>
+
+    <div id="SideNav">
+
+        <div id="SideNavTopContents">
+            <button type="button" id="SideNavCloser"><img src="../content/icons/XFS.ico" alt="Side Nav Close" /></button>
+            <a href="../index.html" class="HomeButton"><img src="../content/images/PMX_Logo.png" alt="PMX Logo" title="Home" /></a>
+        </div>
+
+        <div id="SideNavContents">
+            <a href="../index.html">Home</a>
+            <a href="../guides/main.html">Guides &amp; Strategy</a>
+            <a href="../replays/main.html">Replays</a>
+            <a href="../blog/main.html">News</a>
+            <a href="../customs/main.html" class="DisabledPage">Custom Content</a>
+        </div>
+        <div id="SideNavBottomContents">
+            <img id="BottomPic" draggable="false" />
+        </div>
+    </div>
+    <!-- content -->
+
+    <section id="Heading">
+        <h1>savory</h1>
+    </section>
+
+    <section id="Body">
+        <div>
+            <p>hi!! (˶◜ᵕ◝˶) ty for visiting</p>
+            <p>this song is lovely and the last minute warms my soul like nothing else...</p>
+            <iframe width="100%" src="https://www.youtube.com/embed/-pU1OoUMVlU?si=amypIzuVwqoBDfBO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <p>i really like to cook and i love atlyss and exceed!! i dont play it much though i just like talking and thinking about it and also fighting the bot. i can never decide who i main ... im too in flux as a person to make preferences like that !!</p>
+            <p>i love bein trans</p>
+        </div>
+    </section>
+
+    <script src="../content/scripts/sidenav.js"></script>
+    <script src="../content/scripts/randompic.js"></script>
+
+</body>
+</html>
