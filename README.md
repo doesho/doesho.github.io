@@ -1,5 +1,5 @@
 # PLAY MORE EXCEED | playexceed.com
-Doe's Exceed fan website! I want this website to do multiple things to benefit the Exceed community:
+savory's Exceed fan website! I want this website to do multiple things to benefit the Exceed community:
 
 1. Compile (and host?) downloadable fan-made content such as characters, playmats and rules
 2. Compile strategy and character guides, searchable and sortable by content and subject matter
