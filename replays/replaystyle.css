@@ -22,7 +22,7 @@
 .collapseButton{
     background-color: rgba(0,0,0,0);
     bottom: 5px;
-    right: 5%;
+    right: 150px;
     position: absolute;
     height: 20px;
 }
