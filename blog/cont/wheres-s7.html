@@ -7,8 +7,8 @@
     <meta charset="utf-8" />
     <title>Where's Season 7? | PLAY MORE EXCEED</title>
 
-    <link rel="stylesheet" href="../../pagestyle.css" />
-    <link rel="stylesheet" href="../../sidenavstyle.css" />
+    <link rel="stylesheet" href="../../pagestyle-widescreen.css" />
+    <link rel="stylesheet" href="../../sidenavstyle-widescreen.css" />
 
     <link rel="stylesheet" href="../blogpagestyle.css" />
     <link rel="stylesheet" href="lightmode.css" />
@@ -16,6 +16,27 @@
 
 </head>
 <body id="body">
+
+    <script language="Javascript">
+        window.onload = function () {
+            var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+
+            var pageStyle = document.createElement("link");
+            pageStyle.rel = "stylesheet";
+            pageStyle.type = "text/css";
+
+            var sideNavStyle = document.createElement("link");
+            sideNavStyle.rel = "stylesheet";
+            sideNavStyle.type = "text/css";
+
+            if (mobile) {
+                pageStyle.href = "../../pagestyle-mobile.css";
+                sideNavStyle.href = "../../sidenavstyle-mobile.css";
+                document.head.appendChild(pageStyle);
+                document.head.appendChild(sideNavStyle);
+            }
+        }
+    </script>
 
     <!-- side nav bar -->
 
@@ -30,11 +51,10 @@
 
         <div id="SideNavContents">
             <a href="../../index.html">Home</a>
-            <a href="../../customs/main.html" class="DisabledPage">Custom Content</a>
             <a href="../../guides/main.html">Guides &amp; Strategy</a>
-            <a href="../../community/main.html" class="DisabledPage">Community &amp; Events</a>
-            <a href="../../players/main.html" class="DisabledPage">Players</a>
+            <a href="../../replays/main.html">Replays</a>
             <a href="../../blog/main.html">News</a>
+            <a href="../../customs/main.html" class="DisabledPage">Custom Content</a>
         </div>
         <div id="SideNavBottomContents">
             <img id="BottomPic" draggable="false" />
@@ -230,7 +250,7 @@
             </div>
         </div>
 
-        </section>
+    </section>
 
     <script src="../../content/scripts/sidenav.js"></script>
 </body>
