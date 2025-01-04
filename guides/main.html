@@ -6,16 +6,15 @@
     <title>Guides &amp; Strategy | PLAY MORE EXCEED</title>
     <link rel="icon" type="image/x-icon" href="../content/icons/PMX_Favicon.ico" />
 
-    <link rel="stylesheet" href="../pagestyle.css" />
+    <link rel="stylesheet" href="../pagestyle-widescreen.css" />
     <link rel="stylesheet" href="../searchbarstyle.css" />
-    <link rel="stylesheet" href="../sidenavstyle.css" id="SideNavSheet" />
+    <link rel="stylesheet" href="../sidenavstyle-widescreen.css" id="SideNavSheet" />
     <link rel="stylesheet" href="../stickystyle.css" id="StickSheet" />
     <link rel="stylesheet" href="guidestyle.css" />
 
     <!-- color modes -->
     <link rel="stylesheet" href="../lightmode.css" id="LightMode" />
     <!-- <link rel="stylesheet" href="darkmode.css" id="DarkMode" />  -->
-
     <!-- style modes -->
     <link rel="stylesheet" href="choice-lines.css" id="LineSheet" />
     <link rel="stylesheet" href="choice-compact.css" id="CompactSheet" />
@@ -30,8 +29,20 @@
     <script language="Javascript">
         window.onload = function () {
             var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+
+            var pageStyle = document.createElement("link");
+            pageStyle.rel = "stylesheet";
+            pageStyle.type = "text/css";
+
+            var sideNavStyle = document.createElement("link");
+            sideNavStyle.rel = "stylesheet";
+            sideNavStyle.type = "text/css";
+
             if (mobile) {
-                alert("Website not optimized for mobile yet, sorry...");
+                pageStyle.href = "../pagestyle-mobile.css";
+                sideNavStyle.href = "../sidenavstyle-mobile.css";
+                document.head.appendChild(pageStyle);
+                document.head.appendChild(sideNavStyle);
             }
         }
     </script>
@@ -49,10 +60,10 @@
 
         <div id="SideNavContents">
             <a href="../index.html">Home</a>
-            <a href="../customs/main.html" class="DisabledPage">Custom Content</a>
             <a href="#" id="CurrentPage">Guides &amp; Strategy</a>
             <a href="../replays/main.html">Replays</a>
             <a href="../blog/main.html">News</a>
+            <a href="../customs/main.html" class="DisabledPage">Custom Content</a>
             <button type="button" style="display: none;" id="ModeButton"><p id="ModeButtonText"></p></button> <!-- dark mode button -->
         </div>
         <div id="SideNavBottomContents">
@@ -1783,7 +1794,7 @@
                         </div>
                     </a>
                 </div>
-                
+
                 <div data-entry="block" class="Choice">
                     <a href="https://docs.google.com/document/d/e/2PACX-1vQObVWb8OaSPxg1q8xd04N074j98FBND98tPepD5XcNkvV-Jul0bL2WqbJ2nYgVlPgKCNanHmGvFPEn/pub" class="ChoiceLink">
                         <div data-tags class="ChoiceBodyContainer">
@@ -2078,14 +2089,14 @@
                             <div class="ChoiceBody">
                                 <h4>by Biletsky</h4>
                                 <p>
-                                    
+
                                 </p>
                                 <p class="Tags">Basics, Video</p>
                             </div>
                         </div>
                     </a>
                 </div>
-                
+
                 <div data-entry="block" class="Choice">
                     <a href="https://youtu.be/OWpk9sVp2hI?si=lFs4JlOwXfAdgvd3" class="ChoiceLink">
                         <div data-tags class="ChoiceBodyContainer">
@@ -2096,14 +2107,14 @@
                             <div class="ChoiceBody">
                                 <h4>by Biletsky</h4>
                                 <p>
-                                    
+
                                 </p>
                                 <p class="Tags">Basics, Video</p>
                             </div>
                         </div>
                     </a>
                 </div>
-                                
+
                 <div data-entry="block" class="Choice">
                     <a href="https://youtu.be/0lkBN_2qAMA?si=DZAupfpObD_WKNY0" class="ChoiceLink">
                         <div data-tags class="ChoiceBodyContainer">
@@ -2114,14 +2125,14 @@
                             <div class="ChoiceBody">
                                 <h4>by Biletsky</h4>
                                 <p>
-                                    
+
                                 </p>
                                 <p class="Tags">Basics, Video</p>
                             </div>
                         </div>
                     </a>
                 </div>
-                
+
                 <div data-entry="block" class="Choice">
                     <a href="https://youtu.be/62Nf5eOlRwY?si=d9V_mM5GR9_IMgN6" class="ChoiceLink">
                         <div data-tags class="ChoiceBodyContainer">

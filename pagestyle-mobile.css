@@ -1,0 +1,125 @@
+﻿/* H1 is the page header.
+    H2 is for sections.
+    H3 is for titles of things, like player entries, guide names, etc. Typically in searchable boxes.
+    H4 is for things that have to stand out of normal text but barely, ie. buttons, author name
+
+    ------ CLASS BREAKDOWN -------
+    ParentEntryContainer = this single element contains all entrycatagories and thus entries
+    Entry = this element is one instance in a list of other elements which can be filtered
+    EntryCatagory = this element contains some but not all Entries based on some catagory
+    Tags = the text of this element is compared against search input to filter things. put in an entry
+    
+*/
+
+/* this sheet applies to all pages, though pages also have their own specialized sheet. */
+
+html *{
+    font-family: Vollkorn, serif;
+    color: var(--text);
+}
+
+::selection {
+    background: var(--selection);
+}
+
+a {
+    text-decoration-line: none;
+    color: var(--link);
+}
+
+a:hover {
+    color: var(--userinput);
+}
+
+/* Top of the page */
+
+#body { /*contains the whole page ofc*/
+    padding: 0px;
+    margin: 0px;
+    background-color: var(--background);
+}
+
+#Heading { /*main page heading in its own document*/
+    text-align: center;
+    font-size: 80px;
+    margin: 0px;
+}
+
+.TextBody {
+    background-color: var(--secondary);
+    padding-bottom: 1px;
+}
+
+.TextBody p{
+    padding: 0px 50px;
+}
+
+.UniqueBody {
+    /* dont put anything here. uniquebody rules should be in the page's sheet
+       since what they contain is unique to that page */
+}
+
+/* tooltips */
+
+.ToolTip {
+    position: relative;
+    display: inline-block;
+}
+
+.ToolTip .ToolTipText {
+    visibility: hidden;
+    width: 100px;
+    opacity: 0;
+    background-color: var(--userinput);
+    color: var(--tooltiptext);
+    text-align: center;
+    border-radius: 2px;
+    position: absolute;
+    z-index: 1;
+
+    padding: 5px 0;
+    bottom: 60px;
+    left: 62%;
+    margin-left: -60px;
+}
+
+.ToolTip:hover .ToolTipText {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.2s;
+}
+
+.Level99 {
+    background-color: var(--level99) !important;
+}
+
+
+/* Character names and accompanying icons */
+
+.CharName{
+    display: flex;
+    align-items: center;
+}
+
+.CharIcon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+    border: 2px solid black;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+/* FOOTER */
+
+#FooterContents {
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+    background: var(--secondary);
+}
+
+    #FooterNav a{
+        font-size: 25px;
+        margin: 15px;
+    }

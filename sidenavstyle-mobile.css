@@ -1,0 +1,157 @@
+﻿/* side bar opener & home button */
+
+#SideNavOpener {
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    z-index: 96;
+    background: transparent;
+    border: none;
+    opacity: 0.4;
+}
+
+    #SideNavOpener img {
+        width: 80px;
+    }
+
+    #SideNavOpener:hover {
+        opacity: 1;
+        transition: 0.05s;
+        cursor: pointer;
+    }
+
+.HomeButton{
+    position: fixed;
+    top: 10px;
+    left: 140px;
+    z-index: 96;
+    background: transparent;
+    border: none;
+    opacity: 0.6;
+}
+
+    .HomeButton img{
+        height: 80px;
+    }
+
+    .HomeButton:hover{
+        opacity: 1;
+        transition: 0.05s;
+        cursor: pointer;
+    }
+
+#WIPWarning{
+    position: fixed;
+    width: 70PX;
+    text-align: center;
+    bottom: 10px;
+    left: 40px;
+    font-size: 12px;
+    opacity: 0.7;
+    background: var(--secondary);
+    font-weight: bold;
+    user-select: none;
+}
+
+#SideNavReminder{
+    width: 150px;
+    position: fixed;
+    left: 20px;
+    top: 40px;
+    user-select: none;
+}
+
+/* 
+    actual sidenav div itself 
+    when opened #SideNav becomes width: auto due to sidenav.js. If you
+    want to adjust the size of the sidenav div then adjust the contents
+*/
+
+#SideNav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 0px;
+    height: 100%;
+    background: linear-gradient(to top, var(--highlight) 5%, var(--secondary));
+    z-index: 97;
+    box-shadow: 5px 0px 5px rgba(0,0,0,0.3);
+}
+
+/* top part of sidenav (just closer)*/
+
+#SideNavTopContents{
+    position: relative;
+    z-index: 66;
+    margin-bottom: 10px;
+}
+
+    #SideNavTopContents hr{
+        margin: 0px;
+    }
+
+#SideNavCloser{
+    padding: 10px 25px;
+    border: 0px;
+    background: transparent;
+}
+    #SideNavCloser img{
+        width: 80px;
+        padding: 0px;
+    }
+    #SideNavCloser:hover{
+        cursor: pointer;
+    }
+
+/* main body / options */
+
+#CurrentPage {
+    color: gray;
+    cursor: default;
+    background-color: lightgray !important;
+}
+
+.DisabledPage {
+    color: dimgray !important;
+    cursor: not-allowed;
+    background-color: darkgray !important;
+    opacity: 0.3;
+}
+
+#SideNavContents {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+    #SideNavContents a { /* actual links */
+        padding: 30px;
+        line-height: 40px;
+        text-align: right;
+        font-size: 30px;
+        background-color: var(--secondary);
+        border: 1px solid rgba(0,0,0,0.05);
+    }
+
+#ModeButton{
+    margin: 20px 0px;
+}
+
+/* bottom contents ie picture */
+
+#SideNavBottomContents {
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+    #SideNavBottomContents img {
+        position: absolute;
+        bottom: 0;
+        left: -60%;
+        height: 600px;
+        opacity: 0.4;
+        z-index: 1;
+    }

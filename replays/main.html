@@ -6,13 +6,12 @@
     <title>Replays | PLAY MORE EXCEED</title>
     <link rel="icon" type="image/x-icon" href="../content/icons/PMX_Favicon.ico" />
 
-    <link rel="stylesheet" href="../pagestyle.css" />
     <link rel="stylesheet" href="replaystyle.css" />
-    <link rel="stylesheet" href="layout-grid.css"/>
+    <link rel="stylesheet" href="layout-grid.css" />
     <link rel="stylesheet" href="../lightmode.css" />
-
+    <link rel="stylesheet" href="../pagestyle-widescreen.css" />
     <link rel="stylesheet" href="../searchbarstyle.css" />
-    <link rel="stylesheet" href="../sidenavstyle.css" id="SideNavSheet" />
+    <link rel="stylesheet" href="../sidenavstyle-widescreen.css" id="SideNavSheet" />
     <link rel="stylesheet" href="../stickystyle.css" id="StickSheet" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,6 +19,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body id="body">
+
+    <script language="Javascript">
+        window.onload = function () {
+            var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+
+            var pageStyle = document.createElement("link");
+            pageStyle.rel = "stylesheet";
+            pageStyle.type = "text/css";
+
+            var sideNavStyle = document.createElement("link");
+            sideNavStyle.rel = "stylesheet";
+            sideNavStyle.type = "text/css";
+
+            if (mobile) {
+                pageStyle.href = "pagestyle-mobile.css";
+                sideNavStyle.href = "sidenavstyle-mobile.css";
+                document.head.appendChild(pageStyle);
+                document.head.appendChild(sideNavStyle);
+            }
+        }
+    </script>
 
     <!-- side nav bar -->
 
@@ -36,10 +56,10 @@
 
         <div id="SideNavContents">
             <a href="../index.html">Home</a>
-            <a href="../customs/main.html" class="DisabledPage">Custom Content</a>
             <a href="../guides/main.html">Guides &amp; Strategy</a>
             <a href="#" id="CurrentPage">Replays</a>
             <a href="../blog/main.html">Blog</a>
+            <a href="../customs/main.html" class="DisabledPage">Custom Content</a>
         </div>
         <div id="SideNavBottomContents">
             <img id="BottomPic" draggable="false" />
@@ -421,7 +441,7 @@
                 <div id="LowerSelectorContainer">
                     <div id="SpoilerCheckboxContainer">
                         <label for="SpoilerCheckbox">show winner?</label>
-                        <input type="checkbox" id="SpoilerCheckbox" checked/>
+                        <input type="checkbox" id="SpoilerCheckbox" checked />
                     </div>
                     <div data-searchInputContainer="descriptionSearch" class="SearchInputContainer">
                         <input type="search" class="SearchInput" placeholder="[WIP] Tournament or commentator..." />
@@ -468,7 +488,7 @@
                     </div>
                 </a>
             </div>
-            
+
             <div data-entry="flex" class="Choice">
                 <a href="https://youtu.be/v3B36DBICsU?t=257">
                     <div class="ChoiceTitle">
@@ -497,7 +517,7 @@
                     </div>
                 </a>
             </div>
-            
+
             <div data-entry="flex" class="Choice">
                 <a href="https://youtu.be/M2k0PTHxlKk?t=5477">
                     <div class="ChoiceTitle">
@@ -526,7 +546,7 @@
                     </div>
                 </a>
             </div>
-            
+
             <div data-entry="flex" class="Choice">
                 <a href="https://youtu.be/M2k0PTHxlKk?t=3115">
                     <div class="ChoiceTitle">
@@ -555,7 +575,7 @@
                     </div>
                 </a>
             </div>
-            
+
             <div data-entry="flex" class="Choice">
                 <a href="https://youtu.be/M2k0PTHxlKk?t=284">
                     <div class="ChoiceTitle">
@@ -584,7 +604,7 @@
                     </div>
                 </a>
             </div>
-            
+
             <div data-entry="flex" class="Choice">
                 <a href="https://youtu.be/cHFzCqgC93g?t=5564">
                     <div class="ChoiceTitle">
@@ -613,7 +633,7 @@
                     </div>
                 </a>
             </div>
-            
+
             <div data-entry="flex" class="Choice">
                 <a href="https://youtu.be/cHFzCqgC93g?t=2560">
                     <div class="ChoiceTitle">
@@ -642,7 +662,7 @@
                     </div>
                 </a>
             </div>
-            
+
             <div data-entry="flex" class="Choice">
                 <a href="https://youtu.be/cHFzCqgC93g?t=166">
                     <div class="ChoiceTitle">
@@ -671,7 +691,7 @@
                     </div>
                 </a>
             </div>
-            
+
             <div data-entry="flex" class="Choice">
                 <a href="https://youtu.be/L0Gi7XTNW8U?si=ES6PXtyiPdUSbMSa">
                     <div class="ChoiceTitle">
@@ -699,7 +719,7 @@
                     </div>
                 </a>
             </div>
-            
+
             <div data-entry="flex" class="Choice">
                 <a href="https://youtu.be/wxDSQ2uxXQ0?si=n_BdyB37TNcF6a0f">
                     <div class="ChoiceTitle">
@@ -727,7 +747,7 @@
                     </div>
                 </a>
             </div>
-            
+
             <div data-entry="flex" class="Choice">
                 <a href="https://youtu.be/aj6CPmNwf2o?si=ebkOJ1bqDAfml0u8">
                     <div class="ChoiceTitle">
@@ -755,7 +775,7 @@
                     </div>
                 </a>
             </div>
-            
+
             <div data-entry="flex" class="Choice">
                 <a href="https://youtu.be/7IyKSfbZWFQ?si=tzTBdJYwTICSVCMt">
                     <div class="ChoiceTitle">
@@ -783,7 +803,7 @@
                     </div>
                 </a>
             </div>
-            
+
             <div data-entry="flex" class="Choice">
                 <a href="https://youtu.be/YY2ZLB-AOn0?si=iIzGz-eGAA85H5iq">
                     <div class="ChoiceTitle">
@@ -811,7 +831,7 @@
                     </div>
                 </a>
             </div>
-            
+
             <div data-entry="flex" class="Choice">
                 <a href="https://youtu.be/4umf9k_ZSN8?t=2992">
                     <div class="ChoiceTitle">
@@ -840,7 +860,7 @@
                     </div>
                 </a>
             </div>
-                           
+
             <div data-entry="flex" class="Choice">
                 <a href="https://youtu.be/4umf9k_ZSN8?t=131">
                     <div class="ChoiceTitle">
@@ -869,7 +889,7 @@
                     </div>
                 </a>
             </div>
-                        
+
             <div data-entry="flex" class="Choice">
                 <a href="https://youtu.be/zp_oHFHslkY?si=OneMpAXGVX4VbsdM">
                     <div class="ChoiceTitle">
@@ -897,7 +917,7 @@
                     </div>
                 </a>
             </div>
-            
+
             <div data-entry="flex" class="Choice">
                 <a href="https://youtu.be/h6Iwq04TgII?si=lFzIZ-TMKxUloHiH">
                     <div class="ChoiceTitle">
@@ -3384,7 +3404,7 @@
                     </div>
                 </a>
             </div>
-            
+
             <div data-entry="flex" class="Choice">
                 <a href="https://youtu.be/nKRBmYia8p4?t=3199">
                     <div class="ChoiceTitle">
@@ -3413,7 +3433,7 @@
                     </div>
                 </a>
             </div>
-                               
+
             <div data-entry="flex" class="Choice">
                 <a href="https://youtu.be/nKRBmYia8p4?t=1552">
                     <div class="ChoiceTitle">
@@ -3442,7 +3462,7 @@
                     </div>
                 </a>
             </div>
-                        
+
             <div data-entry="flex" class="Choice">
                 <a href="https://youtu.be/nKRBmYia8p4?t=527">
                     <div class="ChoiceTitle">
@@ -3471,7 +3491,7 @@
                     </div>
                 </a>
             </div>
-                                    
+
             <div data-entry="flex" class="Choice">
                 <a href="https://youtu.be/V9D_8KEe9wU?t=3492">
                     <div class="ChoiceTitle">
@@ -3500,7 +3520,7 @@
                     </div>
                 </a>
             </div>
-                                                             
+
             <div data-entry="flex" class="Choice">
                 <a href="https://youtu.be/V9D_8KEe9wU?t=2131">
                     <div class="ChoiceTitle">
@@ -3529,7 +3549,7 @@
                     </div>
                 </a>
             </div>
-                                                
+
             <div data-entry="flex" class="Choice">
                 <a href="https://youtu.be/V9D_8KEe9wU?t=164">
                     <div class="ChoiceTitle">
@@ -3558,7 +3578,7 @@
                     </div>
                 </a>
             </div>
-                                                            
+
             <div data-entry="flex" class="Choice">
                 <a href="https://youtu.be/tfvYJ0ZQBiA?t=1972">
                     <div class="ChoiceTitle">
@@ -3587,7 +3607,7 @@
                     </div>
                 </a>
             </div>
-                                                                        
+
             <div data-entry="flex" class="Choice">
                 <a href="https://youtu.be/tfvYJ0ZQBiA?t=310">
                     <div class="ChoiceTitle">
@@ -3616,7 +3636,7 @@
                     </div>
                 </a>
             </div>
-                                                                                    
+
             <div data-entry="flex" class="Choice">
                 <a href="https://youtu.be/N1i2XuF3Cck?t=4294">
                     <div class="ChoiceTitle">
@@ -3645,7 +3665,7 @@
                     </div>
                 </a>
             </div>
-                                                                                                
+
             <div data-entry="flex" class="Choice">
                 <a href="https://youtu.be/N1i2XuF3Cck?t=446">
                     <div class="ChoiceTitle">
@@ -3674,7 +3694,7 @@
                     </div>
                 </a>
             </div>
-                                                                                                            
+
             <div data-entry="flex" class="Choice">
                 <a href="https://youtu.be/AyeyKupmt_k?t=1659">
                     <div class="ChoiceTitle">
@@ -3703,7 +3723,7 @@
                     </div>
                 </a>
             </div>
-                                                                                                                        
+
             <div data-entry="flex" class="Choice">
                 <a href="https://youtu.be/AyeyKupmt_k?t=165">
                     <div class="ChoiceTitle">
@@ -3761,7 +3781,7 @@
                     </div>
                 </a>
             </div>
-            
+
             <div data-entry="flex" class="Choice">
                 <a href="https://youtu.be/qKjO_ZNQACk?t=1837">
                     <div class="ChoiceTitle">
@@ -3790,7 +3810,7 @@
                     </div>
                 </a>
             </div>
-            
+
             <div data-entry="flex" class="Choice">
                 <a href="https://youtu.be/qKjO_ZNQACk?t=266">
                     <div class="ChoiceTitle">
@@ -3819,7 +3839,7 @@
                     </div>
                 </a>
             </div>
-            
+
             <div data-entry="flex" class="Choice">
                 <a href="https://youtu.be/kCCJNr2U2dI?t=355">
                     <div class="ChoiceTitle">

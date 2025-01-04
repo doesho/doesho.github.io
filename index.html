@@ -7,11 +7,10 @@
     <link rel="icon" type="image/x-icon" href="content/icons/PMX_Favicon.ico" />
 
     <link rel="stylesheet" href="indexstyle.css" />
-    <link rel="stylesheet" href="pagestyle.css" />
-    <link rel="stylesheet" href="lightmode.css" />
-
-    <link rel="stylesheet" href="sidenavstyle.css" />
+    <link rel="stylesheet" href="pagestyle-widescreen.css" />
+    <link rel="stylesheet" href="sidenavstyle-widescreen.css" />
     <link rel="stylesheet" href="stickystyle.css" />
+    <link rel="stylesheet" href="lightmode.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,8 +21,20 @@
     <script language="Javascript">
         window.onload = function () {
             var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+
+            var pageStyle = document.createElement("link");
+            pageStyle.rel = "stylesheet";
+            pageStyle.type = "text/css";
+
+            var sideNavStyle = document.createElement("link");
+            sideNavStyle.rel = "stylesheet";
+            sideNavStyle.type = "text/css";
+
             if (mobile) {
-                alert("Website not optimized for mobile yet, sorry...");
+                pageStyle.href = "pagestyle-mobile.css";
+                sideNavStyle.href = "sidenavstyle-mobile.css";
+                document.head.appendChild(pageStyle);
+                document.head.appendChild(sideNavStyle);
             }
         }
     </script>
@@ -43,10 +54,10 @@
 
         <div id="SideNavContents">
             <a href="#" id="CurrentPage">Home</a>
-            <a href="customs/main.html" class="DisabledPage">Custom Content</a>
             <a href="guides/main.html">Guides &amp; Strategy</a>
             <a href="replays/main.html">Replays</a>
             <a href="blog/main.html">News</a>
+            <a href="customs/main.html" class="DisabledPage">Custom Content</a>
             <button type="button" id="ModeButton" style="display: none;"><p id="ModeButtonText"></p></button>
         </div>
         <div id="SideNavBottomContents">

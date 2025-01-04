@@ -71,8 +71,12 @@
         border-bottom: 1px solid var(--userinput) !important;
         box-shadow: 3px -1px 0px 0px var(--userinput) inset !important;
         transition: 0.10s;
-        margin-left: 5px;
     }
+
+        .Choice:hover h3 {
+            margin-left: 5px;
+            transition: 0.10s;
+        }
 
 .ChoiceBodyContainer {
     display: flex;

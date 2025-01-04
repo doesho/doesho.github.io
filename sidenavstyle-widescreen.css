@@ -111,8 +111,8 @@
 .DisabledPage{
     color: dimgray !important;
     cursor: not-allowed;
-    background-color: gray !important;
-    opacity: 0.6;
+    background-color: darkgray !important;
+    opacity: 0.3;
 }
 
 #SideNavContents {

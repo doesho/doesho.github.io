@@ -6,14 +6,14 @@
     <title>Blog | PLAY MORE EXCEED</title>
     <link rel="icon" type="image/x-icon" href="../content/icons/PMX_Favicon.ico" />
 
-    <link rel="stylesheet" href="../pagestyle.css" />
     <link rel="stylesheet" href="blogstyle.css" />
     <link rel="stylesheet" href="../lightmode.css" />
 
     <link rel="stylesheet" class="Swappable" id="LineSheet" href="choice-default.css" />
 
+    <link rel="stylesheet" href="../pagestyle-widescreen.css" />
     <link rel="stylesheet" href="../searchbarstyle.css" />
-    <link rel="stylesheet" href="../sidenavstyle.css" id="SideNavSheet" />
+    <link rel="stylesheet" href="../sidenavstyle-widescreen.css" id="SideNavSheet" />
     <link rel="stylesheet" href="../stickystyle.css" id="StickSheet" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,6 +23,27 @@
 
 </head>
 <body id="body">
+
+    <script language="Javascript">
+        window.onload = function () {
+            var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+
+            var pageStyle = document.createElement("link");
+            pageStyle.rel = "stylesheet";
+            pageStyle.type = "text/css";
+
+            var sideNavStyle = document.createElement("link");
+            sideNavStyle.rel = "stylesheet";
+            sideNavStyle.type = "text/css";
+
+            if (mobile) {
+                pageStyle.href = "../pagestyle-mobile.css";
+                sideNavStyle.href = "../sidenavstyle-mobile.css";
+                document.head.appendChild(pageStyle);
+                document.head.appendChild(sideNavStyle);
+            }
+        }
+    </script>
 
     <!-- side nav bar -->
 
@@ -38,10 +59,10 @@
 
         <div id="SideNavContents">
             <a href="../index.html">Home</a>
-            <a href="../customs/main.html" class="DisabledPage">Custom Content</a>
             <a href="../guides/main.html">Guides &amp; Strategy</a>
             <a href="../replays/main.html">Replays</a>
             <a href="#" id="CurrentPage">News</a>
+            <a href="../customs/main.html" class="DisabledPage">Custom Content</a>
         </div>
         <div id="SideNavBottomContents">
             <img id="BottomPic" draggable="false" />
