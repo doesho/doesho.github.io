@@ -6,12 +6,12 @@
     <title>Custom Content | PLAY MORE EXCEED</title>
     <link rel="icon" type="image/x-icon" href="../content/icons/PMX_Favicon.ico" />
 
-    <link rel="stylesheet" href="../pagestyle.css" />
+    <link rel="stylesheet" href="../pagestyle-widescreen.css" />
     <link rel="stylesheet" href="customsstyle.css" />
     <link rel="stylesheet" href="lightmode.css" />
 
     <link rel="stylesheet" href="../searchbarstyle.css" />
-    <link rel="stylesheet" href="../sidenavstyle.css" id="SideNavSheet" />
+    <link rel="stylesheet" href="../sidenavstyle-widescreen.css" id="SideNavSheet" />
     <link rel="stylesheet" href="../stickystyle.css" id="StickSheet" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,6 +19,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body id="body">
+
+    <script language="Javascript">
+        window.onload = function () {
+            var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+
+            var pageStyle = document.createElement("link");
+            pageStyle.rel = "stylesheet";
+            pageStyle.type = "text/css";
+
+            var sideNavStyle = document.createElement("link");
+            sideNavStyle.rel = "stylesheet";
+            sideNavStyle.type = "text/css";
+
+            if (mobile) {
+                pageStyle.href = "pagestyle-mobile.css";
+                sideNavStyle.href = "sidenavstyle-mobile.css";
+                document.head.appendChild(pageStyle);
+                document.head.appendChild(sideNavStyle);
+            }
+        }
+    </script>
 
     <!-- side nav bar -->
 
@@ -58,7 +79,7 @@
         <p>
             To make a tier list of the characters from seasons 1-7, <a href="https://tiermaker.com/create/exceed-tier-list-seasons-1-5-651904">check here</a>.<br />
             To make power budget tier lists, check out my <a href="https://tiermaker.com/user/15748928">profile on tiermaker.com</a>.
-         </p>
+        </p>
     </section>
 
     <!-- scripts -->

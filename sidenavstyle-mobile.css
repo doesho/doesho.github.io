@@ -42,11 +42,11 @@
 
 #WIPWarning{
     position: fixed;
-    width: 70PX;
+    width: 160PX;
     text-align: center;
     bottom: 10px;
-    left: 40px;
-    font-size: 12px;
+    left: 50px;
+    font-size: 26px;
     opacity: 0.7;
     background: var(--secondary);
     font-weight: bold;
