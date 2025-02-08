@@ -7,7 +7,6 @@
     align-items: center;
     background-size: cover;
     background-position: center;
-    height: 100vh;
     overflow: hidden;
 }
 
@@ -17,11 +16,12 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    margin: 90px;
+    margin: 120px;
 }
 
 #PMXimg{
     width: 70%;
+    min-width: 400px;
 }
 
 #IndexHeadingBottom {
@@ -30,11 +30,11 @@
     min-height: 130px;
     width: 100%;
     background: var(--background);
-    position: absolute;
+    position: relative;
     bottom: 0px;
     justify-content: center;
     transition: 0.2s;
-    border-top: 5px solid;
+    border-top: 8px solid;
     border-color: var(--highlight);
     -webkit-box-shadow: 1px -84px 80px -49px rgba(0,0,0,1);
     -moz-box-shadow: 1px -84px 80px -49px rgba(0,0,0,1);
@@ -42,16 +42,17 @@
 }
 
     #IndexHeadingBottom:hover {
-        height: 17%;
-        min-height: 150px;
+        border-color: var(--userinput);
         cursor: pointer;
     }
 
 #scrollicon {
     align-self: center;
-    min-width: 100px;
-    max-width: 200px;
+    width: 200px;
     filter: drop-shadow( 0px 7px var(--highlight));
+}
+
+#scrollpoint {
 }
 
 #newImage{
@@ -133,6 +134,7 @@
         margin: 0px;
         text-transform: uppercase;
         background-image: radial-gradient(var(--highlight), rgba(0, 0, 0, 0) 60%);
+        color: black;
     }
 
 .ExceedSeller p {
