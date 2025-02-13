@@ -142,32 +142,3 @@
     padding: 0px 10px;
 
 }
-
-/* individual sidebar boxes */
-
-#NoobBox{
-    border: 2px solid var(--highlight);
-    padding: 0px;
-}
-    #NoobBox h3{
-        font-size: 25px;
-        font-weight: bold;
-        background: var(--highlight);
-        padding: 2px;
-        margin: 20px 0px;
-        text-align: center;
-    }
-
-    #NoobBox p{
-        padding: 0px 5px;
-    }
-
-#TagBox h3{
-    text-align: center;
-}
-
-#FGCBox div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}

@@ -13,6 +13,9 @@
     flex-direction: column;
     text-align: center;
 }
+    .TextBody p{
+        margin-top: 30px;
+    }
 
     /* ken quotes */
 
@@ -27,15 +30,6 @@
     .TextBody img{
         margin-top: 5px;
         height: 50px;
-    }
-
-    #kenQuoteBody{
-        padding: 0px 10px;
-        height: 30px;
-        margin: 0px;
-        text-align: center;
-        border: 1px solid rgba(50,50,50,0.3);
-        border-radius: 5px;
     }
 
 .LinkList li {
@@ -58,3 +52,30 @@
         border: 1px solid var(--userinput);
         opacity: 1;
     }
+
+#KenBox {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#kenPic {
+    max-width: 70px;
+}
+
+#kenQuoteBody {
+    padding: 0px 10px;
+    margin: 15px;
+    text-align: center;
+    border: 1px solid rgba(50,50,50,0.3);
+    border-radius: 3px;
+}
+#TagBox h3 {
+    text-align: center;
+}
+
+#FGCBox div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
